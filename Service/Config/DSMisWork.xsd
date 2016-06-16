@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSMisWork" targetNamespace="http://tempuri.org/DSMisWork.xsd" xmlns:mstns="http://tempuri.org/DSMisWork.xsd" xmlns="http://tempuri.org/DSMisWork.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSMisWork" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSMisWork" msprop:Generator_UserDSName="DSMisWork">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl" msprop:Generator_TableClassName="tblDataTable" msprop:Generator_TableVarName="tabletbl" msprop:Generator_RowChangedName="tblRowChanged" msprop:Generator_TablePropName="tbl" msprop:Generator_RowDeletingName="tblRowDeleting" msprop:Generator_RowChangingName="tblRowChanging" msprop:Generator_RowEvHandlerName="tblRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRowDeleted" msprop:Generator_RowClassName="tblRow" msprop:Generator_UserTableName="tbl" msprop:Generator_RowEvArgName="tblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="需求部门" msprop:Generator_ColumnVarNameInTable="column需求部门" msprop:Generator_ColumnPropNameInRow="需求部门" msprop:Generator_ColumnPropNameInTable="需求部门Column" msprop:Generator_UserColumnName="需求部门" type="xs:string" minOccurs="0" />
+              <xs:element name="部门名称" msprop:Generator_ColumnVarNameInTable="column部门名称" msprop:Generator_ColumnPropNameInRow="部门名称" msprop:Generator_ColumnPropNameInTable="部门名称Column" msprop:Generator_UserColumnName="部门名称" type="xs:string" minOccurs="0" />
+              <xs:element name="需求人" msprop:Generator_ColumnVarNameInTable="column需求人" msprop:Generator_ColumnPropNameInRow="需求人" msprop:Generator_ColumnPropNameInTable="需求人Column" msprop:Generator_UserColumnName="需求人" type="xs:string" minOccurs="0" />
+              <xs:element name="配合人" msprop:Generator_ColumnVarNameInTable="column配合人" msprop:Generator_ColumnPropNameInRow="配合人" msprop:Generator_ColumnPropNameInTable="配合人Column" msprop:Generator_UserColumnName="配合人" type="xs:string" minOccurs="0" />
+              <xs:element name="配合人姓名" msprop:Generator_ColumnVarNameInTable="column配合人姓名" msprop:Generator_ColumnPropNameInRow="配合人姓名" msprop:Generator_ColumnPropNameInTable="配合人姓名Column" msprop:Generator_UserColumnName="配合人姓名" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

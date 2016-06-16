@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9DFBD0EF-24E5-4DB4-96AF-236452EC9FC5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hanbell.AutoReport.Config</RootNamespace>
+    <AssemblyName>SHBReports</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountReceivableDelay.cs" />
+    <Compile Include="AccountReceivableDelayConfig.cs" />
+    <Compile Include="AccountReceivableDelayForSaler.cs" />
+    <Compile Include="AccountReceivableDelayForSalerConfig.cs" />
+    <Compile Include="AccountReceivableDelayReport.cs">
+      <DependentUpon>AccountReceivableDelayReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AccountReceivableDelay_Comer.cs" />
+    <Compile Include="Dianshouweiyanshou_zhuweiConfig.cs" />
+    <Compile Include="Dianshouweiyanshou_zhuweiReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dianshouweiyanshou_zhuweiReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dianshouweiyanshou_zhuweiDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dianshouweiyanshou_zhuweiDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dianshouweiyanshou_zhuwei_AM.cs" />
+    <Compile Include="Dianshouweiyanshou_zhuwei_PM.cs" />
+    <Compile Include="DSAccountReceivableDelay.Designer.cs">
+      <DependentUpon>DSAccountReceivableDelay.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Dianshouweiyanshou_zhuwei.cs" />
+    <Compile Include="DSSpecOrderAnalyze.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSpecOrderAnalyze.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSpecOrderNotification.Designer.cs">
+      <DependentUpon>DSSpecOrderNotification.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DSSpecOrderVendor.cs">
+      <DependentUpon>DSSpecOrderVendor.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSSpecOrderVendor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSSpecOrderVendor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSSpecOrderWBS.Designer.cs">
+      <DependentUpon>DSSpecOrderWBS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="IdleProductDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdleProductDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IdleStock.cs" />
+    <Compile Include="IdleStockConfig.cs" />
+    <Compile Include="IdleStockDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdleStockDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IdleStockReport_PP.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IdleStockReport_PP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IdleStock_Comer.cs" />
+    <Compile Include="IdleProduct.cs" />
+    <Compile Include="IdleProductConfig.cs" />
+    <Compile Include="ProductionOrderNeedClose.cs" />
+    <Compile Include="ProductionOrderNeedCloseConfig.cs" />
+    <Compile Include="ProductionOrderNeedCloseDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionOrderNeedCloseDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionOrderNeedCloseReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionOrderNeedCloseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesOrderSchedule.cs" />
+    <Compile Include="SalesOrderScheduleConfig.cs" />
+    <Compile Include="SalesOrderScheduleConfig_R_HD.cs" />
+    <Compile Include="SalesOrderScheduleDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesOrderScheduleDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrderScheduleReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalesOrderScheduleReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesOrderSchedule_AA.cs" />
+    <Compile Include="SalesOrderSchedule_AH.cs" />
+    <Compile Include="SalesOrderSchedule_R.cs" />
+    <Compile Include="SalesOrderSchedule_R_HD.cs" />
+    <Compile Include="SpecOrderUpdateStateConfig.cs" />
+    <Compile Include="SpecOrderUpdateState.cs" />
+    <Compile Include="SpecOrderAnalyze.cs" />
+    <Compile Include="SpecOrderAnalyzeConfig.cs" />
+    <Compile Include="SpecOrderAnalyzeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SpecOrderAnalyzeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpecOrderAnalyze_AA.cs" />
+    <Compile Include="SpecOrderAnalyze_AH.cs" />
+    <Compile Include="SpecOrderAnalyze_P.cs" />
+    <Compile Include="SpecOrderAnalyze_R.cs" />
+    <Compile Include="SpecOrderDelay.cs" />
+    <Compile Include="SpecOrderDelay_AA.cs" />
+    <Compile Include="SpecOrderDelay_AH.cs" />
+    <Compile Include="SpecOrderDelayConfig.cs" />
+    <Compile Include="SpecOrderDelay_P.cs" />
+    <Compile Include="SpecOrderDelay_R.cs" />
+    <Compile Include="SpecOrderPO_AA.cs" />
+    <Compile Include="SpecOrderPO_AH.cs" />
+    <Compile Include="SpecOrderPO_P.cs" />
+    <Compile Include="SpecOrderPO_R.cs" />
+    <Compile Include="SpecOrderRD_AA.cs" />
+    <Compile Include="SpecOrderRD_AH.cs" />
+    <Compile Include="SpecOrderRD_P.cs" />
+    <Compile Include="SpecOrderRD_R.cs" />
+    <Compile Include="SpecOrderVendor.cs" />
+    <Compile Include="SpecOrderVendorConfig.cs" />
+    <Compile Include="SpecOrderNotification.cs" />
+    <Compile Include="SpecOrderNotificationConfig.cs" />
+    <Compile Include="SpecOrderNotificationReport.cs">
+      <DependentUpon>SpecOrderNotificationReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SpecOrderPO.cs" />
+    <Compile Include="SpecOrderPOConfig.cs" />
+    <Compile Include="SpecOrderPP.cs" />
+    <Compile Include="SpecOrderPPConfig.cs" />
+    <Compile Include="SpecOrderRD.cs" />
+    <Compile Include="SpecOrderRDConfig.cs" />
+    <Compile Include="StandCostAbnormality.cs" />
+    <Compile Include="StandCostAbnormalityDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StandCostAbnormalityDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StandCostAbnormalityConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\AutoReportConfig.csproj">
+      <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
+      <Name>AutoReportConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\AutoReportCore.csproj">
+      <Project>{1BF1F150-93F7-47B9-BDFF-12D407C33987}</Project>
+      <Name>AutoReportCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Dianshouweiyanshou_zhuweiDS.xsc">
+      <DependentUpon>Dianshouweiyanshou_zhuweiDS.xsd</DependentUpon>
+    </None>
+    <None Include="Dianshouweiyanshou_zhuweiDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dianshouweiyanshou_zhuweiDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dianshouweiyanshou_zhuweiDS.xss">
+      <DependentUpon>Dianshouweiyanshou_zhuweiDS.xsd</DependentUpon>
+    </None>
+    <None Include="DSAccountReceivableDelay.xsc">
+      <DependentUpon>DSAccountReceivableDelay.xsd</DependentUpon>
+    </None>
+    <None Include="DSAccountReceivableDelay.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSAccountReceivableDelay.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSAccountReceivableDelay.xss">
+      <DependentUpon>DSAccountReceivableDelay.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderAnalyze.xsc">
+      <DependentUpon>DSSpecOrderAnalyze.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderAnalyze.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSpecOrderAnalyze.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSSpecOrderAnalyze.xss">
+      <DependentUpon>DSSpecOrderAnalyze.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderNotification.xsc">
+      <DependentUpon>DSSpecOrderNotification.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderNotification.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSpecOrderNotification.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSSpecOrderNotification.xss">
+      <DependentUpon>DSSpecOrderNotification.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderWBS.xsc">
+      <DependentUpon>DSSpecOrderWBS.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderWBS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSpecOrderWBS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSSpecOrderWBS.xss">
+      <DependentUpon>DSSpecOrderWBS.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderVendor.xsc">
+      <DependentUpon>DSSpecOrderVendor.xsd</DependentUpon>
+    </None>
+    <None Include="DSSpecOrderVendor.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSSpecOrderVendor.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSSpecOrderVendor.xss">
+      <DependentUpon>DSSpecOrderVendor.xsd</DependentUpon>
+    </None>
+    <None Include="IdleProductDS.xsc">
+      <DependentUpon>IdleProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="IdleProductDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IdleProductDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IdleProductDS.xss">
+      <DependentUpon>IdleProductDS.xsd</DependentUpon>
+    </None>
+    <None Include="IdleStockDS.xsc">
+      <DependentUpon>IdleStockDS.xsd</DependentUpon>
+    </None>
+    <None Include="IdleStockDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>IdleStockDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IdleStockDS.xss">
+      <DependentUpon>IdleStockDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionOrderNeedCloseDS.xsc">
+      <DependentUpon>ProductionOrderNeedCloseDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionOrderNeedCloseDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionOrderNeedCloseDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProductionOrderNeedCloseDS.xss">
+      <DependentUpon>ProductionOrderNeedCloseDS.xsd</DependentUpon>
+    </None>
+    <None Include="SalesOrderScheduleDS.xsc">
+      <DependentUpon>SalesOrderScheduleDS.xsd</DependentUpon>
+    </None>
+    <None Include="SalesOrderScheduleDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SalesOrderScheduleDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SalesOrderScheduleDS.xss">
+      <DependentUpon>SalesOrderScheduleDS.xsd</DependentUpon>
+    </None>
+    <None Include="StandCostAbnormalityDS.xsc">
+      <DependentUpon>StandCostAbnormalityDS.xsd</DependentUpon>
+    </None>
+    <None Include="StandCostAbnormalityDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StandCostAbnormalityDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StandCostAbnormalityDS.xss">
+      <DependentUpon>StandCostAbnormalityDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AccountReceivableDelayReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountReceivableDelayReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dianshouweiyanshou_zhuweiReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Dianshouweiyanshou_zhuweiReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IdleStockReport_PP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IdleStockReport_PP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionOrderNeedCloseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductionOrderNeedCloseReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrderScheduleReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalesOrderScheduleReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecOrderAnalyzeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SpecOrderAnalyzeReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecOrderNotificationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SpecOrderNotificationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

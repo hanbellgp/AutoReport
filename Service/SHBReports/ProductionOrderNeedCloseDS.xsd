@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProductionOrderNeedCloseDS" targetNamespace="http://tempuri.org/ProductionOrderNeedCloseDS.xsd" xmlns:mstns="http://tempuri.org/ProductionOrderNeedCloseDS.xsd" xmlns="http://tempuri.org/ProductionOrderNeedCloseDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProductionOrderNeedCloseDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProductionOrderNeedCloseDS" msprop:Generator_UserDSName="ProductionOrderNeedCloseDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_RowClassName="tblresultRow" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowEvArgName="tblresultRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="manno" msprop:Generator_ColumnVarNameInTable="columnmanno" msprop:Generator_ColumnPropNameInRow="manno" msprop:Generator_ColumnPropNameInTable="mannoColumn" msprop:Generator_UserColumnName="manno" type="xs:string" minOccurs="0" />
+              <xs:element name="pono" msprop:Generator_ColumnVarNameInTable="columnpono" msprop:Generator_ColumnPropNameInRow="pono" msprop:Generator_ColumnPropNameInTable="ponoColumn" msprop:Generator_UserColumnName="pono" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbrf" msprop:Generator_ColumnVarNameInTable="columnitnbrf" msprop:Generator_ColumnPropNameInRow="itnbrf" msprop:Generator_ColumnPropNameInTable="itnbrfColumn" msprop:Generator_UserColumnName="itnbrf" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="keyindate" msprop:Generator_ColumnVarNameInTable="columnkeyindate" msprop:Generator_ColumnPropNameInRow="keyindate" msprop:Generator_ColumnPropNameInTable="keyindateColumn" msprop:Generator_UserColumnName="keyindate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="mandate" msprop:Generator_ColumnVarNameInTable="columnmandate" msprop:Generator_ColumnPropNameInRow="mandate" msprop:Generator_ColumnPropNameInTable="mandateColumn" msprop:Generator_UserColumnName="mandate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="manqty" msprop:Generator_ColumnVarNameInTable="columnmanqty" msprop:Generator_ColumnPropNameInRow="manqty" msprop:Generator_ColumnPropNameInTable="manqtyColumn" msprop:Generator_UserColumnName="manqty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="finqty" msprop:Generator_ColumnVarNameInTable="columnfinqty" msprop:Generator_ColumnPropNameInRow="finqty" msprop:Generator_ColumnPropNameInTable="finqtyColumn" msprop:Generator_UserColumnName="finqty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="issqty" msprop:Generator_ColumnVarNameInTable="columnissqty" msprop:Generator_ColumnPropNameInRow="issqty" msprop:Generator_ColumnPropNameInTable="issqtyColumn" msprop:Generator_UserColumnName="issqty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="modqty" msprop:Generator_ColumnVarNameInTable="columnmodqty" msprop:Generator_ColumnPropNameInRow="modqty" msprop:Generator_ColumnPropNameInTable="modqtyColumn" msprop:Generator_UserColumnName="modqty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="accqy1" msprop:Generator_ColumnVarNameInTable="columnaccqy1" msprop:Generator_ColumnPropNameInRow="accqy1" msprop:Generator_ColumnPropNameInTable="accqy1Column" msprop:Generator_UserColumnName="accqy1" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="okqy1" msprop:Generator_ColumnVarNameInTable="columnokqy1" msprop:Generator_ColumnPropNameInRow="okqy1" msprop:Generator_ColumnPropNameInTable="okqy1Column" msprop:Generator_UserColumnName="okqy1" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

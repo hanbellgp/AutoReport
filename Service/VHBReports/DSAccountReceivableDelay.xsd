@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSAccountReceivableDelay" targetNamespace="http://tempuri.org/DSAccountReceivableDelay.xsd" xmlns:mstns="http://tempuri.org/DSAccountReceivableDelay.xsd" xmlns="http://tempuri.org/DSAccountReceivableDelay.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSAccountReceivableDelay" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSAccountReceivableDelay" msprop:Generator_UserDSName="DSAccountReceivableDelay">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_RowEvArgName="tblresultRowChangeEvent" msprop:Generator_RowClassName="tblresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cuskind" msprop:Generator_ColumnVarNameInTable="columncuskind" msprop:Generator_ColumnPropNameInRow="cuskind" msprop:Generator_ColumnPropNameInTable="cuskindColumn" msprop:Generator_UserColumnName="cuskind" type="xs:string" minOccurs="0" />
+              <xs:element name="areacode" msprop:Generator_ColumnVarNameInTable="columnareacode" msprop:Generator_ColumnPropNameInRow="areacode" msprop:Generator_ColumnPropNameInTable="areacodeColumn" msprop:Generator_UserColumnName="areacode" type="xs:string" minOccurs="0" />
+              <xs:element name="cusno" msprop:Generator_ColumnVarNameInTable="columncusno" msprop:Generator_ColumnPropNameInRow="cusno" msprop:Generator_ColumnPropNameInTable="cusnoColumn" msprop:Generator_UserColumnName="cusno" type="xs:string" minOccurs="0" />
+              <xs:element name="cusna" msprop:Generator_ColumnVarNameInTable="columncusna" msprop:Generator_ColumnPropNameInRow="cusna" msprop:Generator_ColumnPropNameInTable="cusnaColumn" msprop:Generator_UserColumnName="cusna" type="xs:string" minOccurs="0" />
+              <xs:element name="userno" msprop:Generator_ColumnVarNameInTable="columnuserno" msprop:Generator_ColumnPropNameInRow="userno" msprop:Generator_ColumnPropNameInTable="usernoColumn" msprop:Generator_UserColumnName="userno" type="xs:string" minOccurs="0" />
+              <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username" type="xs:string" minOccurs="0" />
+              <xs:element name="notdelay" msprop:Generator_ColumnVarNameInTable="columnnotdelay" msprop:Generator_ColumnPropNameInRow="notdelay" msprop:Generator_ColumnPropNameInTable="notdelayColumn" msprop:Generator_UserColumnName="notdelay" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="isdelay" msprop:Generator_ColumnVarNameInTable="columnisdelay" msprop:Generator_ColumnPropNameInRow="isdelay" msprop:Generator_ColumnPropNameInTable="isdelayColumn" msprop:Generator_UserColumnName="isdelay" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="willdelay" msprop:Generator_ColumnVarNameInTable="columnwilldelay" msprop:Generator_ColumnPropNameInRow="willdelay" msprop:Generator_ColumnPropNameInTable="willdelayColumn" msprop:Generator_UserColumnName="willdelay" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="period1" msprop:Generator_ColumnVarNameInTable="columnperiod1" msprop:Generator_ColumnPropNameInRow="period1" msprop:Generator_ColumnPropNameInTable="period1Column" msprop:Generator_UserColumnName="period1" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="period2" msprop:Generator_ColumnVarNameInTable="columnperiod2" msprop:Generator_ColumnPropNameInRow="period2" msprop:Generator_ColumnPropNameInTable="period2Column" msprop:Generator_UserColumnName="period2" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="period3" msprop:Generator_ColumnVarNameInTable="columnperiod3" msprop:Generator_ColumnPropNameInRow="period3" msprop:Generator_ColumnPropNameInTable="period3Column" msprop:Generator_UserColumnName="period3" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="period4" msprop:Generator_ColumnVarNameInTable="columnperiod4" msprop:Generator_ColumnPropNameInRow="period4" msprop:Generator_ColumnPropNameInTable="period4Column" msprop:Generator_UserColumnName="period4" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="period5" msprop:Generator_ColumnVarNameInTable="columnperiod5" msprop:Generator_ColumnPropNameInRow="period5" msprop:Generator_ColumnPropNameInTable="period5Column" msprop:Generator_UserColumnName="period5" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="period6" msprop:Generator_ColumnVarNameInTable="columnperiod6" msprop:Generator_ColumnPropNameInRow="period6" msprop:Generator_ColumnPropNameInTable="period6Column" msprop:Generator_UserColumnName="period6" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="total" msdata:ReadOnly="true" msdata:Expression="isnull(isdelay,0)+isnull(notdelay,0)" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="thismonrec" msprop:Generator_ColumnVarNameInTable="columnthismonrec" msprop:Generator_ColumnPropNameInRow="thismonrec" msprop:Generator_ColumnPropNameInTable="thismonrecColumn" msprop:Generator_UserColumnName="thismonrec" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="beftotal" msprop:Generator_ColumnVarNameInTable="columnbeftotal" msprop:Generator_ColumnPropNameInRow="beftotal" msprop:Generator_ColumnPropNameInTable="beftotalColumn" msprop:Generator_UserColumnName="beftotal" type="xs:decimal" default="0.00" minOccurs="0" />
+              <xs:element name="rectotal" msdata:ReadOnly="true" msdata:Expression="isnull(thismonrec,0)+isnull(beftotal,0)" msprop:Generator_ColumnVarNameInTable="columnrectotal" msprop:Generator_ColumnPropNameInRow="rectotal" msprop:Generator_ColumnPropNameInTable="rectotalColumn" msprop:Generator_UserColumnName="rectotal" type="xs:decimal" default="0.00" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

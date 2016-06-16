@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IdleProductDS" targetNamespace="http://tempuri.org/IdleProductDS.xsd" xmlns:mstns="http://tempuri.org/IdleProductDS.xsd" xmlns="http://tempuri.org/IdleProductDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IdleProductDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IdleProductDS" msprop:Generator_UserDSName="IdleProductDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_RowEvArgName="tblresultRowChangeEvent" msprop:Generator_RowClassName="tblresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cdrno" msdata:Caption="订单" msprop:Generator_ColumnVarNameInTable="columncdrno" msprop:Generator_ColumnPropNameInRow="cdrno" msprop:Generator_ColumnPropNameInTable="cdrnoColumn" msprop:Generator_UserColumnName="cdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbrcus" msdata:Caption="机型" msprop:Generator_ColumnVarNameInTable="columnitnbrcus" msprop:Generator_ColumnPropNameInRow="itnbrcus" msprop:Generator_ColumnPropNameInTable="itnbrcusColumn" msprop:Generator_UserColumnName="itnbrcus" type="xs:string" minOccurs="0" />
+              <xs:element name="recdate" msdata:Caption="接单日期" msprop:Generator_ColumnVarNameInTable="columnrecdate" msprop:Generator_ColumnPropNameInRow="recdate" msprop:Generator_ColumnPropNameInTable="recdateColumn" msprop:Generator_UserColumnName="recdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cfmdate" msdata:Caption="确认日期" msprop:Generator_ColumnVarNameInTable="columncfmdate" msprop:Generator_ColumnPropNameInRow="cfmdate" msprop:Generator_ColumnPropNameInTable="cfmdateColumn" msprop:Generator_UserColumnName="cfmdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="shipday1" msdata:Caption="交货日期" msprop:Generator_ColumnVarNameInTable="columnshipday1" msprop:Generator_ColumnPropNameInRow="shipday1" msprop:Generator_ColumnPropNameInTable="shipday1Column" msprop:Generator_UserColumnName="shipday1" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="remark1" msdata:Caption="营业备注" msprop:Generator_ColumnVarNameInTable="columnremark1" msprop:Generator_ColumnPropNameInRow="remark1" msprop:Generator_ColumnPropNameInTable="remark1Column" msprop:Generator_UserColumnName="remark1" type="xs:string" minOccurs="0" />
+              <xs:element name="cusno" msdata:Caption="客户编号" msprop:Generator_ColumnVarNameInTable="columncusno" msprop:Generator_ColumnPropNameInRow="cusno" msprop:Generator_ColumnPropNameInTable="cusnoColumn" msprop:Generator_UserColumnName="cusno" type="xs:string" minOccurs="0" />
+              <xs:element name="cusna" msdata:Caption="客户简称" msprop:Generator_ColumnVarNameInTable="columncusna" msprop:Generator_ColumnPropNameInRow="cusna" msprop:Generator_ColumnPropNameInTable="cusnaColumn" msprop:Generator_UserColumnName="cusna" type="xs:string" minOccurs="0" />
+              <xs:element name="areacode" msdata:Caption="区域" msprop:Generator_ColumnVarNameInTable="columnareacode" msprop:Generator_ColumnPropNameInRow="areacode" msprop:Generator_ColumnPropNameInTable="areacodeColumn" msprop:Generator_UserColumnName="areacode" type="xs:string" minOccurs="0" />
+              <xs:element name="mapqty" msdata:Caption="数量" msprop:Generator_ColumnVarNameInTable="columnmapqty" msprop:Generator_ColumnPropNameInRow="mapqty" msprop:Generator_ColumnPropNameInTable="mapqtyColumn" msprop:Generator_UserColumnName="mapqty" type="xs:decimal" minOccurs="0" />
+              <xs:element name="varnr" msdata:Caption="制造号码" msprop:Generator_ColumnVarNameInTable="columnvarnr" msprop:Generator_ColumnPropNameInRow="varnr" msprop:Generator_ColumnPropNameInTable="varnrColumn" msprop:Generator_UserColumnName="varnr" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblarea" msprop:Generator_TableClassName="tblareaDataTable" msprop:Generator_TableVarName="tabletblarea" msprop:Generator_RowChangedName="tblareaRowChanged" msprop:Generator_TablePropName="tblarea" msprop:Generator_RowDeletingName="tblareaRowDeleting" msprop:Generator_RowChangingName="tblareaRowChanging" msprop:Generator_RowEvHandlerName="tblareaRowChangeEventHandler" msprop:Generator_RowDeletedName="tblareaRowDeleted" msprop:Generator_RowClassName="tblareaRow" msprop:Generator_UserTableName="tblarea" msprop:Generator_RowEvArgName="tblareaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:string" minOccurs="0" />
+              <xs:element name="cdesc" msprop:Generator_ColumnVarNameInTable="columncdesc" msprop:Generator_ColumnPropNameInRow="cdesc" msprop:Generator_ColumnPropNameInTable="cdescColumn" msprop:Generator_UserColumnName="cdesc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblstock" msprop:Generator_TableClassName="tblstockDataTable" msprop:Generator_TableVarName="tabletblstock" msprop:Generator_RowChangedName="tblstockRowChanged" msprop:Generator_TablePropName="tblstock" msprop:Generator_RowDeletingName="tblstockRowDeleting" msprop:Generator_RowChangingName="tblstockRowChanging" msprop:Generator_RowEvHandlerName="tblstockRowChangeEventHandler" msprop:Generator_RowDeletedName="tblstockRowDeleted" msprop:Generator_RowClassName="tblstockRow" msprop:Generator_UserTableName="tblstock" msprop:Generator_RowEvArgName="tblstockRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itcls" msdata:Caption="大类" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="件号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="名称" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="varnr" msdata:Caption="制造号码" msprop:Generator_ColumnVarNameInTable="columnvarnr" msprop:Generator_ColumnPropNameInRow="varnr" msprop:Generator_ColumnPropNameInTable="varnrColumn" msprop:Generator_UserColumnName="varnr" type="xs:string" minOccurs="0" />
+              <xs:element name="onhand1" msdata:Caption="数量" msprop:Generator_ColumnVarNameInTable="columnonhand1" msprop:Generator_ColumnPropNameInRow="onhand1" msprop:Generator_ColumnPropNameInTable="onhand1Column" msprop:Generator_UserColumnName="onhand1" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

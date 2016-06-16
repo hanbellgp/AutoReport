@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Notification>
+  <Hanbell.AutoReport.Config.MisWork>
+    <subject>自动报表</subject>
+    <to>
+    </to>
+    <cc>
+      <address>admin@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+    </bcc>
+    <attachments>
+    </attachments>
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day>
+      </day>
+      <time>07:05</time>
+      <lasttime></lasttime>
+      <nexttime></nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.MisWorkConfig">
+    </param>
+  </Hanbell.AutoReport.Config.MisWork>
+</Notification>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FWKCGLDS" targetNamespace="http://tempuri.org/FWKCGLDS.xsd" xmlns:mstns="http://tempuri.org/FWKCGLDS.xsd" xmlns="http://tempuri.org/FWKCGLDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FWKCGLDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FWKCGLDS" msprop:Generator_UserDSName="FWKCGLDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_RowClassName="tblresultRow" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowEvArgName="tblresultRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="部门" msprop:Generator_ColumnVarNameInTable="column部门" msprop:Generator_ColumnPropNameInRow="部门" msprop:Generator_ColumnPropNameInTable="部门Column" msprop:Generator_UserColumnName="部门" type="xs:string" minOccurs="0" />
+              <xs:element name="顺序" msprop:Generator_ColumnVarNameInTable="column顺序" msprop:Generator_ColumnPropNameInRow="顺序" msprop:Generator_ColumnPropNameInTable="顺序Column" msprop:Generator_UserColumnName="顺序" type="xs:string" minOccurs="0" />
+              <xs:element name="ERP区域" msprop:Generator_ColumnVarNameInTable="columnERP区域" msprop:Generator_ColumnPropNameInRow="ERP区域" msprop:Generator_ColumnPropNameInTable="ERP区域Column" msprop:Generator_UserColumnName="ERP区域" type="xs:string" minOccurs="0" />
+              <xs:element name="库号" msprop:Generator_ColumnVarNameInTable="column库号" msprop:Generator_ColumnPropNameInRow="库号" msprop:Generator_ColumnPropNameInTable="库号Column" msprop:Generator_UserColumnName="库号" type="xs:string" minOccurs="0" />
+              <xs:element name="金额" msprop:Generator_ColumnVarNameInTable="column金额" msprop:Generator_ColumnPropNameInRow="金额" msprop:Generator_ColumnPropNameInTable="金额Column" msprop:Generator_UserColumnName="金额" type="xs:decimal" minOccurs="0" />
+              <xs:element name="目标" msprop:Generator_ColumnVarNameInTable="column目标" msprop:Generator_ColumnPropNameInRow="目标" msprop:Generator_ColumnPropNameInTable="目标Column" msprop:Generator_UserColumnName="目标" type="xs:decimal" minOccurs="0" />
+              <xs:element name="库名" msprop:Generator_ColumnVarNameInTable="column库名" msprop:Generator_ColumnPropNameInRow="库名" msprop:Generator_ColumnPropNameInTable="库名Column" msprop:Generator_UserColumnName="库名" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblall" msprop:Generator_TableClassName="tblallDataTable" msprop:Generator_TableVarName="tabletblall" msprop:Generator_RowChangedName="tblallRowChanged" msprop:Generator_TablePropName="tblall" msprop:Generator_RowDeletingName="tblallRowDeleting" msprop:Generator_RowChangingName="tblallRowChanging" msprop:Generator_RowEvHandlerName="tblallRowChangeEventHandler" msprop:Generator_RowDeletedName="tblallRowDeleted" msprop:Generator_RowClassName="tblallRow" msprop:Generator_UserTableName="tblall" msprop:Generator_RowEvArgName="tblallRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trdate" msprop:Generator_ColumnVarNameInTable="columntrdate" msprop:Generator_ColumnPropNameInRow="trdate" msprop:Generator_ColumnPropNameInTable="trdateColumn" msprop:Generator_UserColumnName="trdate" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="amts" msprop:Generator_ColumnVarNameInTable="columnamts" msprop:Generator_ColumnPropNameInRow="amts" msprop:Generator_ColumnPropNameInTable="amtsColumn" msprop:Generator_UserColumnName="amts" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblKF02" msprop:Generator_TableClassName="tblKF02DataTable" msprop:Generator_TableVarName="tabletblKF02" msprop:Generator_TablePropName="tblKF02" msprop:Generator_RowDeletingName="tblKF02RowDeleting" msprop:Generator_RowChangingName="tblKF02RowChanging" msprop:Generator_RowEvHandlerName="tblKF02RowChangeEventHandler" msprop:Generator_RowDeletedName="tblKF02RowDeleted" msprop:Generator_UserTableName="tblKF02" msprop:Generator_RowChangedName="tblKF02RowChanged" msprop:Generator_RowEvArgName="tblKF02RowChangeEvent" msprop:Generator_RowClassName="tblKF02Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trdate" msprop:Generator_ColumnVarNameInTable="columntrdate" msprop:Generator_ColumnPropNameInRow="trdate" msprop:Generator_ColumnPropNameInTable="trdateColumn" msprop:Generator_UserColumnName="trdate" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="amts" msprop:Generator_ColumnVarNameInTable="columnamts" msprop:Generator_ColumnPropNameInRow="amts" msprop:Generator_ColumnPropNameInTable="amtsColumn" msprop:Generator_UserColumnName="amts" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblAKF02" msprop:Generator_TableClassName="tblAKF02DataTable" msprop:Generator_TableVarName="tabletblAKF02" msprop:Generator_TablePropName="tblAKF02" msprop:Generator_RowDeletingName="tblAKF02RowDeleting" msprop:Generator_RowChangingName="tblAKF02RowChanging" msprop:Generator_RowEvHandlerName="tblAKF02RowChangeEventHandler" msprop:Generator_RowDeletedName="tblAKF02RowDeleted" msprop:Generator_UserTableName="tblAKF02" msprop:Generator_RowChangedName="tblAKF02RowChanged" msprop:Generator_RowEvArgName="tblAKF02RowChangeEvent" msprop:Generator_RowClassName="tblAKF02Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trdate" msprop:Generator_ColumnVarNameInTable="columntrdate" msprop:Generator_ColumnPropNameInRow="trdate" msprop:Generator_ColumnPropNameInTable="trdateColumn" msprop:Generator_UserColumnName="trdate" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="amts" msprop:Generator_ColumnVarNameInTable="columnamts" msprop:Generator_ColumnPropNameInRow="amts" msprop:Generator_ColumnPropNameInTable="amtsColumn" msprop:Generator_UserColumnName="amts" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblKF01" msprop:Generator_TableClassName="tblKF01DataTable" msprop:Generator_TableVarName="tabletblKF01" msprop:Generator_TablePropName="tblKF01" msprop:Generator_RowDeletingName="tblKF01RowDeleting" msprop:Generator_RowChangingName="tblKF01RowChanging" msprop:Generator_RowEvHandlerName="tblKF01RowChangeEventHandler" msprop:Generator_RowDeletedName="tblKF01RowDeleted" msprop:Generator_UserTableName="tblKF01" msprop:Generator_RowChangedName="tblKF01RowChanged" msprop:Generator_RowEvArgName="tblKF01RowChangeEvent" msprop:Generator_RowClassName="tblKF01Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trdate" msprop:Generator_ColumnVarNameInTable="columntrdate" msprop:Generator_ColumnPropNameInRow="trdate" msprop:Generator_ColumnPropNameInTable="trdateColumn" msprop:Generator_UserColumnName="trdate" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="amts" msprop:Generator_ColumnVarNameInTable="columnamts" msprop:Generator_ColumnPropNameInRow="amts" msprop:Generator_ColumnPropNameInTable="amtsColumn" msprop:Generator_UserColumnName="amts" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblKF03" msprop:Generator_TableClassName="tblKF03DataTable" msprop:Generator_TableVarName="tabletblKF03" msprop:Generator_TablePropName="tblKF03" msprop:Generator_RowDeletingName="tblKF03RowDeleting" msprop:Generator_RowChangingName="tblKF03RowChanging" msprop:Generator_RowEvHandlerName="tblKF03RowChangeEventHandler" msprop:Generator_RowDeletedName="tblKF03RowDeleted" msprop:Generator_UserTableName="tblKF03" msprop:Generator_RowChangedName="tblKF03RowChanged" msprop:Generator_RowEvArgName="tblKF03RowChangeEvent" msprop:Generator_RowClassName="tblKF03Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trdate" msprop:Generator_ColumnVarNameInTable="columntrdate" msprop:Generator_ColumnPropNameInRow="trdate" msprop:Generator_ColumnPropNameInTable="trdateColumn" msprop:Generator_UserColumnName="trdate" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="amts" msprop:Generator_ColumnVarNameInTable="columnamts" msprop:Generator_ColumnPropNameInRow="amts" msprop:Generator_ColumnPropNameInTable="amtsColumn" msprop:Generator_UserColumnName="amts" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblZZ" msprop:Generator_TableClassName="tblZZDataTable" msprop:Generator_TableVarName="tabletblZZ" msprop:Generator_TablePropName="tblZZ" msprop:Generator_RowDeletingName="tblZZRowDeleting" msprop:Generator_RowChangingName="tblZZRowChanging" msprop:Generator_RowEvHandlerName="tblZZRowChangeEventHandler" msprop:Generator_RowDeletedName="tblZZRowDeleted" msprop:Generator_UserTableName="tblZZ" msprop:Generator_RowChangedName="tblZZRowChanged" msprop:Generator_RowEvArgName="tblZZRowChangeEvent" msprop:Generator_RowClassName="tblZZRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trdate" msprop:Generator_ColumnVarNameInTable="columntrdate" msprop:Generator_ColumnPropNameInRow="trdate" msprop:Generator_ColumnPropNameInTable="trdateColumn" msprop:Generator_UserColumnName="trdate" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="amts" msprop:Generator_ColumnVarNameInTable="columnamts" msprop:Generator_ColumnPropNameInRow="amts" msprop:Generator_ColumnPropNameInTable="amtsColumn" msprop:Generator_UserColumnName="amts" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

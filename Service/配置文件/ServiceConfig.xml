@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Service>
+	<mailserver>
+		<smtp>172.16.10.18</smtp>
+		<port>25</port>
+    <from>noreply@hanbell.com.cn</from>
+		<account></account>
+		<pwd></pwd>
+		<domain>hanbell.com.cn</domain>
+	</mailserver>
+  <webserver>http://localhost:port/virtualpath/</webserver>
+	<objectfile>AutoReportConfig.dll</objectfile>
+</Service>

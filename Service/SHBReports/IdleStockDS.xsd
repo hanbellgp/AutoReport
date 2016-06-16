@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IdleStockDS" targetNamespace="http://tempuri.org/IdleStockDS.xsd" xmlns:mstns="http://tempuri.org/IdleStockDS.xsd" xmlns="http://tempuri.org/IdleStockDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IdleStockDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IdleStockDS" msprop:Generator_UserDSName="IdleStockDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblinvmon" msprop:Generator_TableClassName="tblinvmonDataTable" msprop:Generator_TableVarName="tabletblinvmon" msprop:Generator_TablePropName="tblinvmon" msprop:Generator_RowDeletingName="tblinvmonRowDeleting" msprop:Generator_RowChangingName="tblinvmonRowChanging" msprop:Generator_RowEvHandlerName="tblinvmonRowChangeEventHandler" msprop:Generator_RowDeletedName="tblinvmonRowDeleted" msprop:Generator_UserTableName="tblinvmon" msprop:Generator_RowChangedName="tblinvmonRowChanged" msprop:Generator_RowEvArgName="tblinvmonRowChangeEvent" msprop:Generator_RowClassName="tblinvmonRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="yearmon" msprop:Generator_ColumnVarNameInTable="columnyearmon" msprop:Generator_ColumnPropNameInRow="yearmon" msprop:Generator_ColumnPropNameInTable="yearmonColumn" msprop:Generator_UserColumnName="yearmon" type="xs:string" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" />
+              <xs:element name="whdsc" msprop:Generator_ColumnVarNameInTable="columnwhdsc" msprop:Generator_ColumnPropNameInRow="whdsc" msprop:Generator_ColumnPropNameInTable="whdscColumn" msprop:Generator_UserColumnName="whdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="itclscode" msprop:Generator_ColumnVarNameInTable="columnitclscode" msprop:Generator_ColumnPropNameInRow="itclscode" msprop:Generator_ColumnPropNameInTable="itclscodeColumn" msprop:Generator_UserColumnName="itclscode" type="xs:string" minOccurs="0" />
+              <xs:element name="itcls" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="genre1" msprop:Generator_ColumnVarNameInTable="columngenre1" msprop:Generator_ColumnPropNameInRow="genre1" msprop:Generator_ColumnPropNameInTable="genre1Column" msprop:Generator_UserColumnName="genre1" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period1" msprop:Generator_ColumnVarNameInTable="columnperiod1" msprop:Generator_ColumnPropNameInRow="period1" msprop:Generator_ColumnPropNameInTable="period1Column" msprop:Generator_UserColumnName="period1" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total1" msprop:Generator_ColumnVarNameInTable="columntotal1" msprop:Generator_ColumnPropNameInRow="total1" msprop:Generator_ColumnPropNameInTable="total1Column" msprop:Generator_UserColumnName="total1" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period2" msprop:Generator_ColumnVarNameInTable="columnperiod2" msprop:Generator_ColumnPropNameInRow="period2" msprop:Generator_ColumnPropNameInTable="period2Column" msprop:Generator_UserColumnName="period2" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total2" msprop:Generator_ColumnVarNameInTable="columntotal2" msprop:Generator_ColumnPropNameInRow="total2" msprop:Generator_ColumnPropNameInTable="total2Column" msprop:Generator_UserColumnName="total2" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period3" msprop:Generator_ColumnVarNameInTable="columnperiod3" msprop:Generator_ColumnPropNameInRow="period3" msprop:Generator_ColumnPropNameInTable="period3Column" msprop:Generator_UserColumnName="period3" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total3" msprop:Generator_ColumnVarNameInTable="columntotal3" msprop:Generator_ColumnPropNameInRow="total3" msprop:Generator_ColumnPropNameInTable="total3Column" msprop:Generator_UserColumnName="total3" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period4" msprop:Generator_ColumnVarNameInTable="columnperiod4" msprop:Generator_ColumnPropNameInRow="period4" msprop:Generator_ColumnPropNameInTable="period4Column" msprop:Generator_UserColumnName="period4" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total4" msprop:Generator_ColumnVarNameInTable="columntotal4" msprop:Generator_ColumnPropNameInRow="total4" msprop:Generator_ColumnPropNameInTable="total4Column" msprop:Generator_UserColumnName="total4" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period5" msprop:Generator_ColumnVarNameInTable="columnperiod5" msprop:Generator_ColumnPropNameInRow="period5" msprop:Generator_ColumnPropNameInTable="period5Column" msprop:Generator_UserColumnName="period5" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total5" msprop:Generator_ColumnVarNameInTable="columntotal5" msprop:Generator_ColumnPropNameInRow="total5" msprop:Generator_ColumnPropNameInTable="total5Column" msprop:Generator_UserColumnName="total5" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period6" msprop:Generator_ColumnVarNameInTable="columnperiod6" msprop:Generator_ColumnPropNameInRow="period6" msprop:Generator_ColumnPropNameInTable="period6Column" msprop:Generator_UserColumnName="period6" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total6" msprop:Generator_ColumnVarNameInTable="columntotal6" msprop:Generator_ColumnPropNameInRow="total6" msprop:Generator_ColumnPropNameInTable="total6Column" msprop:Generator_UserColumnName="total6" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period7" msprop:Generator_ColumnVarNameInTable="columnperiod7" msprop:Generator_ColumnPropNameInRow="period7" msprop:Generator_ColumnPropNameInTable="period7Column" msprop:Generator_UserColumnName="period7" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total7" msprop:Generator_ColumnVarNameInTable="columntotal7" msprop:Generator_ColumnPropNameInRow="total7" msprop:Generator_ColumnPropNameInTable="total7Column" msprop:Generator_UserColumnName="total7" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period8" msprop:Generator_ColumnVarNameInTable="columnperiod8" msprop:Generator_ColumnPropNameInRow="period8" msprop:Generator_ColumnPropNameInTable="period8Column" msprop:Generator_UserColumnName="period8" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="total8" msprop:Generator_ColumnVarNameInTable="columntotal8" msprop:Generator_ColumnPropNameInRow="total8" msprop:Generator_ColumnPropNameInTable="total8Column" msprop:Generator_UserColumnName="total8" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblinvmonhistory" msprop:Generator_TableClassName="tblinvmonhistoryDataTable" msprop:Generator_TableVarName="tabletblinvmonhistory" msprop:Generator_TablePropName="tblinvmonhistory" msprop:Generator_RowDeletingName="tblinvmonhistoryRowDeleting" msprop:Generator_RowChangingName="tblinvmonhistoryRowChanging" msprop:Generator_RowEvHandlerName="tblinvmonhistoryRowChangeEventHandler" msprop:Generator_RowDeletedName="tblinvmonhistoryRowDeleted" msprop:Generator_UserTableName="tblinvmonhistory" msprop:Generator_RowChangedName="tblinvmonhistoryRowChanged" msprop:Generator_RowEvArgName="tblinvmonhistoryRowChangeEvent" msprop:Generator_RowClassName="tblinvmonhistoryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" />
+              <xs:element name="itcls" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="itclscode" msprop:Generator_ColumnVarNameInTable="columnitclscode" msprop:Generator_ColumnPropNameInRow="itclscode" msprop:Generator_ColumnPropNameInTable="itclscodeColumn" msprop:Generator_UserColumnName="itclscode" type="xs:string" minOccurs="0" />
+              <xs:element name="period2" msprop:Generator_ColumnVarNameInTable="columnperiod2" msprop:Generator_ColumnPropNameInRow="period2" msprop:Generator_ColumnPropNameInTable="period2Column" msprop:Generator_UserColumnName="period2" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period3" msprop:Generator_ColumnVarNameInTable="columnperiod3" msprop:Generator_ColumnPropNameInRow="period3" msprop:Generator_ColumnPropNameInTable="period3Column" msprop:Generator_UserColumnName="period3" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period4" msprop:Generator_ColumnVarNameInTable="columnperiod4" msprop:Generator_ColumnPropNameInRow="period4" msprop:Generator_ColumnPropNameInTable="period4Column" msprop:Generator_UserColumnName="period4" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period5" msprop:Generator_ColumnVarNameInTable="columnperiod5" msprop:Generator_ColumnPropNameInRow="period5" msprop:Generator_ColumnPropNameInTable="period5Column" msprop:Generator_UserColumnName="period5" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period6" msprop:Generator_ColumnVarNameInTable="columnperiod6" msprop:Generator_ColumnPropNameInRow="period6" msprop:Generator_ColumnPropNameInTable="period6Column" msprop:Generator_UserColumnName="period6" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period7" msprop:Generator_ColumnVarNameInTable="columnperiod7" msprop:Generator_ColumnPropNameInRow="period7" msprop:Generator_ColumnPropNameInTable="period7Column" msprop:Generator_UserColumnName="period7" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblresult_PP" msprop:Generator_TableClassName="tblresult_PPDataTable" msprop:Generator_TableVarName="tabletblresult_PP" msprop:Generator_TablePropName="tblresult_PP" msprop:Generator_RowDeletingName="tblresult_PPRowDeleting" msprop:Generator_RowChangingName="tblresult_PPRowChanging" msprop:Generator_RowEvHandlerName="tblresult_PPRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresult_PPRowDeleted" msprop:Generator_UserTableName="tblresult_PP" msprop:Generator_RowChangedName="tblresult_PPRowChanged" msprop:Generator_RowEvArgName="tblresult_PPRowChangeEvent" msprop:Generator_RowClassName="tblresult_PPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="yearmon" msprop:Generator_ColumnVarNameInTable="columnyearmon" msprop:Generator_ColumnPropNameInRow="yearmon" msprop:Generator_ColumnPropNameInTable="yearmonColumn" msprop:Generator_UserColumnName="yearmon" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="whdsc" msprop:Generator_ColumnVarNameInTable="columnwhdsc" msprop:Generator_ColumnPropNameInRow="whdsc" msprop:Generator_ColumnPropNameInTable="whdscColumn" msprop:Generator_UserColumnName="whdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="itclscode" msprop:Generator_ColumnVarNameInTable="columnitclscode" msprop:Generator_ColumnPropNameInRow="itclscode" msprop:Generator_ColumnPropNameInTable="itclscodeColumn" msprop:Generator_UserColumnName="itclscode" type="xs:string" minOccurs="0" />
+              <xs:element name="itcls" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="baseqty" msprop:Generator_ColumnVarNameInTable="columnbaseqty" msprop:Generator_ColumnPropNameInRow="baseqty" msprop:Generator_ColumnPropNameInTable="baseqtyColumn" msprop:Generator_UserColumnName="baseqty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period1" msprop:Generator_ColumnVarNameInTable="columnperiod1" msprop:Generator_ColumnPropNameInRow="period1" msprop:Generator_ColumnPropNameInTable="period1Column" msprop:Generator_UserColumnName="period1" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period2" msprop:Generator_ColumnVarNameInTable="columnperiod2" msprop:Generator_ColumnPropNameInRow="period2" msprop:Generator_ColumnPropNameInTable="period2Column" msprop:Generator_UserColumnName="period2" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period3" msprop:Generator_ColumnVarNameInTable="columnperiod3" msprop:Generator_ColumnPropNameInRow="period3" msprop:Generator_ColumnPropNameInTable="period3Column" msprop:Generator_UserColumnName="period3" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period4" msprop:Generator_ColumnVarNameInTable="columnperiod4" msprop:Generator_ColumnPropNameInRow="period4" msprop:Generator_ColumnPropNameInTable="period4Column" msprop:Generator_UserColumnName="period4" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period5" msprop:Generator_ColumnVarNameInTable="columnperiod5" msprop:Generator_ColumnPropNameInRow="period5" msprop:Generator_ColumnPropNameInTable="period5Column" msprop:Generator_UserColumnName="period5" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period6" msprop:Generator_ColumnVarNameInTable="columnperiod6" msprop:Generator_ColumnPropNameInRow="period6" msprop:Generator_ColumnPropNameInTable="period6Column" msprop:Generator_UserColumnName="period6" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="period7" msprop:Generator_ColumnVarNameInTable="columnperiod7" msprop:Generator_ColumnPropNameInRow="period7" msprop:Generator_ColumnPropNameInTable="period7Column" msprop:Generator_UserColumnName="period7" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="genre1" msprop:Generator_ColumnVarNameInTable="columngenre1" msprop:Generator_ColumnPropNameInRow="genre1" msprop:Generator_ColumnPropNameInTable="genre1Column" msprop:Generator_UserColumnName="genre1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="tblinvmonPK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblinvmon" />
+      <xs:field xpath="mstns:yearmon" />
+      <xs:field xpath="mstns:wareh" />
+      <xs:field xpath="mstns:itnbr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
