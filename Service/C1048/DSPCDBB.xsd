@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSPCDBB" targetNamespace="http://tempuri.org/DSPCDBB.xsd" xmlns:mstns="http://tempuri.org/DSPCDBB.xsd" xmlns="http://tempuri.org/DSPCDBB.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSPCDBB" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSPCDBB" msprop:Generator_UserDSName="DSPCDBB">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DSpcdbb_x0020_" msprop:Generator_TableClassName="DSpcdbb_DataTable" msprop:Generator_TableVarName="tableDSpcdbb_" msprop:Generator_TablePropName="DSpcdbb_" msprop:Generator_RowDeletingName="DSpcdbb_RowDeleting" msprop:Generator_UserTableName="DSpcdbb " msprop:Generator_RowChangingName="DSpcdbb_RowChanging" msprop:Generator_RowEvHandlerName="DSpcdbb_RowChangeEventHandler" msprop:Generator_RowDeletedName="DSpcdbb_RowDeleted" msprop:Generator_RowEvArgName="DSpcdbb_RowChangeEvent" msprop:Generator_RowChangedName="DSpcdbb_RowChanged" msprop:Generator_RowClassName="DSpcdbb_Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="noamc002" msprop:Generator_ColumnVarNameInTable="columnnoamc002" msprop:Generator_ColumnPropNameInRow="noamc002" msprop:Generator_ColumnPropNameInTable="noamc002Column" msprop:Generator_UserColumnName="noamc002" type="xs:string" minOccurs="0" />
+              <xs:element name="noatk002" msprop:Generator_ColumnVarNameInTable="columnnoatk002" msprop:Generator_ColumnPropNameInRow="noatk002" msprop:Generator_ColumnPropNameInTable="noatk002Column" msprop:Generator_UserColumnName="noatk002" type="xs:string" minOccurs="0" />
+              <xs:element name="rq" msprop:Generator_ColumnVarNameInTable="columnrq" msprop:Generator_ColumnPropNameInRow="rq" msprop:Generator_ColumnPropNameInTable="rqColumn" msprop:Generator_UserColumnName="rq" type="xs:string" minOccurs="0" />
+              <xs:element name="noamc012" msprop:Generator_ColumnVarNameInTable="columnnoamc012" msprop:Generator_ColumnPropNameInRow="noamc012" msprop:Generator_ColumnPropNameInTable="noamc012Column" msprop:Generator_UserColumnName="noamc012" type="xs:string" minOccurs="0" />
+              <xs:element name="noatk023" msprop:Generator_ColumnVarNameInTable="columnnoatk023" msprop:Generator_ColumnPropNameInRow="noatk023" msprop:Generator_ColumnPropNameInTable="noatk023Column" msprop:Generator_UserColumnName="noatk023" type="xs:string" minOccurs="0" />
+              <xs:element name="noatk007" msprop:Generator_ColumnVarNameInTable="columnnoatk007" msprop:Generator_ColumnPropNameInRow="noatk007" msprop:Generator_ColumnPropNameInTable="noatk007Column" msprop:Generator_UserColumnName="noatk007" type="xs:string" minOccurs="0" />
+              <xs:element name="noatk008" msprop:Generator_ColumnVarNameInTable="columnnoatk008" msprop:Generator_ColumnPropNameInRow="noatk008" msprop:Generator_ColumnPropNameInTable="noatk008Column" msprop:Generator_UserColumnName="noatk008" type="xs:string" minOccurs="0" />
+              <xs:element name="noatk009" msprop:Generator_ColumnVarNameInTable="columnnoatk009" msprop:Generator_ColumnPropNameInRow="noatk009" msprop:Generator_ColumnPropNameInTable="noatk009Column" msprop:Generator_UserColumnName="noatk009" type="xs:string" minOccurs="0" />
+              <xs:element name="noatk010" msprop:Generator_ColumnVarNameInTable="columnnoatk010" msprop:Generator_ColumnPropNameInRow="noatk010" msprop:Generator_ColumnPropNameInTable="noatk010Column" msprop:Generator_UserColumnName="noatk010" type="xs:string" minOccurs="0" />
+              <xs:element name="noamc013" msprop:Generator_ColumnVarNameInTable="columnnoamc013" msprop:Generator_ColumnPropNameInRow="noamc013" msprop:Generator_ColumnPropNameInTable="noamc013Column" msprop:Generator_UserColumnName="noamc013" type="xs:string" minOccurs="0" />
+              <xs:element name="noamc014" msprop:Generator_ColumnVarNameInTable="columnnoamc014" msprop:Generator_ColumnPropNameInRow="noamc014" msprop:Generator_ColumnPropNameInTable="noamc014Column" msprop:Generator_UserColumnName="noamc014" type="xs:string" minOccurs="0" />
+              <xs:element name="hcrq" msprop:Generator_ColumnVarNameInTable="columnhcrq" msprop:Generator_ColumnPropNameInRow="hcrq" msprop:Generator_ColumnPropNameInTable="hcrqColumn" msprop:Generator_UserColumnName="hcrq" type="xs:string" minOccurs="0" />
+              <xs:element name="noamc015" msprop:Generator_ColumnVarNameInTable="columnnoamc015" msprop:Generator_ColumnPropNameInRow="noamc015" msprop:Generator_ColumnPropNameInTable="noamc015Column" msprop:Generator_UserColumnName="noamc015" type="xs:string" minOccurs="0" />
+              <xs:element name="noamc005" msprop:Generator_ColumnVarNameInTable="columnnoamc005" msprop:Generator_ColumnPropNameInRow="noamc005" msprop:Generator_ColumnPropNameInTable="noamc005Column" msprop:Generator_UserColumnName="noamc005" type="xs:string" minOccurs="0" />
+              <xs:element name="noamc003" msprop:Generator_ColumnVarNameInTable="columnnoamc003" msprop:Generator_ColumnPropNameInRow="noamc003" msprop:Generator_ColumnPropNameInTable="noamc003Column" msprop:Generator_UserColumnName="noamc003" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

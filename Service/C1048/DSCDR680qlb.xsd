@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCDR680qlb" targetNamespace="http://tempuri.org/DSCDR680qlb.xsd" xmlns:mstns="http://tempuri.org/DSCDR680qlb.xsd" xmlns="http://tempuri.org/DSCDR680qlb.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCDR680qlb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSCDR680qlb" msprop:Generator_UserDSName="DSCDR680qlb">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CDR680qlb" msprop:Generator_TableClassName="CDR680qlbDataTable" msprop:Generator_TableVarName="tableCDR680qlb" msprop:Generator_TablePropName="CDR680qlb" msprop:Generator_RowDeletingName="CDR680qlbRowDeleting" msprop:Generator_UserTableName="CDR680qlb" msprop:Generator_RowChangingName="CDR680qlbRowChanging" msprop:Generator_RowEvHandlerName="CDR680qlbRowChangeEventHandler" msprop:Generator_RowDeletedName="CDR680qlbRowDeleted" msprop:Generator_RowEvArgName="CDR680qlbRowChangeEvent" msprop:Generator_RowChangedName="CDR680qlbRowChanged" msprop:Generator_RowClassName="CDR680qlbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cusno" msprop:Generator_ColumnVarNameInTable="columncusno" msprop:Generator_ColumnPropNameInRow="cusno" msprop:Generator_ColumnPropNameInTable="cusnoColumn" msprop:Generator_UserColumnName="cusno" type="xs:string" minOccurs="0" />
+              <xs:element name="cusna" msprop:Generator_ColumnVarNameInTable="columncusna" msprop:Generator_ColumnPropNameInRow="cusna" msprop:Generator_ColumnPropNameInTable="cusnaColumn" msprop:Generator_UserColumnName="cusna" type="xs:string" minOccurs="0" />
+              <xs:element name="shpdate" msprop:Generator_ColumnVarNameInTable="columnshpdate" msprop:Generator_ColumnPropNameInRow="shpdate" msprop:Generator_ColumnPropNameInTable="shpdateColumn" msprop:Generator_UserColumnName="shpdate" type="xs:string" minOccurs="0" />
+              <xs:element name="shpno" msprop:Generator_ColumnVarNameInTable="columnshpno" msprop:Generator_ColumnPropNameInRow="shpno" msprop:Generator_ColumnPropNameInTable="shpnoColumn" msprop:Generator_UserColumnName="shpno" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="qlsl" msprop:Generator_ColumnVarNameInTable="columnqlsl" msprop:Generator_ColumnPropNameInRow="qlsl" msprop:Generator_ColumnPropNameInTable="qlslColumn" msprop:Generator_UserColumnName="qlsl" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSJZchmxb" targetNamespace="http://tempuri.org/DSJZchmxb.xsd" xmlns:mstns="http://tempuri.org/DSJZchmxb.xsd" xmlns="http://tempuri.org/DSJZchmxb.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSJZchmxb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSJZchmxb" msprop:Generator_UserDSName="DSJZchmxb">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_RowEvArgName="tblresultRowChangeEvent" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_RowClassName="tblresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itnbr" msdata:Caption="件号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="机型" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="q01" msdata:Caption="01月" msprop:Generator_ColumnVarNameInTable="columnq01" msprop:Generator_ColumnPropNameInRow="q01" msprop:Generator_ColumnPropNameInTable="q01Column" msprop:Generator_UserColumnName="q01" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q02" msdata:Caption="02月" msprop:Generator_ColumnVarNameInTable="columnq02" msprop:Generator_ColumnPropNameInRow="q02" msprop:Generator_ColumnPropNameInTable="q02Column" msprop:Generator_UserColumnName="q02" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q03" msdata:Caption="03月" msprop:Generator_ColumnVarNameInTable="columnq03" msprop:Generator_ColumnPropNameInRow="q03" msprop:Generator_ColumnPropNameInTable="q03Column" msprop:Generator_UserColumnName="q03" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q04" msdata:Caption="04月" msprop:Generator_ColumnVarNameInTable="columnq04" msprop:Generator_ColumnPropNameInRow="q04" msprop:Generator_ColumnPropNameInTable="q04Column" msprop:Generator_UserColumnName="q04" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q05" msdata:Caption="05月" msprop:Generator_ColumnVarNameInTable="columnq05" msprop:Generator_ColumnPropNameInRow="q05" msprop:Generator_ColumnPropNameInTable="q05Column" msprop:Generator_UserColumnName="q05" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q06" msdata:Caption="06月" msprop:Generator_ColumnVarNameInTable="columnq06" msprop:Generator_ColumnPropNameInRow="q06" msprop:Generator_ColumnPropNameInTable="q06Column" msprop:Generator_UserColumnName="q06" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q07" msdata:Caption="07月" msprop:Generator_ColumnVarNameInTable="columnq07" msprop:Generator_ColumnPropNameInRow="q07" msprop:Generator_ColumnPropNameInTable="q07Column" msprop:Generator_UserColumnName="q07" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q08" msdata:Caption="08月" msprop:Generator_ColumnVarNameInTable="columnq08" msprop:Generator_ColumnPropNameInRow="q08" msprop:Generator_ColumnPropNameInTable="q08Column" msprop:Generator_UserColumnName="q08" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q09" msdata:Caption="09月" msprop:Generator_ColumnVarNameInTable="columnq09" msprop:Generator_ColumnPropNameInRow="q09" msprop:Generator_ColumnPropNameInTable="q09Column" msprop:Generator_UserColumnName="q09" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q10" msdata:Caption="10月" msprop:Generator_ColumnVarNameInTable="columnq10" msprop:Generator_ColumnPropNameInRow="q10" msprop:Generator_ColumnPropNameInTable="q10Column" msprop:Generator_UserColumnName="q10" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q11" msdata:Caption="11月" msprop:Generator_ColumnVarNameInTable="columnq11" msprop:Generator_ColumnPropNameInRow="q11" msprop:Generator_ColumnPropNameInTable="q11Column" msprop:Generator_UserColumnName="q11" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="q12" msdata:Caption="12月" msprop:Generator_ColumnVarNameInTable="columnq12" msprop:Generator_ColumnPropNameInRow="q12" msprop:Generator_ColumnPropNameInTable="q12Column" msprop:Generator_UserColumnName="q12" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="qtoyal" msdata:ReadOnly="true" msdata:Expression="q01+q02+q03+q04+q05+q06+q07+q08+q09+q10+q11+q12" msdata:Caption="总计" msprop:Generator_ColumnVarNameInTable="columnqtoyal" msprop:Generator_ColumnPropNameInRow="qtoyal" msprop:Generator_ColumnPropNameInTable="qtoyalColumn" msprop:Generator_UserColumnName="qtoyal" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl" msprop:Generator_TableClassName="tblDataTable" msprop:Generator_TableVarName="tabletbl" msprop:Generator_TablePropName="tbl" msprop:Generator_RowDeletingName="tblRowDeleting" msprop:Generator_UserTableName="tbl" msprop:Generator_RowChangingName="tblRowChanging" msprop:Generator_RowEvHandlerName="tblRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRowDeleted" msprop:Generator_RowEvArgName="tblRowChangeEvent" msprop:Generator_RowChangedName="tblRowChanged" msprop:Generator_RowClassName="tblRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="spdsc2" msprop:Generator_ColumnVarNameInTable="columnspdsc2" msprop:Generator_ColumnPropNameInRow="spdsc2" msprop:Generator_ColumnPropNameInTable="spdsc2Column" msprop:Generator_UserColumnName="spdsc2" type="xs:string" minOccurs="0" />
+              <xs:element name="cusna" msprop:Generator_ColumnVarNameInTable="columncusna" msprop:Generator_ColumnPropNameInRow="cusna" msprop:Generator_ColumnPropNameInTable="cusnaColumn" msprop:Generator_UserColumnName="cusna" type="xs:string" minOccurs="0" />
+              <xs:element name="yearmon" msprop:Generator_ColumnVarNameInTable="columnyearmon" msprop:Generator_ColumnPropNameInRow="yearmon" msprop:Generator_ColumnPropNameInTable="yearmonColumn" msprop:Generator_UserColumnName="yearmon" type="xs:string" minOccurs="0" />
+              <xs:element name="shpamts" msprop:Generator_ColumnVarNameInTable="columnshpamts" msprop:Generator_ColumnPropNameInRow="shpamts" msprop:Generator_ColumnPropNameInTable="shpamtsColumn" msprop:Generator_UserColumnName="shpamts" type="xs:decimal" minOccurs="0" />
+              <xs:element name="shpqy" msprop:Generator_ColumnVarNameInTable="columnshpqy" msprop:Generator_ColumnPropNameInRow="shpqy" msprop:Generator_ColumnPropNameInTable="shpqyColumn" msprop:Generator_UserColumnName="shpqy" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

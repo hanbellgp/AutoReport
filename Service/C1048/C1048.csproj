@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F567C891-E638-4FA4-A976-72E5AF87C2F3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hanbell.AutoReport.Config</RootNamespace>
+    <AssemblyName>C1048</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bxdmx.cs" />
+    <Compile Include="BxdmxConfig.cs" />
+    <Compile Include="BxdmxReport.cs">
+      <DependentUpon>BxdmxReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CDR680qlb.cs" />
+    <Compile Include="CDR680qlbConfig.cs" />
+    <Compile Include="CDR680qlbReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDR680qlbReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cdrcusxgb.cs" />
+    <Compile Include="CdrcusxgbConfig.cs" />
+    <Compile Include="Cglb.cs" />
+    <Compile Include="CglbConfig.cs" />
+    <Compile Include="Cglb_zj.cs" />
+    <Compile Include="Cglb_zjConfig.cs" />
+    <Compile Include="CHU.cs" />
+    <Compile Include="CHUConfig.cs" />
+    <Compile Include="Dpcwlycb.cs" />
+    <Compile Include="DpcwlycbConfig.cs" />
+    <Compile Include="DSBxdmx.cs">
+      <DependentUpon>DSBxdmx.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSBxdmx.Designer.cs">
+      <DependentUpon>DSBxdmx.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DSCDR680qlb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCDR680qlb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCdrcusxgb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCdrcusxgb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCglb.cs">
+      <DependentUpon>DSCglb.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSCglb.Designer.cs">
+      <DependentUpon>DSCglb.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DSCglb_zj.cs">
+      <DependentUpon>DSCglb_zj.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSCglb_zj.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCglb_zj.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCHU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCHU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSDpcwlycb.cs">
+      <DependentUpon>DSDpcwlycb.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSDpcwlycb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDpcwlycb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSERPCglb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSERPCglb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSERPCglb_zj.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSERPCglb_zj.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSFddxgb.cs">
+      <DependentUpon>DSFddxgb.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSFddxgb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSFddxgb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSGuanlian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSGuanlian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSJZchmxb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSJZchmxb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSKehu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSKehu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSNFWD.cs">
+      <DependentUpon>DSNFWD.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSNFWD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSNFWD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSNFWJAD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSNFWJAD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSNFWLLD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSNFWLLD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSNKFJAD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSNKFJAD.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPCDBB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPCDBB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPgtbb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPgtbb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPurvdrxgb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPurvdrxgb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTest.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERPCglb.cs" />
+    <Compile Include="ERPCglbConfig.cs" />
+    <Compile Include="ERPCglb_qt.cs" />
+    <Compile Include="ERPCglb_qtConfig.cs" />
+    <Compile Include="ERPCglb_zj.cs" />
+    <Compile Include="ERPCglb_zjConfig.cs" />
+    <Compile Include="ERPMonthCloseConfig_VN.cs" />
+    <Compile Include="ERPMonthCloseDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPMonthCloseDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERPMonthClose_VN.cs" />
+    <Compile Include="Fddxgb.cs" />
+    <Compile Include="FddxgbConfig.cs" />
+    <Compile Include="Guanlian.cs" />
+    <Compile Include="GuanlianConfig.cs" />
+    <Compile Include="JZchmxb.cs" />
+    <Compile Include="JZchmxbConfig.cs" />
+    <Compile Include="JZchmxbReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JZchmxbReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JZchmxbReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JZchmxbReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kehu.cs" />
+    <Compile Include="KehuConfig.cs" />
+    <Compile Include="NFWD.cs" />
+    <Compile Include="NFWDConfig.cs" />
+    <Compile Include="NFWJAD.cs" />
+    <Compile Include="NFWJADConfig.cs" />
+    <Compile Include="NFWLLD.cs" />
+    <Compile Include="NFWLLDConfig.cs" />
+    <Compile Include="NKFJAD.cs" />
+    <Compile Include="NKFJADConfig.cs" />
+    <Compile Include="PCDBB.cs" />
+    <Compile Include="PCDBBConfig.cs" />
+    <Compile Include="PcdbbReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PcdbbReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PGTBB.cs" />
+    <Compile Include="PGTBBConfig.cs" />
+    <Compile Include="PgtbbReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PgtbbReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ERPMonthCloseReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPMonthCloseReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Purvdrxgb.cs" />
+    <Compile Include="PurvdrxgbReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurvdrxgbReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurvdrxgbConfig.cs" />
+    <Compile Include="CdrcusxgbReport.cs">
+      <DependentUpon>CdrcusxgbReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Test.cs" />
+    <Compile Include="TestConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DSBxdmx.xsc">
+      <DependentUpon>DSBxdmx.xsd</DependentUpon>
+    </None>
+    <None Include="DSBxdmx.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSBxdmx.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSBxdmx.xss">
+      <DependentUpon>DSBxdmx.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR680qlb.xsc">
+      <DependentUpon>DSCDR680qlb.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR680qlb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCDR680qlb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCDR680qlb.xss">
+      <DependentUpon>DSCDR680qlb.xsd</DependentUpon>
+    </None>
+    <None Include="DSCdrcusxgb.xsc">
+      <DependentUpon>DSCdrcusxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSCdrcusxgb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCdrcusxgb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCdrcusxgb.xss">
+      <DependentUpon>DSCdrcusxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSCglb.xsc">
+      <DependentUpon>DSCglb.xsd</DependentUpon>
+    </None>
+    <None Include="DSCglb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCglb.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSCglb.xss">
+      <DependentUpon>DSCglb.xsd</DependentUpon>
+    </None>
+    <None Include="DSCglb_zj.xsc">
+      <DependentUpon>DSCglb_zj.xsd</DependentUpon>
+    </None>
+    <None Include="DSCglb_zj.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCglb_zj.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCglb_zj.xss">
+      <DependentUpon>DSCglb_zj.xsd</DependentUpon>
+    </None>
+    <None Include="DSCHU.xsc">
+      <DependentUpon>DSCHU.xsd</DependentUpon>
+    </None>
+    <None Include="DSCHU.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCHU.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSCHU.xss">
+      <DependentUpon>DSCHU.xsd</DependentUpon>
+    </None>
+    <None Include="DSDpcwlycb.xsc">
+      <DependentUpon>DSDpcwlycb.xsd</DependentUpon>
+    </None>
+    <None Include="DSDpcwlycb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDpcwlycb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSDpcwlycb.xss">
+      <DependentUpon>DSDpcwlycb.xsd</DependentUpon>
+    </None>
+    <None Include="DSERPCglb.xsc">
+      <DependentUpon>DSERPCglb.xsd</DependentUpon>
+    </None>
+    <None Include="DSERPCglb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSERPCglb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSERPCglb.xss">
+      <DependentUpon>DSERPCglb.xsd</DependentUpon>
+    </None>
+    <None Include="DSERPCglb_zj.xsc">
+      <DependentUpon>DSERPCglb_zj.xsd</DependentUpon>
+    </None>
+    <None Include="DSERPCglb_zj.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSERPCglb_zj.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSERPCglb_zj.xss">
+      <DependentUpon>DSERPCglb_zj.xsd</DependentUpon>
+    </None>
+    <None Include="DSFddxgb.xsc">
+      <DependentUpon>DSFddxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSFddxgb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSFddxgb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSFddxgb.xss">
+      <DependentUpon>DSFddxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSGuanlian.xsc">
+      <DependentUpon>DSGuanlian.xsd</DependentUpon>
+    </None>
+    <None Include="DSGuanlian.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSGuanlian.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSGuanlian.xss">
+      <DependentUpon>DSGuanlian.xsd</DependentUpon>
+    </None>
+    <None Include="DSJZchmxb.xsc">
+      <DependentUpon>DSJZchmxb.xsd</DependentUpon>
+    </None>
+    <None Include="DSJZchmxb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSJZchmxb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSJZchmxb.xss">
+      <DependentUpon>DSJZchmxb.xsd</DependentUpon>
+    </None>
+    <None Include="DSKehu.xsc">
+      <DependentUpon>DSKehu.xsd</DependentUpon>
+    </None>
+    <None Include="DSKehu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSKehu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSKehu.xss">
+      <DependentUpon>DSKehu.xsd</DependentUpon>
+    </None>
+    <None Include="DSNFWD.xsc">
+      <DependentUpon>DSNFWD.xsd</DependentUpon>
+    </None>
+    <None Include="DSNFWD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSNFWD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSNFWD.xss">
+      <DependentUpon>DSNFWD.xsd</DependentUpon>
+    </None>
+    <None Include="DSNFWJAD.xsc">
+      <DependentUpon>DSNFWJAD.xsd</DependentUpon>
+    </None>
+    <None Include="DSNFWJAD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSNFWJAD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSNFWJAD.xss">
+      <DependentUpon>DSNFWJAD.xsd</DependentUpon>
+    </None>
+    <None Include="DSNFWLLD.xsc">
+      <DependentUpon>DSNFWLLD.xsd</DependentUpon>
+    </None>
+    <None Include="DSNFWLLD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSNFWLLD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSNFWLLD.xss">
+      <DependentUpon>DSNFWLLD.xsd</DependentUpon>
+    </None>
+    <None Include="DSNKFJAD.xsc">
+      <DependentUpon>DSNKFJAD.xsd</DependentUpon>
+    </None>
+    <None Include="DSNKFJAD.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSNKFJAD.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSNKFJAD.xss">
+      <DependentUpon>DSNKFJAD.xsd</DependentUpon>
+    </None>
+    <None Include="DSPCDBB.xsc">
+      <DependentUpon>DSPCDBB.xsd</DependentUpon>
+    </None>
+    <None Include="DSPCDBB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPCDBB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPCDBB.xss">
+      <DependentUpon>DSPCDBB.xsd</DependentUpon>
+    </None>
+    <None Include="DSPgtbb.xsc">
+      <DependentUpon>DSPgtbb.xsd</DependentUpon>
+    </None>
+    <None Include="DSPgtbb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPgtbb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPgtbb.xss">
+      <DependentUpon>DSPgtbb.xsd</DependentUpon>
+    </None>
+    <None Include="DSPurvdrxgb.xsc">
+      <DependentUpon>DSPurvdrxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSPurvdrxgb.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPurvdrxgb.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPurvdrxgb.xss">
+      <DependentUpon>DSPurvdrxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSTest.xsc">
+      <DependentUpon>DSTest.xsd</DependentUpon>
+    </None>
+    <None Include="DSTest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTest.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSTest.xss">
+      <DependentUpon>DSTest.xsd</DependentUpon>
+    </None>
+    <None Include="ERPMonthCloseDS.xsc">
+      <DependentUpon>ERPMonthCloseDS.xsd</DependentUpon>
+    </None>
+    <None Include="ERPMonthCloseDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERPMonthCloseDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ERPMonthCloseDS.xss">
+      <DependentUpon>ERPMonthCloseDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BxdmxReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BxdmxReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDR680qlbReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CDR680qlbReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERPMonthCloseReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ERPMonthCloseReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JZchmxbReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JZchmxbReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JZchmxbReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>JZchmxbReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PcdbbReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PcdbbReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgtbbReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PgtbbReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurvdrxgbReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PurvdrxgbReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CdrcusxgbReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CdrcusxgbReport.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\AutoReportConfig.csproj">
+      <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
+      <Name>AutoReportConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\AutoReportCore.csproj">
+      <Project>{1BF1F150-93F7-47B9-BDFF-12D407C33987}</Project>
+      <Name>AutoReportCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
