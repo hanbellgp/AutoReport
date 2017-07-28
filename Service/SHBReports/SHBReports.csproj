@@ -48,12 +48,20 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AAStock.cs" />
+    <Compile Include="AAStockConfig.cs" />
+    <Compile Include="AAStockDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AAStockDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AccountReceivableDelay.cs" />
     <Compile Include="AccountReceivableDelayConfig.cs" />
     <Compile Include="AccountReceivableDelayForSaler.cs" />
@@ -65,6 +73,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="AccountReceivableDelay_Comer.cs" />
+    <Compile Include="AccountReceivableDelay_GZ.cs" />
+    <Compile Include="AccountReceivableDelay_JN.cs" />
+    <Compile Include="AccountReceivableDelay_NJ.cs" />
     <Compile Include="Dianshouweiyanshou_zhuweiConfig.cs" />
     <Compile Include="Dianshouweiyanshou_zhuweiReport.cs">
       <AutoGen>True</AutoGen>
@@ -162,6 +173,9 @@
     <Compile Include="SalesOrderSchedule_AH.cs" />
     <Compile Include="SalesOrderSchedule_R.cs" />
     <Compile Include="SalesOrderSchedule_R_HD.cs" />
+    <Compile Include="SpecOrderDelay_Comer.cs" />
+    <Compile Include="SpecOrderPO_Comer.cs" />
+    <Compile Include="SpecOrderRD_Comer.cs" />
     <Compile Include="SpecOrderUpdateStateConfig.cs" />
     <Compile Include="SpecOrderUpdateState.cs" />
     <Compile Include="SpecOrderAnalyze.cs" />
@@ -190,6 +204,7 @@
     <Compile Include="SpecOrderRD_AH.cs" />
     <Compile Include="SpecOrderRD_P.cs" />
     <Compile Include="SpecOrderRD_R.cs" />
+    <Compile Include="SpecOrderUpdateState_Comer.cs" />
     <Compile Include="SpecOrderVendor.cs" />
     <Compile Include="SpecOrderVendorConfig.cs" />
     <Compile Include="SpecOrderNotification.cs" />
@@ -225,6 +240,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AAStockDS.xsc">
+      <DependentUpon>AAStockDS.xsd</DependentUpon>
+    </None>
+    <None Include="AAStockDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AAStockDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AAStockDS.xss">
+      <DependentUpon>AAStockDS.xsd</DependentUpon>
+    </None>
     <None Include="Dianshouweiyanshou_zhuweiDS.xsc">
       <DependentUpon>Dianshouweiyanshou_zhuweiDS.xsd</DependentUpon>
     </None>
