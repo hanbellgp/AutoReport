@@ -251,8 +251,8 @@ namespace Hanbell.AutoReport.Config
             int state;
             StringBuilder puracd = new StringBuilder();
             puracd.Append("select b.pono,e.acceptno,e.acceptdate,e.recivedate,e.okqy1 from  purdta b,purdtamap c,purdask d,puracd e ");
-            puracd.Append("where  b.facno=c.facno and b.pono=c.pono and b.trseq=c.trseq and  c.facno=d.facno and c.srcno=d.prno and c.srcseq=d.trseq and b.facno=e.facno and b.pono=e.pono and b.trseq=e.ponotrseq ");
-            puracd.Append(" and e.accsta='Y' and e.okqy1>0 and d.prno='{0}' and d.itnbr='{1}';");
+            puracd.Append(" where  b.facno=c.facno and b.pono=c.pono and b.trseq=c.trseq and  c.facno=d.facno and c.srcno=d.prno and c.srcseq=d.trseq and b.facno=e.facno and  b.prono=e.prono and b.pono=e.pono and b.trseq=e.ponotrseq ");
+            puracd.Append(" and e.accsta='Y' and e.okqy1>0 and d.prno='{0}' and d.itnbr='{1}' ");
 
             StringBuilder sfcwad = new StringBuilder();
             sfcwad.Append("SELECT sfcwad.facno,sfcwad.inpno,sfcwad.manno,sfcwad.itnbr,sfcwad.attqty1,sfcwah.indat,sfcwad.varnr,sfcwad.fixnr FROM sfcwad,sfcwah ");
@@ -262,7 +262,7 @@ namespace Hanbell.AutoReport.Config
             StringBuilder assacd = new StringBuilder();
             assacd.Append("SELECT puracd.facno,puracd.prono,puracd.acceptno,puracd.acceptdate,puracd.pono,puracd.ponotrseq,puracd.itnbr,puracd.recivedate,puracd.okqy1  ");
             assacd.Append(" FROM puracd,purdta,asspurhad ");
-            assacd.Append(" WHERE (puracd.facno = purdta.facno) AND  (puracd.pono = purdta.pono) AND  (puracd.ponotrseq = purdta.trseq) AND  ");
+            assacd.Append(" WHERE (puracd.facno = purdta.facno) AND  (puracd.prono = purdta.prono) AND  (puracd.pono = purdta.pono) AND  (puracd.ponotrseq = purdta.trseq) AND  ");
             assacd.Append(" ((purdta.facno = asspurhad.facno) AND (purdta.prono = asspurhad.prono) AND (purdta.pono = asspurhad.pono)) AND ");
             assacd.Append(" ((puracd.accsta = 'Y') AND (puracd.okqy1 > 0) AND (asspurhad.prono = '1') AND ");
             assacd.Append(" (asspurhad.facno = '{0}') AND (asspurhad.manno = '{1}') AND  (asspurhad.itnbr ='{2}'))");
@@ -306,8 +306,8 @@ namespace Hanbell.AutoReport.Config
                         {
                             ExecSql(string.Format(updatesql, tblpuracd.Rows[0]["pono"], acceptno, acceptdate, recivedate, qty, state, row["id"], row["seq"]));
                         }
+                        tblpuracd.Dispose();
                     }
-                    tblpuracd.Dispose();
                 }
                 //生产制令
                 if ((row["prno"].ToString().Substring(0, 1) == "M") && (row["morpcode"].ToString().Substring(0, 1) != "A"))
@@ -339,8 +339,8 @@ namespace Hanbell.AutoReport.Config
                         {
                             ExecSql(string.Format(updatesql, "", acceptno, acceptdate, recivedate, qty, state, row["id"], row["seq"]));
                         }
+                        tblsfcwad.Dispose();
                     }
-                    tblsfcwad.Dispose();
                 }
                 //托工制令
                 if ((row["prno"].ToString().Substring(0, 1) == "M") && (row["morpcode"].ToString().Substring(0, 1) == "A"))
@@ -372,8 +372,8 @@ namespace Hanbell.AutoReport.Config
                         {
                             ExecSql(string.Format(updatesql, "", acceptno, acceptdate, recivedate, qty, state, row["id"], row["seq"]));
                         }
+                        tblassacd.Dispose();
                     }
-                    tblassacd.Dispose();
                 }
             }
         }
