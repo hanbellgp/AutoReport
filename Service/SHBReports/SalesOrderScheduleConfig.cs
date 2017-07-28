@@ -23,7 +23,7 @@ namespace Hanbell.AutoReport.Config
 
         public override void InitData()
         {
-            string sqlstr = "select a.cusno,a.cusna,b.mancode,'' as username,a.cdrno,a.itnbrcus,a.itdsc,a.qty,a.shipday1,a.inqty,a.shipqty,a.manno,a.manday1,a.finday1 from cdrschedule a " +
+            string sqlstr = "select a.cusno,a.cusna,b.mancode,'' as username,a.cuspono,a.cdrno,a.itnbrcus,a.itdsc,a.qty,a.shipday1,a.inqty,a.shipqty,a.manno,a.manday1,a.finday1 from cdrschedule a " +
             " left outer join cdrhmas b on left(a.cdrno,len(a.cdrno)-4)=b.cdrno where a.status<>'Y' and  a.kindcode='{0}'";
             Fill(String.Format(sqlstr, args["kindcode"]), ds, "tblresult");
 
