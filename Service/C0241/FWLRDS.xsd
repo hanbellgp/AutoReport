@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FWLRDS" targetNamespace="http://tempuri.org/FWLRDS.xsd" xmlns:mstns="http://tempuri.org/FWLRDS.xsd" xmlns="http://tempuri.org/FWLRDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FWLRDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FWLRDS" msprop:Generator_UserDSName="FWLRDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblfwlld" msprop:Generator_TableClassName="tblfwlldDataTable" msprop:Generator_TableVarName="tabletblfwlld" msprop:Generator_TablePropName="tblfwlld" msprop:Generator_RowDeletingName="tblfwlldRowDeleting" msprop:Generator_RowChangingName="tblfwlldRowChanging" msprop:Generator_RowEvHandlerName="tblfwlldRowChangeEventHandler" msprop:Generator_RowDeletedName="tblfwlldRowDeleted" msprop:Generator_UserTableName="tblfwlld" msprop:Generator_RowChangedName="tblfwlldRowChanged" msprop:Generator_RowEvArgName="tblfwlldRowChangeEvent" msprop:Generator_RowClassName="tblfwlldRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

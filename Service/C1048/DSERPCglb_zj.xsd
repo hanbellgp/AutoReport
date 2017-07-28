@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSERPCglb_zj" targetNamespace="http://tempuri.org/DSERPCglb_zj.xsd" xmlns:mstns="http://tempuri.org/DSERPCglb_zj.xsd" xmlns="http://tempuri.org/DSERPCglb_zj.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSERPCglb_zj" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSERPCglb_zj" msprop:Generator_UserDSName="DSERPCglb_zj">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl2" msprop:Generator_TableClassName="tbl2DataTable" msprop:Generator_TableVarName="tabletbl2" msprop:Generator_TablePropName="tbl2" msprop:Generator_RowDeletingName="tbl2RowDeleting" msprop:Generator_UserTableName="tbl2" msprop:Generator_RowChangingName="tbl2RowChanging" msprop:Generator_RowEvHandlerName="tbl2RowChangeEventHandler" msprop:Generator_RowDeletedName="tbl2RowDeleted" msprop:Generator_RowEvArgName="tbl2RowChangeEvent" msprop:Generator_RowChangedName="tbl2RowChanged" msprop:Generator_RowClassName="tbl2Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vdrno" msdata:Caption="prono" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msdata:Caption="cgtype" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="cgtype" msdata:Caption="ty" msprop:Generator_ColumnVarNameInTable="columncgtype" msprop:Generator_ColumnPropNameInRow="cgtype" msprop:Generator_ColumnPropNameInTable="cgtypeColumn" msprop:Generator_UserColumnName="cgtype" type="xs:string" minOccurs="0" />
+              <xs:element name="ly" msdata:Caption="tm" msprop:Generator_ColumnVarNameInTable="columnly" msprop:Generator_ColumnPropNameInRow="ly" msprop:Generator_ColumnPropNameInTable="lyColumn" msprop:Generator_UserColumnName="ly" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lm" msprop:Generator_ColumnVarNameInTable="columnlm" msprop:Generator_ColumnPropNameInRow="lm" msprop:Generator_ColumnPropNameInTable="lmColumn" msprop:Generator_UserColumnName="lm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="llj" msprop:Generator_ColumnVarNameInTable="columnllj" msprop:Generator_ColumnPropNameInRow="llj" msprop:Generator_ColumnPropNameInTable="lljColumn" msprop:Generator_UserColumnName="llj" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblmiscode" msprop:Generator_TableClassName="tblmiscodeDataTable" msprop:Generator_TableVarName="tabletblmiscode" msprop:Generator_TablePropName="tblmiscode" msprop:Generator_RowDeletingName="tblmiscodeRowDeleting" msprop:Generator_UserTableName="tblmiscode" msprop:Generator_RowChangingName="tblmiscodeRowChanging" msprop:Generator_RowEvHandlerName="tblmiscodeRowChangeEventHandler" msprop:Generator_RowDeletedName="tblmiscodeRowDeleted" msprop:Generator_RowEvArgName="tblmiscodeRowChangeEvent" msprop:Generator_RowChangedName="tblmiscodeRowChanged" msprop:Generator_RowClassName="tblmiscodeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:string" minOccurs="0" />
+              <xs:element name="cdesc" msprop:Generator_ColumnVarNameInTable="columncdesc" msprop:Generator_ColumnPropNameInRow="cdesc" msprop:Generator_ColumnPropNameInTable="cdescColumn" msprop:Generator_UserColumnName="cdesc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbcglb" msprop:Generator_TableClassName="tbcglbDataTable" msprop:Generator_TableVarName="tabletbcglb" msprop:Generator_TablePropName="tbcglb" msprop:Generator_RowDeletingName="tbcglbRowDeleting" msprop:Generator_UserTableName="tbcglb" msprop:Generator_RowChangingName="tbcglbRowChanging" msprop:Generator_RowEvHandlerName="tbcglbRowChangeEventHandler" msprop:Generator_RowDeletedName="tbcglbRowDeleted" msprop:Generator_RowEvArgName="tbcglbRowChangeEvent" msprop:Generator_RowChangedName="tbcglbRowChanged" msprop:Generator_RowClassName="tbcglbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="facno" msprop:Generator_ColumnVarNameInTable="columnfacno" msprop:Generator_ColumnPropNameInRow="facno" msprop:Generator_ColumnPropNameInTable="facnoColumn" msprop:Generator_UserColumnName="facno" type="xs:string" minOccurs="0" />
+              <xs:element name="prono" msprop:Generator_ColumnVarNameInTable="columnprono" msprop:Generator_ColumnPropNameInRow="prono" msprop:Generator_ColumnPropNameInTable="pronoColumn" msprop:Generator_UserColumnName="prono" type="xs:string" minOccurs="0" />
+              <xs:element name="cgtype" msprop:Generator_ColumnVarNameInTable="columncgtype" msprop:Generator_ColumnPropNameInRow="cgtype" msprop:Generator_ColumnPropNameInTable="cgtypeColumn" msprop:Generator_UserColumnName="cgtype" type="xs:string" minOccurs="0" />
+              <xs:element name="ty" msprop:Generator_ColumnVarNameInTable="columnty" msprop:Generator_ColumnPropNameInRow="ty" msprop:Generator_ColumnPropNameInTable="tyColumn" msprop:Generator_UserColumnName="ty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="tm" msprop:Generator_ColumnVarNameInTable="columntm" msprop:Generator_ColumnPropNameInRow="tm" msprop:Generator_ColumnPropNameInTable="tmColumn" msprop:Generator_UserColumnName="tm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lm" msprop:Generator_ColumnVarNameInTable="columnlm" msprop:Generator_ColumnPropNameInRow="lm" msprop:Generator_ColumnPropNameInTable="lmColumn" msprop:Generator_UserColumnName="lm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ly" msprop:Generator_ColumnVarNameInTable="columnly" msprop:Generator_ColumnPropNameInRow="ly" msprop:Generator_ColumnPropNameInTable="lyColumn" msprop:Generator_UserColumnName="ly" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="llj" msprop:Generator_ColumnVarNameInTable="columnllj" msprop:Generator_ColumnPropNameInRow="llj" msprop:Generator_ColumnPropNameInTable="lljColumn" msprop:Generator_UserColumnName="llj" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbvdrno" msprop:Generator_TableClassName="tbvdrnoDataTable" msprop:Generator_TableVarName="tabletbvdrno" msprop:Generator_TablePropName="tbvdrno" msprop:Generator_RowDeletingName="tbvdrnoRowDeleting" msprop:Generator_UserTableName="tbvdrno" msprop:Generator_RowChangingName="tbvdrnoRowChanging" msprop:Generator_RowEvHandlerName="tbvdrnoRowChangeEventHandler" msprop:Generator_RowDeletedName="tbvdrnoRowDeleted" msprop:Generator_RowEvArgName="tbvdrnoRowChangeEvent" msprop:Generator_RowChangedName="tbvdrnoRowChanged" msprop:Generator_RowClassName="tbvdrnoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cgtype" msprop:Generator_ColumnVarNameInTable="columncgtype" msprop:Generator_ColumnPropNameInRow="cgtype" msprop:Generator_ColumnPropNameInTable="cgtypeColumn" msprop:Generator_UserColumnName="cgtype" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="tyzb" msprop:Generator_ColumnVarNameInTable="columntyzb" msprop:Generator_ColumnPropNameInRow="tyzb" msprop:Generator_ColumnPropNameInTable="tyzbColumn" msprop:Generator_UserColumnName="tyzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="tmzb" msprop:Generator_ColumnVarNameInTable="columntmzb" msprop:Generator_ColumnPropNameInRow="tmzb" msprop:Generator_ColumnPropNameInTable="tmzbColumn" msprop:Generator_UserColumnName="tmzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ty" msprop:Generator_ColumnVarNameInTable="columnty" msprop:Generator_ColumnPropNameInRow="ty" msprop:Generator_ColumnPropNameInTable="tyColumn" msprop:Generator_UserColumnName="ty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="tm" msprop:Generator_ColumnVarNameInTable="columntm" msprop:Generator_ColumnPropNameInRow="tm" msprop:Generator_ColumnPropNameInTable="tmColumn" msprop:Generator_UserColumnName="tm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lm" msprop:Generator_ColumnVarNameInTable="columnlm" msprop:Generator_ColumnPropNameInRow="lm" msprop:Generator_ColumnPropNameInTable="lmColumn" msprop:Generator_UserColumnName="lm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ly" msprop:Generator_ColumnVarNameInTable="columnly" msprop:Generator_ColumnPropNameInRow="ly" msprop:Generator_ColumnPropNameInTable="lyColumn" msprop:Generator_UserColumnName="ly" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="llj" msprop:Generator_ColumnVarNameInTable="columnllj" msprop:Generator_ColumnPropNameInRow="llj" msprop:Generator_ColumnPropNameInTable="lljColumn" msprop:Generator_UserColumnName="llj" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lmzb" msprop:Generator_ColumnVarNameInTable="columnlmzb" msprop:Generator_ColumnPropNameInRow="lmzb" msprop:Generator_ColumnPropNameInTable="lmzbColumn" msprop:Generator_UserColumnName="lmzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lyzb" msprop:Generator_ColumnVarNameInTable="columnlyzb" msprop:Generator_ColumnPropNameInRow="lyzb" msprop:Generator_ColumnPropNameInTable="lyzbColumn" msprop:Generator_UserColumnName="lyzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lmcz" msprop:Generator_ColumnVarNameInTable="columnlmcz" msprop:Generator_ColumnPropNameInRow="lmcz" msprop:Generator_ColumnPropNameInTable="lmczColumn" msprop:Generator_UserColumnName="lmcz" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lycz" msprop:Generator_ColumnVarNameInTable="columnlycz" msprop:Generator_ColumnPropNameInRow="lycz" msprop:Generator_ColumnPropNameInTable="lyczColumn" msprop:Generator_UserColumnName="lycz" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_RowEvArgName="tblresultRowChangeEvent" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_RowClassName="tblresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cgtype" msprop:Generator_ColumnVarNameInTable="columncgtype" msprop:Generator_ColumnPropNameInRow="cgtype" msprop:Generator_ColumnPropNameInTable="cgtypeColumn" msprop:Generator_UserColumnName="cgtype" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="tyzb" msprop:Generator_ColumnVarNameInTable="columntyzb" msprop:Generator_ColumnPropNameInRow="tyzb" msprop:Generator_ColumnPropNameInTable="tyzbColumn" msprop:Generator_UserColumnName="tyzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="tmzb" msprop:Generator_ColumnVarNameInTable="columntmzb" msprop:Generator_ColumnPropNameInRow="tmzb" msprop:Generator_ColumnPropNameInTable="tmzbColumn" msprop:Generator_UserColumnName="tmzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ty" msprop:Generator_ColumnVarNameInTable="columnty" msprop:Generator_ColumnPropNameInRow="ty" msprop:Generator_ColumnPropNameInTable="tyColumn" msprop:Generator_UserColumnName="ty" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="tm" msprop:Generator_ColumnVarNameInTable="columntm" msprop:Generator_ColumnPropNameInRow="tm" msprop:Generator_ColumnPropNameInTable="tmColumn" msprop:Generator_UserColumnName="tm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lm" msprop:Generator_ColumnVarNameInTable="columnlm" msprop:Generator_ColumnPropNameInRow="lm" msprop:Generator_ColumnPropNameInTable="lmColumn" msprop:Generator_UserColumnName="lm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ly" msprop:Generator_ColumnVarNameInTable="columnly" msprop:Generator_ColumnPropNameInRow="ly" msprop:Generator_ColumnPropNameInTable="lyColumn" msprop:Generator_UserColumnName="ly" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="llj" msprop:Generator_ColumnVarNameInTable="columnllj" msprop:Generator_ColumnPropNameInRow="llj" msprop:Generator_ColumnPropNameInTable="lljColumn" msprop:Generator_UserColumnName="llj" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lmzb" msprop:Generator_ColumnVarNameInTable="columnlmzb" msprop:Generator_ColumnPropNameInRow="lmzb" msprop:Generator_ColumnPropNameInTable="lmzbColumn" msprop:Generator_UserColumnName="lmzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lyzb" msprop:Generator_ColumnVarNameInTable="columnlyzb" msprop:Generator_ColumnPropNameInRow="lyzb" msprop:Generator_ColumnPropNameInTable="lyzbColumn" msprop:Generator_UserColumnName="lyzb" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lmcz" msprop:Generator_ColumnVarNameInTable="columnlmcz" msprop:Generator_ColumnPropNameInRow="lmcz" msprop:Generator_ColumnPropNameInTable="lmczColumn" msprop:Generator_UserColumnName="lmcz" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="lycz" msprop:Generator_ColumnVarNameInTable="columnlycz" msprop:Generator_ColumnPropNameInRow="lycz" msprop:Generator_ColumnPropNameInTable="lyczColumn" msprop:Generator_UserColumnName="lycz" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="zb" msprop:Generator_ColumnVarNameInTable="columnzb" msprop:Generator_ColumnPropNameInRow="zb" msprop:Generator_ColumnPropNameInTable="zbColumn" msprop:Generator_UserColumnName="zb" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbl3" msprop:Generator_TableClassName="tbl3DataTable" msprop:Generator_TableVarName="tabletbl3" msprop:Generator_TablePropName="tbl3" msprop:Generator_RowDeletingName="tbl3RowDeleting" msprop:Generator_UserTableName="tbl3" msprop:Generator_RowChangingName="tbl3RowChanging" msprop:Generator_RowEvHandlerName="tbl3RowChangeEventHandler" msprop:Generator_RowDeletedName="tbl3RowDeleted" msprop:Generator_RowEvArgName="tbl3RowChangeEvent" msprop:Generator_RowChangedName="tbl3RowChanged" msprop:Generator_RowClassName="tbl3Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="facno" msdata:Caption="prono" msprop:Generator_ColumnVarNameInTable="columnfacno" msprop:Generator_ColumnPropNameInRow="facno" msprop:Generator_ColumnPropNameInTable="facnoColumn" msprop:Generator_UserColumnName="facno" type="xs:string" minOccurs="0" />
+              <xs:element name="prono" msdata:Caption="cgtype" msprop:Generator_ColumnVarNameInTable="columnprono" msprop:Generator_ColumnPropNameInRow="prono" msprop:Generator_ColumnPropNameInTable="pronoColumn" msprop:Generator_UserColumnName="prono" type="xs:string" minOccurs="0" />
+              <xs:element name="cgtype" msdata:Caption="ty" msprop:Generator_ColumnVarNameInTable="columncgtype" msprop:Generator_ColumnPropNameInRow="cgtype" msprop:Generator_ColumnPropNameInTable="cgtypeColumn" msprop:Generator_UserColumnName="cgtype" type="xs:string" minOccurs="0" />
+              <xs:element name="lm" msdata:Caption="tm" msprop:Generator_ColumnVarNameInTable="columnlm" msprop:Generator_ColumnPropNameInRow="lm" msprop:Generator_ColumnPropNameInTable="lmColumn" msprop:Generator_UserColumnName="lm" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="ly" msdata:Caption="lm" msprop:Generator_ColumnVarNameInTable="columnly" msprop:Generator_ColumnPropNameInRow="ly" msprop:Generator_ColumnPropNameInTable="lyColumn" msprop:Generator_UserColumnName="ly" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="llj" msprop:Generator_ColumnVarNameInTable="columnllj" msprop:Generator_ColumnPropNameInRow="llj" msprop:Generator_ColumnPropNameInTable="lljColumn" msprop:Generator_UserColumnName="llj" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

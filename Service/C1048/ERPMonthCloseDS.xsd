@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ERPMonthCloseDS" targetNamespace="http://tempuri.org/ERPMonthCloseDS.xsd" xmlns:mstns="http://tempuri.org/ERPMonthCloseDS.xsd" xmlns="http://tempuri.org/ERPMonthCloseDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ERPMonthCloseDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ERPMonthCloseDS" msprop:Generator_UserDSName="ERPMonthCloseDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_RowEvArgName="tblresultRowChangeEvent" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_RowClassName="tblresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="trno" msprop:Generator_ColumnVarNameInTable="columntrno" msprop:Generator_ColumnPropNameInRow="trno" msprop:Generator_ColumnPropNameInTable="trnoColumn" msprop:Generator_UserColumnName="trno" type="xs:string" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnPropNameInTable="dateColumn" msprop:Generator_UserColumnName="date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="userno" msprop:Generator_ColumnVarNameInTable="columnuserno" msprop:Generator_ColumnPropNameInRow="userno" msprop:Generator_ColumnPropNameInTable="usernoColumn" msprop:Generator_UserColumnName="userno" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

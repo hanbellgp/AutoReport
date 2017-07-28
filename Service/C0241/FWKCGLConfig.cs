@@ -24,39 +24,39 @@ namespace C0241
             " h.whdsc as '库名',left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
             " from invamtshistory y,[test].[dbo].invwh h " +
             " where trdate=left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
-            " and y.wareh=h.wareh and h.wareh='KF02' " +
+            " and y.wareh=h.wareh and h.wareh='EKF02' " +
             " UNION ALL " +
             " select '服务部' as '部门','2' as '顺序','上海ERP' as 'ERP区域' ,y.wareh as '库号',(amts/10000) as '金额',80 as '目标', " +
             " h.whdsc as '库名',left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
             " from invamtshistory y,[test].[dbo].invwh h " +
             " where trdate=left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
-            " and y.wareh=h.wareh and h.wareh='AKF02' " +
+            " and y.wareh=h.wareh and h.wareh='EAKF02' " +
             " UNION ALL " +
             " select '服务部' as '部门','3' as '顺序','上海ERP' as 'ERP区域' ,y.wareh as '库号',(amts/10000) as '金额',100 as '目标', " +
             " h.whdsc as '库名',left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
             " from invamtshistory y,[test].[dbo].invwh h " +
             " where trdate=left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
-            " and y.wareh=h.wareh and h.wareh='KF01' " +
+            " and y.wareh=h.wareh and h.wareh='EKF01' " +
             " UNION ALL " +
             " select '服务部' as '部门','4' as '顺序','上海ERP' as 'ERP区域' ,y.wareh as '库号',(amts/10000) as '金额',70 as '目标', " +
             " h.whdsc as '库名',left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
             " from invamtshistory y,[test].[dbo].invwh h " +
             " where trdate=left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
-            " and y.wareh=h.wareh and h.wareh='KF03' " +
+            " and y.wareh=h.wareh and h.wareh='EKF03' " +
             " union all " +
             " select '服务部' as '部门','5' as '顺序','上海ERP' as 'ERP区域' ,y.wareh as '库号',(amts/10000) as '金额',15 as '目标'," +
             " y.wareh as '库名',left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
             " from invamtshistory y where trdate=left(convert(char(8), dateadd(day, -1, getdate()), 112),8) and y.wareh='在制' ";
             Fill(sqlstr, this.ds, "tblresult");
 
-            sqlstr = "select trdate,wareh,amts from invamtshistory where datediff(day,convert(datetime,trdate),getdate())<=30 and  wareh in ('KF03','KF02','AKF02','KF01','在制') ";
+            sqlstr = "select trdate,wareh,amts from invamtshistory where datediff(day,convert(datetime,trdate),getdate())<=30 and  wareh in ('EKF03','EKF02','EAKF02','EKF01','在制') ";
             Fill(sqlstr, this.ds, "tblall");
 
             sqlstr = "select trdate,wareh,amts from invamtshistory where datediff(day,convert(datetime,trdate),getdate())<=30 and  wareh ='{0}' ";
-            Fill(String.Format(sqlstr, "KF02"), this.ds, "tblKF02");
-            Fill(String.Format(sqlstr, "AKF02"), this.ds, "tblAKF02");
-            Fill(String.Format(sqlstr, "KF01"), this.ds, "tblKF01");
-            Fill(String.Format(sqlstr, "KF03"), this.ds, "tblKF03");
+            Fill(String.Format(sqlstr, "EKF02"), this.ds, "tblKF02");
+            Fill(String.Format(sqlstr, "EAKF02"), this.ds, "tblAKF02");
+            Fill(String.Format(sqlstr, "EKF01"), this.ds, "tblKF01");
+            Fill(String.Format(sqlstr, "EKF03"), this.ds, "tblKF03");
             Fill(String.Format(sqlstr, "在制"), this.ds, "tblZZ");
 
 
