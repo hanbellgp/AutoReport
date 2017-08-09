@@ -69,76 +69,36 @@ namespace Hanbell.AutoReport.Config
 
         protected virtual string GetContent(DataTable tbl, string[] title)
         {
-            int i;
-            string display;
             StringBuilder sb = new StringBuilder();
             sb.Append(GetContentHead());
-            sb.Append("<TABLE>");
-            sb.Append("<tr valign='middle'>");
-            foreach (DataColumn column in tbl.Columns)
-            {
-                if (title != null)
-                {
-                    i = tbl.Columns.IndexOf(column);
-                    if (i < title.Length)
-                    {
-                        display = title[i];
-                        sb.Append("<th><span>" + display + "</span></th>");
-                    }
-                    else
-                    {
-                        sb.Append("<th><span>" + column.ColumnName + "</span></th>");
-                    }
-                }
-                else
-                {
-                    sb.Append("<th><span>" + column.ColumnName + "</span></th>");
-                }
-            }
-            sb.Append("</tr>");
-            int colsCount = tbl.Columns.Count;
-            int rowsCount = tbl.Rows.Count;
-            for (int j = 0; j < rowsCount; j++)
-            {
-                sb.Append("<tr>");
-                for (int k = 0; k < colsCount; k++)
-                {
-                    if ((tbl.Columns[k].DataType == System.Type.GetType("System.Double")) || (tbl.Columns[k].DataType == System.Type.GetType("System.Decimal")) ||
-   (tbl.Columns[k].DataType == System.Type.GetType("System.Int16")) || (tbl.Columns[k].DataType == System.Type.GetType("System.Int32")) || (tbl.Columns[k].DataType == System.Type.GetType("System.Int64")))
-                    {
-                        //数字格式右对齐
-                        sb.Append("<td class='number'>");
-                    }
-                    else
-                    {
-                        sb.Append("<td>");
-                    }
-                    object obj = tbl.Rows[j][k];
-                    if (obj == DBNull.Value || obj.ToString() == "")
-                    {
-                        // 如果是NULL则在HTML里面使用一个空格替换之  
-                        obj = "&nbsp;";
-                    }
-                    sb.Append("<span>" + obj.ToString().Trim() + "</span>");
-                    sb.Append("</td>");
-                }
-                sb.Append("</tr>");
-            }
-            sb.Append("</TABLE>");
+            sb.Append(GetHTMLTable(tbl, title, null));
             sb.Append(GetContentFooter());
             return sb.ToString();
         }
 
         protected virtual string GetContent(DataTable tbl, string[] title, int[] width)
         {
-            if (title.Length != width.Length)
+            if (title != null && width != null && title.Length != width.Length)
             {
                 return "指定的标题与栏位宽度设定不一致";
             }
+            StringBuilder sb = new StringBuilder();
+            sb.Append(GetContentHead());
+            sb.Append(GetHTMLTable(tbl, title, width));
+            sb.Append(GetContentFooter());
+            return sb.ToString();
+        }
+
+        protected virtual string GetContentFooter()
+        {
+            return "</DIV><p style='text-align:left;'>" + GetMailFooterAdd(this.ToString()) + "</p></BODY></HTML>";
+        }
+
+        protected virtual string GetHTMLTable(DataTable tbl, string[] title, int[] width)
+        {
             int i;
             string display;
             StringBuilder sb = new StringBuilder();
-            sb.Append(GetContentHead());
             sb.Append("<TABLE>");
             sb.Append("<tr valign='middle'>");
             foreach (DataColumn column in tbl.Columns)
@@ -149,16 +109,23 @@ namespace Hanbell.AutoReport.Config
                     if (i < title.Length)
                     {
                         display = title[i];
-                        sb.Append("<th width='" + width[i] + "'><span>" + display + "</span></th>");
+                        if (width != null)
+                        {
+                            sb.Append("<th width='" + width[i] + "'><span>" + display + "</span></th>");
+                        }
+                        else
+                        {
+                            sb.Append("<th><span>" + display + "</span></th>");
+                        }
                     }
                     else
                     {
-                        sb.Append("<th><span>" + column.ColumnName + "</span></th>");
+                        sb.Append("<th><span>" + column.Caption + "</span></th>");
                     }
                 }
                 else
                 {
-                    sb.Append("<th><span>" + column.ColumnName + "</span></th>");
+                    sb.Append("<th><span>" + column.Caption + "</span></th>");
                 }
             }
             sb.Append("</tr>");
@@ -203,13 +170,7 @@ namespace Hanbell.AutoReport.Config
                 sb.Append("</tr>");
             }
             sb.Append("</TABLE>");
-            sb.Append(GetContentFooter());
             return sb.ToString();
-        }
-
-        protected virtual string GetContentFooter()
-        {
-            return "</DIV><p style='text-align:left;'>" + GetMailFooterAdd(this.ToString()) + "</p></BODY></HTML>";
         }
 
         protected virtual string GetReportName(string notification)
@@ -231,7 +192,7 @@ namespace Hanbell.AutoReport.Config
         /// <param name="tbl">需要转换的DataTable</param>
         /// <param name="fileName">Excel文件完整名称</param>
         /// <param name="flag">True自动加入附件,False不加入附件</param>
-        protected void DataTableToExcel(System.Data.DataTable tbl, string fileName,bool flag)
+        protected void DataTableToExcel(System.Data.DataTable tbl, string fileName, bool flag)
         {
             if (tbl == null)
                 return;
@@ -277,7 +238,7 @@ namespace Hanbell.AutoReport.Config
             {
                 AddAtt(fileName); //加入附件中
             }
-                     
+
         }
 
         /// <summary>
@@ -359,11 +320,25 @@ namespace Hanbell.AutoReport.Config
             }
         }
 
+        protected string GetMailAddressByEmployeeIdFromOA(string employeeid)
+        {
+            if (nc == null) return "";
+            string sqlstr = "SELECT mailAddress FROM Users WHERE id='{0}'";
+            return nc.GetQueryString(DBServerType.MSSQL, Base.GetDBConnectionString("EFGP"), String.Format(sqlstr, employeeid));
+        }
+
         protected string GetManagerIdByEmployeeIdFromOA(string employeeid)
         {
             if (nc == null) return "";
-            string sqlstr = "select resak013 from resak where resak001='{0}'";
-            return nc.GetQueryString(DBServerType.MSSQL, Base.GetDBConnectionString("SHBOA"), String.Format(sqlstr, employeeid));
+            string sqlstr = "select id from Users where Users.OID = '{0}'";
+            return nc.GetQueryString(DBServerType.MSSQL, Base.GetDBConnectionString("EFGP"), String.Format(sqlstr, GetManagerOIDByEmployeeIdFromOA(employeeid)));
+        }
+
+        protected string GetManagerOIDByEmployeeIdFromOA(string employeeid)
+        {
+            if (nc == null) return "";
+            string sqlstr = "select specifiedManagerOID from Functions,Users where Users.OID = Functions.occupantOID and Functions.isMain=1 and Users.id='{0}'";
+            return nc.GetQueryString(DBServerType.MSSQL, Base.GetDBConnectionString("EFGP"), String.Format(sqlstr, employeeid));
         }
 
         protected string[] GetHTMLFileContents(string fileName, string beginTag, string endTag, int beginAdjust, int endAdjust)
