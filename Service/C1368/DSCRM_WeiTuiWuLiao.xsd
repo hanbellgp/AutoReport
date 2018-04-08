@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCRM_WeiTuiWuLiao" targetNamespace="http://tempuri.org/DSCRM_WeiTuiWuLiao.xsd" xmlns:mstns="http://tempuri.org/DSCRM_WeiTuiWuLiao.xsd" xmlns="http://tempuri.org/DSCRM_WeiTuiWuLiao.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCRM_WeiTuiWuLiao" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSCRM_WeiTuiWuLiao" msprop:Generator_UserDSName="DSCRM_WeiTuiWuLiao">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CRM_WeiTuiWuLiao" msprop:Generator_TableClassName="CRM_WeiTuiWuLiaoDataTable" msprop:Generator_TableVarName="tableCRM_WeiTuiWuLiao" msprop:Generator_RowChangedName="CRM_WeiTuiWuLiaoRowChanged" msprop:Generator_TablePropName="CRM_WeiTuiWuLiao" msprop:Generator_RowDeletingName="CRM_WeiTuiWuLiaoRowDeleting" msprop:Generator_RowChangingName="CRM_WeiTuiWuLiaoRowChanging" msprop:Generator_RowEvHandlerName="CRM_WeiTuiWuLiaoRowChangeEventHandler" msprop:Generator_RowDeletedName="CRM_WeiTuiWuLiaoRowDeleted" msprop:Generator_RowClassName="CRM_WeiTuiWuLiaoRow" msprop:Generator_UserTableName="CRM_WeiTuiWuLiao" msprop:Generator_RowEvArgName="CRM_WeiTuiWuLiaoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TC054" msdata:Caption="案件代號" msprop:Generator_ColumnVarNameInTable="columnTC054" msprop:Generator_ColumnPropNameInRow="TC054" msprop:Generator_ColumnPropNameInTable="TC054Column" msprop:Generator_UserColumnName="TC054" type="xs:string" minOccurs="0" />
+              <xs:element name="TD001" msdata:Caption="維修單別" msprop:Generator_ColumnVarNameInTable="columnTD001" msprop:Generator_ColumnPropNameInRow="TD001" msprop:Generator_ColumnPropNameInTable="TD001Column" msprop:Generator_UserColumnName="TD001" type="xs:string" minOccurs="0" />
+              <xs:element name="TD002" msdata:Caption="維修單號" msprop:Generator_ColumnVarNameInTable="columnTD002" msprop:Generator_ColumnPropNameInRow="TD002" msprop:Generator_ColumnPropNameInTable="TD002Column" msprop:Generator_UserColumnName="TD002" type="xs:string" minOccurs="0" />
+              <xs:element name="TD003" msdata:Caption="維修序號" msprop:Generator_ColumnVarNameInTable="columnTD003" msprop:Generator_ColumnPropNameInRow="TD003" msprop:Generator_ColumnPropNameInTable="TD003Column" msprop:Generator_UserColumnName="TD003" type="xs:string" minOccurs="0" />
+              <xs:element name="TC007" msdata:Caption="客戶代號" msprop:Generator_ColumnVarNameInTable="columnTC007" msprop:Generator_ColumnPropNameInRow="TC007" msprop:Generator_ColumnPropNameInTable="TC007Column" msprop:Generator_UserColumnName="TC007" type="xs:string" minOccurs="0" />
+              <xs:element name="TC036" msdata:Caption="客戶全名" msprop:Generator_ColumnVarNameInTable="columnTC036" msprop:Generator_ColumnPropNameInRow="TC036" msprop:Generator_ColumnPropNameInTable="TC036Column" msprop:Generator_UserColumnName="TC036" type="xs:string" minOccurs="0" />
+              <xs:element name="TC008" msdata:Caption="產品品號" msprop:Generator_ColumnVarNameInTable="columnTC008" msprop:Generator_ColumnPropNameInRow="TC008" msprop:Generator_ColumnPropNameInTable="TC008Column" msprop:Generator_UserColumnName="TC008" type="xs:string" minOccurs="0" />
+              <xs:element name="TC009" msdata:Caption="產品品名" msprop:Generator_ColumnVarNameInTable="columnTC009" msprop:Generator_ColumnPropNameInRow="TC009" msprop:Generator_ColumnPropNameInTable="TC009Column" msprop:Generator_UserColumnName="TC009" type="xs:string" minOccurs="0" />
+              <xs:element name="TC010" msdata:Caption="產品規格" msprop:Generator_ColumnVarNameInTable="columnTC010" msprop:Generator_ColumnPropNameInRow="TC010" msprop:Generator_ColumnPropNameInTable="TC010Column" msprop:Generator_UserColumnName="TC010" type="xs:string" minOccurs="0" />
+              <xs:element name="TC011" msdata:Caption="送修" msprop:Generator_ColumnVarNameInTable="columnTC011" msprop:Generator_ColumnPropNameInRow="TC011" msprop:Generator_ColumnPropNameInTable="TC011Column" msprop:Generator_UserColumnName="TC011" type="xs:string" minOccurs="0" />
+              <xs:element name="TC012" msdata:Caption="送修部门" msprop:Generator_ColumnVarNameInTable="columnTC012" msprop:Generator_ColumnPropNameInRow="TC012" msprop:Generator_ColumnPropNameInTable="TC012Column" msprop:Generator_UserColumnName="TC012" type="xs:string" minOccurs="0" />
+              <xs:element name="TC016" msdata:Caption="维修人员" msprop:Generator_ColumnVarNameInTable="columnTC016" msprop:Generator_ColumnPropNameInRow="TC016" msprop:Generator_ColumnPropNameInTable="TC016Column" msprop:Generator_UserColumnName="TC016" type="xs:string" minOccurs="0" />
+              <xs:element name="TC017" msdata:Caption="维修部门" msprop:Generator_ColumnVarNameInTable="columnTC017" msprop:Generator_ColumnPropNameInRow="TC017" msprop:Generator_ColumnPropNameInTable="TC017Column" msprop:Generator_UserColumnName="TC017" type="xs:string" minOccurs="0" />
+              <xs:element name="TC058" msdata:Caption="产品序号" msprop:Generator_ColumnVarNameInTable="columnTC058" msprop:Generator_ColumnPropNameInRow="TC058" msprop:Generator_ColumnPropNameInTable="TC058Column" msprop:Generator_UserColumnName="TC058" type="xs:string" minOccurs="0" />
+              <xs:element name="TC197" msdata:Caption="产品别" msprop:Generator_ColumnVarNameInTable="columnTC197" msprop:Generator_ColumnPropNameInRow="TC197" msprop:Generator_ColumnPropNameInTable="TC197Column" msprop:Generator_UserColumnName="TC197" type="xs:string" minOccurs="0" />
+              <xs:element name="TC198" msdata:Caption="区域别" msprop:Generator_ColumnVarNameInTable="columnTC198" msprop:Generator_ColumnPropNameInRow="TC198" msprop:Generator_ColumnPropNameInTable="TC198Column" msprop:Generator_UserColumnName="TC198" type="xs:string" minOccurs="0" />
+              <xs:element name="TD046" msdata:Caption="需核銷" msprop:Generator_ColumnVarNameInTable="columnTD046" msprop:Generator_ColumnPropNameInRow="TD046" msprop:Generator_ColumnPropNameInTable="TD046Column" msprop:Generator_UserColumnName="TD046" type="xs:string" minOccurs="0" />
+              <xs:element name="TD047" msdata:Caption="已核銷" msprop:Generator_ColumnVarNameInTable="columnTD047" msprop:Generator_ColumnPropNameInRow="TD047" msprop:Generator_ColumnPropNameInTable="TD047Column" msprop:Generator_UserColumnName="TD047" type="xs:string" minOccurs="0" />
+              <xs:element name="TD043" msdata:Caption="強制結案" msprop:Generator_ColumnVarNameInTable="columnTD043" msprop:Generator_ColumnPropNameInRow="TD043" msprop:Generator_ColumnPropNameInTable="TD043Column" msprop:Generator_UserColumnName="TD043" type="xs:string" minOccurs="0" />
+              <xs:element name="TA004" msdata:Caption="部門代號" msprop:Generator_ColumnVarNameInTable="columnTA004" msprop:Generator_ColumnPropNameInRow="TA004" msprop:Generator_ColumnPropNameInTable="TA004Column" msprop:Generator_UserColumnName="TA004" type="xs:string" minOccurs="0" />
+              <xs:element name="TA025" msdata:Caption="ERP服務領料單號" msprop:Generator_ColumnVarNameInTable="columnTA025" msprop:Generator_ColumnPropNameInRow="TA025" msprop:Generator_ColumnPropNameInTable="TA025Column" msprop:Generator_UserColumnName="TA025" type="xs:string" minOccurs="0" />
+              <xs:element name="TA026" msdata:Caption="ERP服務退料單號" msprop:Generator_ColumnVarNameInTable="columnTA026" msprop:Generator_ColumnPropNameInRow="TA026" msprop:Generator_ColumnPropNameInTable="TA026Column" msprop:Generator_UserColumnName="TA026" type="xs:string" minOccurs="0" />
+              <xs:element name="TA028" msdata:Caption="ERP借出單號" msprop:Generator_ColumnVarNameInTable="columnTA028" msprop:Generator_ColumnPropNameInRow="TA028" msprop:Generator_ColumnPropNameInTable="TA028Column" msprop:Generator_UserColumnName="TA028" type="xs:string" minOccurs="0" />
+              <xs:element name="TA029" msdata:Caption="ERP歸還單號" msprop:Generator_ColumnVarNameInTable="columnTA029" msprop:Generator_ColumnPropNameInRow="TA029" msprop:Generator_ColumnPropNameInTable="TA029Column" msprop:Generator_UserColumnName="TA029" type="xs:string" minOccurs="0" />
+              <xs:element name="TB004" msdata:Caption="品號" msprop:Generator_ColumnVarNameInTable="columnTB004" msprop:Generator_ColumnPropNameInRow="TB004" msprop:Generator_ColumnPropNameInTable="TB004Column" msprop:Generator_UserColumnName="TB004" type="xs:string" minOccurs="0" />
+              <xs:element name="TB005" msdata:Caption="品名" msprop:Generator_ColumnVarNameInTable="columnTB005" msprop:Generator_ColumnPropNameInRow="TB005" msprop:Generator_ColumnPropNameInTable="TB005Column" msprop:Generator_UserColumnName="TB005" type="xs:string" minOccurs="0" />
+              <xs:element name="TB009" msdata:Caption="實領數量" msprop:Generator_ColumnVarNameInTable="columnTB009" msprop:Generator_ColumnPropNameInRow="TB009" msprop:Generator_ColumnPropNameInTable="TB009Column" msprop:Generator_UserColumnName="TB009" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
