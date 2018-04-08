@@ -13,12 +13,12 @@ namespace Hanbell.AutoReport.Config
         {
         }
 
-        public AccountReceivableDelayConfig(DBServerType dbType, string connName,string notification)
+        public AccountReceivableDelayConfig(DBServerType dbType, string connName, string notification)
         {
             PrepareDBUtil(dbType, Base.GetDBConnectionString(connName));
             this.ds = new DSAccountReceivableDelay();
             this.reportList.Add(new AccountReceivableDelayReport());
-            this.args = Base.GetParameter(notification,this.ToString());
+            this.args = Base.GetParameter(notification, this.ToString());
         }
 
         public override void InitData()
