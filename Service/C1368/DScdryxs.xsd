@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DScdryxs" targetNamespace="http://tempuri.org/DScdryxs.xsd" xmlns:mstns="http://tempuri.org/DScdryxs.xsd" xmlns="http://tempuri.org/DScdryxs.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DScdryxs" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DScdryxs" msprop:Generator_UserDSName="DScdryxs">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cdryxs" msprop:Generator_TableClassName="cdryxsDataTable" msprop:Generator_TableVarName="tablecdryxs" msprop:Generator_TablePropName="cdryxs" msprop:Generator_RowDeletingName="cdryxsRowDeleting" msprop:Generator_RowChangingName="cdryxsRowChanging" msprop:Generator_RowEvHandlerName="cdryxsRowChangeEventHandler" msprop:Generator_RowDeletedName="cdryxsRowDeleted" msprop:Generator_UserTableName="cdryxs" msprop:Generator_RowChangedName="cdryxsRowChanged" msprop:Generator_RowEvArgName="cdryxsRowChangeEvent" msprop:Generator_RowClassName="cdryxsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="protype" msprop:Generator_ColumnVarNameInTable="columnprotype" msprop:Generator_ColumnPropNameInRow="protype" msprop:Generator_ColumnPropNameInTable="protypeColumn" msprop:Generator_UserColumnName="protype" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbrcus" msprop:Generator_ColumnVarNameInTable="columnitnbrcus" msprop:Generator_ColumnPropNameInRow="itnbrcus" msprop:Generator_ColumnPropNameInTable="itnbrcusColumn" msprop:Generator_UserColumnName="itnbrcus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

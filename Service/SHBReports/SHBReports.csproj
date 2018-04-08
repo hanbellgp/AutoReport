@@ -76,7 +76,12 @@
     <Compile Include="AccountReceivableDelay_GZ.cs" />
     <Compile Include="AccountReceivableDelay_JN.cs" />
     <Compile Include="AccountReceivableDelay_NJ.cs" />
+    <Compile Include="CRM_WeiTuiWuLiaoConfig.cs" />
     <Compile Include="Dianshouweiyanshou_zhuweiConfig.cs" />
+    <Compile Include="Dianshouweiyanshou_zhuweiDS.cs">
+      <DependentUpon>Dianshouweiyanshou_zhuweiDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Dianshouweiyanshou_zhuweiReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,12 +227,12 @@
     <Compile Include="SpecOrderRD.cs" />
     <Compile Include="SpecOrderRDConfig.cs" />
     <Compile Include="StandCostAbnormality.cs" />
+    <Compile Include="StandCostAbnormalityConfig.cs" />
     <Compile Include="StandCostAbnormalityDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StandCostAbnormalityDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="StandCostAbnormalityConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Config\AutoReportConfig.csproj">

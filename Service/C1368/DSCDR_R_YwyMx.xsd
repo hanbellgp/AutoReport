@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCDR_R_YwyMx" targetNamespace="http://tempuri.org/DSCDR_R_YwyMx.xsd" xmlns:mstns="http://tempuri.org/DSCDR_R_YwyMx.xsd" xmlns="http://tempuri.org/DSCDR_R_YwyMx.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCDR_R_YwyMx" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSCDR_R_YwyMx" msprop:Generator_UserDSName="DSCDR_R_YwyMx">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CDR_R_YwyMx" msprop:Generator_TableClassName="CDR_R_YwyMxDataTable" msprop:Generator_TableVarName="tableCDR_R_YwyMx" msprop:Generator_TablePropName="CDR_R_YwyMx" msprop:Generator_RowDeletingName="CDR_R_YwyMxRowDeleting" msprop:Generator_RowChangingName="CDR_R_YwyMxRowChanging" msprop:Generator_RowEvHandlerName="CDR_R_YwyMxRowChangeEventHandler" msprop:Generator_RowDeletedName="CDR_R_YwyMxRowDeleted" msprop:Generator_UserTableName="CDR_R_YwyMx" msprop:Generator_RowChangedName="CDR_R_YwyMxRowChanged" msprop:Generator_RowEvArgName="CDR_R_YwyMxRowChangeEvent" msprop:Generator_RowClassName="CDR_R_YwyMxRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="depnoarea" msprop:Generator_ColumnVarNameInTable="columndepnoarea" msprop:Generator_ColumnPropNameInRow="depnoarea" msprop:Generator_ColumnPropNameInTable="depnoareaColumn" msprop:Generator_UserColumnName="depnoarea" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

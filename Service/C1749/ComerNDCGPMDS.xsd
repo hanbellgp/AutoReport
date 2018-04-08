@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ComerNDCGPMDS" targetNamespace="http://tempuri.org/ComerNDCGPMDS.xsd" xmlns:mstns="http://tempuri.org/ComerNDCGPMDS.xsd" xmlns="http://tempuri.org/ComerNDCGPMDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ComerNDCGPMDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ComerNDCGPMDS" msprop:Generator_UserDSName="ComerNDCGPMDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ndcgpm" msprop:Generator_TableClassName="ndcgpmDataTable" msprop:Generator_TableVarName="tablendcgpm" msprop:Generator_RowChangedName="ndcgpmRowChanged" msprop:Generator_TablePropName="ndcgpm" msprop:Generator_RowDeletingName="ndcgpmRowDeleting" msprop:Generator_RowChangingName="ndcgpmRowChanging" msprop:Generator_RowEvHandlerName="ndcgpmRowChangeEventHandler" msprop:Generator_RowDeletedName="ndcgpmRowDeleted" msprop:Generator_RowClassName="ndcgpmRow" msprop:Generator_UserTableName="ndcgpm" msprop:Generator_RowEvArgName="ndcgpmRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="yer" msprop:Generator_ColumnVarNameInTable="columnyer" msprop:Generator_ColumnPropNameInRow="yer" msprop:Generator_ColumnPropNameInTable="yerColumn" msprop:Generator_UserColumnName="yer" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="m_puramt" msprop:Generator_ColumnVarNameInTable="columnm_puramt" msprop:Generator_ColumnPropNameInRow="m_puramt" msprop:Generator_ColumnPropNameInTable="m_puramtColumn" msprop:Generator_UserColumnName="m_puramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="m_order" msprop:Generator_ColumnVarNameInTable="columnm_order" msprop:Generator_ColumnPropNameInRow="m_order" msprop:Generator_ColumnPropNameInTable="m_orderColumn" msprop:Generator_UserColumnName="m_order" type="xs:short" minOccurs="0" />
+              <xs:element name="y_puramt" msprop:Generator_ColumnVarNameInTable="columny_puramt" msprop:Generator_ColumnPropNameInRow="y_puramt" msprop:Generator_ColumnPropNameInTable="y_puramtColumn" msprop:Generator_UserColumnName="y_puramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="y_order" msprop:Generator_ColumnVarNameInTable="columny_order" msprop:Generator_ColumnPropNameInRow="y_order" msprop:Generator_ColumnPropNameInTable="y_orderColumn" msprop:Generator_UserColumnName="y_order" type="xs:short" minOccurs="0" />
+              <xs:element name="ly_puramt" msprop:Generator_ColumnVarNameInTable="columnly_puramt" msprop:Generator_ColumnPropNameInRow="ly_puramt" msprop:Generator_ColumnPropNameInTable="ly_puramtColumn" msprop:Generator_UserColumnName="ly_puramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ly_order" msprop:Generator_ColumnVarNameInTable="columnly_order" msprop:Generator_ColumnPropNameInRow="ly_order" msprop:Generator_ColumnPropNameInTable="ly_orderColumn" msprop:Generator_UserColumnName="ly_order" type="xs:short" minOccurs="0" />
+              <xs:element name="lm_puramt" msprop:Generator_ColumnVarNameInTable="columnlm_puramt" msprop:Generator_ColumnPropNameInRow="lm_puramt" msprop:Generator_ColumnPropNameInTable="lm_puramtColumn" msprop:Generator_UserColumnName="lm_puramt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="lm_order" msprop:Generator_ColumnVarNameInTable="columnlm_order" msprop:Generator_ColumnPropNameInRow="lm_order" msprop:Generator_ColumnPropNameInTable="lm_orderColumn" msprop:Generator_UserColumnName="lm_order" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mpuramt" msprop:Generator_TableClassName="mpuramtDataTable" msprop:Generator_TableVarName="tablempuramt" msprop:Generator_RowChangedName="mpuramtRowChanged" msprop:Generator_TablePropName="mpuramt" msprop:Generator_RowDeletingName="mpuramtRowDeleting" msprop:Generator_RowChangingName="mpuramtRowChanging" msprop:Generator_RowEvHandlerName="mpuramtRowChangeEventHandler" msprop:Generator_RowDeletedName="mpuramtRowDeleted" msprop:Generator_RowClassName="mpuramtRow" msprop:Generator_UserTableName="mpuramt" msprop:Generator_RowEvArgName="mpuramtRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="m_puramt" msprop:Generator_ColumnVarNameInTable="columnm_puramt" msprop:Generator_ColumnPropNameInRow="m_puramt" msprop:Generator_ColumnPropNameInTable="m_puramtColumn" msprop:Generator_UserColumnName="m_puramt" type="xs:string" minOccurs="0" />
+              <xs:element name="m_order" msprop:Generator_ColumnVarNameInTable="columnm_order" msprop:Generator_ColumnPropNameInRow="m_order" msprop:Generator_ColumnPropNameInTable="m_orderColumn" msprop:Generator_UserColumnName="m_order" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lypuramt" msprop:Generator_TableClassName="lypuramtDataTable" msprop:Generator_TableVarName="tablelypuramt" msprop:Generator_RowChangedName="lypuramtRowChanged" msprop:Generator_TablePropName="lypuramt" msprop:Generator_RowDeletingName="lypuramtRowDeleting" msprop:Generator_RowChangingName="lypuramtRowChanging" msprop:Generator_RowEvHandlerName="lypuramtRowChangeEventHandler" msprop:Generator_RowDeletedName="lypuramtRowDeleted" msprop:Generator_RowClassName="lypuramtRow" msprop:Generator_UserTableName="lypuramt" msprop:Generator_RowEvArgName="lypuramtRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="ly_puramt" msprop:Generator_ColumnVarNameInTable="columnly_puramt" msprop:Generator_ColumnPropNameInRow="ly_puramt" msprop:Generator_ColumnPropNameInTable="ly_puramtColumn" msprop:Generator_UserColumnName="ly_puramt" type="xs:string" minOccurs="0" />
+              <xs:element name="ly_order" msprop:Generator_ColumnVarNameInTable="columnly_order" msprop:Generator_ColumnPropNameInRow="ly_order" msprop:Generator_ColumnPropNameInTable="ly_orderColumn" msprop:Generator_UserColumnName="ly_order" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lmpuramt" msprop:Generator_TableClassName="lmpuramtDataTable" msprop:Generator_TableVarName="tablelmpuramt" msprop:Generator_RowChangedName="lmpuramtRowChanged" msprop:Generator_TablePropName="lmpuramt" msprop:Generator_RowDeletingName="lmpuramtRowDeleting" msprop:Generator_RowChangingName="lmpuramtRowChanging" msprop:Generator_RowEvHandlerName="lmpuramtRowChangeEventHandler" msprop:Generator_RowDeletedName="lmpuramtRowDeleted" msprop:Generator_RowClassName="lmpuramtRow" msprop:Generator_UserTableName="lmpuramt" msprop:Generator_RowEvArgName="lmpuramtRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="lm_puramt" msprop:Generator_ColumnVarNameInTable="columnlm_puramt" msprop:Generator_ColumnPropNameInRow="lm_puramt" msprop:Generator_ColumnPropNameInTable="lm_puramtColumn" msprop:Generator_UserColumnName="lm_puramt" type="xs:string" minOccurs="0" />
+              <xs:element name="lm_order" msprop:Generator_ColumnVarNameInTable="columnlm_order" msprop:Generator_ColumnPropNameInRow="lm_order" msprop:Generator_ColumnPropNameInTable="lm_orderColumn" msprop:Generator_UserColumnName="lm_order" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
