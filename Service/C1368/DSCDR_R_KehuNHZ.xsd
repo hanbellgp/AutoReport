@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSCDR_R_KehuNHZ" targetNamespace="http://tempuri.org/DSCDR_R_KehuNHZ.xsd" xmlns:mstns="http://tempuri.org/DSCDR_R_KehuNHZ.xsd" xmlns="http://tempuri.org/DSCDR_R_KehuNHZ.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSCDR_R_KehuNHZ" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSCDR_R_KehuNHZ" msprop:Generator_UserDSName="DSCDR_R_KehuNHZ">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CDR_R_KehuNHZ" msprop:Generator_TableClassName="CDR_R_KehuNHZDataTable" msprop:Generator_TableVarName="tableCDR_R_KehuNHZ" msprop:Generator_RowChangedName="CDR_R_KehuNHZRowChanged" msprop:Generator_TablePropName="CDR_R_KehuNHZ" msprop:Generator_RowDeletingName="CDR_R_KehuNHZRowDeleting" msprop:Generator_RowChangingName="CDR_R_KehuNHZRowChanging" msprop:Generator_RowEvHandlerName="CDR_R_KehuNHZRowChangeEventHandler" msprop:Generator_RowDeletedName="CDR_R_KehuNHZRowDeleted" msprop:Generator_RowClassName="CDR_R_KehuNHZRow" msprop:Generator_UserTableName="CDR_R_KehuNHZ" msprop:Generator_RowEvArgName="CDR_R_KehuNHZRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="protype" msprop:Generator_ColumnVarNameInTable="columnprotype" msprop:Generator_ColumnPropNameInRow="protype" msprop:Generator_ColumnPropNameInTable="protypeColumn" msprop:Generator_UserColumnName="protype" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbrcus" msprop:Generator_ColumnVarNameInTable="columnitnbrcus" msprop:Generator_ColumnPropNameInRow="itnbrcus" msprop:Generator_ColumnPropNameInTable="itnbrcusColumn" msprop:Generator_UserColumnName="itnbrcus" type="xs:string" minOccurs="0" />
+              <xs:element name="cusna" msprop:Generator_ColumnVarNameInTable="columncusna" msprop:Generator_ColumnPropNameInRow="cusna" msprop:Generator_ColumnPropNameInTable="cusnaColumn" msprop:Generator_UserColumnName="cusna" type="xs:string" minOccurs="0" />
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:string" minOccurs="0" />
+              <xs:element name="amts" msprop:Generator_ColumnVarNameInTable="columnamts" msprop:Generator_ColumnPropNameInRow="amts" msprop:Generator_ColumnPropNameInTable="amtsColumn" msprop:Generator_UserColumnName="amts" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_RowEvArgName="tblresultRowChangeEvent" msprop:Generator_RowClassName="tblresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="protype" msprop:Generator_ColumnVarNameInTable="columnprotype" msprop:Generator_ColumnPropNameInRow="protype" msprop:Generator_ColumnPropNameInTable="protypeColumn" msprop:Generator_UserColumnName="protype" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbrcus" msprop:Generator_ColumnVarNameInTable="columnitnbrcus" msprop:Generator_ColumnPropNameInRow="itnbrcus" msprop:Generator_ColumnPropNameInTable="itnbrcusColumn" msprop:Generator_UserColumnName="itnbrcus" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

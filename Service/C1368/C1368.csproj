@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B15E6C4E-B99B-42F8-B630-AF6F20B18BEE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hanbell.AutoReport.Config</RootNamespace>
+    <AssemblyName>C1368</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cdryxs.cs" />
+    <Compile Include="cdryxsConfig.cs" />
+    <Compile Include="cdryxs_all.cs" />
+    <Compile Include="cdryxs_gz.cs" />
+    <Compile Include="cdryxs_hd.cs" />
+    <Compile Include="cdryxs_jn.cs" />
+    <Compile Include="cdryxs_nj.cs" />
+    <Compile Include="CDR_R_KehuNHZ.cs" />
+    <Compile Include="CDR_R_KehuNHZConfig.cs" />
+    <Compile Include="CDR_R_KehuNHZ_all.cs" />
+    <Compile Include="CDR_R_KehuNHZ_gz.cs" />
+    <Compile Include="CDR_R_KehuNHZ_hd.cs" />
+    <Compile Include="CDR_R_KehuNHZ_jn.cs" />
+    <Compile Include="CDR_R_KehuNHZ_nj.cs" />
+    <Compile Include="CDR_R_KehuYXS.cs" />
+    <Compile Include="CDR_R_KehuYXSConfig.cs" />
+    <Compile Include="CDR_R_KehuYXS_all.cs" />
+    <Compile Include="CDR_R_KehuYXS_gz.cs" />
+    <Compile Include="CDR_R_KehuYXS_hd.cs" />
+    <Compile Include="CDR_R_KehuYXS_jn.cs" />
+    <Compile Include="CDR_R_KehuYXS_nj.cs" />
+    <Compile Include="CDR_R_XSHZ.cs" />
+    <Compile Include="CDR_R_XSHZConfig.cs" />
+    <Compile Include="CDR_R_YwyMx.cs" />
+    <Compile Include="CDR_R_YwyMxAll.cs" />
+    <Compile Include="CDR_R_YwyMxAllConfig.cs" />
+    <Compile Include="CDR_R_YwyMxConfig.cs" />
+    <Compile Include="CHU.cs" />
+    <Compile Include="CHUConfig.cs" />
+    <Compile Include="CRM_WeiTuiWuLiaoConfig.cs" />
+    <Compile Include="DScdryxs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DScdryxs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCDR_R_KehuNHZ.cs">
+      <DependentUpon>DSCDR_R_KehuNHZ.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSCDR_R_KehuNHZ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCDR_R_KehuNHZ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCDR_R_XSHZ.cs">
+      <DependentUpon>DSCDR_R_XSHZ.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSCDR_R_XSHZ.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCDR_R_XSHZ.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCDR_R_YwyMx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCDR_R_YwyMx.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCDR_R_YwyMxAll.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCDR_R_YwyMxAll.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCRM_WeiTuiWuLiao.cs">
+      <DependentUpon>DSCRM_WeiTuiWuLiao.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSCRM_WeiTuiWuLiao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCRM_WeiTuiWuLiao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSKehu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSKehu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSCHU.cs">
+      <DependentUpon>DSCHU.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSCHU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCHU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSGuanlian.cs">
+      <DependentUpon>DSGuanlian.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSGuanlian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSGuanlian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPurvdrxgb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPurvdrxgb.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSTCHU.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSTCHU.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSW01.cs">
+      <DependentUpon>DSW01.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSW01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSW01.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSZjzl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSZjzl.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Guanlian.cs" />
+    <Compile Include="GuanlianConfig.cs" />
+    <Compile Include="GuanlianReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuanlianReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Kehu.cs" />
+    <Compile Include="KehuConfig.cs" />
+    <Compile Include="KehuReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KehuReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purvdrxgb.cs" />
+    <Compile Include="PurvdrxgbConfig.cs" />
+    <Compile Include="PurvdrxgbReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurvdrxgbReport1.cs" />
+    <Compile Include="StandCostAbnormality.cs" />
+    <Compile Include="StandCostAbnormalityConfig.cs" />
+    <Compile Include="StandCostAbnormalityDS.Designer.cs" />
+    <Compile Include="TCHU.cs" />
+    <Compile Include="TCHUConfig.cs" />
+    <Compile Include="W01.cs" />
+    <Compile Include="W01Config.cs" />
+    <Compile Include="CRM_WeiTuiWuLiao.cs" />
+    <Compile Include="Zjzl.cs" />
+    <Compile Include="ZjzlConfig.cs" />
+    <Compile Include="ZjzlReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ZjzlReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DScdryxs.xsc">
+      <DependentUpon>DScdryxs.xsd</DependentUpon>
+    </None>
+    <None Include="DScdryxs.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DScdryxs.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DScdryxs.xss">
+      <DependentUpon>DScdryxs.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_KehuNHZ.xsc">
+      <DependentUpon>DSCDR_R_KehuNHZ.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_KehuNHZ.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCDR_R_KehuNHZ.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCDR_R_KehuNHZ.xss">
+      <DependentUpon>DSCDR_R_KehuNHZ.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_XSHZ.xsc">
+      <DependentUpon>DSCDR_R_XSHZ.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_XSHZ.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCDR_R_XSHZ.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCDR_R_XSHZ.xss">
+      <DependentUpon>DSCDR_R_XSHZ.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_YwyMx.xsc">
+      <DependentUpon>DSCDR_R_YwyMx.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_YwyMx.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCDR_R_YwyMx.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCDR_R_YwyMx.xss">
+      <DependentUpon>DSCDR_R_YwyMx.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_YwyMxAll.xsc">
+      <DependentUpon>DSCDR_R_YwyMxAll.xsd</DependentUpon>
+    </None>
+    <None Include="DSCDR_R_YwyMxAll.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCDR_R_YwyMxAll.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCDR_R_YwyMxAll.xss">
+      <DependentUpon>DSCDR_R_YwyMxAll.xsd</DependentUpon>
+    </None>
+    <None Include="DSCHU.xsc">
+      <DependentUpon>DSCHU.xsd</DependentUpon>
+    </None>
+    <None Include="DSCHU.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCHU.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSCHU.xss">
+      <DependentUpon>DSCHU.xsd</DependentUpon>
+    </None>
+    <None Include="DSCRM_WeiTuiWuLiao.xsc">
+      <DependentUpon>DSCRM_WeiTuiWuLiao.xsd</DependentUpon>
+    </None>
+    <None Include="DSCRM_WeiTuiWuLiao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCRM_WeiTuiWuLiao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCRM_WeiTuiWuLiao.xss">
+      <DependentUpon>DSCRM_WeiTuiWuLiao.xsd</DependentUpon>
+    </None>
+    <None Include="DSGuanlian.xsc">
+      <DependentUpon>DSGuanlian.xsd</DependentUpon>
+    </None>
+    <None Include="DSGuanlian.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSGuanlian.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSGuanlian.xss">
+      <DependentUpon>DSGuanlian.xsd</DependentUpon>
+    </None>
+    <None Include="DSKehu.xsc">
+      <DependentUpon>DSKehu.xsd</DependentUpon>
+    </None>
+    <None Include="DSKehu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSKehu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSKehu.xss">
+      <DependentUpon>DSKehu.xsd</DependentUpon>
+    </None>
+    <None Include="DSPurvdrxgb.xsc">
+      <DependentUpon>DSPurvdrxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSPurvdrxgb.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPurvdrxgb.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPurvdrxgb.xss">
+      <DependentUpon>DSPurvdrxgb.xsd</DependentUpon>
+    </None>
+    <None Include="DSTCHU.xsc">
+      <DependentUpon>DSTCHU.xsd</DependentUpon>
+    </None>
+    <None Include="DSTCHU.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSTCHU.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSTCHU.xss">
+      <DependentUpon>DSTCHU.xsd</DependentUpon>
+    </None>
+    <None Include="DSW01.xsc">
+      <DependentUpon>DSW01.xsd</DependentUpon>
+    </None>
+    <None Include="DSW01.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSW01.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSW01.xss">
+      <DependentUpon>DSW01.xsd</DependentUpon>
+    </None>
+    <None Include="DSZjzl.xsc">
+      <DependentUpon>DSZjzl.xsd</DependentUpon>
+    </None>
+    <None Include="DSZjzl.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSZjzl.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSZjzl.xss">
+      <DependentUpon>DSZjzl.xsd</DependentUpon>
+    </None>
+    <None Include="StandCostAbnormalityDS.xsc">
+      <DependentUpon>StandCostAbnormalityDS.xsd</DependentUpon>
+    </None>
+    <None Include="StandCostAbnormalityDS.xsd" />
+    <None Include="StandCostAbnormalityDS.xss">
+      <DependentUpon>StandCostAbnormalityDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\AutoReportConfig.csproj">
+      <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
+      <Name>AutoReportConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\AutoReportCore.csproj">
+      <Project>{1BF1F150-93F7-47B9-BDFF-12D407C33987}</Project>
+      <Name>AutoReportCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GuanlianReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GuanlianReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KehuReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>KehuReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZjzlReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ZjzlReport.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

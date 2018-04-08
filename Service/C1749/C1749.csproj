@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF4A273A-5E79-4E42-9108-9B319DE94827}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hanbell.AutoReport.Config</RootNamespace>
+    <AssemblyName>C1749</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BadAcceptance.cs" />
+    <Compile Include="BadAcceptanceConfig.cs" />
+    <Compile Include="BadAcceptanceDS.cs">
+      <DependentUpon>BadAcceptanceDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BadAcceptanceDS.Designer.cs">
+      <DependentUpon>BadAcceptanceDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CDR643Prompt.cs" />
+    <Compile Include="CDRX643DS.cs">
+      <DependentUpon>CDRX643DS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDRX643DS.Designer.cs">
+      <DependentUpon>CDRX643DS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CDRX643PromptConfig.cs" />
+    <Compile Include="ComerNainDuCaiGouMaiMingConfig.cs" />
+    <Compile Include="ComerNDCGPMDS.cs">
+      <DependentUpon>ComerNDCGPMDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComerNDCGPMDS.Designer.cs">
+      <DependentUpon>ComerNDCGPMDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ComerNianDuCaiGouPaiMing.cs" />
+    <Compile Include="NianDuCaiGouPaiMing.cs" />
+    <Compile Include="NianDuCaiGouPaiMingConfig.cs" />
+    <Compile Include="NianDuCaiGouPaiMingDS.cs">
+      <DependentUpon>NianDuCaiGouPaiMingDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NianDuCaiGouPaiMingDS.Designer.cs">
+      <DependentUpon>NianDuCaiGouPaiMingDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PaymentDetails.cs" />
+    <Compile Include="PaymentDetailsConfig.cs" />
+    <Compile Include="PaymentDetailsDS.cs">
+      <DependentUpon>PaymentDetailsDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PaymentDetailsDS.Designer.cs">
+      <DependentUpon>PaymentDetailsDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialEquipment.cs" />
+    <Compile Include="SpecialEquipmentConfig.cs" />
+    <Compile Include="SpecialEquipmentDS.cs">
+      <DependentUpon>SpecialEquipmentDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpecialEquipmentDS.Designer.cs">
+      <DependentUpon>SpecialEquipmentDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="StatisticalReport.cs" />
+    <Compile Include="StatisticalReportConfig.cs" />
+    <Compile Include="StatisticalReportDS.cs">
+      <DependentUpon>StatisticalReportDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StatisticalReportDS.Designer.cs">
+      <DependentUpon>StatisticalReportDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Unreturn.cs" />
+    <Compile Include="UnreturnConfig.cs" />
+    <Compile Include="UnreturnDS.cs">
+      <DependentUpon>UnreturnDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnreturnDS.Designer.cs">
+      <DependentUpon>UnreturnDS.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="YQWJAPurchaseOrder.cs">
+      <DependentUpon>YQWJAPurchaseOrder.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YQWJAPurchaseOrder.Designer.cs">
+      <DependentUpon>YQWJAPurchaseOrder.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="YuQiWeiJieAnPurchaseOrder.cs" />
+    <Compile Include="YuQiWeiJieAnPurchaseOrderConfig.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="BadAcceptanceDS.xsc">
+      <DependentUpon>BadAcceptanceDS.xsd</DependentUpon>
+    </None>
+    <None Include="BadAcceptanceDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BadAcceptanceDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BadAcceptanceDS.xss">
+      <DependentUpon>BadAcceptanceDS.xsd</DependentUpon>
+    </None>
+    <None Include="CDRX643DS.xsc">
+      <DependentUpon>CDRX643DS.xsd</DependentUpon>
+    </None>
+    <None Include="CDRX643DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CDRX643DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CDRX643DS.xss">
+      <DependentUpon>CDRX643DS.xsd</DependentUpon>
+    </None>
+    <None Include="ComerNDCGPMDS.xsc">
+      <DependentUpon>ComerNDCGPMDS.xsd</DependentUpon>
+    </None>
+    <None Include="ComerNDCGPMDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ComerNDCGPMDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ComerNDCGPMDS.xss">
+      <DependentUpon>ComerNDCGPMDS.xsd</DependentUpon>
+    </None>
+    <None Include="NianDuCaiGouPaiMingDS.xsc">
+      <DependentUpon>NianDuCaiGouPaiMingDS.xsd</DependentUpon>
+    </None>
+    <None Include="NianDuCaiGouPaiMingDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NianDuCaiGouPaiMingDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NianDuCaiGouPaiMingDS.xss">
+      <DependentUpon>NianDuCaiGouPaiMingDS.xsd</DependentUpon>
+    </None>
+    <None Include="PaymentDetailsDS.xsc">
+      <DependentUpon>PaymentDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="PaymentDetailsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PaymentDetailsDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PaymentDetailsDS.xss">
+      <DependentUpon>PaymentDetailsDS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SpecialEquipmentDS.xsc">
+      <DependentUpon>SpecialEquipmentDS.xsd</DependentUpon>
+    </None>
+    <None Include="SpecialEquipmentDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SpecialEquipmentDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SpecialEquipmentDS.xss">
+      <DependentUpon>SpecialEquipmentDS.xsd</DependentUpon>
+    </None>
+    <None Include="StatisticalReportDS.xsc">
+      <DependentUpon>StatisticalReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="StatisticalReportDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StatisticalReportDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StatisticalReportDS.xss">
+      <DependentUpon>StatisticalReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="UnreturnDS.xsc">
+      <DependentUpon>UnreturnDS.xsd</DependentUpon>
+    </None>
+    <None Include="UnreturnDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UnreturnDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnreturnDS.xss">
+      <DependentUpon>UnreturnDS.xsd</DependentUpon>
+    </None>
+    <None Include="YQWJAPurchaseOrder.xsc">
+      <DependentUpon>YQWJAPurchaseOrder.xsd</DependentUpon>
+    </None>
+    <None Include="YQWJAPurchaseOrder.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YQWJAPurchaseOrder.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="YQWJAPurchaseOrder.xss">
+      <DependentUpon>YQWJAPurchaseOrder.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\AutoReportConfig.csproj">
+      <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
+      <Name>AutoReportConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\AutoReportCore.csproj">
+      <Project>{1BF1F150-93F7-47B9-BDFF-12D407C33987}</Project>
+      <Name>AutoReportCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\AutoReportService.csproj">
+      <Project>{7DF64C24-5601-4D09-9842-A3B5C789EDB6}</Project>
+      <Name>AutoReportService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHBReports\SHBReports.csproj">
+      <Project>{9DFBD0EF-24E5-4DB4-96AF-236452EC9FC5}</Project>
+      <Name>SHBReports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

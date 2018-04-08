@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StandCostAbnormalityDS" targetNamespace="http://tempuri.org/StandCostAbnormalityDS.xsd" xmlns:mstns="http://tempuri.org/StandCostAbnormalityDS.xsd" xmlns="http://tempuri.org/StandCostAbnormalityDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StandCostAbnormalityDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StandCostAbnormalityDS" msprop:Generator_UserDSName="StandCostAbnormalityDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblsc" msprop:Generator_TableClassName="tblscDataTable" msprop:Generator_TableVarName="tabletblsc" msprop:Generator_RowChangedName="tblscRowChanged" msprop:Generator_TablePropName="tblsc" msprop:Generator_RowDeletingName="tblscRowDeleting" msprop:Generator_RowChangingName="tblscRowChanging" msprop:Generator_RowEvHandlerName="tblscRowChangeEventHandler" msprop:Generator_RowDeletedName="tblscRowDeleted" msprop:Generator_RowClassName="tblscRow" msprop:Generator_UserTableName="tblsc" msprop:Generator_RowEvArgName="tblscRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itcls" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="morpcode" msprop:Generator_ColumnVarNameInTable="columnmorpcode" msprop:Generator_ColumnPropNameInRow="morpcode" msprop:Generator_ColumnPropNameInTable="morpcodeColumn" msprop:Generator_UserColumnName="morpcode" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="spdsc" msprop:Generator_ColumnVarNameInTable="columnspdsc" msprop:Generator_ColumnPropNameInRow="spdsc" msprop:Generator_ColumnPropNameInTable="spdscColumn" msprop:Generator_UserColumnName="spdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="cost" msprop:Generator_ColumnVarNameInTable="columncost" msprop:Generator_ColumnPropNameInRow="cost" msprop:Generator_ColumnPropNameInTable="costColumn" msprop:Generator_UserColumnName="cost" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="asscost" msprop:Generator_ColumnVarNameInTable="columnasscost" msprop:Generator_ColumnPropNameInRow="asscost" msprop:Generator_ColumnPropNameInTable="asscostColumn" msprop:Generator_UserColumnName="asscost" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="cpl" msprop:Generator_ColumnVarNameInTable="columncpl" msprop:Generator_ColumnPropNameInRow="cpl" msprop:Generator_ColumnPropNameInTable="cplColumn" msprop:Generator_UserColumnName="cpl" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="cpg" msprop:Generator_ColumnVarNameInTable="columncpg" msprop:Generator_ColumnPropNameInRow="cpg" msprop:Generator_ColumnPropNameInTable="cpgColumn" msprop:Generator_UserColumnName="cpg" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="cpf" msprop:Generator_ColumnVarNameInTable="columncpf" msprop:Generator_ColumnPropNameInRow="cpf" msprop:Generator_ColumnPropNameInTable="cpfColumn" msprop:Generator_UserColumnName="cpf" type="xs:decimal" default="0" minOccurs="0" />
+              <xs:element name="cpt" msprop:Generator_ColumnVarNameInTable="columncpt" msprop:Generator_ColumnPropNameInRow="cpt" msprop:Generator_ColumnPropNameInTable="cptColumn" msprop:Generator_UserColumnName="cpt" type="xs:decimal" default="0" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="tblinvstandcostPK" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblsc" />
+      <xs:field xpath="mstns:itnbr" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
