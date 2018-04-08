@@ -297,6 +297,10 @@ namespace Hanbell.AutoReport.EFGP {
             
             private global::System.Data.DataColumn columndelaydays;
             
+            private global::System.Data.DataColumn columndeptno;
+            
+            private global::System.Data.DataColumn columndept;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblprocessDataTable() {
@@ -404,6 +408,22 @@ namespace Hanbell.AutoReport.EFGP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn deptnoColumn {
+                get {
+                    return this.columndeptno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn deptColumn {
+                get {
+                    return this.columndept;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +459,7 @@ namespace Hanbell.AutoReport.EFGP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblprocessRow AddtblprocessRow(string processDefinitionId, string processInstanceName, string serialNumber, string subject, string id, string userName, System.DateTime createdTime, string status, short delaydays) {
+            public tblprocessRow AddtblprocessRow(string processDefinitionId, string processInstanceName, string serialNumber, string subject, string id, string userName, System.DateTime createdTime, string status, short delaydays, string deptno, string dept) {
                 tblprocessRow rowtblprocessRow = ((tblprocessRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         processDefinitionId,
@@ -450,7 +470,9 @@ namespace Hanbell.AutoReport.EFGP {
                         userName,
                         createdTime,
                         status,
-                        delaydays};
+                        delaydays,
+                        deptno,
+                        dept};
                 rowtblprocessRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblprocessRow);
                 return rowtblprocessRow;
@@ -482,6 +504,8 @@ namespace Hanbell.AutoReport.EFGP {
                 this.columncreatedTime = base.Columns["createdTime"];
                 this.columnstatus = base.Columns["status"];
                 this.columndelaydays = base.Columns["delaydays"];
+                this.columndeptno = base.Columns["deptno"];
+                this.columndept = base.Columns["dept"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,6 +529,10 @@ namespace Hanbell.AutoReport.EFGP {
                 base.Columns.Add(this.columnstatus);
                 this.columndelaydays = new global::System.Data.DataColumn("delaydays", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndelaydays);
+                this.columndeptno = new global::System.Data.DataColumn("deptno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndeptno);
+                this.columndept = new global::System.Data.DataColumn("dept", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndept);
                 this.columnprocessDefinitionId.Caption = "流程代号";
                 this.columnprocessInstanceName.Caption = "流程名称";
                 this.columnserialNumber.Caption = "流程序号";
@@ -514,6 +542,8 @@ namespace Hanbell.AutoReport.EFGP {
                 this.columncreatedTime.Caption = "建立时间";
                 this.columnstatus.Caption = "状态";
                 this.columndelaydays.Caption = "滞留天数";
+                this.columndeptno.Caption = "部门编号";
+                this.columndept.Caption = "部门名称";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -800,6 +830,38 @@ namespace Hanbell.AutoReport.EFGP {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string deptno {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblprocess.deptnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“deptno”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletblprocess.deptnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string dept {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblprocess.deptColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“dept”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletblprocess.deptColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsprocessDefinitionIdNull() {
                 return this.IsNull(this.tabletblprocess.processDefinitionIdColumn);
             }
@@ -904,6 +966,30 @@ namespace Hanbell.AutoReport.EFGP {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetdelaydaysNull() {
                 this[this.tabletblprocess.delaydaysColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdeptnoNull() {
+                return this.IsNull(this.tabletblprocess.deptnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdeptnoNull() {
+                this[this.tabletblprocess.deptnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsdeptNull() {
+                return this.IsNull(this.tabletblprocess.deptColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetdeptNull() {
+                this[this.tabletblprocess.deptColumn] = global::System.Convert.DBNull;
             }
         }
         
