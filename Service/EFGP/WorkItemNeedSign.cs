@@ -31,40 +31,50 @@ namespace Hanbell.AutoReport.EFGP
             string managerId;
             string table1, table2;
             string[] p = new string[] { };
-
+            DataTable tbl;
             foreach (DataRow row in nc.GetDataTable("tblprocess").Rows)
             {
-                if (p.Contains(row["id"].ToString())) continue;
                 if (row["id"].ToString().Substring(0, 1).Equals("H") || row["id"].ToString().Substring(0, 1).Equals("Q") || row["id"].ToString().Substring(0, 1).Equals("V")) continue;
+                if (p.Contains(row["id"].ToString())) continue;
                 Array.Resize(ref p, p.Length + 1);
                 p.SetValue(row["id"].ToString(), p.Length - 1);
                 nc.GetDataTable("tblprocess").DefaultView.RowFilter = " id='" + row["id"].ToString() + "'";
-                table1 = GetHTMLTable(nc.GetDataTable("tblprocess").DefaultView.ToTable(), null, null);
+                tbl = nc.GetDataTable("tblprocess").DefaultView.ToTable();
+                tbl.Columns.Remove("deptno");
+                tbl.Columns.Remove("dept");
+                table1 = GetHTMLTable(tbl, null, null);
 
-                nc.GetDataTable("tblprocess").DefaultView.RowFilter = " id='" + row["id"].ToString() + "' AND delaydays > 3 ";
-                if (nc.GetDataTable("tblprocess").DefaultView.ToTable().Rows.Count > 0)
+                nc.GetDataTable("tblprocess").DefaultView.RowFilter = " id='" + row["id"].ToString() + "' AND delaydays > 5 ";
+                tbl = nc.GetDataTable("tblprocess").DefaultView.ToTable();
+                tbl.Columns.Remove("deptno");
+                tbl.Columns.Remove("dept");
+                if (tbl.Rows.Count > 0)
                 {
-                    table2 = "以下单据已超过3天<br/>" + GetHTMLTable(nc.GetDataTable("tblprocess").DefaultView.ToTable(), null, null);
+                    table2 = "以下单据已超过5天,请向柯总说明原因!<br/>" + GetHTMLTable(tbl, null, null);
                 }
                 else
                 {
-                    table2 = "没有超过3天及以上的未签核单据";
+                    table2 = "没有超过5天及以上的未签核单据";
                 }
 
 
                 NotificationContent msg = new NotificationContent();
+                //msg.AddTo("C0160@hanbell.com.cn");
                 msg.AddTo(GetMailAddressByEmployeeIdFromOA(row["id"].ToString()));
-                //抄送直属主管
-                managerId = GetManagerIdByEmployeeIdFromOA(row["id"].ToString());
-                if (managerId.ToString() != "" && !managerId.ToString().Equals("C0616"))
+                if (nc.GetDataTable("tblprocess").DefaultView.ToTable().Rows.Count > 0)
                 {
-                    msg.AddCc(GetMailAddressByEmployeeIdFromOA(managerId));
+                    //抄送直属主管
+                    managerId = GetManagerIdByEmployeeIdFromOA(row["id"].ToString());
+                    if (managerId != null && managerId.ToString() != "" && !managerId.ToString().Equals("C0002") && !managerId.ToString().Equals("C0616"))
+                    {
+                        msg.AddCc(GetMailAddressByEmployeeIdFromOA(managerId));
+                    }
+                    if (!row["id"].ToString().Substring(0, 1).Equals("0") && !row["id"].ToString().Equals("C0002"))
+                    {
+                        msg.AddCc("C0616@hanbell.com.cn");
+                    }
                 }
-                if (!row["id"].ToString().Substring(0, 1).Equals("0"))
-                {
-                    msg.AddCc("C0616@hanbell.com.cn");
-                }
-                msg.subject = this.subject;
+                msg.subject = row["deptno"].ToString() + row["dept"].ToString() + "_" + this.subject;
                 msg.content = GetContentHead() + table1 + "<br/><br/><br/>" + table2 + GetContentFooter();
                 msg.AddNotify(new MailNotify());
                 msg.Update();

@@ -344,6 +344,10 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn columnfinday1;
             
+            private global::System.Data.DataColumn columnsn;
+            
+            private global::System.Data.DataColumn columnremark1;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tblresultDataTable() {
@@ -499,6 +503,22 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn snColumn {
+                get {
+                    return this.columnsn;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn remark1Column {
+                get {
+                    return this.columnremark1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -534,7 +554,24 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblresultRow AddtblresultRow(string cusno, string cusna, string mancode, string username, string cuspono, string cdrno, string itnbrcus, string itdsc, decimal qty, System.DateTime shipday1, decimal inqty, decimal shipqty, string manno, System.DateTime manday1, System.DateTime finday1) {
+            public tblresultRow AddtblresultRow(
+                        string cusno, 
+                        string cusna, 
+                        string mancode, 
+                        string username, 
+                        string cuspono, 
+                        string cdrno, 
+                        string itnbrcus, 
+                        string itdsc, 
+                        decimal qty, 
+                        System.DateTime shipday1, 
+                        decimal inqty, 
+                        decimal shipqty, 
+                        string manno, 
+                        System.DateTime manday1, 
+                        System.DateTime finday1, 
+                        string sn, 
+                        string remark1) {
                 tblresultRow rowtblresultRow = ((tblresultRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cusno,
@@ -551,7 +588,9 @@ namespace Hanbell.AutoReport.Config {
                         shipqty,
                         manno,
                         manday1,
-                        finday1};
+                        finday1,
+                        sn,
+                        remark1};
                 rowtblresultRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblresultRow);
                 return rowtblresultRow;
@@ -589,6 +628,8 @@ namespace Hanbell.AutoReport.Config {
                 this.columnmanno = base.Columns["manno"];
                 this.columnmanday1 = base.Columns["manday1"];
                 this.columnfinday1 = base.Columns["finday1"];
+                this.columnsn = base.Columns["sn"];
+                this.columnremark1 = base.Columns["remark1"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -624,6 +665,10 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columnmanday1);
                 this.columnfinday1 = new global::System.Data.DataColumn("finday1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfinday1);
+                this.columnsn = new global::System.Data.DataColumn("sn", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsn);
+                this.columnremark1 = new global::System.Data.DataColumn("remark1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnremark1);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1278,6 +1323,38 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string sn {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblresult.snColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“sn”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletblresult.snColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string remark1 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblresult.remark1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“remark1”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletblresult.remark1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscusnoNull() {
                 return this.IsNull(this.tabletblresult.cusnoColumn);
             }
@@ -1454,6 +1531,30 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setfinday1Null() {
                 this[this.tabletblresult.finday1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IssnNull() {
+                return this.IsNull(this.tabletblresult.snColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetsnNull() {
+                this[this.tabletblresult.snColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isremark1Null() {
+                return this.IsNull(this.tabletblresult.remark1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setremark1Null() {
+                this[this.tabletblresult.remark1Column] = global::System.Convert.DBNull;
             }
         }
         

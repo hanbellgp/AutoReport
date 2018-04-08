@@ -22,7 +22,7 @@ namespace Hanbell.AutoReport.Config
         {
             base.Init();
             string htmlFile = "";
-            this.nc = new AccountReceivableDelayConfig(Core.DBServerType.SybaseASE, "SHBERP",this.ToString());
+            this.nc = new AccountReceivableDelayConfig(Core.DBServerType.SybaseASE, "SHBERP", this.ToString());
             nc.InitData();
             nc.ConfigData();
 
@@ -37,7 +37,7 @@ namespace Hanbell.AutoReport.Config
                     if (item.FullResourceName == "Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt")
                     {
                         Hashtable args = new Hashtable();
-                        args = Base.GetParameter(this.ToString(),nc.ToString());
+                        args = Base.GetParameter(this.ToString(), nc.ToString());
                         int day1, day2, day3, day4, day5;
                         if (args == null || args.Count != 5)
                         {
@@ -89,7 +89,7 @@ namespace Hanbell.AutoReport.Config
         protected override void SendAddtionalNotification()
         {
             Hashtable args = new Hashtable();
-            args = Base.GetParameter(this.ToString(),nc.ToString());
+            args = Base.GetParameter(this.ToString(), nc.ToString());
             string mailcc;
             int day1, day2, day3, day4, day5;
             if (args == null || args.Count != 5)
@@ -119,17 +119,18 @@ namespace Hanbell.AutoReport.Config
                 nc.GetDataTable("tblresult").DefaultView.RowFilter = " userno='" + row["userno"].ToString() + "'";
 
                 NotificationContent msg = new NotificationContent();
-                msg.AddTo(row["userno"].ToString() + "@" + Base.GetMailAccountDomain());
+                msg.AddTo(GetMailAddressByEmployeeIdFromOA(row["userno"].ToString()));
                 //抄送直接主管
                 mailcc = GetManagerIdByEmployeeIdFromOA(row["userno"].ToString());
-                if (mailcc.ToString() != "")
+
+                if (mailcc != null && mailcc.ToString() != "")
                 {
-                    msg.AddCc(mailcc +  "@" + Base.GetMailAccountDomain());
+                    msg.AddCc(GetMailAddressByEmployeeIdFromOA(mailcc));
                     //获取上上级主管,如果是华东晋能龙经理,就抄送给他
                     mailcc = GetManagerIdByEmployeeIdFromOA(mailcc);
-                    if (mailcc.ToString() == "C0045")
+                    if (mailcc != null && mailcc.ToString() == "C0045")
                     {
-                        msg.AddCc(mailcc + "@" + Base.GetMailAccountDomain());
+                        msg.AddCc(GetMailAddressByEmployeeIdFromOA(mailcc));
                     }
                 }
                 msg.subject = this.subject;

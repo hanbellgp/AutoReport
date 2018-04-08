@@ -24,6 +24,8 @@
               <xs:element name="createdTime" msdata:Caption="建立时间" msprop:Generator_ColumnVarNameInTable="columncreatedTime" msprop:Generator_ColumnPropNameInRow="createdTime" msprop:Generator_ColumnPropNameInTable="createdTimeColumn" msprop:Generator_UserColumnName="createdTime" type="xs:dateTime" minOccurs="0" />
               <xs:element name="status" msdata:Caption="状态" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
               <xs:element name="delaydays" msdata:Caption="滞留天数" msprop:Generator_ColumnVarNameInTable="columndelaydays" msprop:Generator_ColumnPropNameInRow="delaydays" msprop:Generator_ColumnPropNameInTable="delaydaysColumn" msprop:Generator_UserColumnName="delaydays" type="xs:short" minOccurs="0" />
+              <xs:element name="deptno" msdata:Caption="部门编号" msprop:Generator_ColumnVarNameInTable="columndeptno" msprop:Generator_ColumnPropNameInRow="deptno" msprop:Generator_ColumnPropNameInTable="deptnoColumn" msprop:Generator_UserColumnName="deptno" type="xs:string" minOccurs="0" />
+              <xs:element name="dept" msdata:Caption="部门名称" msprop:Generator_ColumnVarNameInTable="columndept" msprop:Generator_ColumnPropNameInRow="dept" msprop:Generator_ColumnPropNameInTable="deptColumn" msprop:Generator_UserColumnName="dept" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
