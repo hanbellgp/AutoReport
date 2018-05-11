@@ -76,7 +76,15 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="CDRX643PromptConfig.cs" />
-    <Compile Include="ComerNainDuCaiGouMaiMingConfig.cs" />
+    <Compile Include="Monthly.cs" />
+    <Compile Include="MonthlyConfig.cs" />
+    <Compile Include="MonthlyDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SHBComerNianDuCaiGouPaiMing.cs" />
+    <Compile Include="SHBNianDuCaiGouPaiMingConfig.cs" />
     <Compile Include="ComerNDCGPMDS.cs">
       <DependentUpon>ComerNDCGPMDS.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -143,6 +151,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="WarehZP07.cs" />
+    <Compile Include="WarehZP07Config.cs" />
+    <Compile Include="WarehZP07DS.cs">
+      <DependentUpon>WarehZP07DS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WarehZP07DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WarehZP07DS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="YQWJAPurchaseOrder.cs">
       <DependentUpon>YQWJAPurchaseOrder.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -154,6 +173,7 @@
     </Compile>
     <Compile Include="YuQiWeiJieAnPurchaseOrder.cs" />
     <Compile Include="YuQiWeiJieAnPurchaseOrderConfig.cs" />
+    <Compile Include="ComerNainDuCaiGouMaiMingConfig.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -196,6 +216,17 @@
     </None>
     <None Include="ComerNDCGPMDS.xss">
       <DependentUpon>ComerNDCGPMDS.xsd</DependentUpon>
+    </None>
+    <None Include="MonthlyDS.xsc">
+      <DependentUpon>MonthlyDS.xsd</DependentUpon>
+    </None>
+    <None Include="MonthlyDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MonthlyDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MonthlyDS.xss">
+      <DependentUpon>MonthlyDS.xsd</DependentUpon>
     </None>
     <None Include="NianDuCaiGouPaiMingDS.xsc">
       <DependentUpon>NianDuCaiGouPaiMingDS.xsd</DependentUpon>
@@ -260,6 +291,17 @@
     </None>
     <None Include="UnreturnDS.xss">
       <DependentUpon>UnreturnDS.xsd</DependentUpon>
+    </None>
+    <None Include="WarehZP07DS.xsc">
+      <DependentUpon>WarehZP07DS.xsd</DependentUpon>
+    </None>
+    <None Include="WarehZP07DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WarehZP07DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WarehZP07DS.xss">
+      <DependentUpon>WarehZP07DS.xsd</DependentUpon>
     </None>
     <None Include="YQWJAPurchaseOrder.xsc">
       <DependentUpon>YQWJAPurchaseOrder.xsd</DependentUpon>

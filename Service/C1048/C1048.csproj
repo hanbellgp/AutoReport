@@ -286,8 +286,6 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Test.cs" />
-    <Compile Include="TestConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DSBxdmx.xsc">
