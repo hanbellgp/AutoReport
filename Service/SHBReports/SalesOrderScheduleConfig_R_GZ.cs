@@ -7,10 +7,10 @@ using Hanbell.AutoReport.Core;
 
 namespace Hanbell.AutoReport.Config
 {
-    public class SalesOrderScheduleConfig_R_HD : SalesOrderScheduleConfig
+    public class SalesOrderScheduleConfig_R_GZ : SalesOrderScheduleConfig
     {
 
-        public SalesOrderScheduleConfig_R_HD(DBServerType dbType, string connName, string notification)
+        public SalesOrderScheduleConfig_R_GZ(DBServerType dbType, string connName, string notification)
         {
             PrepareDBUtil(dbType, Base.GetDBConnectionString(connName));
             this.ds = new SalesOrderScheduleDS();

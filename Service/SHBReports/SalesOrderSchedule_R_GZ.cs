@@ -6,9 +6,9 @@ using Hanbell.AutoReport.Core;
 
 namespace Hanbell.AutoReport.Config
 {
-    public class SalesOrderSchedule_R_HD : SalesOrderSchedule_R
+    public class SalesOrderSchedule_R_GZ : SalesOrderSchedule_R
     {
-        public SalesOrderSchedule_R_HD()
+        public SalesOrderSchedule_R_GZ()
         {
 
         }
@@ -17,7 +17,7 @@ namespace Hanbell.AutoReport.Config
         {
             SetMailHead();
 
-            nc = new SalesOrderScheduleConfig_R_HD(DBServerType.SybaseASE, "SHBERP", this.ToString());
+            nc = new SalesOrderScheduleConfig_R_GZ(DBServerType.SybaseASE, "SHBERP", this.ToString());
             nc.InitData();
             nc.ConfigData();
 
