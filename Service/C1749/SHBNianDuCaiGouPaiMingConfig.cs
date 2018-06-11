@@ -7,40 +7,36 @@ using System.Data;
 
 namespace Hanbell.AutoReport.Config
 {
-    class ComerNainDuCaiGouMaiMingConfig : NotificationConfig
+    public class SHBNianDuCaiGouPaiMingConfig : NotificationConfig
     {
-        public ComerNainDuCaiGouMaiMingConfig(DBServerType dbType, string connName, string notification)
+        public SHBNianDuCaiGouPaiMingConfig(DBServerType dbType, string connName, string notification)
         {
             PrepareDBUtil(dbType, Base.GetDBConnectionString(connName));
 
             this.ds = new ComerNDCGPMDS();
-
+            //this.reportList.Add(new NianDuCaiGouPaiMingReport());
             this.args = Base.GetParameter(notification, this.ToString());
         }
         public override void InitData()
         {
             //查询年度年度采购金额
-            String sqlStr = @"select top 30  convert(varchar(4),a.trdat,112) as 'yer',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as y_puramt , 0 as y_order, 
-            0 as 'm_puramt', 0 as 'm_order',0 as 'ly_puramt',0 as 'ly_order',0 as 'lm_puramt', 0 as 'lm_order' from ( 
+            String sqlStr = @"select top 30 convert(varchar(4),a.trdat,112) as yer,a.vdrno,a.vdrna ,0 as m_puramt, 0 as m_order,
+            sum(a.acpamt)/10000 as y_puramt , 0 as y_order,0 as lm_puramt,0 as lm_order,0 as ly_puramt,0 as ly_order from ( 
             SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh, purvdr,purhad 
-            WHERE (apmpyh.vdrno = purvdr.vdrno) and  (purhad.facno = apmpyh.facno) and (purhad.prono = apmpyh.prono) and (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1'))  AND 
-            (apmpyh.facno = 'K' and apmpyh.prono = '1' and 
+            WHERE (apmpyh.vdrno = purvdr.vdrno) and  (purhad.facno = apmpyh.facno) and (purhad.prono = apmpyh.prono) and (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1'))  AND
+            (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
             year(apmpyh.trdat)= year(dateadd(month,-1,getdate()))))a 
             GROUP BY convert(varchar(4),a.trdat,112),a.vdrno ,a.vdrna 
             order by sum(a.acpamt) desc";
-
             Fill(sqlStr, ds, "ndcgpm");
-            //Fill(DBServerType.SybaseASE, Base.GetDBConnectionString("SHBERP"), sqlStr, ds, "ndcgpm");
-
             //查询上个月采购金额
             sqlStr = @"select convert(varchar(6),a.trdat,112) as 'mon',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as 'm_puramt',0 as 'm_order' from (
-            SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh, purvdr,purhad WHERE (apmpyh.vdrno = purvdr.vdrno) and  
-            (purhad.facno = apmpyh.facno) and (purhad.prono = apmpyh.prono) and (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1')) AND (apmpyh.facno = 'K' and apmpyh.prono = '1' and  
+            SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh, purvdr,purhad WHERE (apmpyh.vdrno = purvdr.vdrno) and 
+            (purhad.facno = apmpyh.facno) and (purhad.prono = apmpyh.prono) and (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1')) AND (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
             convert(varchar(6),apmpyh.trdat,112)= convert(varchar(6),dateadd(month,-1,getdate()),112)))a 
             GROUP BY convert(varchar(6),a.trdat,112),a.vdrno ,a.vdrna    
             order by sum(a.acpamt) desc";
             Fill(sqlStr, ds, "mpuramt");
-            //Fill(DBServerType.SybaseASE, Base.GetDBConnectionString("SHBERP"), sqlStr, ds, "mpuramt");
             //添加到ndcgpm表中
             foreach (DataRow item in ds.Tables["ndcgpm"].Rows)
             {
@@ -54,43 +50,17 @@ namespace Hanbell.AutoReport.Config
                 }
             }
 
-
-            //查询同期采购金额排名
-            sqlStr = @"select convert(varchar(4),a.trdat,112) as 'yer',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as 'ly_puramt',0 as 'ly_order' from (
-            SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh,purvdr,purhad 
-            WHERE (apmpyh.vdrno = purvdr.vdrno) and ( purhad.facno = apmpyh.facno ) and ( purhad.prono = apmpyh.prono ) and   
-            (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1')) AND (apmpyh.facno = 'K' and apmpyh.prono = '1' and 
-            year(apmpyh.trdat)= year(dateadd(year,-1,dateadd(month,-1,getdate())))))a 
-            GROUP BY convert(varchar(4),a.trdat,112),a.vdrno,a.vdrna    
-            order by sum(a.acpamt) desc";
-            //添加到ndcgpm表里去
-            Fill(sqlStr, ds, "lypuramt");
-            //Fill(DBServerType.SybaseASE, Base.GetDBConnectionString("SHBERP"), sqlStr, ds, "lypuramt");
-            foreach (DataRow item in ds.Tables["ndcgpm"].Rows)
-            {
-                foreach (DataRow row in ds.Tables["lypuramt"].Rows)
-                {
-                    if (item["vdrno"].ToString() == row["vdrno"].ToString())
-                    {
-                        item["ly_puramt"] = row["ly_puramt"];
-                        item["ly_order"] = row["ly_order"];
-                    }
-                }
-            }
-
-
-            //查询去年采购金额
+            //查询同期排名
             sqlStr = @"select convert(varchar(4),a.trdat,112) as 'mom',a.vdrno,a.vdrna,sum(a.acpamt)/10000 as 'lm_puramt',0 as 'lm_order' from (
-            SELECT  apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna ,acpamt,0 as ordern,apmpyh.trdat 
+            SELECT  apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna ,acpamt,0 as ordern,apmpyh.trdat
             FROM apmpyh,purvdr,purhad  WHERE (apmpyh.vdrno = purvdr.vdrno) and (purhad.facno = apmpyh.facno) and  (purhad.prono = apmpyh.prono) and   
-            (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1'))  AND (apmpyh.facno = 'K' and apmpyh.prono = '1' and 
-            convert(varchar(6),apmpyh.trdat,112) <= convert( varchar(6),dateadd(month,-13,getdate()),112) 
+            (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1'))  AND (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
+            convert(varchar(6),apmpyh.trdat,112) < = convert( varchar(6),dateadd(month,-13,getdate()),112) 
             and convert(varchar(4),apmpyh.trdat,112) = convert( varchar(4),dateadd(month,-13,getdate()),112)))a 
             GROUP BY convert(varchar(4),a.trdat,112),a.vdrno,a.vdrna 
             order by sum(a.acpamt) desc";
             //添加到ndcgpm表去
             Fill(sqlStr, ds, "lmpuramt");
-            //Fill(DBServerType.SybaseASE, Base.GetDBConnectionString("SHBERP"), sqlStr, ds, "lmpuramt");
             foreach (DataRow item in ds.Tables["ndcgpm"].Rows)
             {
                 foreach (DataRow row in ds.Tables["lmpuramt"].Rows)
@@ -103,6 +73,28 @@ namespace Hanbell.AutoReport.Config
                 }
             }
 
+            //查询去年排名
+            sqlStr = @"select convert(varchar(4),a.trdat,112) as 'yer',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as 'ly_puramt',0 as 'ly_order' from (
+            SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh,purvdr,purhad 
+            WHERE (apmpyh.vdrno = purvdr.vdrno) and ( purhad.facno = apmpyh.facno ) and ( purhad.prono = apmpyh.prono ) and   
+            (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1')) AND (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
+            year(apmpyh.trdat)= year(dateadd(year,-1,dateadd(month,-1,getdate())))))a 
+            GROUP BY convert(varchar(4),a.trdat,112),a.vdrno,a.vdrna    
+            order by sum(a.acpamt) desc";
+            //添加到ndcgpm表里去
+            Fill(sqlStr, ds, "lypuramt");
+            foreach (DataRow item in ds.Tables["ndcgpm"].Rows)
+            {
+                foreach (DataRow row in ds.Tables["lypuramt"].Rows)
+                {
+                    if (item["vdrno"].ToString() == row["vdrno"].ToString())
+                    {
+                        item["ly_puramt"] = row["ly_puramt"];
+                        item["ly_order"] = row["ly_order"];
+                    }
+                }
+            }
+
         }
         //最后排序
         public override void ConfigData()
@@ -111,7 +103,7 @@ namespace Hanbell.AutoReport.Config
             int i = 0;
             DataTable tbl;
             tbl = ds.Tables["ndcgpm"].Copy();
-            tbl.DefaultView.Sort = "lm_puramt DESC";
+            tbl.DefaultView.Sort = "ly_puramt DESC";
 
             ds.Tables["ndcgpm"].Rows.Clear();
             tbl = tbl.DefaultView.ToTable();
@@ -119,13 +111,14 @@ namespace Hanbell.AutoReport.Config
             foreach (DataRow item in tbl.Rows)
             {
                 i++;
-                if (!item["lm_puramt"].ToString().Equals("0"))
+                //Console.WriteLine(item["lm_puramt"].ToString());
+                if (!item["ly_puramt"].ToString().Equals("0"))
                 {
-                    item["lm_order"] = i;
+                    item["ly_order"] = i;
                 }
                 else
                 {
-                    item["lm_order"] = 0;
+                    item["ly_order"] = 0;
                 }
                 DataRow r = ds.Tables["ndcgpm"].NewRow();
                 r[0] = item[0];
@@ -144,7 +137,7 @@ namespace Hanbell.AutoReport.Config
             //再排同期采购
             i = 0;
             tbl = ds.Tables["ndcgpm"].Copy();
-            tbl.DefaultView.Sort = "ly_puramt DESC";
+            tbl.DefaultView.Sort = "lm_puramt DESC";
 
             ds.Tables["ndcgpm"].Rows.Clear();
             tbl = tbl.DefaultView.ToTable();
@@ -152,13 +145,13 @@ namespace Hanbell.AutoReport.Config
             foreach (DataRow item in tbl.Rows)
             {
                 i++;
-                if (!item["ly_puramt"].ToString().Equals("0"))
+                if (!item["lm_puramt"].ToString().Equals("0"))
                 {
-                    item["ly_order"] = i;
+                    item["lm_order"] = i;
                 }
                 else
                 {
-                    item["ly_order"] = 0;
+                    item["lm_order"] = 0;
                 }
                 DataRow r = ds.Tables["ndcgpm"].NewRow();
                 r[0] = item[0];

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WarehZP07DS" targetNamespace="http://tempuri.org/WarehZP07DS.xsd" xmlns:mstns="http://tempuri.org/WarehZP07DS.xsd" xmlns="http://tempuri.org/WarehZP07DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WarehZP07DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WarehZP07DS" msprop:Generator_UserDSName="WarehZP07DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ZP07tlb" msprop:Generator_TableClassName="ZP07tlbDataTable" msprop:Generator_TableVarName="tableZP07tlb" msprop:Generator_RowChangedName="ZP07tlbRowChanged" msprop:Generator_TablePropName="ZP07tlb" msprop:Generator_RowDeletingName="ZP07tlbRowDeleting" msprop:Generator_RowChangingName="ZP07tlbRowChanging" msprop:Generator_RowEvHandlerName="ZP07tlbRowChangeEventHandler" msprop:Generator_RowDeletedName="ZP07tlbRowDeleted" msprop:Generator_RowClassName="ZP07tlbRow" msprop:Generator_UserTableName="ZP07tlb" msprop:Generator_RowEvArgName="ZP07tlbRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="trnqy1" msprop:Generator_ColumnVarNameInTable="columntrnqy1" msprop:Generator_ColumnPropNameInRow="trnqy1" msprop:Generator_ColumnPropNameInTable="trnqy1Column" msprop:Generator_UserColumnName="trnqy1" type="xs:string" minOccurs="0" />
+              <xs:element name="unmsr1" msprop:Generator_ColumnVarNameInTable="columnunmsr1" msprop:Generator_ColumnPropNameInRow="unmsr1" msprop:Generator_ColumnPropNameInTable="unmsr1Column" msprop:Generator_UserColumnName="unmsr1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
