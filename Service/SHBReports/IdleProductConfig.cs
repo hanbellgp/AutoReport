@@ -39,7 +39,7 @@ namespace Hanbell.AutoReport.Config
             sqlBuilder.Length = 0;
             sqlBuilder.Append("select invbat.itcls,invbat.itnbr,invmas.itdsc,invbat.varnr,invbat.onhand1 from ");
             sqlBuilder.Append(" invbat,invmas where invbat.itnbr=invmas.itnbr and isnull(varnr,'')<>'' and onhand1<>0 and wareh='W01' ");
-            sqlBuilder.Append(" and invbat.itcls in {0};");
+            sqlBuilder.Append(" and invbat.itcls in {0}");
 
             Fill(String.Format(sqlBuilder.ToString(),this.args["itcls"]), this.ds, "tblstock");
 
