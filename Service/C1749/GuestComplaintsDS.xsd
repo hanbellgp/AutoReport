@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="GuestComplaintsDS" targetNamespace="http://tempuri.org/GuestComplaintsDS.xsd" xmlns:mstns="http://tempuri.org/GuestComplaintsDS.xsd" xmlns="http://tempuri.org/GuestComplaintsDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="GuestComplaintsDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="GuestComplaintsDS" msprop:Generator_UserDSName="GuestComplaintsDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tlbGuest" msprop:Generator_TableClassName="tlbGuestDataTable" msprop:Generator_TableVarName="tabletlbGuest" msprop:Generator_RowChangedName="tlbGuestRowChanged" msprop:Generator_TablePropName="tlbGuest" msprop:Generator_RowDeletingName="tlbGuestRowDeleting" msprop:Generator_RowChangingName="tlbGuestRowChanging" msprop:Generator_RowEvHandlerName="tlbGuestRowChangeEventHandler" msprop:Generator_RowDeletedName="tlbGuestRowDeleted" msprop:Generator_RowClassName="tlbGuestRow" msprop:Generator_UserTableName="tlbGuest" msprop:Generator_RowEvArgName="tlbGuestRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="责任部门" msprop:Generator_ColumnVarNameInTable="column责任部门" msprop:Generator_ColumnPropNameInRow="责任部门" msprop:Generator_ColumnPropNameInTable="责任部门Column" msprop:Generator_UserColumnName="责任部门" type="xs:string" minOccurs="0" />
+              <xs:element name="案件编号" msprop:Generator_ColumnVarNameInTable="column案件编号" msprop:Generator_ColumnPropNameInRow="案件编号" msprop:Generator_ColumnPropNameInTable="案件编号Column" msprop:Generator_UserColumnName="案件编号" type="xs:string" minOccurs="0" />
+              <xs:element name="客户代号" msprop:Generator_ColumnVarNameInTable="column客户代号" msprop:Generator_ColumnPropNameInRow="客户代号" msprop:Generator_ColumnPropNameInTable="客户代号Column" msprop:Generator_UserColumnName="客户代号" type="xs:string" minOccurs="0" />
+              <xs:element name="客户简称" msprop:Generator_ColumnVarNameInTable="column客户简称" msprop:Generator_ColumnPropNameInRow="客户简称" msprop:Generator_ColumnPropNameInTable="客户简称Column" msprop:Generator_UserColumnName="客户简称" type="xs:string" minOccurs="0" />
+              <xs:element name="问题描述" msprop:Generator_ColumnVarNameInTable="column问题描述" msprop:Generator_ColumnPropNameInRow="问题描述" msprop:Generator_ColumnPropNameInTable="问题描述Column" msprop:Generator_UserColumnName="问题描述" type="xs:string" minOccurs="0" />
+              <xs:element name="产品别" msprop:Generator_ColumnVarNameInTable="column产品别" msprop:Generator_ColumnPropNameInRow="产品别" msprop:Generator_ColumnPropNameInTable="产品别Column" msprop:Generator_UserColumnName="产品别" type="xs:string" minOccurs="0" />
+              <xs:element name="区域别" msprop:Generator_ColumnVarNameInTable="column区域别" msprop:Generator_ColumnPropNameInRow="区域别" msprop:Generator_ColumnPropNameInTable="区域别Column" msprop:Generator_UserColumnName="区域别" type="xs:string" minOccurs="0" />
+              <xs:element name="客诉类别" msprop:Generator_ColumnVarNameInTable="column客诉类别" msprop:Generator_ColumnPropNameInRow="客诉类别" msprop:Generator_ColumnPropNameInTable="客诉类别Column" msprop:Generator_UserColumnName="客诉类别" type="xs:string" minOccurs="0" />
+              <xs:element name="责任判定" msprop:Generator_ColumnVarNameInTable="column责任判定" msprop:Generator_ColumnPropNameInRow="责任判定" msprop:Generator_ColumnPropNameInTable="责任判定Column" msprop:Generator_UserColumnName="责任判定" type="xs:string" minOccurs="0" />
+              <xs:element name="收费否" msprop:Generator_ColumnVarNameInTable="column收费否" msprop:Generator_ColumnPropNameInRow="收费否" msprop:Generator_ColumnPropNameInTable="收费否Column" msprop:Generator_UserColumnName="收费否" type="xs:string" minOccurs="0" />
+              <xs:element name="结案码" msprop:Generator_ColumnVarNameInTable="column结案码" msprop:Generator_ColumnPropNameInRow="结案码" msprop:Generator_ColumnPropNameInTable="结案码Column" msprop:Generator_UserColumnName="结案码" type="xs:string" minOccurs="0" />
+              <xs:element name="结案日期" msprop:Generator_ColumnVarNameInTable="column结案日期" msprop:Generator_ColumnPropNameInRow="结案日期" msprop:Generator_ColumnPropNameInTable="结案日期Column" msprop:Generator_UserColumnName="结案日期" type="xs:string" minOccurs="0" />
+              <xs:element name="是否客诉" msprop:Generator_ColumnVarNameInTable="column是否客诉" msprop:Generator_ColumnPropNameInRow="是否客诉" msprop:Generator_ColumnPropNameInTable="是否客诉Column" msprop:Generator_UserColumnName="是否客诉" type="xs:string" minOccurs="0" />
+              <xs:element name="原因分析说明" msprop:Generator_ColumnVarNameInTable="column原因分析说明" msprop:Generator_ColumnPropNameInRow="原因分析说明" msprop:Generator_ColumnPropNameInTable="原因分析说明Column" msprop:Generator_UserColumnName="原因分析说明" type="xs:string" minOccurs="0" />
+              <xs:element name="接案日期" msprop:Generator_ColumnVarNameInTable="column接案日期" msprop:Generator_ColumnPropNameInRow="接案日期" msprop:Generator_ColumnPropNameInTable="接案日期Column" msprop:Generator_UserColumnName="接案日期" type="xs:string" minOccurs="0" />
+              <xs:element name="是否在原厂保固期" msprop:Generator_ColumnVarNameInTable="column是否在原厂保固期" msprop:Generator_ColumnPropNameInRow="是否在原厂保固期" msprop:Generator_ColumnPropNameInTable="是否在原厂保固期Column" msprop:Generator_UserColumnName="是否在原厂保固期" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
