@@ -20,17 +20,17 @@ namespace Hanbell.AutoReport.Config {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DSFddxgb")]
+    [global::System.Xml.Serialization.XmlRootAttribute("GuestComplaintsDS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DSFddxgb : global::System.Data.DataSet {
+    public partial class GuestComplaintsDS : global::System.Data.DataSet {
         
-        private FddxgbDataTable tableFddxgb;
+        private tlbGuestDataTable tabletlbGuest;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DSFddxgb() {
+        public GuestComplaintsDS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Hanbell.AutoReport.Config {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected DSFddxgb(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected GuestComplaintsDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Hanbell.AutoReport.Config {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Fddxgb"] != null)) {
-                    base.Tables.Add(new FddxgbDataTable(ds.Tables["Fddxgb"]));
+                if ((ds.Tables["tlbGuest"] != null)) {
+                    base.Tables.Add(new tlbGuestDataTable(ds.Tables["tlbGuest"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Hanbell.AutoReport.Config {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FddxgbDataTable Fddxgb {
+        public tlbGuestDataTable tlbGuest {
             get {
-                return this.tableFddxgb;
+                return this.tabletlbGuest;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DSFddxgb cln = ((DSFddxgb)(base.Clone()));
+            GuestComplaintsDS cln = ((GuestComplaintsDS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Hanbell.AutoReport.Config {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Fddxgb"] != null)) {
-                    base.Tables.Add(new FddxgbDataTable(ds.Tables["Fddxgb"]));
+                if ((ds.Tables["tlbGuest"] != null)) {
+                    base.Tables.Add(new tlbGuestDataTable(ds.Tables["tlbGuest"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFddxgb = ((FddxgbDataTable)(base.Tables["Fddxgb"]));
+            this.tabletlbGuest = ((tlbGuestDataTable)(base.Tables["tlbGuest"]));
             if ((initTable == true)) {
-                if ((this.tableFddxgb != null)) {
-                    this.tableFddxgb.InitVars();
+                if ((this.tabletlbGuest != null)) {
+                    this.tabletlbGuest.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DSFddxgb";
+            this.DataSetName = "GuestComplaintsDS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DSFddxgb.xsd";
+            this.Namespace = "http://tempuri.org/GuestComplaintsDS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFddxgb = new FddxgbDataTable();
-            base.Tables.Add(this.tableFddxgb);
+            this.tabletlbGuest = new tlbGuestDataTable();
+            base.Tables.Add(this.tabletlbGuest);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeFddxgb() {
+        private bool ShouldSerializetlbGuest() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DSFddxgb ds = new DSFddxgb();
+            GuestComplaintsDS ds = new GuestComplaintsDS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,43 +270,51 @@ namespace Hanbell.AutoReport.Config {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void FddxgbRowChangeEventHandler(object sender, FddxgbRowChangeEvent e);
+        public delegate void tlbGuestRowChangeEventHandler(object sender, tlbGuestRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FddxgbDataTable : global::System.Data.TypedTableBase<FddxgbRow> {
+        public partial class tlbGuestDataTable : global::System.Data.TypedTableBase<tlbGuestRow> {
             
-            private global::System.Data.DataColumn columncdrno;
+            private global::System.Data.DataColumn column责任部门;
             
-            private global::System.Data.DataColumn columndepno;
+            private global::System.Data.DataColumn column案件编号;
             
-            private global::System.Data.DataColumn columndepname;
+            private global::System.Data.DataColumn column客户代号;
             
-            private global::System.Data.DataColumn columncusno;
+            private global::System.Data.DataColumn column客户简称;
             
-            private global::System.Data.DataColumn columncusna;
+            private global::System.Data.DataColumn column问题描述;
             
-            private global::System.Data.DataColumn columnitnbr;
+            private global::System.Data.DataColumn column产品别;
             
-            private global::System.Data.DataColumn columnitnbrcus;
+            private global::System.Data.DataColumn column区域别;
             
-            private global::System.Data.DataColumn columncdrqy1;
+            private global::System.Data.DataColumn column客诉类别;
             
-            private global::System.Data.DataColumn columnmodnum;
+            private global::System.Data.DataColumn column责任判定;
             
-            private global::System.Data.DataColumn columnuserno;
+            private global::System.Data.DataColumn column收费否;
             
-            private global::System.Data.DataColumn columnmancode;
+            private global::System.Data.DataColumn column结案码;
             
-            private global::System.Data.DataColumn columnmark1;
+            private global::System.Data.DataColumn column结案日期;
+            
+            private global::System.Data.DataColumn column是否客诉;
+            
+            private global::System.Data.DataColumn column原因分析说明;
+            
+            private global::System.Data.DataColumn column接案日期;
+            
+            private global::System.Data.DataColumn column是否在原厂保固期;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FddxgbDataTable() {
-                this.TableName = "Fddxgb";
+            public tlbGuestDataTable() {
+                this.TableName = "tlbGuest";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -314,7 +322,7 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal FddxgbDataTable(global::System.Data.DataTable table) {
+            internal tlbGuestDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -331,104 +339,136 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected FddxgbDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tlbGuestDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cdrnoColumn {
+            public global::System.Data.DataColumn 责任部门Column {
                 get {
-                    return this.columncdrno;
+                    return this.column责任部门;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn depnoColumn {
+            public global::System.Data.DataColumn 案件编号Column {
                 get {
-                    return this.columndepno;
+                    return this.column案件编号;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn depnameColumn {
+            public global::System.Data.DataColumn 客户代号Column {
                 get {
-                    return this.columndepname;
+                    return this.column客户代号;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cusnoColumn {
+            public global::System.Data.DataColumn 客户简称Column {
                 get {
-                    return this.columncusno;
+                    return this.column客户简称;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cusnaColumn {
+            public global::System.Data.DataColumn 问题描述Column {
                 get {
-                    return this.columncusna;
+                    return this.column问题描述;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn itnbrColumn {
+            public global::System.Data.DataColumn 产品别Column {
                 get {
-                    return this.columnitnbr;
+                    return this.column产品别;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn itnbrcusColumn {
+            public global::System.Data.DataColumn 区域别Column {
                 get {
-                    return this.columnitnbrcus;
+                    return this.column区域别;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cdrqy1Column {
+            public global::System.Data.DataColumn 客诉类别Column {
                 get {
-                    return this.columncdrqy1;
+                    return this.column客诉类别;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn modnumColumn {
+            public global::System.Data.DataColumn 责任判定Column {
                 get {
-                    return this.columnmodnum;
+                    return this.column责任判定;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn usernoColumn {
+            public global::System.Data.DataColumn 收费否Column {
                 get {
-                    return this.columnuserno;
+                    return this.column收费否;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn mancodeColumn {
+            public global::System.Data.DataColumn 结案码Column {
                 get {
-                    return this.columnmancode;
+                    return this.column结案码;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn mark1Column {
+            public global::System.Data.DataColumn 结案日期Column {
                 get {
-                    return this.columnmark1;
+                    return this.column结案日期;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 是否客诉Column {
+                get {
+                    return this.column是否客诉;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 原因分析说明Column {
+                get {
+                    return this.column原因分析说明;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 接案日期Column {
+                get {
+                    return this.column接案日期;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 是否在原厂保固期Column {
+                get {
+                    return this.column是否在原厂保固期;
                 }
             }
             
@@ -443,56 +483,76 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FddxgbRow this[int index] {
+            public tlbGuestRow this[int index] {
                 get {
-                    return ((FddxgbRow)(this.Rows[index]));
+                    return ((tlbGuestRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FddxgbRowChangeEventHandler FddxgbRowChanging;
+            public event tlbGuestRowChangeEventHandler tlbGuestRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FddxgbRowChangeEventHandler FddxgbRowChanged;
+            public event tlbGuestRowChangeEventHandler tlbGuestRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FddxgbRowChangeEventHandler FddxgbRowDeleting;
+            public event tlbGuestRowChangeEventHandler tlbGuestRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event FddxgbRowChangeEventHandler FddxgbRowDeleted;
+            public event tlbGuestRowChangeEventHandler tlbGuestRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddFddxgbRow(FddxgbRow row) {
+            public void AddtlbGuestRow(tlbGuestRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FddxgbRow AddFddxgbRow(string cdrno, string depno, string depname, string cusno, string cusna, string itnbr, string itnbrcus, decimal cdrqy1, int modnum, string userno, string mancode, string mark1) {
-                FddxgbRow rowFddxgbRow = ((FddxgbRow)(this.NewRow()));
+            public tlbGuestRow AddtlbGuestRow(
+                        string 责任部门, 
+                        string 案件编号, 
+                        string 客户代号, 
+                        string 客户简称, 
+                        string 问题描述, 
+                        string 产品别, 
+                        string 区域别, 
+                        string 客诉类别, 
+                        string 责任判定, 
+                        string 收费否, 
+                        string 结案码, 
+                        string 结案日期, 
+                        string 是否客诉, 
+                        string 原因分析说明, 
+                        string 接案日期, 
+                        string 是否在原厂保固期) {
+                tlbGuestRow rowtlbGuestRow = ((tlbGuestRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        cdrno,
-                        depno,
-                        depname,
-                        cusno,
-                        cusna,
-                        itnbr,
-                        itnbrcus,
-                        cdrqy1,
-                        modnum,
-                        userno,
-                        mancode,
-                        mark1};
-                rowFddxgbRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFddxgbRow);
-                return rowFddxgbRow;
+                        责任部门,
+                        案件编号,
+                        客户代号,
+                        客户简称,
+                        问题描述,
+                        产品别,
+                        区域别,
+                        客诉类别,
+                        责任判定,
+                        收费否,
+                        结案码,
+                        结案日期,
+                        是否客诉,
+                        原因分析说明,
+                        接案日期,
+                        是否在原厂保固期};
+                rowtlbGuestRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtlbGuestRow);
+                return rowtlbGuestRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FddxgbDataTable cln = ((FddxgbDataTable)(base.Clone()));
+                tlbGuestDataTable cln = ((tlbGuestDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -500,79 +560,91 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FddxgbDataTable();
+                return new tlbGuestDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columncdrno = base.Columns["cdrno"];
-                this.columndepno = base.Columns["depno"];
-                this.columndepname = base.Columns["depname"];
-                this.columncusno = base.Columns["cusno"];
-                this.columncusna = base.Columns["cusna"];
-                this.columnitnbr = base.Columns["itnbr"];
-                this.columnitnbrcus = base.Columns["itnbrcus"];
-                this.columncdrqy1 = base.Columns["cdrqy1"];
-                this.columnmodnum = base.Columns["modnum"];
-                this.columnuserno = base.Columns["userno"];
-                this.columnmancode = base.Columns["mancode"];
-                this.columnmark1 = base.Columns["mark1"];
+                this.column责任部门 = base.Columns["责任部门"];
+                this.column案件编号 = base.Columns["案件编号"];
+                this.column客户代号 = base.Columns["客户代号"];
+                this.column客户简称 = base.Columns["客户简称"];
+                this.column问题描述 = base.Columns["问题描述"];
+                this.column产品别 = base.Columns["产品别"];
+                this.column区域别 = base.Columns["区域别"];
+                this.column客诉类别 = base.Columns["客诉类别"];
+                this.column责任判定 = base.Columns["责任判定"];
+                this.column收费否 = base.Columns["收费否"];
+                this.column结案码 = base.Columns["结案码"];
+                this.column结案日期 = base.Columns["结案日期"];
+                this.column是否客诉 = base.Columns["是否客诉"];
+                this.column原因分析说明 = base.Columns["原因分析说明"];
+                this.column接案日期 = base.Columns["接案日期"];
+                this.column是否在原厂保固期 = base.Columns["是否在原厂保固期"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columncdrno = new global::System.Data.DataColumn("cdrno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncdrno);
-                this.columndepno = new global::System.Data.DataColumn("depno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndepno);
-                this.columndepname = new global::System.Data.DataColumn("depname", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndepname);
-                this.columncusno = new global::System.Data.DataColumn("cusno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncusno);
-                this.columncusna = new global::System.Data.DataColumn("cusna", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncusna);
-                this.columnitnbr = new global::System.Data.DataColumn("itnbr", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnitnbr);
-                this.columnitnbrcus = new global::System.Data.DataColumn("itnbrcus", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnitnbrcus);
-                this.columncdrqy1 = new global::System.Data.DataColumn("cdrqy1", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncdrqy1);
-                this.columnmodnum = new global::System.Data.DataColumn("modnum", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmodnum);
-                this.columnuserno = new global::System.Data.DataColumn("userno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnuserno);
-                this.columnmancode = new global::System.Data.DataColumn("mancode", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmancode);
-                this.columnmark1 = new global::System.Data.DataColumn("mark1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmark1);
+                this.column责任部门 = new global::System.Data.DataColumn("责任部门", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column责任部门);
+                this.column案件编号 = new global::System.Data.DataColumn("案件编号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column案件编号);
+                this.column客户代号 = new global::System.Data.DataColumn("客户代号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column客户代号);
+                this.column客户简称 = new global::System.Data.DataColumn("客户简称", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column客户简称);
+                this.column问题描述 = new global::System.Data.DataColumn("问题描述", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column问题描述);
+                this.column产品别 = new global::System.Data.DataColumn("产品别", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column产品别);
+                this.column区域别 = new global::System.Data.DataColumn("区域别", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column区域别);
+                this.column客诉类别 = new global::System.Data.DataColumn("客诉类别", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column客诉类别);
+                this.column责任判定 = new global::System.Data.DataColumn("责任判定", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column责任判定);
+                this.column收费否 = new global::System.Data.DataColumn("收费否", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column收费否);
+                this.column结案码 = new global::System.Data.DataColumn("结案码", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column结案码);
+                this.column结案日期 = new global::System.Data.DataColumn("结案日期", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column结案日期);
+                this.column是否客诉 = new global::System.Data.DataColumn("是否客诉", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column是否客诉);
+                this.column原因分析说明 = new global::System.Data.DataColumn("原因分析说明", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column原因分析说明);
+                this.column接案日期 = new global::System.Data.DataColumn("接案日期", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column接案日期);
+                this.column是否在原厂保固期 = new global::System.Data.DataColumn("是否在原厂保固期", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column是否在原厂保固期);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FddxgbRow NewFddxgbRow() {
-                return ((FddxgbRow)(this.NewRow()));
+            public tlbGuestRow NewtlbGuestRow() {
+                return ((tlbGuestRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FddxgbRow(builder);
+                return new tlbGuestRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FddxgbRow);
+                return typeof(tlbGuestRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FddxgbRowChanged != null)) {
-                    this.FddxgbRowChanged(this, new FddxgbRowChangeEvent(((FddxgbRow)(e.Row)), e.Action));
+                if ((this.tlbGuestRowChanged != null)) {
+                    this.tlbGuestRowChanged(this, new tlbGuestRowChangeEvent(((tlbGuestRow)(e.Row)), e.Action));
                 }
             }
             
@@ -580,8 +652,8 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FddxgbRowChanging != null)) {
-                    this.FddxgbRowChanging(this, new FddxgbRowChangeEvent(((FddxgbRow)(e.Row)), e.Action));
+                if ((this.tlbGuestRowChanging != null)) {
+                    this.tlbGuestRowChanging(this, new tlbGuestRowChangeEvent(((tlbGuestRow)(e.Row)), e.Action));
                 }
             }
             
@@ -589,8 +661,8 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FddxgbRowDeleted != null)) {
-                    this.FddxgbRowDeleted(this, new FddxgbRowChangeEvent(((FddxgbRow)(e.Row)), e.Action));
+                if ((this.tlbGuestRowDeleted != null)) {
+                    this.tlbGuestRowDeleted(this, new tlbGuestRowChangeEvent(((tlbGuestRow)(e.Row)), e.Action));
                 }
             }
             
@@ -598,14 +670,14 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FddxgbRowDeleting != null)) {
-                    this.FddxgbRowDeleting(this, new FddxgbRowChangeEvent(((FddxgbRow)(e.Row)), e.Action));
+                if ((this.tlbGuestRowDeleting != null)) {
+                    this.tlbGuestRowDeleting(this, new tlbGuestRowChangeEvent(((tlbGuestRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveFddxgbRow(FddxgbRow row) {
+            public void RemovetlbGuestRow(tlbGuestRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -614,7 +686,7 @@ namespace Hanbell.AutoReport.Config {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DSFddxgb ds = new DSFddxgb();
+                GuestComplaintsDS ds = new GuestComplaintsDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -632,7 +704,7 @@ namespace Hanbell.AutoReport.Config {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FddxgbDataTable";
+                attribute2.FixedValue = "tlbGuestDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -676,351 +748,463 @@ namespace Hanbell.AutoReport.Config {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FddxgbRow : global::System.Data.DataRow {
+        public partial class tlbGuestRow : global::System.Data.DataRow {
             
-            private FddxgbDataTable tableFddxgb;
+            private tlbGuestDataTable tabletlbGuest;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal FddxgbRow(global::System.Data.DataRowBuilder rb) : 
+            internal tlbGuestRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFddxgb = ((FddxgbDataTable)(this.Table));
+                this.tabletlbGuest = ((tlbGuestDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cdrno {
+            public string 责任部门 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.cdrnoColumn]));
+                        return ((string)(this[this.tabletlbGuest.责任部门Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“cdrno”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“责任部门”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.cdrnoColumn] = value;
+                    this[this.tabletlbGuest.责任部门Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string depno {
+            public string 案件编号 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.depnoColumn]));
+                        return ((string)(this[this.tabletlbGuest.案件编号Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“depno”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“案件编号”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.depnoColumn] = value;
+                    this[this.tabletlbGuest.案件编号Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string depname {
+            public string 客户代号 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.depnameColumn]));
+                        return ((string)(this[this.tabletlbGuest.客户代号Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“depname”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“客户代号”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.depnameColumn] = value;
+                    this[this.tabletlbGuest.客户代号Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cusno {
+            public string 客户简称 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.cusnoColumn]));
+                        return ((string)(this[this.tabletlbGuest.客户简称Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“cusno”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“客户简称”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.cusnoColumn] = value;
+                    this[this.tabletlbGuest.客户简称Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cusna {
+            public string 问题描述 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.cusnaColumn]));
+                        return ((string)(this[this.tabletlbGuest.问题描述Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“cusna”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“问题描述”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.cusnaColumn] = value;
+                    this[this.tabletlbGuest.问题描述Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string itnbr {
+            public string 产品别 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.itnbrColumn]));
+                        return ((string)(this[this.tabletlbGuest.产品别Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“itnbr”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“产品别”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.itnbrColumn] = value;
+                    this[this.tabletlbGuest.产品别Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string itnbrcus {
+            public string 区域别 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.itnbrcusColumn]));
+                        return ((string)(this[this.tabletlbGuest.区域别Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“itnbrcus”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“区域别”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.itnbrcusColumn] = value;
+                    this[this.tabletlbGuest.区域别Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal cdrqy1 {
+            public string 客诉类别 {
                 get {
                     try {
-                        return ((decimal)(this[this.tableFddxgb.cdrqy1Column]));
+                        return ((string)(this[this.tabletlbGuest.客诉类别Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“cdrqy1”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“客诉类别”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.cdrqy1Column] = value;
+                    this[this.tabletlbGuest.客诉类别Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int modnum {
+            public string 责任判定 {
                 get {
                     try {
-                        return ((int)(this[this.tableFddxgb.modnumColumn]));
+                        return ((string)(this[this.tabletlbGuest.责任判定Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“modnum”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“责任判定”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.modnumColumn] = value;
+                    this[this.tabletlbGuest.责任判定Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string userno {
+            public string 收费否 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.usernoColumn]));
+                        return ((string)(this[this.tabletlbGuest.收费否Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“userno”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“收费否”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.usernoColumn] = value;
+                    this[this.tabletlbGuest.收费否Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string mancode {
+            public string 结案码 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.mancodeColumn]));
+                        return ((string)(this[this.tabletlbGuest.结案码Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“mancode”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“结案码”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.mancodeColumn] = value;
+                    this[this.tabletlbGuest.结案码Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string mark1 {
+            public string 结案日期 {
                 get {
                     try {
-                        return ((string)(this[this.tableFddxgb.mark1Column]));
+                        return ((string)(this[this.tabletlbGuest.结案日期Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“Fddxgb”中列“mark1”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“结案日期”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableFddxgb.mark1Column] = value;
+                    this[this.tabletlbGuest.结案日期Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscdrnoNull() {
-                return this.IsNull(this.tableFddxgb.cdrnoColumn);
+            public string 是否客诉 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.是否客诉Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“是否客诉”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.是否客诉Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcdrnoNull() {
-                this[this.tableFddxgb.cdrnoColumn] = global::System.Convert.DBNull;
+            public string 原因分析说明 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.原因分析说明Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“原因分析说明”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.原因分析说明Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdepnoNull() {
-                return this.IsNull(this.tableFddxgb.depnoColumn);
+            public string 接案日期 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.接案日期Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“接案日期”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.接案日期Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdepnoNull() {
-                this[this.tableFddxgb.depnoColumn] = global::System.Convert.DBNull;
+            public string 是否在原厂保固期 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.是否在原厂保固期Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“是否在原厂保固期”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.是否在原厂保固期Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdepnameNull() {
-                return this.IsNull(this.tableFddxgb.depnameColumn);
+            public bool Is责任部门Null() {
+                return this.IsNull(this.tabletlbGuest.责任部门Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdepnameNull() {
-                this[this.tableFddxgb.depnameColumn] = global::System.Convert.DBNull;
+            public void Set责任部门Null() {
+                this[this.tabletlbGuest.责任部门Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscusnoNull() {
-                return this.IsNull(this.tableFddxgb.cusnoColumn);
+            public bool Is案件编号Null() {
+                return this.IsNull(this.tabletlbGuest.案件编号Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcusnoNull() {
-                this[this.tableFddxgb.cusnoColumn] = global::System.Convert.DBNull;
+            public void Set案件编号Null() {
+                this[this.tabletlbGuest.案件编号Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscusnaNull() {
-                return this.IsNull(this.tableFddxgb.cusnaColumn);
+            public bool Is客户代号Null() {
+                return this.IsNull(this.tabletlbGuest.客户代号Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcusnaNull() {
-                this[this.tableFddxgb.cusnaColumn] = global::System.Convert.DBNull;
+            public void Set客户代号Null() {
+                this[this.tabletlbGuest.客户代号Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsitnbrNull() {
-                return this.IsNull(this.tableFddxgb.itnbrColumn);
+            public bool Is客户简称Null() {
+                return this.IsNull(this.tabletlbGuest.客户简称Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetitnbrNull() {
-                this[this.tableFddxgb.itnbrColumn] = global::System.Convert.DBNull;
+            public void Set客户简称Null() {
+                this[this.tabletlbGuest.客户简称Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsitnbrcusNull() {
-                return this.IsNull(this.tableFddxgb.itnbrcusColumn);
+            public bool Is问题描述Null() {
+                return this.IsNull(this.tabletlbGuest.问题描述Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetitnbrcusNull() {
-                this[this.tableFddxgb.itnbrcusColumn] = global::System.Convert.DBNull;
+            public void Set问题描述Null() {
+                this[this.tabletlbGuest.问题描述Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Iscdrqy1Null() {
-                return this.IsNull(this.tableFddxgb.cdrqy1Column);
+            public bool Is产品别Null() {
+                return this.IsNull(this.tabletlbGuest.产品别Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setcdrqy1Null() {
-                this[this.tableFddxgb.cdrqy1Column] = global::System.Convert.DBNull;
+            public void Set产品别Null() {
+                this[this.tabletlbGuest.产品别Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsmodnumNull() {
-                return this.IsNull(this.tableFddxgb.modnumColumn);
+            public bool Is区域别Null() {
+                return this.IsNull(this.tabletlbGuest.区域别Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetmodnumNull() {
-                this[this.tableFddxgb.modnumColumn] = global::System.Convert.DBNull;
+            public void Set区域别Null() {
+                this[this.tabletlbGuest.区域别Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsusernoNull() {
-                return this.IsNull(this.tableFddxgb.usernoColumn);
+            public bool Is客诉类别Null() {
+                return this.IsNull(this.tabletlbGuest.客诉类别Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetusernoNull() {
-                this[this.tableFddxgb.usernoColumn] = global::System.Convert.DBNull;
+            public void Set客诉类别Null() {
+                this[this.tabletlbGuest.客诉类别Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsmancodeNull() {
-                return this.IsNull(this.tableFddxgb.mancodeColumn);
+            public bool Is责任判定Null() {
+                return this.IsNull(this.tabletlbGuest.责任判定Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetmancodeNull() {
-                this[this.tableFddxgb.mancodeColumn] = global::System.Convert.DBNull;
+            public void Set责任判定Null() {
+                this[this.tabletlbGuest.责任判定Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Ismark1Null() {
-                return this.IsNull(this.tableFddxgb.mark1Column);
+            public bool Is收费否Null() {
+                return this.IsNull(this.tabletlbGuest.收费否Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setmark1Null() {
-                this[this.tableFddxgb.mark1Column] = global::System.Convert.DBNull;
+            public void Set收费否Null() {
+                this[this.tabletlbGuest.收费否Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is结案码Null() {
+                return this.IsNull(this.tabletlbGuest.结案码Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set结案码Null() {
+                this[this.tabletlbGuest.结案码Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is结案日期Null() {
+                return this.IsNull(this.tabletlbGuest.结案日期Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set结案日期Null() {
+                this[this.tabletlbGuest.结案日期Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is是否客诉Null() {
+                return this.IsNull(this.tabletlbGuest.是否客诉Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set是否客诉Null() {
+                this[this.tabletlbGuest.是否客诉Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is原因分析说明Null() {
+                return this.IsNull(this.tabletlbGuest.原因分析说明Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set原因分析说明Null() {
+                this[this.tabletlbGuest.原因分析说明Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is接案日期Null() {
+                return this.IsNull(this.tabletlbGuest.接案日期Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set接案日期Null() {
+                this[this.tabletlbGuest.接案日期Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is是否在原厂保固期Null() {
+                return this.IsNull(this.tabletlbGuest.是否在原厂保固期Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set是否在原厂保固期Null() {
+                this[this.tabletlbGuest.是否在原厂保固期Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1028,22 +1212,22 @@ namespace Hanbell.AutoReport.Config {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class FddxgbRowChangeEvent : global::System.EventArgs {
+        public class tlbGuestRowChangeEvent : global::System.EventArgs {
             
-            private FddxgbRow eventRow;
+            private tlbGuestRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FddxgbRowChangeEvent(FddxgbRow row, global::System.Data.DataRowAction action) {
+            public tlbGuestRowChangeEvent(tlbGuestRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FddxgbRow Row {
+            public tlbGuestRow Row {
                 get {
                     return this.eventRow;
                 }

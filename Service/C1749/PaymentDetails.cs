@@ -44,10 +44,12 @@ namespace Hanbell.AutoReport.Config
                     Array.Resize(ref p, p.Length + 1);
                     p.SetValue(row["apusrno"].ToString(), p.Length - 1);
                     msg.AddTo(GetMailAddressByEmployeeIdFromOA(row["apusrno"].ToString()));
+                    //msg.AddTo(GetMailAddressByEmployeeIdFromOA("C1749"));
                 }
                 if (row["apusrno"].ToString() != "" && row["apusrno"].ToString().Equals("C0002"))
                 {
                     msg.AddCc("C0616@hanbell.com.cn");
+                    //msg.AddCc("C1749@hanbell.com.cn");
                 }
                 
             }
