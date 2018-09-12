@@ -12,7 +12,7 @@
   <xs:element name="DSCHU" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSCHU" msprop:Generator_UserDSName="DSCHU">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CHU" msprop:Generator_TableClassName="CHUDataTable" msprop:Generator_TableVarName="tableCHU" msprop:Generator_RowChangedName="CHURowChanged" msprop:Generator_TablePropName="CHU" msprop:Generator_RowDeletingName="CHURowDeleting" msprop:Generator_RowChangingName="CHURowChanging" msprop:Generator_RowEvHandlerName="CHURowChangeEventHandler" msprop:Generator_RowDeletedName="CHURowDeleted" msprop:Generator_RowClassName="CHURow" msprop:Generator_UserTableName="CHU" msprop:Generator_RowEvArgName="CHURowChangeEvent">
+        <xs:element name="CHU" msprop:Generator_TableClassName="CHUDataTable" msprop:Generator_TableVarName="tableCHU" msprop:Generator_TablePropName="CHU" msprop:Generator_RowDeletingName="CHURowDeleting" msprop:Generator_RowChangingName="CHURowChanging" msprop:Generator_RowEvHandlerName="CHURowChangeEventHandler" msprop:Generator_RowDeletedName="CHURowDeleted" msprop:Generator_UserTableName="CHU" msprop:Generator_RowChangedName="CHURowChanged" msprop:Generator_RowEvArgName="CHURowChangeEvent" msprop:Generator_RowClassName="CHURow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="shpno" msprop:Generator_ColumnVarNameInTable="columnshpno" msprop:Generator_ColumnPropNameInRow="shpno" msprop:Generator_ColumnPropNameInTable="shpnoColumn" msprop:Generator_UserColumnName="shpno" type="xs:string" minOccurs="0" />
@@ -40,6 +40,7 @@
               <xs:element name="cuspono" msprop:Generator_ColumnVarNameInTable="columncuspono" msprop:Generator_ColumnPropNameInRow="cuspono" msprop:Generator_ColumnPropNameInTable="cusponoColumn" msprop:Generator_UserColumnName="cuspono" type="xs:string" minOccurs="0" />
               <xs:element name="tocdrno" msprop:Generator_ColumnVarNameInTable="columntocdrno" msprop:Generator_ColumnPropNameInRow="tocdrno" msprop:Generator_ColumnPropNameInTable="tocdrnoColumn" msprop:Generator_UserColumnName="tocdrno" type="xs:string" minOccurs="0" />
               <xs:element name="dmark1" msprop:Generator_ColumnVarNameInTable="columndmark1" msprop:Generator_ColumnPropNameInRow="dmark1" msprop:Generator_ColumnPropNameInTable="dmark1Column" msprop:Generator_UserColumnName="dmark1" type="xs:string" minOccurs="0" />
+              <xs:element name="protype" msprop:Generator_ColumnVarNameInTable="columnprotype" msprop:Generator_ColumnPropNameInRow="protype" msprop:Generator_ColumnPropNameInTable="protypeColumn" msprop:Generator_UserColumnName="protype" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

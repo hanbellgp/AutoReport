@@ -23,7 +23,8 @@ namespace Hanbell.AutoReport.Config
         {
             Updatepros();
             String sqlstr = "select protype,itnbrcus,cusna,sum(armqy) as qty,sum(shpamts) as amts  from cdr_rs_rqymx " +
-            " where left(depno,2) in ('{0}') and convert(varchar(6),shpmonq,112)=convert(varchar(6),dateadd(month,-13,getdate()),112)   " +
+            //" where left(depno,2) in ('{0}') and convert(varchar(6),shpmonq,112)=convert(varchar(6),dateadd(month,-13,getdate()),112)   " +          //去年的这个月的上个月的数据
+            " where left(depno,2) in ('{0}') and convert(varchar(6),shpmonq,112)=convert(varchar(6),dateadd(month,-1,getdate()),112)   " +            //今年的这个月的上个月的数据
             " group by protype,itnbrcus,cusna  order by protype,cusna ";
 
             Fill(String.Format(sqlstr, args["depno"]), ds, "CDR_R_KehuNHZ");
