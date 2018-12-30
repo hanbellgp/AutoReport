@@ -1,29 +1,3325 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Notification>
-  <Hanbell.AutoReport.Config.MisWork>
-    <subject>自动报表</subject>
+  <Hanbell.AutoReport.EFGP.WorkItemNeedSign fileName="EFGP.dll" reportName="">
+    <subject>新OA系统未签核表单明细</subject>
+    <to />
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!&lt;br /&gt;以下是新OA系统未签核表单明细，请查收! 煩請各位尽快簽核。</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1</week>
+      <day />
+      <time>05:55</time>
+      <lasttime>2018/9/24 5:55:38</lasttime>
+      <nexttime>2018/10/01 05:55:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.EFGP.WorkItemNeedSignConfig">
+      <processDefinitionId>('PKG_HK_FW005','PKG_HK_XQB005','PKG_HZ_GL040','PKG_HZ_JS014')</processDefinitionId>
+    </param>
+  </Hanbell.AutoReport.EFGP.WorkItemNeedSign>
+  <Hanbell.AutoReport.Config.AAStock fileName="SHBReports.dll" reportName="">
+    <subject>A机组接单能量表</subject>
     <to>
+      <address>1Q100@hanbell.com.cn</address>
+      <address>1Q500@hanbell.com.cn</address>
+      <address>1Q600@hanbell.com.cn</address>
+      <address>C1236@hanbell.com.cn</address>
+      <address>C1355@hanbell.com.cn</address>
+      <address>C0802@hanbell.com.cn</address>
     </to>
     <cc>
-      <address>admin@hanbell.com.cn</address>
+      <address>C0117@hanbell.com.cn</address>
     </cc>
     <bcc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!A机组接单能量表帮助您了解产品库存和交货信息！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5,6</week>
+      <day />
+      <time>16:00</time>
+      <lasttime>2018/9/29 16:00:07</lasttime>
+      <nexttime>2018/10/01 16:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.AAStockConfig">
+      <wareh>('EW01','W01')</wareh>
+      <days>14</days>
+      <prosscode>('AH01','AH02','AH04','AH07','AHSC')</prosscode>
+      <kind>('AA6','AA6F','AE6','AM6')</kind>
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.AAStock>
+  <Hanbell.AutoReport.Config.Cglb_zj fileName="C1048.dll" reportName="采购类别统计报表（只含铸件）">
+    <subject>采购类别统计报表（只含铸件）</subject>
+    <to />
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!以下是采购类别统计报表（只含铸件）！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>Q</period>
+      <week>0,1,2,3,4,5</week>
+      <day>5</day>
+      <time>23:40</time>
+      <lasttime>2015/9/1 17:00:34</lasttime>
+      <nexttime>2015/09/01 17:00:00</nexttime>
+      <status>X</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.Cglb_zjConfig" />
+  </Hanbell.AutoReport.Config.Cglb_zj>
+  <Hanbell.AutoReport.Config.Cglb fileName="C1048.dll" reportName="采购类别统计报表(不含铸件)">
+    <subject>采购类别统计报表(不含铸件)</subject>
+    <to />
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!以下是采购类别统计报表(不含铸件)！
+    </headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员
+    </footerAdd>
+    <notify>
+      <period>Q</period>
+      <week>1,3,5</week>
+      <day>5</day>
+      <time>23:40</time>
+      <lasttime>2015/9/5 23:40:41</lasttime>
+      <nexttime>2015/09/05 23:40:00</nexttime>
+      <status>X</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CglbConfig" />
+  </Hanbell.AutoReport.Config.Cglb>
+  <Hanbell.AutoReport.Config.Fddxgb fileName="C1048.dll" reportName="分公司订单修改表">
+    <subject>分公司订单修改表</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+      <address>C0430@hanbell.com.cn</address>
+      <address>C0414@hanbell.com.cn</address>
+      <address>C0738@hanbell.com.cn</address>
+      <address>C0206@hanbell.com.cn</address>
+      <address>C0805@hanbell.com.cn</address>
+      <address>C0820@hanbell.com.cn</address>
+      <address>C1924@hanbell.com.cn</address>
+      <address>C1457@hanbell.com.cn</address>
+      <address>C1553@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+      <address>C0899@hanbell.com.cn</address>
+      <address>C0358@hanbell.com.cn</address>
+      <address>C0276@hanbell.com.cn</address>
+      <address>C0524@hanbell.com.cn</address>
+      <address>C0010@hanbell.com.cn</address>
+      <address>C0140@hanbell.com.cn</address>
+      <address>C0045@hanbell.com.cn</address>
+      <address>C0033@hanbell.com.cn</address>
+      <address>C0007@hanbell.com.cn</address>
+      <address>C0521@hanbell.com.cn</address>
+      <address>C0013@hanbell.com.cn</address>
+      <address>1F600@hanbell.com.cn</address>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C0179@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0616@hanbell.com.cn</address>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好! 
+     以下是分公司订单修改明细，请各位各自查看，未填写修改原因的自行在ERP中添加修正，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>5</week>
+      <day />
+      <time>17:00</time>
+      <lasttime>2018/9/28 17:00:26</lasttime>
+      <nexttime>2018/10/05 17:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.FddxgbConfig" />
+  </Hanbell.AutoReport.Config.Fddxgb>
+  <Hanbell.AutoReport.Config.CDR680qlb fileName="C1048.dll" reportName="CDR680欠料报表">
+    <subject>CDR680欠料报表</subject>
+    <to>
+      <address>C0160@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.CDR680qlbReport.rpt attName="CDR680欠料报表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!
+    以下是CDR680欠料报表明细，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>Q</period>
+      <week>5</week>
+      <day />
+      <time>17:00</time>
+      <lasttime>2016/7/26 11:37:12</lasttime>
+      <nexttime>2015/05/16 17:00:00</nexttime>
+      <status>X</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR680qlbConfig" />
+  </Hanbell.AutoReport.Config.CDR680qlb>
+  <Hanbell.AutoReport.Config.Dpcwlycb fileName="C1048.dll" reportName="待判仓物料处置异常报表">
+    <subject>待判仓物料处置异常报表</subject>
+    <to>
+      <address>C0160@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.CDR680qlbReport.rpt attName="CDR680欠料报表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!
+    以下是待判仓物料处置异常报表明细，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>Q</period>
+      <week>5</week>
+      <day />
+      <time>09:00</time>
+      <lasttime>2016/7/26 11:37:44</lasttime>
+      <nexttime>2015/07/27 17:01:00</nexttime>
+      <status>X</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.DpcwlycbConfig" />
+  </Hanbell.AutoReport.Config.Dpcwlycb>
+  <Hanbell.AutoReport.Config.ERPMonthClose_VN fileName="C1048.dll" reportName="越南月结未确认报表">
+    <subject>越南月结未确认报表</subject>
+    <to>
+      <address>C0160@hanbell.com.cn</address>
+      <address>morton@hanbell.com</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.CDR680qlbReport.rpt attName="CDR680欠料报表" attType="xls" />
+      <Hanbell.AutoReport.Config.ERPMonthCloseReport.rpt attName="越南月末未确认报表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!
+    以下是越南月结未确认报表明细，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>5</week>
+      <day>15,20,25,26,27,28</day>
+      <time>17:00</time>
+      <lasttime>2018/9/28 17:00:26</lasttime>
+      <nexttime>2018/10/28 17:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.ERPMonthCloseConfig_VN" />
+  </Hanbell.AutoReport.Config.ERPMonthClose_VN>
+  <Hanbell.AutoReport.Config.CHU fileName="C1368.dll" reportName="出货">
+    <subject>出货</subject>
+    <to>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+      <address>C0582@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,3,5</week>
+      <day>3</day>
+      <time>07:10</time>
+      <lasttime>2018/9/3 10:10:27</lasttime>
+      <nexttime>2018/10/03 07:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CglbConfig" />
+  </Hanbell.AutoReport.Config.CHU>
+  <Hanbell.AutoReport.Config.Guanlian fileName="C1368.dll" reportName="关联分公司年度出货数据">
+    <subject>关联分公司年度出货数据</subject>
+    <to>
+      <address>C0582@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.GuanlianReport.rpt attName="关联分公司年度数据" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>07:00</time>
+      <lasttime>2018/9/3 10:10:51</lasttime>
+      <nexttime>2018/10/03 07:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.GuanlianConfig" />
+  </Hanbell.AutoReport.Config.Guanlian>
+  <Hanbell.AutoReport.Config.Kehu fileName="C1368.dll" reportName="客户越权明细">
+    <subject>客户越权明细</subject>
+    <to>
+      <address>C0582@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C1491@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.KehuReport.rpt attName="客户越权明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>06:30</time>
+      <lasttime>2018/9/3 6:30:14</lasttime>
+      <nexttime>2018/10/03 06:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.KehuConfig" />
+  </Hanbell.AutoReport.Config.Kehu>
+  <Hanbell.AutoReport.Config.CDR_R_XSHZ fileName="C1368.dll" reportName="制冷销售汇总">
+    <subject>制冷销售汇总</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0193@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>07:30</time>
+      <lasttime>2018/9/3 7:30:08</lasttime>
+      <nexttime>2018/10/03 07:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_XSHZConfig" />
+  </Hanbell.AutoReport.Config.CDR_R_XSHZ>
+  <Hanbell.AutoReport.Config.cdryxs fileName="C1368.dll" reportName="制冷机型月销售">
+    <subject>制冷月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0193@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>07:35</time>
+      <lasttime>2018/9/3 7:35:08</lasttime>
+      <nexttime>2018/10/03 07:35:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.cdryxsConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.cdryxs>
+  <Hanbell.AutoReport.Config.cdryxs_gz fileName="C1368.dll" reportName="广州机型月销售">
+    <subject>广州机型月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C1522@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+      <address>C1439@hanbell.com.cn</address>
+      <address>C1457@hanbell.com.cn</address>
+      <address>C1458@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>07:40</time>
+      <lasttime>2018/9/3 7:40:09</lasttime>
+      <nexttime>2018/10/03 07:40:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.cdryxsConfig">
+      <depno>1D</depno>
+    </param>
+  </Hanbell.AutoReport.Config.cdryxs_gz>
+  <Hanbell.AutoReport.Config.cdryxs_jn fileName="C1368.dll" reportName="济南机型月销售">
+    <subject>济南机型月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0805@hanbell.com.cn</address>
+      <address>C1116@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>07:45</time>
+      <lasttime>2018/9/3 7:45:09</lasttime>
+      <nexttime>2018/10/03 07:45:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.cdryxsConfig">
+      <depno>1C</depno>
+    </param>
+  </Hanbell.AutoReport.Config.cdryxs_jn>
+  <Hanbell.AutoReport.Config.cdryxs_nj fileName="C1368.dll" reportName="南京机型月销售">
+    <subject>南京机型月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0517@hanbell.com.cn</address>
+      <address>C0518@hanbell.com.cn</address>
+      <address>C0820@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>07:50</time>
+      <lasttime>2018/9/3 7:50:09</lasttime>
+      <nexttime>2018/10/03 07:50:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.cdryxsConfig">
+      <depno>1E</depno>
+    </param>
+  </Hanbell.AutoReport.Config.cdryxs_nj>
+  <Hanbell.AutoReport.Config.cdryxs_hd fileName="C1368.dll" reportName="华东机型月销售">
+    <subject>华东机型月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0358@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:10</time>
+      <lasttime>2018/9/3 8:10:10</lasttime>
+      <nexttime>2018/10/03 08:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.cdryxsConfig">
+      <depno>1B</depno>
+    </param>
+  </Hanbell.AutoReport.Config.cdryxs_hd>
+  <Hanbell.AutoReport.Config.CDR_R_KehuYXS fileName="C1368.dll" reportName="制冷客户月销售">
+    <subject>制冷客户月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0193@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:15</time>
+      <lasttime>2018/9/3 8:15:11</lasttime>
+      <nexttime>2018/10/03 08:15:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuYXSConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuYXS>
+  <Hanbell.AutoReport.Config.CDR_R_KehuYXS_gz fileName="C1368.dll" reportName="广州客户月销售">
+    <subject>广州客户月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0899@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+      <address>C1439@hanbell.com.cn</address>
+      <address>C1457@hanbell.com.cn</address>
+      <address>C1458@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:20</time>
+      <lasttime>2018/9/3 8:20:30</lasttime>
+      <nexttime>2018/10/03 08:20:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuYXSConfig">
+      <depno>1D</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuYXS_gz>
+  <Hanbell.AutoReport.Config.CDR_R_KehuYXS_jn fileName="C1368.dll" reportName="济南客户月销售">
+    <subject>济南客户月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0805@hanbell.com.cn</address>
+      <address>C1116@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:25</time>
+      <lasttime>2018/9/3 8:25:17</lasttime>
+      <nexttime>2018/10/03 08:25:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuYXSConfig">
+      <depno>1C</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuYXS_jn>
+  <Hanbell.AutoReport.Config.CDR_R_KehuYXS_hd fileName="C1368.dll" reportName="华东客户月销售">
+    <subject>华东客户月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0358@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:30</time>
+      <lasttime>2018/9/3 8:30:17</lasttime>
+      <nexttime>2018/10/03 08:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuYXSConfig">
+      <depno>1B</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuYXS_hd>
+  <Hanbell.AutoReport.Config.CDR_R_KehuYXS_nj fileName="C1368.dll" reportName="南京客户月销售">
+    <subject>南京客户月销售</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0517@hanbell.com.cn</address>
+      <address>C0518@hanbell.com.cn</address>
+      <address>C0820@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:35</time>
+      <lasttime>2018/9/3 8:35:22</lasttime>
+      <nexttime>2018/10/03 08:35:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuYXSConfig">
+      <depno>1E</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuYXS_nj>
+  <Hanbell.AutoReport.Config.CDR_R_KehuNHZ fileName="C1368.dll" reportName="制冷客户机型年汇总">
+    <subject>制冷客户机型年汇总</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0193@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0616@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>05:00</time>
+      <lasttime>2018/9/3 5:00:10</lasttime>
+      <nexttime>2018/10/03 05:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuNHZConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuNHZ>
+  <Hanbell.AutoReport.Config.CDR_R_KehuNHZ_gz fileName="C1368.dll" reportName="广州客户机型年汇总">
+    <subject>广州客户机型年汇总</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0899@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+      <address>C1439@hanbell.com.cn</address>
+      <address>C1457@hanbell.com.cn</address>
+      <address>C1458@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>05:05</time>
+      <lasttime>2018/9/3 5:06:34</lasttime>
+      <nexttime>2018/10/03 05:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuNHZConfig">
+      <depno>1D</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuNHZ_gz>
+  <Hanbell.AutoReport.Config.CDR_R_KehuNHZ_jn fileName="C1368.dll" reportName="济南客户机型年汇总">
+    <subject>济南客户机型年汇总</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0805@hanbell.com.cn</address>
+      <address>C1116@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>05:10</time>
+      <lasttime>2018/9/3 5:11:24</lasttime>
+      <nexttime>2018/10/03 05:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuNHZConfig">
+      <depno>1C</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuNHZ_jn>
+  <Hanbell.AutoReport.Config.CDR_R_KehuNHZ_hd fileName="C1368.dll" reportName="华东客户机型年汇总">
+    <subject>华东客户机型年汇总</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0358@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>05:15</time>
+      <lasttime>2018/9/3 5:16:01</lasttime>
+      <nexttime>2018/10/03 05:15:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuNHZConfig">
+      <depno>1B</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuNHZ_hd>
+  <Hanbell.AutoReport.Config.CDR_R_KehuNHZ_nj fileName="C1368.dll" reportName="南京客户机型年汇总">
+    <subject>南京客户机型年汇总</subject>
+    <to>
+      <address>1F100@hanbell.com.cn</address>
+      <address>C0517@hanbell.com.cn</address>
+      <address>C0518@hanbell.com.cn</address>
+      <address>C0820@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>05:20</time>
+      <lasttime>2018/9/3 5:21:00</lasttime>
+      <nexttime>2018/10/03 05:20:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuNHZConfig">
+      <depno>1E</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuNHZ_nj>
+  <Hanbell.AutoReport.Config.Purvdrxgb fileName="C1048.dll" reportName="厂商资料修改表">
+    <subject>厂商资料修改明细表</subject>
+    <to>
+      <address>C0004@hanbell.com.cn</address>
+      <address>C0238@hanbell.com.cn</address>
+      <address>C1070@hanbell.com.cn</address>
+      <address>C0227@hanbell.com.cn</address>
+      <address>C0247@hanbell.com.cn</address>
+      <address>C1027@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.PurvdrxgbReport.rpt attName="厂商资料修改表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!
+     以下是厂商资料修改表，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,3,5</week>
+      <day>30</day>
+      <time>17:10</time>
+      <lasttime>2018/8/30 17:10:08</lasttime>
+      <nexttime>2018/09/30 17:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.PurvdrxgbConfig" />
+  </Hanbell.AutoReport.Config.Purvdrxgb>
+  <Hanbell.AutoReport.Config.Cdrcusxgb fileName="C1048.dll" reportName="客户资料修改明细表">
+    <subject>客户资料修改明细表</subject>
+    <to>
+      <address>C0004@hanbell.com.cn</address>
+      <address>C0238@hanbell.com.cn</address>
+      <address>C1070@hanbell.com.cn</address>
+      <address>C0227@hanbell.com.cn</address>
+      <address>C0247@hanbell.com.cn</address>
+      <address>C0256@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.CdrcusxgbReport.rpt attName="客户资料修改表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好! 以下是客户资料修改表，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,3,5</week>
+      <day>30</day>
+      <time>17:10</time>
+      <lasttime>2018/8/30 17:10:10</lasttime>
+      <nexttime>2018/09/30 17:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CdrcusxgbConfig" />
+  </Hanbell.AutoReport.Config.Cdrcusxgb>
+  <Hanbell.AutoReport.Config.W01 fileName="C1368.dll" reportName="W01成品库台数报表">
+    <subject>W01成品库台数报表</subject>
+    <to>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C1121@hanbell.com.cn</address>
+      <address>C1236@hanbell.com.cn</address>
+      <address>C0890@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0054@hanbell.com.cn</address>
+      <address>C1355@hanbell.com.cn</address>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>108@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>1</day>
+      <time>08:00</time>
+      <lasttime>2018/9/1 8:00:07</lasttime>
+      <nexttime>2018/10/01 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.W01Config" />
+  </Hanbell.AutoReport.Config.W01>
+  <Hanbell.AutoReport.Config.JZchmxb fileName="C1048.dll" reportName="机组出货明细表">
+    <subject>机组出货明细表</subject>
+    <to>
+      <address>C0021@hanbell.com.cn</address>
+      <address>C1236@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0616@hanbell.com.cn</address>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!
+    以下是机组出货明细表，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>1</day>
+      <time>17:00</time>
+      <lasttime>2018/9/1 17:00:12</lasttime>
+      <nexttime>2018/10/01 17:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.JZchmxbConfig" />
+  </Hanbell.AutoReport.Config.JZchmxb>
+  <Hanbell.AutoReport.Config.ERPCglb fileName="C1048.dll" reportName="采购类别统计报表(不含铸件)">
+    <subject>采购类别统计报表(不含铸件)</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1491@hanbell.com.cn</address>
     </bcc>
     <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
     </attachments>
-    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作！</headAdd>
+    <headAdd>各位主管、同事:大家好!以下是采购类别统计报表(不含铸件)！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>4</day>
+      <time>23:40</time>
+      <lasttime>2018/9/4 23:40:37</lasttime>
+      <nexttime>2018/10/04 23:40:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.ERPCglbConfig" />
+  </Hanbell.AutoReport.Config.ERPCglb>
+  <Hanbell.AutoReport.Config.ERPCglb_zj fileName="C1048.dll" reportName="采购类别统计报表（只含铸件）">
+    <subject>采购类别统计报表（只含铸件）</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C01608@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!以下是采购类别统计报表（只含铸件）！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>4</day>
+      <time>23:40</time>
+      <lasttime>2018/9/4 23:40:54</lasttime>
+      <nexttime>2018/10/04 23:40:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.ERPCglb_zjConfig" />
+  </Hanbell.AutoReport.Config.ERPCglb_zj>
+  <Hanbell.AutoReport.Config.ERPCglb_qt fileName="C1048.dll" reportName="采购重点类别统计报表">
+    <subject>采购类别统计报表</subject>
+    <to>
+      <address>C0616@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C01608@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!以下是采购类别统计报表！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>5</day>
+      <time>23:40</time>
+      <lasttime>2018/8/5 23:40:51</lasttime>
+      <nexttime>2018/10/05 23:40:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.ERPCglb_qtConfig" />
+  </Hanbell.AutoReport.Config.ERPCglb_qt>
+  <Hanbell.AutoReport.Config.StandCostAbnormality fileName="C1368.dll" reportName="新增件号无标准成本">
+    <subject>新增件号无标准成本</subject>
+    <to>
+      <address>C0460@hanbell.com.cn</address>
+      <address>C0737@hanbell.com.cn</address>
+      <address>C1027@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!新增件号无标准成本提醒您及时维护标准成本！</headAdd>
     <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
     <notify>
       <period>W</period>
       <week>1,2,3,4,5</week>
-      <day>
-      </day>
-      <time>07:05</time>
-      <lasttime></lasttime>
-      <nexttime></nexttime>
+      <day />
+      <time>07:35</time>
+      <lasttime>2018/9/28 7:36:27</lasttime>
+      <nexttime>2018/10/01 07:35:00</nexttime>
       <status>V</status>
     </notify>
-    <param name="Hanbell.AutoReport.Config.MisWorkConfig">
+    <param name="Hanbell.AutoReport.Config.StandCostAbnormalityConfig">
+      <count>3</count>
+      <updatecost>true</updatecost>
+      <itclscode>('1','2','3','4')</itclscode>
+      <indate>2016/10/1</indate>
     </param>
-  </Hanbell.AutoReport.Config.MisWork>
+  </Hanbell.AutoReport.Config.StandCostAbnormality>
+  <Hanbell.AutoReport.Config.NKFJAD fileName="C1048.dll" reportName="未处理客服结案单">
+    <subject>未处理客服结案单</subject>
+    <to />
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!
+    以下是未处理客服结案单，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,2,3,4,5</week>
+      <day>5,15,25</day>
+      <time>08:00</time>
+      <lasttime>2018/9/25 8:00:15</lasttime>
+      <nexttime>2018/10/25 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.NKFJADConfig">
+      <count>3</count>
+      <updatecost>true</updatecost>
+      <itclscode>('1','2','3','4')</itclscode>
+      <indate>2015/1/1</indate>
+    </param>
+  </Hanbell.AutoReport.Config.NKFJAD>
+  <Hanbell.AutoReport.Config.NFWD fileName="C1048.dll" reportName="未处理服务单">
+    <subject>未处理服务单</subject>
+    <to />
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!
+    以下是未处理服务单，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,2,3,4,5</week>
+      <day>5,15,25</day>
+      <time>08:00</time>
+      <lasttime>2018/9/25 8:00:20</lasttime>
+      <nexttime>2018/10/25 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.NFWDConfig">
+      <count>3</count>
+      <updatecost>true</updatecost>
+      <itclscode>('1','2','3','4')</itclscode>
+      <indate>2015/1/1</indate>
+    </param>
+  </Hanbell.AutoReport.Config.NFWD>
+  <Hanbell.AutoReport.Config.NFWJAD fileName="C1048.dll" reportName="未处理服务结案单">
+    <subject>未处理服务结案单</subject>
+    <to />
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!
+    以下是未处理服务结案单，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,2,3,4,5</week>
+      <day>5,15,25</day>
+      <time>08:00</time>
+      <lasttime>2018/9/25 8:00:23</lasttime>
+      <nexttime>2018/10/25 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.NFWJADConfig">
+      <count>3</count>
+      <updatecost>true</updatecost>
+      <itclscode>('1','2','3','4')</itclscode>
+      <indate>2015/1/1</indate>
+    </param>
+  </Hanbell.AutoReport.Config.NFWJAD>
+  <Hanbell.AutoReport.Config.NFWLLD fileName="C1048.dll" reportName="未处理服务领料单">
+    <subject>未处理服务领料单</subject>
+    <to />
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!
+    以下是未处理服务领料单，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,2,3,4,5</week>
+      <day>5,15,25</day>
+      <time>08:00</time>
+      <lasttime>2018/9/25 8:00:23</lasttime>
+      <nexttime>2018/10/25 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.NFWLLDConfig">
+      <count>3</count>
+      <updatecost>true</updatecost>
+      <itclscode>('1','2','3','4')</itclscode>
+      <indate>2015/1/1</indate>
+    </param>
+  </Hanbell.AutoReport.Config.NFWLLD>
+  <Hanbell.AutoReport.Config.PCDBB fileName="C1048.dll" reportName="派车单报表">
+    <subject>派车单报表</subject>
+    <to>
+      <address>C0160@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.PcdbbReport.rpt attName="派车单报表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!
+    以下是派车单报表，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,2,3,4,5</week>
+      <day>1</day>
+      <time>08:00</time>
+      <lasttime>2018/9/1 8:00:08</lasttime>
+      <nexttime>2018/10/01 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.PCDBBConfig">
+      <count>3</count>
+      <updatecost>true</updatecost>
+      <itclscode>('1','2','3','4')</itclscode>
+      <indate>2015/1/1</indate>
+    </param>
+  </Hanbell.AutoReport.Config.PCDBB>
+  <Hanbell.AutoReport.Config.PGTBB fileName="C1048.dll" reportName="文件申请单-配管图报表">
+    <subject>文件申请单-配管图报表</subject>
+    <to>
+      <address>C0160@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.PgtbbReport.rpt attName="配管图报表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!
+    以下是文件申请单-配管图报表，请查收，谢谢！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,2,3,4,5</week>
+      <day>1</day>
+      <time>08:00</time>
+      <lasttime>2018/9/1 8:00:08</lasttime>
+      <nexttime>2018/10/01 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.PGTBBConfig">
+      <count>3</count>
+      <updatecost>true</updatecost>
+      <itclscode>('1','2','3','4')</itclscode>
+      <indate>2015/1/1</indate>
+    </param>
+  </Hanbell.AutoReport.Config.PGTBB>
+  <Hanbell.AutoReport.Config.cdryxs_all fileName="C1368.dll" reportName="全部机型月销售">
+    <subject>全部机型月销售</subject>
+    <to>
+      <address>C0800@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>05:25</time>
+      <lasttime>2018/9/3 5:25:14</lasttime>
+      <nexttime>2018/10/03 05:25:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.cdryxsConfig">
+      <depno>1C','1B','1D','1E','1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.cdryxs_all>
+  <Hanbell.AutoReport.Config.CDR_R_KehuYXS_all fileName="C1368.dll" reportName="全部客户月销售">
+    <subject>全部客户月销售</subject>
+    <to>
+      <address>C0800@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>05:33</time>
+      <lasttime>2018/9/3 5:36:48</lasttime>
+      <nexttime>2018/10/03 05:33:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuYXSConfig">
+      <depno>1C','1B','1D','1E','1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuYXS_all>
+  <Hanbell.AutoReport.Config.SpecOrderUpdateState fileName="SHBReports.dll" reportName="">
+    <subject>特殊订单状态更新</subject>
+    <to />
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>成功执行特殊订单状态更新，此功能需要在其他特殊订单异常报表发送前运行，因为取消了其他特殊订单异常报表中的状态更新，加快速度</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>04:05</time>
+      <lasttime>2018/9/30 4:05:48</lasttime>
+      <nexttime>2018/10/01 04:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderUpdateStateConfig" />
+  </Hanbell.AutoReport.Config.SpecOrderUpdateState>
+  <Hanbell.AutoReport.Config.SpecOrderRD_AA fileName="SHBReports.dll" reportName="">
+    <subject>A机组特殊订单追踪表_技术</subject>
+    <to>
+      <address>1Q300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0117@hanbell.com.cn</address>
+      <address>C0802@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0461@hanbell.com.cn</address>
+      <address>C0922@hanbell.com.cn</address>
+      <address>C0242@hanbell.com.cn</address>
+      <address>C1236@hanbell.com.cn</address>
+      <address>C0110@hanbell.com.cn</address>
+      <address>C0021@hanbell.com.cn</address>
+      <address>C0087@hanbell.com.cn</address>
+      <address>C0139@hanbell.com.cn</address>
+      <address>C1171@hanbell.com.cn</address>
+      <address>C1350@hanbell.com.cn</address>
+      <address>C0091@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单技术追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>05:05</time>
+      <lasttime>2018/9/28 5:05:03</lasttime>
+      <nexttime>2018/10/01 05:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderRDConfig">
+      <kindcode>AA</kindcode>
+      <rdday1>1</rdday1>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderRD_AA>
+  <Hanbell.AutoReport.Config.SpecOrderRD_AH fileName="SHBReports.dll" reportName="">
+    <subject>A机体特殊订单追踪表_技术</subject>
+    <to>
+      <address>1G300@hanbell.com.cn</address>
+      <address>1P300@hanbell.com.cn</address>
+      <address>1G100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+      <address>C0161@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单技术追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>05:05</time>
+      <lasttime>2018/9/28 5:05:03</lasttime>
+      <nexttime>2018/10/01 05:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderRDConfig">
+      <kindcode>AH</kindcode>
+      <rdday1>1</rdday1>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderRD_AH>
+  <Hanbell.AutoReport.Config.SpecOrderRD_R fileName="SHBReports.dll" reportName="">
+    <subject>冷媒特殊订单追踪表_技术</subject>
+    <to>
+      <address>1F300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0364@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0087@hanbell.com.cn</address>
+      <address>C0117@hanbell.com.cn</address>
+      <address>C0410@hanbell.com.cn</address>
+      <address>C0499@hanbell.com.cn</address>
+      <address>C0695@hanbell.com.cn</address>
+      <address>C0724@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单技术追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>05:05</time>
+      <lasttime>2018/9/28 5:05:03</lasttime>
+      <nexttime>2018/10/01 05:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderRDConfig">
+      <kindcode>R</kindcode>
+      <rdday1>1</rdday1>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderRD_R>
+  <Hanbell.AutoReport.Config.SpecOrderRD_P fileName="SHBReports.dll" reportName="">
+    <subject>P特殊订单追踪表_技术</subject>
+    <to>
+      <address>1H120@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>1P300@hanbell.com.cn</address>
+      <address>1N100@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单技术追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>05:05</time>
+      <lasttime>2018/9/28 5:05:03</lasttime>
+      <nexttime>2018/10/01 05:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderRDConfig">
+      <kindcode>P</kindcode>
+      <rdday1>1</rdday1>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderRD_P>
+  <Hanbell.AutoReport.Config.SpecOrderPP fileName="SHBReports.dll" reportName="">
+    <subject>特殊订单追踪表_生管</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单的以下物料还未按时请购或安排工令，请及时完成！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>05:30</time>
+      <lasttime>2018/9/28 5:30:25</lasttime>
+      <nexttime>2018/10/01 05:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderPPConfig">
+      <prday1>2</prday1>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderPP>
+  <Hanbell.AutoReport.Config.SpecOrderPO_AA fileName="SHBReports.dll" reportName="">
+    <subject>A机组特殊订单追踪表_采购</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0117@hanbell.com.cn</address>
+      <address>C0802@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0461@hanbell.com.cn</address>
+      <address>C0922@hanbell.com.cn</address>
+      <address>C0472@hanbell.com.cn</address>
+      <address>C0110@hanbell.com.cn</address>
+      <address>C0021@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+      <address>C0242@hanbell.com.cn</address>
+      <address>C1236@hanbell.com.cn</address>
+      <address>C0139@hanbell.com.cn</address>
+      <address>C1171@hanbell.com.cn</address>
+      <address>C0802@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单采购追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>06:07</time>
+      <lasttime>2018/9/28 6:07:30</lasttime>
+      <nexttime>2018/10/01 06:07:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderPOConfig">
+      <purday1>4</purday1>
+      <kindcode>AA</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderPO_AA>
+  <Hanbell.AutoReport.Config.SpecOrderPO_AH fileName="SHBReports.dll" reportName="">
+    <subject>A机体特殊订单追踪表_采购</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0005@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单采购追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>06:07</time>
+      <lasttime>2018/9/28 6:07:31</lasttime>
+      <nexttime>2018/10/01 06:07:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderPOConfig">
+      <purday1>4</purday1>
+      <kindcode>AH</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderPO_AH>
+  <Hanbell.AutoReport.Config.SpecOrderPO_R fileName="SHBReports.dll" reportName="">
+    <subject>冷媒特殊订单追踪表_采购</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1424@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0582@hanbell.com.cn</address>
+      <address>C1452@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单采购追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>06:07</time>
+      <lasttime>2018/9/28 6:07:31</lasttime>
+      <nexttime>2018/10/01 06:07:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderPOConfig">
+      <purday1>4</purday1>
+      <kindcode>R</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderPO_R>
+  <Hanbell.AutoReport.Config.SpecOrderPO_P fileName="SHBReports.dll" reportName="">
+    <subject>P特殊订单追踪表_采购</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0005@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单采购追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>06:07</time>
+      <lasttime>2018/9/28 6:07:31</lasttime>
+      <nexttime>2018/10/01 06:07:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderPOConfig">
+      <purday1>4</purday1>
+      <kindcode>P</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderPO_P>
+  <Hanbell.AutoReport.Config.SpecOrderVendor fileName="SHBReports.dll" reportName="">
+    <subject>特殊订单物料交货提醒表</subject>
+    <to />
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>亲爱的厂商:您好!&amp;amp;amp;amp;lt;br /&amp;amp;amp;amp;gt;特殊订单物料交货提醒表，提醒您按时交货，若有问题及时反馈汉钟生管！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>07:10</time>
+      <lasttime />
+      <nexttime>2099/03/16 07:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderVendorConfig">
+      <purday1>3</purday1>
+      <vdrno>('SCJ00058','SSH00689')</vdrno>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderVendor>
+  <Hanbell.AutoReport.Config.AccountReceivableDelay fileName="SHBReports.dll" reportName="应收账款逾期分析表">
+    <subject>应收账款逾期分析表</subject>
+    <to>
+      <address>ARDelayRPT@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0179@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt attName="应收账款逾期分析表" attType="pdf" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!<br />应收账款逾期异常表让您及时了解客户的欠款状况，提醒您及时催收账款，提高账款回收率。</headAdd>
+    <footerAdd>
+      <br />此报表由系统自动发送，请不要直接回复。报表管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>15,L</day>
+      <time>23:30</time>
+      <lasttime>2018/9/15 23:30:21</lasttime>
+      <nexttime>2018/09/30 23:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.AccountReceivableDelayConfig">
+      <day4>1</day4>
+      <day1>1</day1>
+      <day3>1</day3>
+      <day5>1</day5>
+      <day2>1</day2>
+    </param>
+  </Hanbell.AutoReport.Config.AccountReceivableDelay>
+  <Hanbell.AutoReport.Config.AccountReceivableDelay_Comer fileName="SHBReports.dll" reportName="应收账款逾期分析表">
+    <subject>应收账款逾期分析表</subject>
+    <to>
+      <address>K0004@hanbell.com.cn</address>
+      <address>K0026@hanbell.com.cn</address>
+      <address>C0919@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0713@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+      <address>C0179@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt attName="应收账款逾期分析表_Comer" attType="pdf" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!&amp;lt;br /&amp;gt;应收账款逾期异常表让您及时了解客户的欠款状况，提醒您及时催收账款，提高账款回收率。</headAdd>
+    <footerAdd>&amp;lt;br /&amp;gt;此报表由系统自动发送，请不要直接回复。报表管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>15,L</day>
+      <time>22:30</time>
+      <lasttime>2018/9/15 22:30:13</lasttime>
+      <nexttime>2018/09/30 22:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.AccountReceivableDelayConfig">
+      <day4>1</day4>
+      <day1>1</day1>
+      <day3>1</day3>
+      <day5>1</day5>
+      <day2>1</day2>
+    </param>
+  </Hanbell.AutoReport.Config.AccountReceivableDelay_Comer>
+  <Hanbell.AutoReport.Config.AccountReceivableDelayForSaler fileName="SHBReports.dll" reportName="">
+    <subject>应收账款逾期分析表</subject>
+    <to />
+    <cc />
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt attName="应收账款逾期分析表_业务员" attType="pdf" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!&lt;br /&gt;应收账款逾期异常表让您及时了解客户的欠款状况，提醒您及时催收账款，提高账款回收率。</headAdd>
+    <footerAdd>&lt;br /&gt;此报表由系统自动发送，请不要直接回复。报表管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>20,25</day>
+      <time>23:30</time>
+      <lasttime>2018/9/25 23:30:18</lasttime>
+      <nexttime>2018/10/25 23:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.AccountReceivableDelayForSalerConfig">
+      <day4>1</day4>
+      <day1>1</day1>
+      <day3>1</day3>
+      <day5>1</day5>
+      <day2>1</day2>
+    </param>
+  </Hanbell.AutoReport.Config.AccountReceivableDelayForSaler>
+  <Hanbell.AutoReport.Config.SalesOrderSchedule_R fileName="SHBReports.dll" reportName="">
+    <subject>产销报表_R产品</subject>
+    <to>
+      <address>C1457@hanbell.com.cn</address>
+      <address>C1458@hanbell.com.cn</address>
+      <address>C0358@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0517@hanbell.com.cn</address>
+      <address>C0820@hanbell.com.cn</address>
+      <address>C0738@hanbell.com.cn</address>
+      <address>C0899@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+      <address>C0414@hanbell.com.cn</address>
+      <address>C0805@hanbell.com.cn</address>
+      <address>C0430@hanbell.com.cn</address>
+      <address>C0582@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0364@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SalesOrderScheduleReport.rpt attName="产销报表_R产品" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!产销报表_R产品，帮助您及时了解订单进度！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>07:35</time>
+      <lasttime>2018/9/28 7:36:35</lasttime>
+      <nexttime>2018/10/01 07:35:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SalesOrderScheduleConfig">
+      <kindcode>R</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SalesOrderSchedule_R>
+  <Hanbell.AutoReport.Config.SalesOrderSchedule_R_HD fileName="SHBReports.dll" reportName="">
+    <subject>产销报表_R产品_华东</subject>
+    <to>
+      <address>C0358@hanbell.com.cn</address>
+      <address>C0033@hanbell.com.cn</address>
+      <address>C0045@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SalesOrderScheduleReport.rpt attName="产销报表_R产品_华东" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!产销报表_R产品_华东，帮助您及时了解订单进度！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>07:35</time>
+      <lasttime>2018/9/28 7:36:36</lasttime>
+      <nexttime>2018/10/01 07:35:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SalesOrderScheduleConfig_R_HD">
+      <areacode>HD</areacode>
+      <kindcode>R</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SalesOrderSchedule_R_HD>
+  <Hanbell.AutoReport.Config.SalesOrderSchedule_R_GZ fileName="SHBReports.dll" reportName="">
+    <subject>产销报表_R产品_广州</subject>
+    <to>
+      <address>C1707@hanbell.com.cn</address>
+      <address>C1457@hanbell.com.cn</address>
+      <address>C1334@hanbell.com.cn</address>
+      <address>C1336@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0206@hanbell.com.cn</address>
+      <address>C0524@hanbell.com.cn</address>
+      <address>C0013@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SalesOrderScheduleReport.rpt attName="产销报表_R产品_广州" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!产销报表_R产品_广州，帮助您及时了解订单进度！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>07:35</time>
+      <lasttime>2018/9/28 7:36:37</lasttime>
+      <nexttime>2018/10/01 07:35:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SalesOrderScheduleConfig_R_GZ">
+      <areacode>HN</areacode>
+      <kindcode>R</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SalesOrderSchedule_R_GZ>
+  <Hanbell.AutoReport.Config.SpecOrderDelay_AA fileName="SHBReports.dll" reportName="">
+    <subject>A机组特殊订单进度异常表</subject>
+    <to>
+      <address>AASpecialOrderPMO@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0117@hanbell.com.cn</address>
+      <address>C0242@hanbell.com.cn</address>
+      <address>C1236@hanbell.com.cn</address>
+      <address>C0461@hanbell.com.cn</address>
+      <address>C0922@hanbell.com.cn</address>
+      <address>C0139@hanbell.com.cn</address>
+      <address>C1171@hanbell.com.cn</address>
+      <address>C0176@hanbell.com.cn</address>
+      <address>C1350@hanbell.com.cn</address>
+      <address>C0091@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderNotificationReport.rpt attName="A机组特殊订单进度异常表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!特殊订单进度异常表，提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统每周一、三自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3</week>
+      <day />
+      <time>06:30</time>
+      <lasttime>2018/9/26 6:30:04</lasttime>
+      <nexttime>2018/10/01 06:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderDelayConfig">
+      <kindcode>AA</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderDelay_AA>
+  <Hanbell.AutoReport.Config.SpecOrderDelay_AH fileName="SHBReports.dll" reportName="">
+    <subject>A机体特殊订单进度异常表</subject>
+    <to>
+      <address>1G100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0161@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderNotificationReport.rpt attName="A机体特殊订单进度异常表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!特殊订单进度异常表，提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统每周一、三自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3</week>
+      <day />
+      <time>06:30</time>
+      <lasttime>2018/9/26 6:30:06</lasttime>
+      <nexttime>2018/10/01 06:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderDelayConfig">
+      <kindcode>AH</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderDelay_AH>
+  <Hanbell.AutoReport.Config.SpecOrderDelay_R fileName="SHBReports.dll" reportName="">
+    <subject>冷媒特殊订单进度异常表</subject>
+    <to>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C1452@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0176@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0087@hanbell.com.cn</address>
+      <address>C0117@hanbell.com.cn</address>
+      <address>C0410@hanbell.com.cn</address>
+      <address>C0499@hanbell.com.cn</address>
+      <address>C0695@hanbell.com.cn</address>
+      <address>C0724@hanbell.com.cn</address>
+      <address>C0051@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0884@hanbell.com.cn</address>
+      <address>C0582@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderNotificationReport.rpt attName="冷媒特殊订单进度异常表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!特殊订单进度异常表，提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统每周一、三自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,3</week>
+      <day />
+      <time>06:30</time>
+      <lasttime>2018/9/26 6:30:08</lasttime>
+      <nexttime>2018/10/01 06:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderDelayConfig">
+      <kindcode>R</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderDelay_R>
+  <Hanbell.AutoReport.Config.SpecOrderDelay_P fileName="SHBReports.dll" reportName="">
+    <subject>P特殊订单进度异常表</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderNotificationReport.rpt attName="P特殊订单进度异常表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!特殊订单进度异常表，提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统每周一、三自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,3</week>
+      <day />
+      <time>06:30</time>
+      <lasttime>2018/9/26 6:30:10</lasttime>
+      <nexttime>2018/10/01 06:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderDelayConfig">
+      <kindcode>P</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderDelay_P>
+  <Hanbell.AutoReport.Config.SpecOrderAnalyze_AA fileName="SHBReports.dll" reportName="">
+    <subject>A机组特殊订单追踪表_本月出货延误统计</subject>
+    <to>
+      <address>AASpecialOrderPMO@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderAnalyzeReport.rpt attName="A机组特殊订单本月出货延误统计明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!<br />A机组特殊订单本月出货延误统计，让你了解订单交货状况！正数表示延误，负数表示提前！</headAdd>
+    <footerAdd>说明：某部门的延误天数=该部门延误天数 - 前部门已延误天数<br />此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>L</day>
+      <time>21:05</time>
+      <lasttime>2018/8/31 21:05:15</lasttime>
+      <nexttime>2018/09/30 21:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderAnalyzeConfig">
+      <kindcode>AA</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderAnalyze_AA>
+  <Hanbell.AutoReport.Config.SpecOrderAnalyze_AH fileName="SHBReports.dll" reportName="">
+    <subject>A机体特殊订单追踪表_本月出货延误统计</subject>
+    <to>
+      <address>1G100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1420@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0161@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderAnalyzeReport.rpt attName="A机体特殊订单本月出货延误统计明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!&amp;lt;br /&amp;gt;A机体特殊订单本月出货延误统计，让你了解订单交货状况！正数表示延误，负数表示提前！</headAdd>
+    <footerAdd>说明：某部门的延误天数=该部门延误天数 - 前部门已延误天数&lt;br /&gt;此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>L</day>
+      <time>21:05</time>
+      <lasttime>2018/8/31 21:05:17</lasttime>
+      <nexttime>2018/09/30 21:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderAnalyzeConfig">
+      <kindcode>AH</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderAnalyze_AH>
+  <Hanbell.AutoReport.Config.SpecOrderAnalyze_R fileName="SHBReports.dll" reportName="">
+    <subject>冷媒特殊订单追踪表_本月出货延误统计</subject>
+    <to>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderAnalyzeReport.rpt attName="冷媒特殊订单本月出货延误统计明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!冷媒特殊订单本月出货延误统计，让你了解订单交货状况！正数表示延误，负数表示提前！</headAdd>
+    <footerAdd>说明：某部门的延误天数=该部门延误天数 - 前部门已延误天数<br />此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>L</day>
+      <time>21:05</time>
+      <lasttime>2018/8/31 21:05:20</lasttime>
+      <nexttime>2018/09/30 21:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderAnalyzeConfig">
+      <kindcode>R</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderAnalyze_R>
+  <Hanbell.AutoReport.Config.SpecOrderAnalyze_P fileName="SHBReports.dll" reportName="">
+    <subject>P特殊订单追踪表_本月出货延误统计</subject>
+    <to>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderAnalyzeReport.rpt attName="P特殊订单本月出货延误统计明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!P特殊订单本月出货延误统计，让你了解订单交货状况！正数表示延误，负数表示提前！</headAdd>
+    <footerAdd>说明：某部门的延误天数=该部门延误天数 - 前部门已延误天数<br />此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>L</day>
+      <time>21:05</time>
+      <lasttime>2018/8/31 21:05:23</lasttime>
+      <nexttime>2018/09/30 21:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderAnalyzeConfig">
+      <kindcode>P</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderAnalyze_P>
+  <Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuwei_AM fileName="SHBReports.dll" reportName="">
+    <subject>已点收未验收明细</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+      <address>1M000@hanbell.com.cn</address>
+      <address>1N200@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1497@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuweiReport.rpt attName="已点未验明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!异常报表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5,6</week>
+      <day />
+      <time>09:00</time>
+      <lasttime>2018/9/29 9:00:09</lasttime>
+      <nexttime>2018/10/01 09:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuweiConfig">
+      <itcls>('2101','2102','2201','2202','2801','2802','2402','2E01','2E02','2K02','2015','2013','2012')</itcls>
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuwei_AM>
+  <Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuwei_PM fileName="SHBReports.dll" reportName="">
+    <subject>已点收未验收明细</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+      <address>1M000@hanbell.com.cn</address>
+      <address>1N200@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1497@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuweiReport.rpt attName="已点未验明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!异常报表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5,6</week>
+      <day />
+      <time>15:00</time>
+      <lasttime>2018/9/29 15:00:09</lasttime>
+      <nexttime>2018/10/01 15:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuweiConfig">
+      <itcls>('2101','2102','2201','2202','2801','2802','2402','2E01','2E02','2K02','2015','2013','2012')</itcls>
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.Dianshouweiyanshou_zhuwei_PM>
+  <Hanbell.AutoReport.Config.ProductionOrderNeedClose fileName="SHBReports.dll" reportName="">
+    <subject>待结案制令明细</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C01587@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.ProductionOrderNeedCloseReport.rpt attName="待结案制令明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!&amp;amp;amp;lt;br /&amp;amp;amp;gt;待结案制令明细，帮助您及时了解制令状态！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5,6</week>
+      <day />
+      <time>16:10</time>
+      <lasttime>2018/9/29 16:10:36</lasttime>
+      <nexttime>2018/10/01 16:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.ProductionOrderNeedCloseConfig" />
+  </Hanbell.AutoReport.Config.ProductionOrderNeedClose>
+  <Hanbell.AutoReport.Config.IdleStock fileName="SHBReports.dll" reportName="">
+    <subject>汉钟生产性物料呆料明细_生管</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.IdleStockReport_PP.rpt attName="汉钟生产性物料呆料明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!汉钟生产性物料呆料明细，帮助您及时了解物料状态！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,2,3,4,5</week>
+      <day>7</day>
+      <time>07:16</time>
+      <lasttime>2018/9/7 7:16:54</lasttime>
+      <nexttime>2018/10/07 07:16:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.IdleStockConfig">
+      <trtype>('ZZZ','000','ADD','ADJ','AJI','AJO','CAA','CAD','CCA','CDS','DIS','IAC','IAD','IAE','IAJ','IAK','IJT','ITB','JR1','JR2','PBA','RAD')</trtype>
+      <wareh>('ASRSDY','ASRSP1','EZK04','ZK04','EM01','EM02','ENG01','ENG02','EPB01','EPB03','EPM01','EW01','EW02','EZP05','EZP08','MC01','MC02','PB01','ZP04','ZP05','ZP06','ZP08','JTSSH00843','JCZC','ZP07','ASRS01','ASRS02','ASRS03','ASRS10','ASRS20','ASRS21','JTSSH00138','JTSSH00201','JTSSH00258','JTSSH00313','JTSSH00324','JTSSH00331','JTSZJ00088','JTSJS00132','JTSSH00557','JTSZJ00185','JTSSH00796','JTDY01','JTSZJ00071','JTSJS00291','JTSZJ00101','JTSZJ00106','JTSSH01164','M01','M02','NG01','NG02','PB02','PB03','W01','W02','ZP01')</wareh>
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.IdleStock>
+  <Hanbell.AutoReport.Config.IdleStock_Comer fileName="SHBReports.dll" reportName="">
+    <subject>柯茂生产性物料呆料明细_生管</subject>
+    <to>
+      <address>1P300@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.IdleStockReport_PP.rpt attName="柯茂生产性物料呆料明细" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!柯茂生产性物料呆料明细，帮助您及时了解物料状态！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>6</day>
+      <time>07:16</time>
+      <lasttime>2018/9/6 7:16:15</lasttime>
+      <nexttime>2018/10/06 07:16:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.IdleStockConfig">
+      <trtype>('ZZZ','000','ADD','ADJ','AJI','AJO','CAA','CAD','CCA','CDS','DIS','IAC','IAD','IAE','IAH','IAJ','IAK','IJT','ITB','JR1','JR2','PBA','RAD')</trtype>
+      <wareh>('XB01','ZP01','M01')</wareh>
+      <facno>K</facno>
+    </param>
+  </Hanbell.AutoReport.Config.IdleStock_Comer>
+  <Hanbell.AutoReport.Config.IdleProduct fileName="SHBReports.dll" reportName="已完工久未出货订单">
+    <subject>已完工久未出货订单</subject>
+    <to>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0724@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0179@hanbell.com.cn</address>
+      <address>C0051@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!已完工久未出货订单提醒您及时与客户确认交期，安排出货。</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>3</week>
+      <day />
+      <time>07:50</time>
+      <lasttime>2018/9/26 7:50:23</lasttime>
+      <nexttime>2018/10/03 07:50:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.IdleProductConfig">
+      <itcls>('3176','3177','3178','3179','3180')</itcls>
+      <wareh>('W01')</wareh>
+      <delaydays>15</delaydays>
+    </param>
+  </Hanbell.AutoReport.Config.IdleProduct>
+  <Hanbell.AutoReport.Config.AccountReceivableDelay_GZ fileName="SHBReports.dll" reportName="应收账款逾期分析表">
+    <subject>应收账款逾期分析表</subject>
+    <to>
+      <address>C0013@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt attName="应收账款逾期分析表_GZ" attType="pdf" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!&lt;br /&gt;应收账款逾期异常表让您及时了解客户的欠款状况，提醒您及时催收账款，提高账款回收率。</headAdd>
+    <footerAdd>&lt;br /&gt;&lt;br /&gt;此报表由系统自动发送，请不要直接回复。报表管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>15,L</day>
+      <time>23:58</time>
+      <lasttime>2018/9/15 23:58:09</lasttime>
+      <nexttime>2018/09/30 23:58:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.AccountReceivableDelayConfig">
+      <day4>1</day4>
+      <day1>1</day1>
+      <day3>1</day3>
+      <day5>1</day5>
+      <day2>1</day2>
+    </param>
+  </Hanbell.AutoReport.Config.AccountReceivableDelay_GZ>
+  <Hanbell.AutoReport.Config.AccountReceivableDelay_JN fileName="SHBReports.dll" reportName="应收账款逾期分析表">
+    <subject>应收账款逾期分析表</subject>
+    <to>
+      <address>C0010@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt attName="应收账款逾期分析表_JN" attType="pdf" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!&lt;br /&gt;应收账款逾期异常表让您及时了解客户的欠款状况，提醒您及时催收账款，提高账款回收率。</headAdd>
+    <footerAdd>&lt;br /&gt;&lt;br /&gt;此报表由系统自动发送，请不要直接回复。报表管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>15,L</day>
+      <time>23:58</time>
+      <lasttime>2018/9/15 23:58:11</lasttime>
+      <nexttime>2018/09/30 23:58:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.AccountReceivableDelayConfig">
+      <day4>1</day4>
+      <day1>1</day1>
+      <day3>1</day3>
+      <day5>1</day5>
+      <day2>1</day2>
+    </param>
+  </Hanbell.AutoReport.Config.AccountReceivableDelay_JN>
+  <Hanbell.AutoReport.Config.AccountReceivableDelay_NJ fileName="SHBReports.dll" reportName="应收账款逾期分析表">
+    <subject>应收账款逾期分析表</subject>
+    <to>
+      <address>C0007@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt attName="应收账款逾期分析表_NJ" attType="pdf" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!&lt;br /&gt;应收账款逾期异常表让您及时了解客户的欠款状况，提醒您及时催收账款，提高账款回收率。</headAdd>
+    <footerAdd>&lt;br /&gt;&lt;br /&gt;此报表由系统自动发送，请不要直接回复。报表管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>
+      </week>
+      <day>15,L</day>
+      <time>23:58</time>
+      <lasttime />
+      <nexttime>2018/09/30 23:58:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.AccountReceivableDelayConfig">
+      <day4>1</day4>
+      <day1>1</day1>
+      <day3>1</day3>
+      <day5>1</day5>
+      <day2>1</day2>
+    </param>
+  </Hanbell.AutoReport.Config.AccountReceivableDelay_NJ>
+  <C0241.FWKCGL fileName="C0241.dll" reportName="服务部库存管理报表">
+    <subject>服务部库存管理报表</subject>
+    <to>
+      <address>C0031@hanbell.com.cn</address>
+      <address>C0423@hanbell.com.cn</address>
+      <address>C0201@hanbell.com.cn</address>
+      <address>C1364@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1587@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <C0241.FWKCGLReport.rpt attName="服务部库存管理报表" attType="pdf" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！服务部库存管理报表让你及时了解库存信息。</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>07:50</time>
+      <lasttime>2018/9/30 7:50:24</lasttime>
+      <nexttime>2018/10/01 07:50:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C0241.FWKCGLConfig" />
+  </C0241.FWKCGL>
+  <Hanbell.AutoReport.Config.CDR_R_KehuNHZ_all fileName="C1368.dll" reportName="全部客户机型年汇总">
+    <subject>全部客户机型年汇总</subject>
+    <to>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:00</time>
+      <lasttime>2018/9/3 8:06:33</lasttime>
+      <nexttime>2018/10/03 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuNHZConfig">
+      <depno>1C','1B','1D','1E','1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuNHZ_all>
+  <Hanbell.AutoReport.Config.CDR_R_YwyMx fileName="C1368.dll" reportName="业务员明细报表">
+    <subject>业务员明细报表</subject>
+    <to>
+      <address>C1368@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>17:39</time>
+      <lasttime>2018/9/3 17:39:07</lasttime>
+      <nexttime>2018/10/03 17:39:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_YwyMxConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_YwyMx>
+  <Hanbell.AutoReport.Config.CDR_R_YwyMxAll fileName="C1368.dll" reportName="业务员报表">
+    <subject>业务员报表</subject>
+    <to>
+      <address>C1368@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>08:00</time>
+      <lasttime>2018/9/3 8:06:41</lasttime>
+      <nexttime>2018/10/03 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_YwyMxAllConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_YwyMxAll>
+  <Hanbell.AutoReport.Config.SpecOrderUpdateState_Comer fileName="SHBReports.dll" reportName="">
+    <subject>特殊订单状态更新_Comer</subject>
+    <to />
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>成功执行特殊订单状态更新，此功能需要在其他特殊订单异常报表发送前运行，因为取消了其他特殊订单异常报表中的状态更新，加快速度</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>03:05</time>
+      <lasttime>2018/9/30 3:05:11</lasttime>
+      <nexttime>2018/10/01 03:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderUpdateStateConfig" />
+  </Hanbell.AutoReport.Config.SpecOrderUpdateState_Comer>
+  <Hanbell.AutoReport.Config.SpecOrderRD_Comer fileName="SHBReports.dll" reportName="">
+    <subject>柯茂特殊订单追踪表_技术</subject>
+    <to>
+      <address>5A300@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>K0026@hanbell.com.cn</address>
+      <address>C0176@hanbell.com.cn</address>
+      <address>C0922@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0179@hanbell.com.cn</address>
+      <address>K0004@hanbell.com.cn</address>
+      <address>K0071@hanbell.com.cn</address>
+      <address>K0078@hanbell.com.cn</address>
+      <address>C0676@hanbell.com.cn</address>
+      <address>C0087@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单技术追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>05:05</time>
+      <lasttime>2018/9/28 5:05:04</lasttime>
+      <nexttime>2018/10/01 05:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderRDConfig">
+      <kindcode>A</kindcode>
+      <rdday1>1</rdday1>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderRD_Comer>
+  <Hanbell.AutoReport.Config.SpecOrderPO_Comer fileName="SHBReports.dll" reportName="">
+    <subject>柯茂特殊订单追踪表_采购</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>K0026@hanbell.com.cn</address>
+      <address>C0176@hanbell.com.cn</address>
+      <address>C0922@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0179@hanbell.com.cn</address>
+      <address>K0004@hanbell.com.cn</address>
+      <address>K0071@hanbell.com.cn</address>
+      <address>K0078@hanbell.com.cn</address>
+      <address>C0676@hanbell.com.cn</address>
+      <address>C0087@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!特殊订单采购追踪表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>06:07</time>
+      <lasttime>2018/9/28 6:07:31</lasttime>
+      <nexttime>2018/10/01 06:07:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderPOConfig">
+      <purday1>4</purday1>
+      <kindcode>A</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderPO_Comer>
+  <Hanbell.AutoReport.Config.SpecOrderDelay_Comer fileName="SHBReports.dll" reportName="">
+    <subject>柯茂特殊订单进度异常表</subject>
+    <to>
+      <address>K0026@hanbell.com.cn</address>
+      <address>C0176@hanbell.com.cn</address>
+      <address>C0113@hanbell.com.cn</address>
+      <address>C0005@hanbell.com.cn</address>
+      <address>C0179@hanbell.com.cn</address>
+      <address>K0004@hanbell.com.cn</address>
+      <address>K0078@hanbell.com.cn</address>
+      <address>C0087@hanbell.com.cn</address>
+      <address>C1067@hanbell.com.cn</address>
+      <address>5A300@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderNotificationReport.rpt attName="柯茂殊订单进度异常表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!特殊订单进度异常表，提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统每周一、三自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,3</week>
+      <day />
+      <time>06:30</time>
+      <lasttime>2018/9/26 6:30:10</lasttime>
+      <nexttime>2018/10/01 06:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecOrderDelayConfig">
+      <kindcode>A</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.SpecOrderDelay_Comer>
+  <Hanbell.AutoReport.Config.CRM_WeiTuiWuLiao fileName="C1368.dll" reportName="未退物料明细表">
+    <subject>未退物料明细表</subject>
+    <to>
+      <address>C0201@hanbell.com.cn</address>
+      <address>1B200@hanbell.com.cn</address>
+      <address>1C200@hanbell.com.cn</address>
+      <address>1D200@hanbell.com.cn</address>
+      <address>C0582@hanbell.com.cn</address>
+      <address>C1424@hanbell.com.cn</address>
+      <address>C1121@hanbell.com.cn</address>
+      <address>C0890@hanbell.com.cn</address>
+      <address>C1560@hanbell.com.cn</address>
+      <address>1E210@hanbell.com.cn</address>
+      <address>1V100@hanbell.com.cn</address>
+      <address>1H110@hanbell.com.cn</address>
+      <address>1Q700@hanbell.com.cn</address>
+      <address>5A500@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1368@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.SpecOrderNotificationReport.rpt attName="柯茂殊订单进度异常表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>0</week>
+      <day />
+      <time>20:30</time>
+      <lasttime>2018/9/23 20:30:56</lasttime>
+      <nexttime>2018/09/30 20:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CRM_WeiTuiWuLiaoConfig">
+      <kindcode>A</kindcode>
+    </param>
+  </Hanbell.AutoReport.Config.CRM_WeiTuiWuLiao>
+  <C1491.PUR150 fileName="C1491.dll" reportName="合约单价未来2个月内到期统计表">
+    <subject>合约单价未来2个月内到期统计表</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C1491@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！以下是供应商合约单价未来2个月内到期统计表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>1</day>
+      <time>01:40</time>
+      <lasttime>2018/9/1 1:40:18</lasttime>
+      <nexttime>2018/10/01 01:40:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C1491.ERPPUR150Config" />
+  </C1491.PUR150>
+  <Hanbell.AutoReport.VHB.AccountReceivableDelay fileName="VHBReports.dll" reportName="应收账款逾期分析表">
+    <subject>应收账款逾期分析表</subject>
+    <to>
+      <address>fredtseng@hanbell.cn</address>
+      <address>jeffwang@hanbell.cn</address>
+      <address>ken@hanbell.cn</address>
+    </to>
+    <cc>
+      <address>C1198@hanbell.com.cn</address>
+      <address>
+      </address>
+    </cc>
+    <bcc>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事:大家好!应收账款逾期异常表让您及时了解客户的欠款状况，提醒您及时催收账款，提高账款回收率。</headAdd>
+    <footerAdd>此报表由系统自动发送，请不要直接回复。报表管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>2</week>
+      <day>5,25</day>
+      <time>07:05</time>
+      <lasttime>2018/9/25 7:05:09</lasttime>
+      <nexttime>2018/10/25 07:05:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="">
+      <purday1>4</purday1>
+      <kindcode>A</kindcode>
+    </param>
+  </Hanbell.AutoReport.VHB.AccountReceivableDelay>
+  <C1491.CloudEquipmentReserve fileName="C1491.dll" reportName="云端设备库存报表">
+    <subject>云端相关设备的库存</subject>
+    <to>
+      <address>C0031@hanbell.com.cn</address>
+      <address>C0241@hanbell.com.cn</address>
+      <address>C0481@hanbell.com.cn</address>
+      <address>C0845@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C1491@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！以下是云端设备库存报表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1</week>
+      <day />
+      <time>10:00</time>
+      <lasttime>2018/9/24 10:00:03</lasttime>
+      <nexttime>2018/10/01 10:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C1491.CloudEquipmentReserveConfig" />
+  </C1491.CloudEquipmentReserve>
+  <C1587.Nodeduction fileName="C1587.dll" reportName="空压机体已出货未扣帐明细">
+    <subject>空压机体已出货未扣帐明细</subject>
+    <to>
+      <address>C0189@hanbell.com.cn</address>
+      <address>C0786@hanbell.com.cn</address>
+      <address>C1164@hanbell.com.cn</address>
+      <address>C0280@hanbell.com.cn</address>
+      <address>C0127@hanbell.com.cn</address>
+      <address>C0842@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1587@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>大家好，
+    空压机体已出货未扣帐明细如下：</headAdd>
+    <footerAdd>
+    </footerAdd>
+    <notify>
+      <period>D</period>
+      <week>1</week>
+      <day />
+      <time>12:00</time>
+      <lasttime>2018/9/30 12:00:01</lasttime>
+      <nexttime>2018/10/01 12:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C1587.NodeductionConfig" />
+  </C1587.Nodeduction>
+  <C1491.ERPPURX460 fileName="C1491.dll" reportName="采购单未交货明细通知">
+    <subject>采购单未交货明细汇总通知</subject>
+    <to />
+    <cc />
+    <bcc>
+      <address>C1491.hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！
+    以下是采购单未交货明细汇总表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1</week>
+      <day />
+      <time>08:00</time>
+      <lasttime>2018/9/24 8:00:16</lasttime>
+      <nexttime>2018/10/01 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C1491.ERPPURX460Config" />
+  </C1491.ERPPURX460>
+  <C1491.OAHKGL037 fileName="C1491.dll" reportName="各部门私车公用人员每月汇总表">
+    <subject>各部门私车公用人员每月汇总表</subject>
+    <to />
+    <cc />
+    <bcc>
+      <address>C1491@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！
+    以下是各部门私车公用人员每月汇总表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1</week>
+      <day>1</day>
+      <time>11:00</time>
+      <lasttime />
+      <nexttime>2018/10/01 11:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C1491.OAHKGL037Config" />
+  </C1491.OAHKGL037>
+  <C1491.ERPPUR530_AM fileName="C1491.dll" reportName="GB物料已点收未检验">
+    <subject>GB物料已点收未检验通知</subject>
+    <to />
+    <cc />
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！
+     以下是GB物料已点收未检验明细表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>11:00</time>
+      <lasttime>2018/9/28 11:00:05</lasttime>
+      <nexttime>2018/10/01 11:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C1491.ERPPUR530Config" />
+  </C1491.ERPPUR530_AM>
+  <C1491.ERPPUR530_PM fileName="C1491.dll" reportName="GB物料已点收未检验">
+    <subject>GB物料已点收未检验通知</subject>
+    <to>
+      <address>C0733@hanbell.com.cn</address>
+      <address>C1704@hanbell.com.cn</address>
+      <address>C1547@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>1M110@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C1491@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！
+     以下是GB物料已点收未检验明细表
+</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>1,2,3,4,5</week>
+      <day />
+      <time>16:00</time>
+      <lasttime>2018/9/28 16:00:25</lasttime>
+      <nexttime>2018/10/01 16:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="C1491.ERPPUR530Config" />
+  </C1491.ERPPUR530_PM>
+  <C1587.Vhusage fileName="C1587.dll" reportName="越南OA使用状况表">
+    <subject>越南OA使用状况</subject>
+    <to>
+      <address>fredtseng@hanbell.cn</address>
+      <address> Jeffwang@hanbell.cn</address>
+      <address> C0002@hanbell.com.cn</address>
+      <address> C0004@hanbell.com.cn</address>
+      <address> C0238@hanbell.com.cn</address>
+      <address> mortonsung@hanbell.cn</address>
+    </to>
+    <cc>
+      <address>C0976@hanbell.com.cn</address>
+      <address> C0160@hanbell.com.cn</address>
+      <address> C0713@hanbell.com.cn</address>
+      <address> C1587@hanbell.com.cn</address>
+      <address> C1198@hanbell.com.cn</address>
+      <address> C1491@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管：
+    大家好！
+    截至于报表发送时，越南OA的使用情况如下：</headAdd>
+    <footerAdd>
+    </footerAdd>
+    <notify>
+      <period>W</period>
+      <week>0</week>
+      <day />
+      <time>10:00</time>
+      <lasttime>2018/9/30 10:00:26</lasttime>
+      <nexttime>2018/09/30 10:00:00</nexttime>
+      <status>X</status>
+    </notify>
+    <param name="C1587.VhusageConfig" />
+  </C1587.Vhusage>
+  <Hanbell.AutoReport.Config.NianDuCaiGouPaiMing fileName="C1749.dll" reportName="本年度采购商厂进货排名前200">
+    <subject>本年度采购商厂进货排名前200</subject>
+    <to>
+      <address>C0077@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments>
+      <Hanbell.AutoReport.Config.JZchmxbReport1.rpt attName="机组出货明细表" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事：大家好！
+    以下是年度采购厂商排名前200名报表
+</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,5</week>
+      <day>1</day>
+      <time>4:01</time>
+      <lasttime />
+      <nexttime>2018/10/01 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.NianDuCaiGouPaiMingConfig" />
+  </Hanbell.AutoReport.Config.NianDuCaiGouPaiMing>
+  <Hanbell.AutoReport.Config.ComerNianDuCaiGouPaiMing fileName="C1749.dll" reportName="柯茂年度采购商厂进货排名前30">
+    <subject>柯茂年度厂商进货排名前30</subject>
+    <to>
+      <address>C0077@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0160@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事：大家好！
+    以下是柯茂年度采购厂商排名前30报表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>1,5</week>
+      <day>1</day>
+      <time>8:00</time>
+      <lasttime>2018/9/1 8:00:11</lasttime>
+      <nexttime>2018/10/01 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.ComerNainDuCaiGouMaiMingConfig" />
+  </Hanbell.AutoReport.Config.ComerNianDuCaiGouPaiMing>
+  <Hanbell.AutoReport.Config.YuQiWeiJieAnPurchaseOrder fileName="C1749.dll" reportName="研发、夹具、费用类逾期表">
+    <subject>研发、夹具、费用类逾期表</subject>
+    <to>
+      <address>1N120@hanbell.com.cn</address>
+      <address>C0090@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0077@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事：大家好！
+    以下是逾期未结案采购单</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>0</week>
+      <day />
+      <time>0:00</time>
+      <lasttime>2018/9/30 0:01:01</lasttime>
+      <nexttime>2018/09/30 00:00:00</nexttime>
+      <status>X</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.YuQiWeiJieAnPurchaseOrderConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.YuQiWeiJieAnPurchaseOrder>
+  <Hanbell.AutoReport.Config.SpecialEquipment fileName="C1749.dll" reportName="特种设备点收入库提醒表">
+    <subject>特种设备点收入库提醒表</subject>
+    <to>
+      <address>C0779@hanbell.com.cn</address>
+      <address>C0677@hanbell.com.cn</address>
+      <address>C0848@hanbell.com.cn</address>
+      <address>C1717</address>
+      <address>C0048@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事：大家好！
+    以下是特种设备点收入库提醒表!
+</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>W</period>
+      <week>0</week>
+      <day />
+      <time>8:00</time>
+      <lasttime>2018/9/30 8:00:14</lasttime>
+      <nexttime>2018/09/30 08:00:00</nexttime>
+      <status>X</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SpecialEquipmentConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.SpecialEquipment>
+  <Hanbell.AutoReport.Config.BadAcceptance fileName="C1749.dll" reportName="上月验收不良明细表">
+    <subject>上月验收不良明细表</subject>
+    <to>
+      <address>C1547@hanbell.com.cn</address>
+      <address>C0733@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0054@hanbell.com.cn</address>
+      <address>C0852@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>各位主管、同事：大家好！
+    以下是上月验收不良明细表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0</week>
+      <day>1</day>
+      <time>8:00</time>
+      <lasttime>2018/9/1 8:00:11</lasttime>
+      <nexttime>2018/10/01 08:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.BadAcceptanceConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.BadAcceptance>
+  <Hanbell.AutoReport.Config.PaymentDetails fileName="C1749.dll" reportName="跨部门请款明细表">
+    <subject>跨部门请款明细表</subject>
+    <to>
+      <address>C0113@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>以下是跨部门请款明细表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>0</week>
+      <day />
+      <time>23:30</time>
+      <lasttime>2018/9/28 23:30:05</lasttime>
+      <nexttime>2018/09/30 23:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.PaymentDetailsConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.PaymentDetails>
+  <Hanbell.AutoReport.Config.Unreturn fileName="C1749.dll" reportName="借出未归还到期明细表">
+    <subject>借出未归还到期明细表</subject>
+    <to>
+      <address>C1749@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc />
+    <attachments />
+    <headAdd>以下是借出未归还到期明细表</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0</week>
+      <day>1</day>
+      <time>23:30</time>
+      <lasttime>2018/9/1 23:33:05</lasttime>
+      <nexttime>2018/10/01 23:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.UnreturnConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.Unreturn>
+  <Hanbell.AutoReport.Config.SHBComerNianDuCaiGouPaiMing fileName="C1749.dll" reportName="年度采购厂商进货排名">
+    <subject>年度采购厂商进货排名前30和5</subject>
+    <to>
+      <address>C0976@hanbell.com.cn</address>
+      <address>C0616@hanbell.com.cn</address>
+      <address>C1088@hanbell.com.cn</address>
+      <address>C0002@hanbell.com.cn</address>
+    </to>
+    <cc />
+    <bcc>
+      <address>C0160@hanbell.com.cn</address>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>
+    </headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0</week>
+      <day>1</day>
+      <time>4:06</time>
+      <lasttime />
+      <nexttime>2018/10/01 23:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.SHBNianDuCaiGouPaiMingConfig">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.SHBComerNianDuCaiGouPaiMing>
+  <Hanbell.AutoReport.Config.WarehZP07 fileName="C1749.dll" reportName="每日不良领料明细">
+    <subject>每日不良领料明细</subject>
+    <to>
+      <address>C0067@hanbell.com.cn</address>
+      <address>C0563@hanbell.com.cn</address>
+      <address>C0704@hanbell.com.cn</address>
+      <address>C0816@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C0127@hanbell.com.cn</address>
+      <address>C0278@hanbell.com.cn</address>
+    </cc>
+    <bcc>
+      <address>C1749@hanbell.com.cn</address>
+    </bcc>
+    <attachments />
+    <headAdd>
+    </headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>0</week>
+      <day>1</day>
+      <time>7:00</time>
+      <lasttime>2018/9/30 7:00:23</lasttime>
+      <nexttime>2018/10/01 07:00:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.WarehZP07Config">
+      <depno>1F</depno>
+    </param>
+  </Hanbell.AutoReport.Config.WarehZP07>
+  <Hanbell.AutoReport.Config.ShpKehu fileName="C1368.dll" reportName="客户越权明细（出货）">
+    <subject>客户越权明细（出货）</subject>
+    <to>
+      <address>C0582@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C1491@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.ShpKehuReport.rpt attName="客户越权明细(出货)" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day>3</day>
+      <time>06:30</time>
+      <lasttime>2018/9/3 6:30:37</lasttime>
+      <nexttime>2018/10/03 06:30:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.KehuConfig" />
+  </Hanbell.AutoReport.Config.ShpKehu>
+  <Hanbell.AutoReport.Config.Yiyanshouweiqueren fileName="SHBReports.dll" reportName="已验收未确认明细">
+    <subject>已验收未确认明细</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+      <address>1N200@hanbell.com.cn</address>
+      <address>C0758@hanbell.com.cn</address>
+      <address>C0201@hanbell.com.cn</address>
+      <address>C0479@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1900@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.ShpKehuReport.rpt attName="客户越权明细(出货)" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!异常报表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>0,1,2,3,4,5</week>
+      <day />
+      <time>12:10</time>
+      <lasttime>2018/9/30 12:10:02</lasttime>
+      <nexttime>2018/10/01 12:10:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.YiyanshouweiquerenConfig">
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.Yiyanshouweiqueren>
+  <Hanbell.AutoReport.Config.Qinggousantianweipaozhuan fileName="SHBReports.dll" reportName="PUR215请购三天未抛转明细">
+    <subject>PUR215请购三天未抛转明细</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>1P300@hanbell.com.cn</address>
+      <address>C1900@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.ShpKehuReport.rpt attName="客户越权明细(出货)" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!异常报表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>0,1,2,3,4,5</week>
+      <day />
+      <time>0:01</time>
+      <lasttime>2018/9/30 0:01:07</lasttime>
+      <nexttime>2018/10/01 00:01:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.QinggousantianweipaozhuanConfig">
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.Qinggousantianweipaozhuan>
+  <Hanbell.AutoReport.Config.Qinggousantianweipaozhuan_P3 fileName="SHBReports.dll" reportName="PUR320请购三天未抛转明细">
+    <subject>PUR320请购三天未抛转明细</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>1P300@hanbell.com.cn</address>
+      <address>C1900@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.ShpKehuReport.rpt attName="客户越权明细(出货)" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!异常报表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>0,1,2,3,4,5</week>
+      <day />
+      <time>0:01</time>
+      <lasttime>2018/9/30 0:01:07</lasttime>
+      <nexttime>2018/10/01 00:01:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.QinggousantianweipaozhuanConfig_P3">
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.Qinggousantianweipaozhuan_P3>
+  <Hanbell.AutoReport.Config.Qinggousantianweipaozhuan_M3 fileName="SHBReports.dll" reportName="MAN345请购三天未抛转明细">
+    <subject>MAN345请购三天未抛转明细</subject>
+    <to>
+      <address>1N100@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>1P300@hanbell.com.cn</address>
+      <address>C1900@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments>
+      <Hanbell.AutoReport.Config.ShpKehuReport.rpt attName="客户越权明细(出货)" attType="xls" />
+    </attachments>
+    <headAdd>各位主管、同事:大家好!异常报表提醒您及时完成工作！</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>D</period>
+      <week>0,1,2,3,4,5</week>
+      <day />
+      <time>0:01</time>
+      <lasttime>2018/9/30 0:01:08</lasttime>
+      <nexttime>2018/10/01 00:01:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.QinggousantianweipaozhuanConfig_M3">
+      <facno>C</facno>
+    </param>
+  </Hanbell.AutoReport.Config.Qinggousantianweipaozhuan_M3>
+  <Hanbell.AutoReport.Config.CDR_R_KehuYXS_cq fileName="C1368.dll" reportName="重庆客户月销售">
+    <subject>重庆客户月销售</subject>
+    <to>
+      <address>C1553@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day />
+      <time>3:03</time>
+      <lasttime />
+      <nexttime>2018/09/03 08:20:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuYXSConfig">
+      <depno>1V</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuYXS_cq>
+  <Hanbell.AutoReport.Config.cdryxs_cq fileName="C1368.dll" reportName="重庆机型月销售">
+    <subject>重庆机型月销售</subject>
+    <to>
+      <address>C1553@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day />
+      <time>3:06</time>
+      <lasttime />
+      <nexttime>2018/09/03 08:20:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.cdryxsConfig">
+      <depno>1V</depno>
+    </param>
+  </Hanbell.AutoReport.Config.cdryxs_cq>
+  <Hanbell.AutoReport.Config.CDR_R_KehuNHZ_cq fileName="C1368.dll" reportName="重庆客户年汇总">
+    <subject>重庆客户年汇总</subject>
+    <to>
+      <address>C1553@hanbell.com.cn</address>
+      <address>C0999@hanbell.com.cn</address>
+    </to>
+    <cc>
+      <address>C1749@hanbell.com.cn</address>
+      <address>C0428@hanbell.com.cn</address>
+      <address>C0976@hanbell.com.cn</address>
+    </cc>
+    <bcc />
+    <attachments />
+    <headAdd>各位主管、同事:大家好!自动报表提醒您及时完成工作</headAdd>
+    <footerAdd>此报表由系统自动发送，请勿直接回复，系统管理员</footerAdd>
+    <notify>
+      <period>M</period>
+      <week>0,1,2,3,4,5</week>
+      <day />
+      <time>3:08</time>
+      <lasttime />
+      <nexttime>2018/09/03 08:20:00</nexttime>
+      <status>V</status>
+    </notify>
+    <param name="Hanbell.AutoReport.Config.CDR_R_KehuNHZConfig">
+      <depno>1V</depno>
+    </param>
+  </Hanbell.AutoReport.Config.CDR_R_KehuNHZ_cq>
 </Notification>

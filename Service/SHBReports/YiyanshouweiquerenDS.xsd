@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="YiyanshouweiquerenDS" targetNamespace="http://tempuri.org/YiyanshouweiquerenDS.xsd" xmlns:mstns="http://tempuri.org/YiyanshouweiquerenDS.xsd" xmlns="http://tempuri.org/YiyanshouweiquerenDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="YiyanshouweiquerenDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="YiyanshouweiquerenDS" msprop:Generator_UserDSName="YiyanshouweiquerenDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblresult" msprop:Generator_TableClassName="tblresultDataTable" msprop:Generator_TableVarName="tabletblresult" msprop:Generator_TablePropName="tblresult" msprop:Generator_RowDeletingName="tblresultRowDeleting" msprop:Generator_RowChangingName="tblresultRowChanging" msprop:Generator_RowEvHandlerName="tblresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tblresultRowDeleted" msprop:Generator_UserTableName="tblresult" msprop:Generator_RowChangedName="tblresultRowChanged" msprop:Generator_RowEvArgName="tblresultRowChangeEvent" msprop:Generator_RowClassName="tblresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="点收编号" msprop:Generator_ColumnVarNameInTable="column点收编号" msprop:Generator_ColumnPropNameInRow="点收编号" msprop:Generator_ColumnPropNameInTable="点收编号Column" msprop:Generator_UserColumnName="点收编号" type="xs:string" minOccurs="0" />
+              <xs:element name="厂商编号" msprop:Generator_ColumnVarNameInTable="column厂商编号" msprop:Generator_ColumnPropNameInRow="厂商编号" msprop:Generator_ColumnPropNameInTable="厂商编号Column" msprop:Generator_UserColumnName="厂商编号" type="xs:string" minOccurs="0" />
+              <xs:element name="厂商简称" msprop:Generator_ColumnVarNameInTable="column厂商简称" msprop:Generator_ColumnPropNameInRow="厂商简称" msprop:Generator_ColumnPropNameInTable="厂商简称Column" msprop:Generator_UserColumnName="厂商简称" type="xs:string" minOccurs="0" />
+              <xs:element name="大类" msprop:Generator_ColumnVarNameInTable="column大类" msprop:Generator_ColumnPropNameInRow="大类" msprop:Generator_ColumnPropNameInTable="大类Column" msprop:Generator_UserColumnName="大类" type="xs:string" minOccurs="0" />
+              <xs:element name="品号" msprop:Generator_ColumnVarNameInTable="column品号" msprop:Generator_ColumnPropNameInRow="品号" msprop:Generator_ColumnPropNameInTable="品号Column" msprop:Generator_UserColumnName="品号" type="xs:string" minOccurs="0" />
+              <xs:element name="品名" msprop:Generator_ColumnVarNameInTable="column品名" msprop:Generator_ColumnPropNameInRow="品名" msprop:Generator_ColumnPropNameInTable="品名Column" msprop:Generator_UserColumnName="品名" type="xs:string" minOccurs="0" />
+              <xs:element name="点收数量" msprop:Generator_ColumnVarNameInTable="column点收数量" msprop:Generator_ColumnPropNameInRow="点收数量" msprop:Generator_ColumnPropNameInTable="点收数量Column" msprop:Generator_UserColumnName="点收数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="点收时间" msprop:Generator_ColumnVarNameInTable="column点收时间" msprop:Generator_ColumnPropNameInRow="点收时间" msprop:Generator_ColumnPropNameInTable="点收时间Column" msprop:Generator_UserColumnName="点收时间" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="验收日期" msprop:Generator_ColumnVarNameInTable="column验收日期" msprop:Generator_ColumnPropNameInRow="验收日期" msprop:Generator_ColumnPropNameInTable="验收日期Column" msprop:Generator_UserColumnName="验收日期" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="库号" msprop:Generator_ColumnVarNameInTable="column库号" msprop:Generator_ColumnPropNameInRow="库号" msprop:Generator_ColumnPropNameInTable="库号Column" msprop:Generator_UserColumnName="库号" type="xs:string" minOccurs="0" />
+              <xs:element name="延误天数" msprop:Generator_ColumnVarNameInTable="column延误天数" msprop:Generator_ColumnPropNameInRow="延误天数" msprop:Generator_ColumnPropNameInTable="延误天数Column" msprop:Generator_UserColumnName="延误天数" type="xs:string" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" msprop:Generator_UserColumnName="备注" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
