@@ -32,7 +32,7 @@ namespace Hanbell.AutoReport.Config
 
                 foreach (ReportClass item in nc.GetReportList())
                 {
-                    if (item.FullResourceName == "Hanbell.AutoReport.Config.AccountReceivableDelayReport.rpt")
+                    if (item.FullResourceName.Equals("Hanbell.AutoReport.Config.AccountReceivableDelayReport_Comer.rpt"))
                     {
                         Hashtable args = new Hashtable();
                         args = Base.GetParameter(this.ToString(),nc.ToString());
@@ -79,7 +79,7 @@ namespace Hanbell.AutoReport.Config
 
             if (nc.GetDataTable("tblresult").Rows.Count > 0)
             {
-                AddNotify(new MailNotify());
+               AddNotify(new MailNotify());
             }
 
         }

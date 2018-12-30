@@ -72,6 +72,12 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="AccountReceivableDelayReport_Comer1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountReceivableDelayReport_Comer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="AccountReceivableDelay_Comer.cs" />
     <Compile Include="AccountReceivableDelay_GZ.cs" />
     <Compile Include="AccountReceivableDelay_JN.cs" />
@@ -434,6 +440,10 @@
     <EmbeddedResource Include="AccountReceivableDelayReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>AccountReceivableDelayReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountReceivableDelayReport_Comer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AccountReceivableDelayReport_Comer1.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Dianshouweiyanshou_zhuweiReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

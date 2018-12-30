@@ -17,7 +17,13 @@ namespace Hanbell.AutoReport.Config
         {
             PrepareDBUtil(dbType, Base.GetDBConnectionString(connName));
             this.ds = new DSAccountReceivableDelay();
-            this.reportList.Add(new AccountReceivableDelayReport());
+            if (connName.Equals("SHBERP"))
+            {
+                this.reportList.Add(new AccountReceivableDelayReport());
+            }
+            else {
+                this.reportList.Add(new AccountReceivableDelayReport_Comer());
+            }
             this.args = Base.GetParameter(notification, this.ToString());
         }
 
