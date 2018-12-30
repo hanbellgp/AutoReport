@@ -155,6 +155,26 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Qinggousantianweipaozhuan.cs" />
+    <Compile Include="QinggousantianweipaozhuanConfig.cs" />
+    <Compile Include="QinggousantianweipaozhuanConfig_K.cs" />
+    <Compile Include="QinggousantianweipaozhuanConfig_M3.cs" />
+    <Compile Include="QinggousantianweipaozhuanConfig_M3_K.cs" />
+    <Compile Include="QinggousantianweipaozhuanConfig_P3.cs" />
+    <Compile Include="QinggousantianweipaozhuanDS.cs">
+      <DependentUpon>QinggousantianweipaozhuanDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QinggousantianweipaozhuanDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QinggousantianweipaozhuanDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Qinggousantianweipaozhuan_K.cs" />
+    <Compile Include="Qinggousantianweipaozhuan_M3.cs" />
+    <Compile Include="Qinggousantianweipaozhuan_M3_K.cs" />
+    <Compile Include="Qinggousantianweipaozhuan_P3.cs" />
+    <Compile Include="Qinggousantianweipaozhuan_P3_K.cs" />
     <Compile Include="SalesOrderSchedule.cs" />
     <Compile Include="SalesOrderScheduleConfig.cs" />
     <Compile Include="SalesOrderScheduleConfig_R_HD.cs" />
@@ -230,6 +250,19 @@
     </Compile>
     <Compile Include="SalesOrderScheduleConfig_R_GZ.cs" />
     <Compile Include="SalesOrderSchedule_R_GZ.cs" />
+    <Compile Include="Yiyanshouweiqueren.cs" />
+    <Compile Include="YiyanshouweiquerenConfig.cs" />
+    <Compile Include="YiyanshouweiquerenConfig_K.cs" />
+    <Compile Include="YiyanshouweiquerenDS.cs">
+      <DependentUpon>YiyanshouweiquerenDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YiyanshouweiquerenDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YiyanshouweiquerenDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Yiyanshouweiqueren_K.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Config\AutoReportConfig.csproj">
@@ -352,6 +385,17 @@
     <None Include="ProductionOrderNeedCloseDS.xss">
       <DependentUpon>ProductionOrderNeedCloseDS.xsd</DependentUpon>
     </None>
+    <None Include="QinggousantianweipaozhuanDS.xsc">
+      <DependentUpon>QinggousantianweipaozhuanDS.xsd</DependentUpon>
+    </None>
+    <None Include="QinggousantianweipaozhuanDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QinggousantianweipaozhuanDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QinggousantianweipaozhuanDS.xss">
+      <DependentUpon>QinggousantianweipaozhuanDS.xsd</DependentUpon>
+    </None>
     <None Include="SalesOrderScheduleDS.xsc">
       <DependentUpon>SalesOrderScheduleDS.xsd</DependentUpon>
     </None>
@@ -373,6 +417,17 @@
     </None>
     <None Include="StandCostAbnormalityDS.xss">
       <DependentUpon>StandCostAbnormalityDS.xsd</DependentUpon>
+    </None>
+    <None Include="YiyanshouweiquerenDS.xsc">
+      <DependentUpon>YiyanshouweiquerenDS.xsd</DependentUpon>
+    </None>
+    <None Include="YiyanshouweiquerenDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YiyanshouweiquerenDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YiyanshouweiquerenDS.xss">
+      <DependentUpon>YiyanshouweiquerenDS.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
