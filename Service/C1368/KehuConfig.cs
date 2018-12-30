@@ -18,88 +18,115 @@ namespace Hanbell.AutoReport.Config
         }
 
 
-        public override void InitData()
-        {
-                 string sqlstr = @" select xx.*, cast( isnull(p.stdprice,0) as decimal(16,2)) stdprice, 
-        cast(case when p.stdprice is null then 0 else  round(100*(xx.unpris)/p.stdprice,2) end as decimal(10,2)) 'stdaccout',p.pricingid '标准定价单号' from 
-        (select qh.mancode ,se.username 'manname' ,se3.username 'keyinname',cu.cusna ,convert(char(12), h.shpdate,112) shpdate ,d.itnbrcus ,d.itnbr ,
-        im.itdsc ,d.shpqy1 '本次出货数量',qd.quaqy1 '报价数量' ,cast(round( h.ratio*d.unpris ,2) as decimal(16,2)) 'unpris' , 
-        se2.username ,cast ( qd.contunpri as decimal(16,2)) contunpri ,
-        cast(case qd.contunpri when 0 then 0 else round(100*h.ratio*d.unpris/qd.contunpri,2) end as decimal(16,2)) 'conaccout',
-        case qh.isspecial when 'Y' then '特殊流程' else '权限审批' end  'flowtype',s.cdesc 'resdesc',
-        s1.cdesc 'prtypedesc',qh.cusno ,qh.oacfuser ,qh.quono ,dh.pricingtype,dh.cdrno ,h.shpno ,d.trseq ,dd.dmark1, dd.dmark2 , d.trseq
-        from cdrqhad qh left join secuser se on qh.mancode=se.userno
-        left join secuser se2 on qh.oacfuser=se2.userno  left join secuser se3 on qh.userno =se3.userno  left join miscode s1  on qh.pricingtype = s1.code and s1.ckind='1C' 
-        ,cdrdmas dd ,cdrhmas dh ,cdrdta d ,  invpri ih , cdrhad h ,miscode s,cdrcus cu,invmas im,cdrqdta qd  where qh.facno='C' and dh.facno='C' and  ih.facno='C'  and
-        qh.facno=qd.facno and qh.quono=qd.quono and dh.facno=dd.facno and dh.cdrno=dd.cdrno and h.facno =d.facno and h.shpno =d.shpno 
-        and dd.itnbr=d.itnbr  and dd.itnbr=qd.itnbr and qd.dmark1 = dd.dmark1 and d.itnbr = im.itnbr 
-        and d.ctrseq=dd.trseq and qd.dmark1=dd.dmark1 and qd.dmark2=dd.dmark2 and qd.quaqy1=dd.cdrqy1
-        and  qh.bcdrno = dh.cdrno and  d.cdrno=dh.cdrno  and  ih.itnbr=d.itnbr  and dh.cusno=cu.cusno  and qh.hquosta in ('Y','T','P') and dh.pricingtype in ('RC')
-        and ( qh.oacfuser <> '' and qh.oacfuser is not null )   and s.ckind='1O'   and qh.apprresno=s.code
-        and  ( dd.dmark1 <> '' or dd.dmark2 <> ''  or h.depno in ('1E000','1E100','1F100','1B000','1D000','1D100','1C000','1C100','1G120','1N120','1B100','1D100','1Q000',
-        '1H100','1G120','1Q000','1F500' ) )  and h.houtsta='Y'  and  ih.yearmon = convert(char(6),DATEADD(month,-1,getdate()),112) 
-        and convert(char(4), h.shpdate,112) =convert(char(4),DATEADD(month,-1,getdate()),112) 
-        union all
-        select qh.mancode ,se.username 'manname' ,se3.username 'keyinname',cu.cusna , convert(char(12), h.shpdate,112) shpdate ,d.itnbrcus ,d.itnbr ,
-        im.itdsc ,d.shpqy1 '出货数量',qd.quaqy1 '报价数量' , cast(round( h.ratio*d.unpris ,2) as decimal(16,2)) 'unpris' ,
-        se2.username ,cast ( qd.contunpri as decimal(16,2)) contunpri ,
-        cast(case qd.contunpri when 0 then 0 else round(100*h.ratio*d.unpris/qd.contunpri,2) end as decimal(16,2)) 'conaccout',
-        case qh.isspecial when 'Y' then '特殊流程' else '权限审批' end  'flowtype',s.cdesc 'resdesc',
-        s1.cdesc 'prtypedesc',qh.cusno ,qh.oacfuser ,qh.quono ,dh.pricingtype, dh.cdrno ,h.shpno ,d.trseq ,dd.dmark1, dd.dmark2 , d.trseq
-        from njerp..cdrqhad qh left join njerp..secuser se on qh.mancode=se.userno  left join secuser se2 on qh.oacfuser=se2.userno
-        left join njerp..secuser se3 on qh.userno =se3.userno  left join miscode s1  on qh.pricingtype = s1.code and s1.ckind='1C' ,njerp..cdrdmas dd
-        ,njerp..cdrhmas dh ,njerp..cdrdta d ,  njerp..invpri ih , njerp..cdrhad h ,miscode s,njerp..cdrcus cu,invmas im,njerp..cdrqdta qd 
-        where qh.facno='N' and dh.facno='N' and  ih.facno='N'  and qh.facno=qd.facno and qh.quono=qd.quono and  dh.facno=dd.facno and dh.cdrno=dd.cdrno 
-        and h.facno =d.facno and h.shpno =d.shpno and dd.itnbr=d.itnbr  and dd.itnbr=qd.itnbr and qd.dmark1 = dd.dmark1 and d.itnbr = im.itnbr 
-        and d.ctrseq=dd.trseq and qd.dmark1=dd.dmark1 and qd.dmark2=dd.dmark2 and qd.quaqy1=dd.cdrqy1  and  qh.bcdrno = dh.cdrno and  d.cdrno=dh.cdrno 
-        and ih.itnbr=d.itnbr  and dh.cusno=cu.cusno and qh.hquosta in ('Y','T','P') and dh.pricingtype in ('RC')
-        and ( qh.oacfuser <> '' and qh.oacfuser is not null )   and s.ckind='1O'   and qh.apprresno=s.code  and  ( dd.dmark1 <> '' or dd.dmark2 <> ''  or h.depno in ('1E000',
-        '1E100','1F100','1B000','1D000','1D100','1C000','1C100', '1G120','1N120','1B100','1D100','1Q000','1H100','1G120','1Q000' ,'1F500') )  and h.houtsta='Y' 
-        and  ih.yearmon = convert(char(6),DATEADD(month,-1,getdate()),112) and convert(char(4), h.shpdate,112) =convert(char(4),DATEADD(month,-1,getdate()),112)
-        union all
-        select qh.mancode ,se.username 'manname' ,se3.username 'keyinname',cu.cusna ,convert(char(12), h.shpdate,112) shpdate ,d.itnbrcus ,d.itnbr ,
-        im.itdsc ,d.shpqy1 '出货数量',qd.quaqy1 '报价数量' , cast(round( h.ratio*d.unpris ,2) as decimal(16,2)) 'unpris' , 
-        se2.username ,cast ( qd.contunpri as decimal(16,2)) contunpri ,
-        cast(case qd.contunpri when 0 then 0 else round(100*h.ratio*d.unpris/qd.contunpri,2) end as decimal(16,2)) 'conaccout',
-        case qh.isspecial when 'Y' then '特殊流程' else '权限审批' end  'flowtype',s.cdesc 'resdesc',s1.cdesc 'prtypedesc',qh.cusno ,qh.oacfuser ,qh.quono ,dh.pricingtype,
-        dh.cdrno ,h.shpno ,d.trseq ,dd.dmark1, dd.dmark2 , d.trseq  from gzerp..cdrqhad qh left join gzerp..secuser se on qh.mancode=se.userno
-        left join secuser se2 on qh.oacfuser=se2.userno  left join gzerp..secuser se3 on qh.userno =se3.userno  left join miscode s1  on qh.pricingtype = s1.code and s1.ckind='1C' 
-        ,gzerp..cdrdmas dd ,gzerp..cdrhmas dh ,gzerp..cdrdta d ,  gzerp..invpri ih , gzerp..cdrhad h ,miscode s,gzerp..cdrcus cu,invmas im,gzerp..cdrqdta qd 
-        where qh.facno='G' and dh.facno='G' and  ih.facno='G'  and  qh.facno=qd.facno and qh.quono=qd.quono and  dh.facno=dd.facno and dh.cdrno=dd.cdrno 
-        and h.facno =d.facno and h.shpno =d.shpno and dd.itnbr=d.itnbr  and dd.itnbr=qd.itnbr and qd.dmark1 = dd.dmark1 and d.itnbr = im.itnbr 
-        and d.ctrseq=dd.trseq and qd.dmark1=dd.dmark1 and qd.dmark2=dd.dmark2 and qd.quaqy1=dd.cdrqy1 and  qh.bcdrno = dh.cdrno and  d.cdrno=dh.cdrno 
-        and ih.itnbr=d.itnbr  and dh.cusno=cu.cusno and qh.hquosta in ('Y','T','P') and dh.pricingtype in ('RC')
-        and ( qh.oacfuser <> '' and qh.oacfuser is not null )   and s.ckind='1O'   and qh.apprresno=s.code  and  ( dd.dmark1 <> '' or dd.dmark2 <> ''  or h.depno in ('1E000',
-        '1E100','1F100','1B000','1D000','1D100','1C000','1C100', '1G120','1N120','1B100','1D100','1Q000','1H100','1G120','1Q000','1F500' ) )  and h.houtsta='Y' 
-        and  ih.yearmon = convert(char(6),DATEADD(month,-1,getdate()),112) and convert(char(4), h.shpdate,112) =convert(char(4),DATEADD(month,-1,getdate()),112)
-        union all
-        select qh.mancode ,se.username 'manname' ,se3.username 'keyinname',cu.cusna ,convert(char(12), h.shpdate,112) shpdate ,d.itnbrcus ,d.itnbr ,
-        im.itdsc ,d.shpqy1 '出货数量',qd.quaqy1 '报价数量' , cast(round( h.ratio*d.unpris ,2) as decimal(16,2)) 'unpris' ,
-        se2.username ,cast ( qd.contunpri as decimal(16,2)) contunpri ,
-        cast(case qd.contunpri when 0 then 0 else round(100*h.ratio*d.unpris/qd.contunpri,2) end as decimal(16,2)) 'conaccout',
-        case qh.isspecial when 'Y' then '特殊流程' else '权限审批' end  'flowtype',s.cdesc 'resdesc',
-        s1.cdesc 'prtypedesc',qh.cusno ,qh.oacfuser ,qh.quono ,dh.pricingtype, dh.cdrno ,h.shpno ,d.trseq ,dd.dmark1, dd.dmark2 , d.trseq
-        from jnerp..cdrqhad qh left join jnerp..secuser se on qh.mancode=se.userno left join secuser se2 on qh.oacfuser=se2.userno left join jnerp..secuser se3 on qh.userno =se3.userno
-        left join miscode s1  on qh.pricingtype = s1.code and s1.ckind='1C'  ,jnerp..cdrdmas dd  ,jnerp..cdrhmas dh ,jnerp..cdrdta d  ,  jnerp..invpri ih 
-        , jnerp..cdrhad h ,miscode s,jnerp..cdrcus cu,invmas im,jnerp..cdrqdta qd  where qh.facno='J' and dh.facno='J' and  ih.facno='J'  and
-        qh.facno=qd.facno and qh.quono=qd.quono and   dh.facno=dd.facno and dh.cdrno=dd.cdrno and h.facno =d.facno and h.shpno =d.shpno 
-        and dd.itnbr=d.itnbr  and dd.itnbr=qd.itnbr and qd.dmark1 = dd.dmark1 and d.itnbr = im.itnbr 
-        and d.ctrseq=dd.trseq and qd.dmark1=dd.dmark1 and qd.dmark2=dd.dmark2 and qd.quaqy1=dd.cdrqy1 and  qh.bcdrno = dh.cdrno and  d.cdrno=dh.cdrno 
-        and  ih.itnbr=d.itnbr  and dh.cusno=cu.cusno and qh.hquosta in ('Y','T','P') and dh.pricingtype in ('RC')
-        and ( qh.oacfuser <> '' and qh.oacfuser is not null )   and s.ckind='1O'   and qh.apprresno=s.code  and  ( dd.dmark1 <> '' or dd.dmark2 <> ''  or h.depno in ('1E000',
-        '1E100','1F100','1B000','1D000','1D100','1C000','1C100', '1G120','1N120','1B100','1D100','1Q000','1H100','1G120','1Q000','1F500' ) )  and h.houtsta='Y' 
-        and  ih.yearmon = convert(char(6),DATEADD(month,-1,getdate()),112) and convert(char(4), h.shpdate,112) =convert(char(4),DATEADD(month,-1,getdate()),112)) xx left join 
-        ( select a.pricingid,a.pricingtype, case a.pricingtype when 'AAD' then  b.price05 when 'AJC' then b.price06 
-        when 'PAC' then  b.price06 when 'PAD' then  b.price08 when 'RC' then b.price04 when 'SDS' then b.price07 when 'AJSC' then b.price04  end   'stdprice'
-        ,b.itnbr ,b.itemno from pricingpolicy a ,pricing b where a.pricingid=b.pricingid and a.status='V'  and a.pricingtype in ('AAD','AJC','PAD','PAC','RC','SDS','AJSC') 
-        and not exists( select * from pricingpolicy c ,pricing d where c.pricingid=d.pricingid and c.status='V'
-        and c.pricingtype in ('AAD','AJC','PAD','PAC','RC','SDS','AJSC') and a.pricingtype=c.pricingtype and b.itnbr= d.itnbr  and b.itemno=d.itemno  and c.pricingid > a.pricingid )
-        ) p on xx.pricingtype=p.pricingtype and xx.itnbr=p.itnbr and (((xx.dmark1<> '' and not(xx.dmark1  is null)) and  xx.dmark1=p.itemno ) or (xx.dmark1='' or xx.dmark1 is null)) ";
+       public override void InitData()
+       {
+           string sqlstr = @" SELECT xx.*,cast(isnull(p.stdprice, 0) AS DECIMAL(16, 2)) stdprice,cast(CASE WHEN p.stdprice IS NULL THEN 0  ELSE round(100 * (xx.unpris) / p.stdprice, 2) END AS DECIMAL(10, 2)) 'stdaccout',
+  p.pricingid '标准定价单号' FROM (SELECT qh.mancode,se.username 'manname', se3.username 'keyinname',cu.cusna,convert(CHAR(12), dh.cfmdate, 112) cfmdate, d.itnbrcus,
+  dd.itnbr, im.itdsc,d.shpqy1  '本次出货数量',qd.quaqy1 '报价数量',cast(round(dh.ratio * d.unpris, 2) AS DECIMAL(16, 2)) 'unpris', se2.username,
+  cast(qd.contunpri AS DECIMAL(16, 2)) contunpri,cast(CASE qd.contunpri WHEN 0 THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
+     CASE qh.isspecial WHEN 'Y' THEN '特殊流程' ELSE '权限审批' END  'flowtype',s.cdesc 'resdesc', s1.cdesc 'prtypedesc', qh.cusno,qh.oacfuser,qh.quono,dh.pricingtype,dh.cdrno,
+    d.shpno, d.trseq,dd.dmark1, dd.dmark2,dd.trseq FROM cdrqhad qh LEFT JOIN secuser se ON qh.mancode = se.userno LEFT JOIN secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C',
+    cdrdmas dd   left join   cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr, cdrhmas dh, miscode s, cdrcus cu, invmas im,
+     cdrqdta qd,invpri ih  WHERE qh.facno = 'C' AND dh.facno = 'C' AND ih.facno = 'C' AND qh.facno = qd.facno AND dh.facno = dd.facno AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno
+      AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
+         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+    and ( qh.oacfuser <> '' and qh.oacfuser is not null ) 
+       AND s.ckind = '1O' AND qh.apprresno = s.code AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN
+       ('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000',
+        '1H100', '1G120', '1Q000', '1F500')) AND   --dh.hrecsta = 'Y' AND
+      ih.yearmon = convert(CHAR(6), DATEADD(MONTH, -1, getdate()), 112) and convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) < convert(CHAR(6), DATEADD(MONTH, 0, getdate()), 112)
+      AND convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) >= convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)+ '01' AND convert(CHAR(4), dh.cfmdate, 112) = convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)
+   UNION ALL
+   SELECT
+     qh.mancode, se.username  'manname',se3.username  'keyinname', cu.cusna,convert(CHAR(12), dh.cfmdate, 112)  cfmdate,
+     d.itnbrcus,dd.itnbr, im.itdsc, d.shpqy1   '出货数量', qd.quaqy1   '报价数量', cast(round(dh.ratio * d.unpris, 2) AS DECIMAL(16, 2))  'unpris',se2.username,
+     cast(qd.contunpri AS DECIMAL(16, 2))  contunpri, cast(CASE qd.contunpri
+          WHEN 0 THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
+     CASE qh.isspecial  WHEN 'Y' THEN '特殊流程' ELSE '权限审批' END  'flowtype', s.cdesc 'resdesc',s1.cdesc  'prtypedesc',
+     qh.cusno, qh.oacfuser,qh.quono,dh.pricingtype, dh.cdrno, d.shpno,d.trseq,dd.dmark1, dd.dmark2,dd.trseq
+   FROM njerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
+     , njerp..cdrdmas dd  left join  njerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr
+     , njerp..cdrhmas dh , miscode s, njerp..cdrcus cu, invmas im, njerp..cdrqdta qd,  njerp..invpri ih
+   WHERE qh.facno = 'N' AND dh.facno = 'N' AND ih.facno = 'N' AND qh.facno = qd.facno AND dh.facno = dd.facno 	AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno
+           AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
+         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+         and ( qh.oacfuser <> '' and qh.oacfuser is not null ) 
+         AND s.ckind = '1O' AND qh.apprresno = s.code
+         AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000',
+        '1H100', '1G120', '1Q000', '1F500')) AND   --dh.hrecsta = 'Y' AND
+         ih.yearmon = convert(CHAR(6), DATEADD(MONTH, -1, getdate()), 112) and convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) < convert(CHAR(6), DATEADD(MONTH, 0, getdate()), 112)
+      AND convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) >= convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)+ '01' AND convert(CHAR(4), dh.cfmdate, 112) = convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)
+   UNION ALL
+  SELECT  qh.mancode, se.username   'manname', se3.username  'keyinname',cu.cusna,convert(CHAR(12), dh.cfmdate, 112)  cfmdate,d.itnbrcus,dd.itnbr,im.itdsc,d.shpqy1  '出货数量',
+     qd.quaqy1 '报价数量',cast(round(dh.ratio * d.unpris, 2) AS DECIMAL(16, 2))  'unpris', se2.username,cast(qd.contunpri AS DECIMAL(16, 2)) contunpri, cast(CASE qd.contunpri
+          WHEN 0 THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
+     CASE qh.isspecial WHEN 'Y' THEN '特殊流程'
+     ELSE '权限审批' END  'flowtype',s.cdesc 'resdesc', s1.cdesc 'prtypedesc',qh.cusno,qh.oacfuser,
+     qh.quono,dh.pricingtype,dh.cdrno, d.shpno,d.trseq,dd.dmark1, dd.dmark2, dd.trseq
+   FROM jnerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
+     , jnerp..cdrdmas dd  left join  jnerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr
+     , jnerp..cdrhmas dh , miscode s, jnerp..cdrcus cu, invmas im, jnerp..cdrqdta qd,  jnerp..invpri ih
+   WHERE qh.facno = 'J' AND dh.facno = 'J' AND ih.facno = 'J' AND qh.facno = qd.facno AND dh.facno = dd.facno
+			AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr
+      AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
+         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND  qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+    and ( qh.oacfuser <> '' and qh.oacfuser is not null )
+          AND s.ckind = '1O' AND qh.apprresno = s.code
+         AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000',
+        '1H100', '1G120', '1Q000', '1F500'))
+		 AND   --dh.hrecsta = 'Y' AND
+      ih.yearmon = convert(CHAR(6), DATEADD(MONTH, -1, getdate()), 112) and convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) < convert(CHAR(6), DATEADD(MONTH, 0, getdate()), 112)
+      AND convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) >= convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)+ '01' AND convert(CHAR(4), dh.cfmdate, 112) = convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)
+   UNION ALL
+   SELECT
+     qh.mancode,se.username  'manname', se3.username   'keyinname', cu.cusna,convert(CHAR(12), dh.cfmdate, 112) cfmdate, d.itnbrcus,dd.itnbr,im.itdsc, d.shpqy1 '出货数量',
+     qd.quaqy1 '报价数量',cast(round(dh.ratio * d.unpris, 2) AS DECIMAL(16, 2)) 'unpris',se2.username,cast(qd.contunpri AS DECIMAL(16, 2))  contunpri,
+     cast(CASE qd.contunpri   WHEN 0  THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
+     CASE qh.isspecial WHEN 'Y' THEN '特殊流程' ELSE '权限审批' END  'flowtype',
+     s.cdesc 'resdesc',  s1.cdesc 'prtypedesc', qh.cusno,qh.oacfuser,qh.quono, dh.pricingtype, dh.cdrno, d.shpno,d.trseq, dd.dmark1, dd.dmark2,
+     dd.trseq FROM gzerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C' ,
+     gzerp..cdrdmas dd  left join  gzerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr , gzerp..cdrhmas dh , miscode s, gzerp..cdrcus cu, invmas im,
+     gzerp..cdrqdta qd,  gzerp..invpri ih WHERE qh.facno = 'G' AND dh.facno = 'G' AND ih.facno = 'G' AND qh.facno = qd.facno AND dh.facno = dd.facno AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno
+           AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr  AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1 AND qh.bcdrno = dh.cdrno
+     AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC')  and ( qh.oacfuser <> '' and qh.oacfuser is not null ) AND s.ckind = '1O' AND qh.apprresno = s.code AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN
+       ('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000', '1H100', '1G120', '1Q000', '1F500'))
+		 AND   --dh.hrecsta = 'Y' AND
+       ih.yearmon = convert(CHAR(6), DATEADD(MONTH, -1, getdate()), 112) and  convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) < convert(CHAR(6), DATEADD(MONTH, 0, getdate()), 112)
+      AND convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) >= convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)+ '01'  AND convert(CHAR(4), dh.cfmdate, 112) = convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)
+    UNION ALL
+   SELECT
+     qh.mancode, se.username   'manname', se3.username 'keyinname',cu.cusna,convert(CHAR(12), dh.cfmdate, 112) cfmdate, d.itnbrcus, dd.itnbr, im.itdsc,
+     d.shpqy1  '出货数量',qd.quaqy1  '报价数量', cast(round(dh.ratio * d.unpris, 2) AS DECIMAL(16, 2))  'unpris', se2.username,cast(qd.contunpri AS DECIMAL(16, 2))  contunpri,
+     cast(CASE qd.contunpri WHEN 0 THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
+     CASE qh.isspecial WHEN 'Y' THEN '特殊流程'  ELSE '权限审批' END   'flowtype',s.cdesc 'resdesc',s1.cdesc 'prtypedesc', qh.cusno,qh.oacfuser,qh.quono,dh.pricingtype,
+     dh.cdrno, d.shpno,d.trseq, dd.dmark1, dd.dmark2,dd.trseq  FROM cqerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno  LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
+     , cqerp..cdrdmas dd  left join  cqerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr
+     , cqerp..cdrhmas dh , miscode s, cqerp..cdrcus cu, invmas im,cqerp..cdrqdta qd,  cqerp..invpri ih  WHERE qh.facno = 'C4' AND dh.facno = 'C4' AND ih.facno = 'C4' AND qh.facno = qd.facno AND dh.facno = dd.facno
+			AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno  AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
+         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+     and ( qh.oacfuser <> '' and qh.oacfuser is not null ) 
+		 AND s.ckind = '1O' AND qh.apprresno = s.code AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN
+       ('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000', '1H100', '1G120', '1Q000', '1F500'))
+		 AND   --dh.hrecsta = 'Y' AND
+        ih.yearmon = convert(CHAR(6), DATEADD(MONTH, -1, getdate()), 112) and convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) < convert(CHAR(6), DATEADD(MONTH, 0, getdate()), 112)
+      AND convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) >= convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)+ '01' AND convert(CHAR(4), dh.cfmdate, 112) = convert(CHAR(4), DATEADD(MONTH, -1, getdate()), 112)
+   ) xx LEFT JOIN
+  (SELECT a.pricingid, a.pricingtype, CASE a.pricingtype  WHEN 'AAD' THEN b.price05 WHEN 'AJC'  THEN b.price06  WHEN 'PAC' THEN b.price06
+     WHEN 'PAD' THEN b.price08 WHEN 'RC' THEN b.price04 WHEN 'SDS' THEN b.price07  WHEN 'AJSC'  THEN b.price04 END 'stdprice',
+     b.itnbr, b.itemno FROM pricingpolicy a, pricing b WHERE a.pricingid = b.pricingid AND a.status = 'V' AND a.pricingtype IN ('AAD', 'AJC', 'PAD', 'PAC', 'RC', 'SDS', 'AJSC')
+     AND NOT exists(SELECT *  FROM pricingpolicy c, pricing d WHERE c.pricingid = d.pricingid AND c.status = 'V' AND c.pricingtype IN ('AAD', 'AJC', 'PAD', 'PAC', 'RC', 'SDS', 'AJSC') AND
+    a.pricingtype = c.pricingtype AND b.itnbr = d.itnbr AND b.itemno = d.itemno AND   c.pricingid > a.pricingid)) p ON xx.pricingtype = p.pricingtype AND xx.itnbr = p.itnbr AND
+         (((xx.dmark1 <> '' AND NOT (xx.dmark1 IS NULL)) AND xx.dmark1 = p.itemno) OR (xx.dmark1 = '' OR xx.dmark1 IS NULL)) order by cdrno ";
 
-                Fill(sqlstr, ds, "Kehu");
+           Fill(sqlstr, ds, "Kehu");
 
-            
-        }
+
+       }
 
         ////移除数据表中多余字段
         //public override void ConfigData()

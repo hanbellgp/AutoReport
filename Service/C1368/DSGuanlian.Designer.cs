@@ -337,6 +337,8 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn columndmark1;
             
+            private global::System.Data.DataColumn columnprotype;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public resultDataTable() {
@@ -604,6 +606,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn protypeColumn {
+                get {
+                    return this.columnprotype;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -668,7 +678,8 @@ namespace Hanbell.AutoReport.Config {
                         string armqy1, 
                         string unpris1, 
                         string ddcose, 
-                        string dmark1) {
+                        string dmark1, 
+                        string protype) {
                 resultRow rowresultRow = ((resultRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         shpno,
@@ -699,7 +710,8 @@ namespace Hanbell.AutoReport.Config {
                         armqy1,
                         unpris1,
                         ddcose,
-                        dmark1};
+                        dmark1,
+                        protype};
                 rowresultRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowresultRow);
                 return rowresultRow;
@@ -751,6 +763,7 @@ namespace Hanbell.AutoReport.Config {
                 this.columnunpris1 = base.Columns["unpris1"];
                 this.columnddcose = base.Columns["ddcose"];
                 this.columndmark1 = base.Columns["dmark1"];
+                this.columnprotype = base.Columns["protype"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -814,6 +827,8 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columnddcose);
                 this.columndmark1 = new global::System.Data.DataColumn("dmark1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndmark1);
+                this.columnprotype = new global::System.Data.DataColumn("protype", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprotype);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1420,6 +1435,22 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string protype {
+                get {
+                    try {
+                        return ((string)(this[this.tableresult.protypeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“result”中列“protype”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableresult.protypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsshpnoNull() {
                 return this.IsNull(this.tableresult.shpnoColumn);
             }
@@ -1764,6 +1795,18 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setdmark1Null() {
                 this[this.tableresult.dmark1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsprotypeNull() {
+                return this.IsNull(this.tableresult.protypeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetprotypeNull() {
+                this[this.tableresult.protypeColumn] = global::System.Convert.DBNull;
             }
         }
         

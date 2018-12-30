@@ -47,7 +47,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   gzerp..cdrhad a, gzerp..cdrdta b, gzerp..cdrhmas c, gzerp..cdrcus d, gzerp..cdrdmas e,  gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -84,7 +88,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-space(4) as cuspono,space(8) as tocdrno,a.hmark2
+space(4) as cuspono,space(8) as tocdrno,a.hmark2,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   gzerp..cdrhad a, gzerp..cdrdta b, gzerp..cdrcus d,   gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -121,7 +129,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   cqerp..cdrhad a, cqerp..cdrdta b, cqerp..cdrhmas c, cqerp..cdrcus d, cqerp..cdrdmas e,  cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -158,7 +170,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-space(4) as cuspono,space(8) as tocdrno,a.hmark2
+space(4) as cuspono,space(8) as tocdrno,a.hmark2,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   cqerp..cdrhad a, cqerp..cdrdta b, cqerp..cdrcus d,   cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -195,7 +211,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   njerp..cdrhad a, njerp..cdrdta b, njerp..cdrhmas c, njerp..cdrcus d,njerp..cdrdmas e,  njerp..invmas  s,njerp..misdept f,njerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -232,7 +252,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-space(4) as cuspono,space(8) as tocdrno,a.hmark2
+space(4) as cuspono,space(8) as tocdrno,a.hmark2,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   njerp..cdrhad a, njerp..cdrdta b, njerp..cdrcus d,   njerp..invmas  s,njerp..misdept f,njerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -269,7 +293,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   jnerp..cdrhad a, jnerp..cdrdta b, jnerp..cdrhmas c, jnerp..cdrcus d,jnerp..cdrdmas e,  jnerp..invmas  s,jnerp..misdept f,jnerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -306,7 +334,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-space(4) as cuspono,space(8) as tocdrno,a.hmark2
+space(4) as cuspono,space(8) as tocdrno,a.hmark2,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   jnerp..cdrhad a, jnerp..cdrdta b, jnerp..cdrcus d,   jnerp..invmas  s,jnerp..misdept f,jnerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -343,7 +375,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   cdrhad a, cdrdta b, cdrhmas c, cdrcus d, cdrdmas e, invmas  s,misdept f,secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -380,7 +416,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-space(4) as cuspono,space(8) as tocdrno,a.hmark2
+space(4) as cuspono,space(8) as tocdrno,a.hmark2,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   cdrhad a, cdrdta b, cdrcus d,   invmas  s,misdept f,secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.shpno = b.shpno ) and       
@@ -417,7 +457,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   gzerp..cdrbhad a, gzerp..cdrbdta b, gzerp..cdrhmas c, gzerp..cdrcus d, gzerp..cdrdmas e, gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.bakno = b.bakno ) and       
@@ -455,7 +499,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   cqerp..cdrbhad a, cqerp..cdrbdta b, cqerp..cdrhmas c, cqerp..cdrcus d, cqerp..cdrdmas e, cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.bakno = b.bakno ) and       
@@ -493,7 +541,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   njerp..cdrbhad a, njerp..cdrbdta b, njerp..cdrhmas c, njerp..cdrcus d, njerp..cdrdmas e, njerp..invmas  s,njerp..misdept f,njerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.bakno = b.bakno ) and       
@@ -531,7 +583,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   jnerp..cdrbhad a, jnerp..cdrbdta b, jnerp..cdrhmas c, jnerp..cdrcus d, jnerp..cdrdmas e, jnerp..invmas s,jnerp..misdept f,jnerp..secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.bakno = b.bakno ) and       
@@ -569,7 +625,11 @@ SELECT
 			g.username,               
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno ,e.dmark1
+c.cuspono,c.tocdrno ,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype 
  FROM   cdrbhad a, cdrbdta b, cdrhmas c, cdrcus d,  cdrdmas e,invmas  s,misdept f,secuser g
    WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
 ( a.bakno = b.bakno ) and       

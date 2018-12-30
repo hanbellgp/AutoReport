@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <dbserver>
-	<SHBERP>Data Source=172.16.10.16;Port=5000;UID=sa;PWD=shahanbell;Database=test;</SHBERP>
+	<SHBERP>Data Source=172.16.10.16;Port=5000;UID=sa;PWD=shahanbell;Database=test;Connect Timeout=60;providerName="System.Data.SqlClient"</SHBERP>
 	<VHBERP>Data Source=172.16.10.73;Port=5000;UID=sa;PWD=shahanbell;Database=vnerp1;</VHBERP>
 	<ComerERP>Data Source=172.16.10.16;Port=5000;UID=sa;PWD=shahanbell;Database=comererp;</ComerERP>
 	<HansonERP>Data Source=172.16.10.16;Port=5000;UID=sa;PWD=shahanbell;Database=hansonerp;</HansonERP>

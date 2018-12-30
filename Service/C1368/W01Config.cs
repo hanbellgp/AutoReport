@@ -34,13 +34,13 @@ sum(trnqys) as trnqys1,itcls,
           then 'R制冷'
           when itcls in ('3576','3579','3580','4052','3676','3679','3680')
           then 'A机组'
-          when itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980')
-          then 'A机体'
-          when itcls in('3776','3780','4079','4052','6053','3779','3A76','3A79','3A80')
-          then 'P真空'  end )  as protype 
+          when itcls in('3376','3379','3380','3476','3479','3480')
+          then 'P机体'
+	  when itcls in('3776','3779','3780','3A76','3A79','3A80')
+          then 'P机组'  end )  as protype 
 from invmon
 where yearmon=left(convert(varchar(8),DATEADD(month,-1,getdate()),112),6) 
-and trtype='ZZZ' and wareh in ('W01' ,'EW01')  and trnqys>0
+and trtype='ZZZ' and wareh in ('W01' ,'EW01','FTW01','ASRS03')  and trnqys>0
 group by itcls ) a
 group by a.protype) f,
 (select b.protype,sum(b.trnqys2) as trnqys2
@@ -50,13 +50,13 @@ from
           then 'R制冷'
           when itcls in ('3576','3579','3580','4052','3676','3679','3680')
           then 'A机组'
-          when itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980')
-          then 'A机体'
-          when itcls in('3776','3780','4079','4052','6053','3779','3A76','3A79','3A80')
-          then 'P真空'  end )  as protype 
+          when itcls in('3376','3379','3380','3476','3479','3480')
+          then 'P机体'
+			 when itcls in('3776','3779','3780','3A76','3A79','3A80')
+          then 'P机组'  end )  as protype  
 from invmonh
 where yearmon=left(convert(varchar(8),DATEADD(month,-13,getdate()),112),6) 
-and trtype='ZZZ' and wareh in ('W01' ,'EW01') and trnqys>0
+and trtype='ZZZ' and wareh in ('W01' ,'EW01','FTW01','ASRS03') and trnqys>0
 group by itcls
 ) b 
 group by b.protype) g,
@@ -67,13 +67,13 @@ from
           then 'R制冷'
           when itcls in ('3576','3579','3580','4052','3676','3679','3680')
           then 'A机组'
-          when itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980')
-          then 'A机体'
-          when itcls in('3776','3780','4079','4052','6053','3779','3A76','3A79','3A80')
-          then 'P真空'  end  )  as protype 
+          when itcls in('3376','3379','3380','3476','3479','3480')
+          then 'P机体'
+			 when itcls in('3776','3779','3780','3A76','3A79','3A80')
+          then 'P机组'  end )  as protype  
 from invmon
 where yearmon=left(convert(varchar(8),DATEADD(month,-1,getdate()),112),6) 
-and trtype='TR1' and wareh in ('W01' ,'EW01') and trnqys>0
+and trtype='TR1' and wareh in ('W01' ,'EW01','FTW01','ASRS03') and trnqys>0
 group by itcls
 ) d 
 group by d.protype) h,
@@ -85,13 +85,76 @@ from
           then 'R制冷'
           when itcls in ('3576','3579','3580','4052','3676','3679','3680')
           then 'A机组'
-          when itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980')
-          then 'A机体'
-          when itcls in('3776','3780','4079','4052','6053','3779','3A76','3A79','3A80')
-          then 'P真空'  end  )  as protype 
+          when itcls in('3376','3379','3380','3476','3479','3480')
+          then 'P机体' 
+			 when itcls in('3776','3779','3780','3A76','3A79','3A80')
+          then 'P机组'  end )  as protype  
 from invmonh
 where yearmon=left(convert(varchar(8),DATEADD(month,-13,getdate()),112),6) 
-and trtype='TR1' and wareh in ('W01' ,'EW01') and trnqys>0
+and trtype='TR1' and wareh in ('W01' ,'EW01','FTW01','ASRS03') and trnqys>0
+group by itcls
+) e 
+group by e.protype) i
+where f.protype=g.protype
+ and f.protype=h.protype and f.protype=i.protype
+group by h.protype,i.protype,g.protype,f.protype 
+
+
+
+
+
+union all 
+
+
+
+select h.protype,
+f.trnqys1,g.trnqys2,
+cast( cast( (sum(f.trnqys1)-sum(g.trnqys2))/sum(f.trnqys1) as decimal(16,4) ) * 100 as decimal(16,2) )  as rate1 ,
+h.trnqys3,i.trnqys4, 
+cast( cast( (sum(h.trnqys3)-sum(i.trnqys4))/sum(h.trnqys3) as decimal(16,4) ) * 100 as decimal(16,2) )  as rate2
+ from
+(select a.protype,sum(a.trnqys1) as trnqys1
+from
+(select 
+sum(trnqys) as trnqys1,itcls,
+    'A机体' as protype 
+from invmon 
+where yearmon=left(convert(varchar(8),DATEADD(month,-1,getdate()),112),6) 
+and  itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980') 
+and trtype='ZZZ' and wareh in ('W01' ,'ASRS03')  and trnqys>0
+group by itcls ) a
+group by a.protype) f,
+(select b.protype,sum(b.trnqys2) as trnqys2
+from
+(select sum(trnqys) as trnqys2 ,itcls,
+     'A机体' as protype 
+from invmonh
+where yearmon=left(convert(varchar(8),DATEADD(month,-13,getdate()),112),6) 
+and  itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980')  
+and trtype='ZZZ' and wareh in ('W01' ,'ASRS03') and trnqys>0
+group by itcls
+) b 
+group by b.protype) g,
+(select d.protype,sum(d.trnqys3) as trnqys3
+from
+(select sum(trnqys) as trnqys3 ,itcls,
+    'A机体' as protype   
+from invmon
+where yearmon=left(convert(varchar(8),DATEADD(month,-1,getdate()),112),6) 
+and  itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980')  
+and trtype='TR1' and wareh in ('W01' ,'ASRS03') and trnqys>0
+group by itcls
+) d 
+group by d.protype) h,
+
+(select e.protype,sum(e.trnqys4) as trnqys4
+from
+(select sum(trnqys) as trnqys4 ,itcls,
+    'A机体' as protype    
+from invmonh
+where yearmon=left(convert(varchar(8),DATEADD(month,-13,getdate()),112),6) 
+and  itcls in('3886','3889','3890','3876','3879','3880','3976','3979','3980')  
+and trtype='TR1' and wareh in ('W01' ,'ASRS03') and trnqys>0
 group by itcls
 ) e 
 group by e.protype) i
@@ -174,32 +237,47 @@ cast( cast( (sum(h.trnqys3)-sum(i.trnqys4))/sum(h.trnqys3) as decimal(16,4) ) * 
 from
 (select 
 sum(trnqys) as trnqys1,itcls,
-    '汉声' as protype 
-from hansonerp..invmon
+    (case when itcls in ('3H76','3H79','3H80')
+          then '离心机组'
+          when itcls in ('3W76','3W79','3W80')
+          then '螺杆机组'
+          when itcls in('3B76','3B79','3B80')
+          then 'ORC'
+           end )  as protype 
+from comererp..invmon
 where yearmon=left(convert(varchar(8),DATEADD(month,-1,getdate()),112),6) 
-and trtype='ZZZ' and wareh in ('1001')  and trnqys>0
-and itclscode='1'
+and trtype='ZZZ' and wareh in ('W01' ,'FTW01')  and trnqys>0 
 group by itcls ) a
 group by a.protype) f,
 (select b.protype,sum(b.trnqys2) as trnqys2
 from
 (select sum(trnqys) as trnqys2 ,itcls,
-    '汉声'  as protype 
-from hansonerp..invmonh
+    (case when itcls in ('3H76','3H79','3H80')
+          then '离心机组'
+          when itcls in ('3W76','3W79','3W80')
+          then '螺杆机组'
+          when itcls in('3B76','3B79','3B80')
+          then 'ORC'
+           end )  as protype 
+from comererp..invmonh
 where yearmon=left(convert(varchar(8),DATEADD(month,-13,getdate()),112),6) 
-and trtype='ZZZ' and wareh in ('1001') and trnqys>0
-and itclscode='1'
+and trtype='ZZZ' and wareh in ('W01' ,'FTW01') and trnqys>0
 group by itcls
 ) b 
 group by b.protype) g,
 (select d.protype,sum(d.trnqys3) as trnqys3
 from
 (select sum(trnqys) as trnqys3 ,itcls,
-    '汉声'  as protype 
-from hansonerp..invmon
+    (case when itcls in ('3H76','3H79','3H80')
+          then '离心机组'
+          when itcls in ('3W76','3W79','3W80')
+          then '螺杆机组'
+          when itcls in('3B76','3B79','3B80')
+          then 'ORC'
+           end )  as protype
+from comererp..invmon
 where yearmon=left(convert(varchar(8),DATEADD(month,-1,getdate()),112),6) 
-and trtype='TR1' and wareh in ('1001') and trnqys>0
-and itclscode='1'
+and trtype='TR1' and wareh in ('W01' ,'FTW01') and trnqys>0
 group by itcls
 ) d 
 group by d.protype) h,
@@ -207,11 +285,16 @@ group by d.protype) h,
 (select e.protype,sum(e.trnqys4) as trnqys4
 from
 (select sum(trnqys) as trnqys4 ,itcls,
-    '汉声'  as protype 
-from hansonerp..invmonh
+   (case when itcls in ('3H76','3H79','3H80')
+          then '离心机组'
+          when itcls in ('3W76','3W79','3W80')
+          then '螺杆机组'
+          when itcls in('3B76','3B79','3B80')
+          then 'ORC'
+           end )  as protype
+from comererp..invmonh
 where yearmon=left(convert(varchar(8),DATEADD(month,-13,getdate()),112),6) 
-and trtype='TR1' and wareh in ('1001') and trnqys>0
-and itclscode='1'
+and trtype='TR1' and wareh in ('W01' ,'FTW01') and trnqys>0
 group by itcls
 ) e 
 group by e.protype) i

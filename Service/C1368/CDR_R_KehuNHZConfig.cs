@@ -27,18 +27,13 @@ namespace Hanbell.AutoReport.Config
         public override void InitData()
         {
             //Updatepros();
-            String sqlstr = "select protype,itnbrcus,cusna,sum(armqy) as qty,sum(shpamts) as amts  from cdr_rs_rqymx " +
-            //" where left(depno,2)in ('{0}')  " + "and convert(varchar(4),shpmonq,112)=convert(varchar(4),dateadd(month,-1,getdate()),112)" +
+            String sqlstr = "select protype,itnbrcus,cusna,sum(armqy) as qty,sum(shpamts) as amts  from cdr_rs_rqymx " + 
             " where left(depno,2)in ('{0}')  " +
-            //"and convert(varchar(4),shpmonq,112) =convert(varchar(4),dateadd(month,-1,getdate()),112)" +
-            " and convert(varchar(4),shpmonq,112) =convert(varchar(4),dateadd(month,-13,getdate()),112)" +
-            " and convert(varchar(6),shpmonq,112) <=convert(varchar(6),dateadd(month,-13,getdate()),112)" +
+                " and convert(varchar(4),shpmonq,112) =convert(varchar(4),dateadd(month,-13,getdate()),112)" +
+                " and convert(varchar(6),shpmonq,112) <=convert(varchar(6),dateadd(month,-13,getdate()),112)" +
+            //" and convert(varchar(4),shpmonq,112) =convert(varchar(4),dateadd(month,-1,getdate()),112)" + 
+            //" and convert(varchar(6),shpmonq,112) <=convert(varchar(6),dateadd(month,-1,getdate()),112)" + 
             " group by protype,itnbrcus,cusna  " 
-            //"union all " +
-            //"select protype,'小计' as itnbrcus,cusna,sum(armqy) as qty,sum(shpamts) as amts  from cdr_rs_rqymx " +
-            //"where left(depno,2) in ('{0}')  and convert(varchar(4),shpmonq,112)=convert(varchar(4),dateadd(month,-1,getdate()),112)  " +
-            //"group by protype ,cusna  " +
-            //"order by protype,cusna ;"
             ;
 
 
