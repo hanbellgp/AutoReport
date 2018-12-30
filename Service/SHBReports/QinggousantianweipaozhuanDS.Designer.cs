@@ -20,17 +20,17 @@ namespace Hanbell.AutoReport.Config {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Dianshouweiyanshou_zhuweiDS")]
+    [global::System.Xml.Serialization.XmlRootAttribute("QinggousantianweipaozhuanDS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Dianshouweiyanshou_zhuweiDS : global::System.Data.DataSet {
+    public partial class QinggousantianweipaozhuanDS : global::System.Data.DataSet {
         
-        private tblresultDataTable tabletblresult;
+        private tblprocessDataTable tabletblprocess;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Dianshouweiyanshou_zhuweiDS() {
+        public QinggousantianweipaozhuanDS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Hanbell.AutoReport.Config {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected Dianshouweiyanshou_zhuweiDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected QinggousantianweipaozhuanDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Hanbell.AutoReport.Config {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["tblresult"] != null)) {
-                    base.Tables.Add(new tblresultDataTable(ds.Tables["tblresult"]));
+                if ((ds.Tables["tblprocess"] != null)) {
+                    base.Tables.Add(new tblprocessDataTable(ds.Tables["tblprocess"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Hanbell.AutoReport.Config {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tblresultDataTable tblresult {
+        public tblprocessDataTable tblprocess {
             get {
-                return this.tabletblresult;
+                return this.tabletblprocess;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Dianshouweiyanshou_zhuweiDS cln = ((Dianshouweiyanshou_zhuweiDS)(base.Clone()));
+            QinggousantianweipaozhuanDS cln = ((QinggousantianweipaozhuanDS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Hanbell.AutoReport.Config {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["tblresult"] != null)) {
-                    base.Tables.Add(new tblresultDataTable(ds.Tables["tblresult"]));
+                if ((ds.Tables["tblprocess"] != null)) {
+                    base.Tables.Add(new tblprocessDataTable(ds.Tables["tblprocess"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tabletblresult = ((tblresultDataTable)(base.Tables["tblresult"]));
+            this.tabletblprocess = ((tblprocessDataTable)(base.Tables["tblprocess"]));
             if ((initTable == true)) {
-                if ((this.tabletblresult != null)) {
-                    this.tabletblresult.InitVars();
+                if ((this.tabletblprocess != null)) {
+                    this.tabletblprocess.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Dianshouweiyanshou_zhuweiDS";
+            this.DataSetName = "QinggousantianweipaozhuanDS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Dianshouweiyanshou_zhuweiDS.xsd";
+            this.Namespace = "http://tempuri.org/QinggousantianweipaozhuanDS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tabletblresult = new tblresultDataTable();
-            base.Tables.Add(this.tabletblresult);
+            this.tabletblprocess = new tblprocessDataTable();
+            base.Tables.Add(this.tabletblprocess);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializetblresult() {
+        private bool ShouldSerializetblprocess() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Dianshouweiyanshou_zhuweiDS ds = new Dianshouweiyanshou_zhuweiDS();
+            QinggousantianweipaozhuanDS ds = new QinggousantianweipaozhuanDS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,39 +270,31 @@ namespace Hanbell.AutoReport.Config {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void tblresultRowChangeEventHandler(object sender, tblresultRowChangeEvent e);
+        public delegate void tblprocessRowChangeEventHandler(object sender, tblprocessRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tblresultDataTable : global::System.Data.TypedTableBase<tblresultRow> {
-            
-            private global::System.Data.DataColumn column点收编号;
-            
-            private global::System.Data.DataColumn column厂商编号;
-            
-            private global::System.Data.DataColumn column厂商简称;
-            
-            private global::System.Data.DataColumn column大类;
+        public partial class tblprocessDataTable : global::System.Data.TypedTableBase<tblprocessRow> {
             
             private global::System.Data.DataColumn column品号;
             
             private global::System.Data.DataColumn column品名;
             
-            private global::System.Data.DataColumn column点收数量;
+            private global::System.Data.DataColumn column数量;
             
-            private global::System.Data.DataColumn column点收时间;
+            private global::System.Data.DataColumn column请购单号;
             
-            private global::System.Data.DataColumn column延误小时数;
+            private global::System.Data.DataColumn column请购日期;
             
-            private global::System.Data.DataColumn column备注;
+            private global::System.Data.DataColumn columndiff;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblresultDataTable() {
-                this.TableName = "tblresult";
+            public tblprocessDataTable() {
+                this.TableName = "tblprocess";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +302,7 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tblresultDataTable(global::System.Data.DataTable table) {
+            internal tblprocessDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,41 +319,9 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected tblresultDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tblprocessDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 点收编号Column {
-                get {
-                    return this.column点收编号;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 厂商编号Column {
-                get {
-                    return this.column厂商编号;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 厂商简称Column {
-                get {
-                    return this.column厂商简称;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 大类Column {
-                get {
-                    return this.column大类;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -382,33 +342,33 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 点收数量Column {
+            public global::System.Data.DataColumn 数量Column {
                 get {
-                    return this.column点收数量;
+                    return this.column数量;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 点收时间Column {
+            public global::System.Data.DataColumn 请购单号Column {
                 get {
-                    return this.column点收时间;
+                    return this.column请购单号;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 延误小时数Column {
+            public global::System.Data.DataColumn 请购日期Column {
                 get {
-                    return this.column延误小时数;
+                    return this.column请购日期;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 备注Column {
+            public global::System.Data.DataColumn diffColumn {
                 get {
-                    return this.column备注;
+                    return this.columndiff;
                 }
             }
             
@@ -423,54 +383,50 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblresultRow this[int index] {
+            public tblprocessRow this[int index] {
                 get {
-                    return ((tblresultRow)(this.Rows[index]));
+                    return ((tblprocessRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tblresultRowChangeEventHandler tblresultRowChanging;
+            public event tblprocessRowChangeEventHandler tblprocessRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tblresultRowChangeEventHandler tblresultRowChanged;
+            public event tblprocessRowChangeEventHandler tblprocessRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tblresultRowChangeEventHandler tblresultRowDeleting;
+            public event tblprocessRowChangeEventHandler tblprocessRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tblresultRowChangeEventHandler tblresultRowDeleted;
+            public event tblprocessRowChangeEventHandler tblprocessRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddtblresultRow(tblresultRow row) {
+            public void AddtblprocessRow(tblprocessRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblresultRow AddtblresultRow(string 点收编号, string 厂商编号, string 厂商简称, string 大类, string 品号, string 品名, decimal 点收数量, System.DateTime 点收时间, short 延误小时数, string 备注) {
-                tblresultRow rowtblresultRow = ((tblresultRow)(this.NewRow()));
+            public tblprocessRow AddtblprocessRow(string 品号, string 品名, decimal 数量, string 请购单号, System.DateTime 请购日期, long diff) {
+                tblprocessRow rowtblprocessRow = ((tblprocessRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        点收编号,
-                        厂商编号,
-                        厂商简称,
-                        大类,
                         品号,
                         品名,
-                        点收数量,
-                        点收时间,
-                        延误小时数,
-                        备注};
-                rowtblresultRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtblresultRow);
-                return rowtblresultRow;
+                        数量,
+                        请购单号,
+                        请购日期,
+                        diff};
+                rowtblprocessRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtblprocessRow);
+                return rowtblprocessRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tblresultDataTable cln = ((tblresultDataTable)(base.Clone()));
+                tblprocessDataTable cln = ((tblprocessDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,73 +434,62 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tblresultDataTable();
+                return new tblprocessDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.column点收编号 = base.Columns["点收编号"];
-                this.column厂商编号 = base.Columns["厂商编号"];
-                this.column厂商简称 = base.Columns["厂商简称"];
-                this.column大类 = base.Columns["大类"];
                 this.column品号 = base.Columns["品号"];
                 this.column品名 = base.Columns["品名"];
-                this.column点收数量 = base.Columns["点收数量"];
-                this.column点收时间 = base.Columns["点收时间"];
-                this.column延误小时数 = base.Columns["延误小时数"];
-                this.column备注 = base.Columns["备注"];
+                this.column数量 = base.Columns["数量"];
+                this.column请购单号 = base.Columns["请购单号"];
+                this.column请购日期 = base.Columns["请购日期"];
+                this.columndiff = base.Columns["diff"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.column点收编号 = new global::System.Data.DataColumn("点收编号", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column点收编号);
-                this.column厂商编号 = new global::System.Data.DataColumn("厂商编号", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column厂商编号);
-                this.column厂商简称 = new global::System.Data.DataColumn("厂商简称", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column厂商简称);
-                this.column大类 = new global::System.Data.DataColumn("大类", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column大类);
                 this.column品号 = new global::System.Data.DataColumn("品号", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column品号);
                 this.column品名 = new global::System.Data.DataColumn("品名", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column品名);
-                this.column点收数量 = new global::System.Data.DataColumn("点收数量", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column点收数量);
-                this.column点收时间 = new global::System.Data.DataColumn("点收时间", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column点收时间);
-                this.column延误小时数 = new global::System.Data.DataColumn("延误小时数", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column延误小时数);
-                this.column备注 = new global::System.Data.DataColumn("备注", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column备注);
+                this.column数量 = new global::System.Data.DataColumn("数量", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column数量);
+                this.column请购单号 = new global::System.Data.DataColumn("请购单号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column请购单号);
+                this.column请购日期 = new global::System.Data.DataColumn("请购日期", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column请购日期);
+                this.columndiff = new global::System.Data.DataColumn("diff", typeof(long), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndiff);
+                this.columndiff.Caption = "异常时间（超过3个工作日）";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblresultRow NewtblresultRow() {
-                return ((tblresultRow)(this.NewRow()));
+            public tblprocessRow NewtblprocessRow() {
+                return ((tblprocessRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tblresultRow(builder);
+                return new tblprocessRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tblresultRow);
+                return typeof(tblprocessRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tblresultRowChanged != null)) {
-                    this.tblresultRowChanged(this, new tblresultRowChangeEvent(((tblresultRow)(e.Row)), e.Action));
+                if ((this.tblprocessRowChanged != null)) {
+                    this.tblprocessRowChanged(this, new tblprocessRowChangeEvent(((tblprocessRow)(e.Row)), e.Action));
                 }
             }
             
@@ -552,8 +497,8 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tblresultRowChanging != null)) {
-                    this.tblresultRowChanging(this, new tblresultRowChangeEvent(((tblresultRow)(e.Row)), e.Action));
+                if ((this.tblprocessRowChanging != null)) {
+                    this.tblprocessRowChanging(this, new tblprocessRowChangeEvent(((tblprocessRow)(e.Row)), e.Action));
                 }
             }
             
@@ -561,8 +506,8 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tblresultRowDeleted != null)) {
-                    this.tblresultRowDeleted(this, new tblresultRowChangeEvent(((tblresultRow)(e.Row)), e.Action));
+                if ((this.tblprocessRowDeleted != null)) {
+                    this.tblprocessRowDeleted(this, new tblprocessRowChangeEvent(((tblprocessRow)(e.Row)), e.Action));
                 }
             }
             
@@ -570,14 +515,14 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tblresultRowDeleting != null)) {
-                    this.tblresultRowDeleting(this, new tblresultRowChangeEvent(((tblresultRow)(e.Row)), e.Action));
+                if ((this.tblprocessRowDeleting != null)) {
+                    this.tblprocessRowDeleting(this, new tblprocessRowChangeEvent(((tblprocessRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovetblresultRow(tblresultRow row) {
+            public void RemovetblprocessRow(tblprocessRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -586,7 +531,7 @@ namespace Hanbell.AutoReport.Config {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Dianshouweiyanshou_zhuweiDS ds = new Dianshouweiyanshou_zhuweiDS();
+                QinggousantianweipaozhuanDS ds = new QinggousantianweipaozhuanDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -604,7 +549,7 @@ namespace Hanbell.AutoReport.Config {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tblresultDataTable";
+                attribute2.FixedValue = "tblprocessDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -648,79 +593,15 @@ namespace Hanbell.AutoReport.Config {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tblresultRow : global::System.Data.DataRow {
+        public partial class tblprocessRow : global::System.Data.DataRow {
             
-            private tblresultDataTable tabletblresult;
+            private tblprocessDataTable tabletblprocess;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tblresultRow(global::System.Data.DataRowBuilder rb) : 
+            internal tblprocessRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletblresult = ((tblresultDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 点收编号 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblresult.点收编号Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“点收编号”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletblresult.点收编号Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 厂商编号 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblresult.厂商编号Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“厂商编号”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletblresult.厂商编号Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 厂商简称 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblresult.厂商简称Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“厂商简称”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletblresult.厂商简称Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 大类 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblresult.大类Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“大类”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletblresult.大类Column] = value;
-                }
+                this.tabletblprocess = ((tblprocessDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -728,14 +609,14 @@ namespace Hanbell.AutoReport.Config {
             public string 品号 {
                 get {
                     try {
-                        return ((string)(this[this.tabletblresult.品号Column]));
+                        return ((string)(this[this.tabletblprocess.品号Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“品号”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“品号”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletblresult.品号Column] = value;
+                    this[this.tabletblprocess.品号Column] = value;
                 }
             }
             
@@ -744,199 +625,151 @@ namespace Hanbell.AutoReport.Config {
             public string 品名 {
                 get {
                     try {
-                        return ((string)(this[this.tabletblresult.品名Column]));
+                        return ((string)(this[this.tabletblprocess.品名Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“品名”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“品名”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletblresult.品名Column] = value;
+                    this[this.tabletblprocess.品名Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal 点收数量 {
+            public decimal 数量 {
                 get {
                     try {
-                        return ((decimal)(this[this.tabletblresult.点收数量Column]));
+                        return ((decimal)(this[this.tabletblprocess.数量Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“点收数量”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“数量”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletblresult.点收数量Column] = value;
+                    this[this.tabletblprocess.数量Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime 点收时间 {
+            public string 请购单号 {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tabletblresult.点收时间Column]));
+                        return ((string)(this[this.tabletblprocess.请购单号Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“点收时间”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“请购单号”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletblresult.点收时间Column] = value;
+                    this[this.tabletblprocess.请购单号Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short 延误小时数 {
+            public System.DateTime 请购日期 {
                 get {
                     try {
-                        return ((short)(this[this.tabletblresult.延误小时数Column]));
+                        return ((global::System.DateTime)(this[this.tabletblprocess.请购日期Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“延误小时数”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“请购日期”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletblresult.延误小时数Column] = value;
+                    this[this.tabletblprocess.请购日期Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 备注 {
+            public long diff {
                 get {
                     try {
-                        return ((string)(this[this.tabletblresult.备注Column]));
+                        return ((long)(this[this.tabletblprocess.diffColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“备注”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tblprocess”中列“diff”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletblresult.备注Column] = value;
+                    this[this.tabletblprocess.diffColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is点收编号Null() {
-                return this.IsNull(this.tabletblresult.点收编号Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set点收编号Null() {
-                this[this.tabletblresult.点收编号Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is厂商编号Null() {
-                return this.IsNull(this.tabletblresult.厂商编号Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set厂商编号Null() {
-                this[this.tabletblresult.厂商编号Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is厂商简称Null() {
-                return this.IsNull(this.tabletblresult.厂商简称Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set厂商简称Null() {
-                this[this.tabletblresult.厂商简称Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is大类Null() {
-                return this.IsNull(this.tabletblresult.大类Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set大类Null() {
-                this[this.tabletblresult.大类Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Is品号Null() {
-                return this.IsNull(this.tabletblresult.品号Column);
+                return this.IsNull(this.tabletblprocess.品号Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Set品号Null() {
-                this[this.tabletblresult.品号Column] = global::System.Convert.DBNull;
+                this[this.tabletblprocess.品号Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Is品名Null() {
-                return this.IsNull(this.tabletblresult.品名Column);
+                return this.IsNull(this.tabletblprocess.品名Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Set品名Null() {
-                this[this.tabletblresult.品名Column] = global::System.Convert.DBNull;
+                this[this.tabletblprocess.品名Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is点收数量Null() {
-                return this.IsNull(this.tabletblresult.点收数量Column);
+            public bool Is数量Null() {
+                return this.IsNull(this.tabletblprocess.数量Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set点收数量Null() {
-                this[this.tabletblresult.点收数量Column] = global::System.Convert.DBNull;
+            public void Set数量Null() {
+                this[this.tabletblprocess.数量Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is点收时间Null() {
-                return this.IsNull(this.tabletblresult.点收时间Column);
+            public bool Is请购单号Null() {
+                return this.IsNull(this.tabletblprocess.请购单号Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set点收时间Null() {
-                this[this.tabletblresult.点收时间Column] = global::System.Convert.DBNull;
+            public void Set请购单号Null() {
+                this[this.tabletblprocess.请购单号Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is延误小时数Null() {
-                return this.IsNull(this.tabletblresult.延误小时数Column);
+            public bool Is请购日期Null() {
+                return this.IsNull(this.tabletblprocess.请购日期Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set延误小时数Null() {
-                this[this.tabletblresult.延误小时数Column] = global::System.Convert.DBNull;
+            public void Set请购日期Null() {
+                this[this.tabletblprocess.请购日期Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is备注Null() {
-                return this.IsNull(this.tabletblresult.备注Column);
+            public bool IsdiffNull() {
+                return this.IsNull(this.tabletblprocess.diffColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set备注Null() {
-                this[this.tabletblresult.备注Column] = global::System.Convert.DBNull;
+            public void SetdiffNull() {
+                this[this.tabletblprocess.diffColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -944,22 +777,22 @@ namespace Hanbell.AutoReport.Config {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class tblresultRowChangeEvent : global::System.EventArgs {
+        public class tblprocessRowChangeEvent : global::System.EventArgs {
             
-            private tblresultRow eventRow;
+            private tblprocessRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblresultRowChangeEvent(tblresultRow row, global::System.Data.DataRowAction action) {
+            public tblprocessRowChangeEvent(tblprocessRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tblresultRow Row {
+            public tblprocessRow Row {
                 get {
                     return this.eventRow;
                 }

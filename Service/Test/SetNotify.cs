@@ -29,6 +29,7 @@ namespace DrizzlingTest
             period.Add(new PeriodType("W", "每周"));
             period.Add(new PeriodType("M", "每月"));
             period.Add(new PeriodType("Q", "每季"));
+          //  period.Add(new PeriodType("TD", "每两天"));
         }
 
         private void SetNotify_Load(object sender, EventArgs e)
