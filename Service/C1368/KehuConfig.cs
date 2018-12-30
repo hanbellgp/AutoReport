@@ -30,7 +30,8 @@ namespace Hanbell.AutoReport.Config
     cdrdmas dd   left join   cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr, cdrhmas dh, miscode s, cdrcus cu, invmas im,
      cdrqdta qd,invpri ih  WHERE qh.facno = 'C' AND dh.facno = 'C' AND ih.facno = 'C' AND qh.facno = qd.facno AND dh.facno = dd.facno AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno
       AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
-         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC')
+         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+    and ( qh.oacfuser <> '' and qh.oacfuser is not null ) 
        AND s.ckind = '1O' AND qh.apprresno = s.code AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN
        ('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000',
         '1H100', '1G120', '1Q000', '1F500')) AND   --dh.hrecsta = 'Y' AND
@@ -44,13 +45,14 @@ namespace Hanbell.AutoReport.Config
           WHEN 0 THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
      CASE qh.isspecial  WHEN 'Y' THEN '特殊流程' ELSE '权限审批' END  'flowtype', s.cdesc 'resdesc',s1.cdesc  'prtypedesc',
      qh.cusno, qh.oacfuser,qh.quono,dh.pricingtype, dh.cdrno, d.shpno,d.trseq,dd.dmark1, dd.dmark2,dd.trseq
-   FROM njerp..cdrqhad qh LEFT JOIN njerp..secuser se ON qh.mancode = se.userno LEFT JOIN njerp..secuser se2 ON qh.oacfuser = se2.userno
-     LEFT JOIN njerp..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
+   FROM njerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
      , njerp..cdrdmas dd  left join  njerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr
      , njerp..cdrhmas dh , miscode s, njerp..cdrcus cu, invmas im, njerp..cdrqdta qd,  njerp..invpri ih
    WHERE qh.facno = 'N' AND dh.facno = 'N' AND ih.facno = 'N' AND qh.facno = qd.facno AND dh.facno = dd.facno 	AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno
            AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
-         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC')
+         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+         and ( qh.oacfuser <> '' and qh.oacfuser is not null ) 
          AND s.ckind = '1O' AND qh.apprresno = s.code
          AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000',
         '1H100', '1G120', '1Q000', '1F500')) AND   --dh.hrecsta = 'Y' AND
@@ -63,14 +65,15 @@ namespace Hanbell.AutoReport.Config
      CASE qh.isspecial WHEN 'Y' THEN '特殊流程'
      ELSE '权限审批' END  'flowtype',s.cdesc 'resdesc', s1.cdesc 'prtypedesc',qh.cusno,qh.oacfuser,
      qh.quono,dh.pricingtype,dh.cdrno, d.shpno,d.trseq,dd.dmark1, dd.dmark2, dd.trseq
-   FROM jnerp..cdrqhad qh LEFT JOIN jnerp..secuser se ON qh.mancode = se.userno LEFT JOIN jnerp..secuser se2 ON qh.oacfuser = se2.userno
-     LEFT JOIN jnerp..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
+   FROM jnerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
      , jnerp..cdrdmas dd  left join  jnerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr
      , jnerp..cdrhmas dh , miscode s, jnerp..cdrcus cu, invmas im, jnerp..cdrqdta qd,  jnerp..invpri ih
    WHERE qh.facno = 'J' AND dh.facno = 'J' AND ih.facno = 'J' AND qh.facno = qd.facno AND dh.facno = dd.facno
 			AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr
       AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
-         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND  qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC')
+         AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND  qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+    and ( qh.oacfuser <> '' and qh.oacfuser is not null )
           AND s.ckind = '1O' AND qh.apprresno = s.code
          AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000',
         '1H100', '1G120', '1Q000', '1F500'))
@@ -84,12 +87,12 @@ namespace Hanbell.AutoReport.Config
      cast(CASE qd.contunpri   WHEN 0  THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
      CASE qh.isspecial WHEN 'Y' THEN '特殊流程' ELSE '权限审批' END  'flowtype',
      s.cdesc 'resdesc',  s1.cdesc 'prtypedesc', qh.cusno,qh.oacfuser,qh.quono, dh.pricingtype, dh.cdrno, d.shpno,d.trseq, dd.dmark1, dd.dmark2,
-     dd.trseq FROM gzerp..cdrqhad qh LEFT JOIN gzerp..secuser se ON qh.mancode = se.userno LEFT JOIN gzerp..secuser se2 ON qh.oacfuser = se2.userno
-     LEFT JOIN gzerp..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C' ,
+     dd.trseq FROM gzerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C' ,
      gzerp..cdrdmas dd  left join  gzerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr , gzerp..cdrhmas dh , miscode s, gzerp..cdrcus cu, invmas im,
      gzerp..cdrqdta qd,  gzerp..invpri ih WHERE qh.facno = 'G' AND dh.facno = 'G' AND ih.facno = 'G' AND qh.facno = qd.facno AND dh.facno = dd.facno AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno
            AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr  AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1 AND qh.bcdrno = dh.cdrno
-     AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC')  AND s.ckind = '1O' AND qh.apprresno = s.code AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN
+     AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC')  and ( qh.oacfuser <> '' and qh.oacfuser is not null ) AND s.ckind = '1O' AND qh.apprresno = s.code AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN
        ('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000', '1H100', '1G120', '1Q000', '1F500'))
 		 AND   --dh.hrecsta = 'Y' AND
        ih.yearmon = convert(CHAR(6), DATEADD(MONTH, -1, getdate()), 112) and  convert(CHAR(6), DATEADD(MONTH, 0, dh.cfmdate), 112) < convert(CHAR(6), DATEADD(MONTH, 0, getdate()), 112)
@@ -100,12 +103,13 @@ namespace Hanbell.AutoReport.Config
      d.shpqy1  '出货数量',qd.quaqy1  '报价数量', cast(round(dh.ratio * d.unpris, 2) AS DECIMAL(16, 2))  'unpris', se2.username,cast(qd.contunpri AS DECIMAL(16, 2))  contunpri,
      cast(CASE qd.contunpri WHEN 0 THEN 0 ELSE round(100 * dh.ratio * dd.unpris / qd.contunpri, 2) END AS DECIMAL(16, 2)) 'conaccout',
      CASE qh.isspecial WHEN 'Y' THEN '特殊流程'  ELSE '权限审批' END   'flowtype',s.cdesc 'resdesc',s1.cdesc 'prtypedesc', qh.cusno,qh.oacfuser,qh.quono,dh.pricingtype,
-     dh.cdrno, d.shpno,d.trseq, dd.dmark1, dd.dmark2,dd.trseq  FROM cqerp..cdrqhad qh LEFT JOIN cqerp..secuser se ON qh.mancode = se.userno  LEFT JOIN cqerp..secuser se2 ON qh.oacfuser = se2.userno
-     LEFT JOIN cqerp..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
+     dh.cdrno, d.shpno,d.trseq, dd.dmark1, dd.dmark2,dd.trseq  FROM cqerp..cdrqhad qh LEFT JOIN test..secuser se ON qh.mancode = se.userno  LEFT JOIN test..secuser se2 ON qh.oacfuser = se2.userno
+     LEFT JOIN test..secuser se3 ON qh.userno = se3.userno LEFT JOIN miscode s1 ON qh.pricingtype = s1.code AND s1.ckind = '1C'
      , cqerp..cdrdmas dd  left join  cqerp.. cdrdta d  on  d.facno = dd.facno and d.cdrno = dd.cdrno  and dd.trseq=d.ctrseq AND dd.itnbr = d.itnbr
      , cqerp..cdrhmas dh , miscode s, cqerp..cdrcus cu, invmas im,cqerp..cdrqdta qd,  cqerp..invpri ih  WHERE qh.facno = 'C4' AND dh.facno = 'C4' AND ih.facno = 'C4' AND qh.facno = qd.facno AND dh.facno = dd.facno
 			AND qh.quono = qd.quono  AND dh.cdrno = dd.cdrno  AND dd.itnbr = qd.itnbr AND qd.dmark1 = dd.dmark1 AND dd.itnbr = im.itnbr AND qd.dmark1 = dd.dmark1 AND qd.dmark2 = dd.dmark2 AND qd.quaqy1 = dd.cdrqy1
          AND qh.bcdrno = dh.cdrno  AND ih.itnbr = dd.itnbr AND dh.cusno = cu.cusno AND qh.hquosta IN ('Y', 'T', 'P') AND dh.pricingtype IN ('RC') 
+     and ( qh.oacfuser <> '' and qh.oacfuser is not null ) 
 		 AND s.ckind = '1O' AND qh.apprresno = s.code AND (dd.dmark1 <> '' OR dd.dmark2 <> '' OR dh.depno IN
        ('1E000', '1E100', '1F100', '1B000', '1D000', '1D100', '1C000', '1C100', '1G120', '1N120', '1B100', '1D100', '1Q000', '1H100', '1G120', '1Q000', '1F500'))
 		 AND   --dh.hrecsta = 'Y' AND
