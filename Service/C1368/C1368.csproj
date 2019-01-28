@@ -56,6 +56,7 @@
     <Compile Include="cdryxs.cs" />
     <Compile Include="cdryxsConfig.cs" />
     <Compile Include="cdryxs_all.cs" />
+    <Compile Include="cdryxs_cq.cs" />
     <Compile Include="cdryxs_gz.cs" />
     <Compile Include="cdryxs_hd.cs" />
     <Compile Include="cdryxs_jn.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="CDR_R_KehuNHZ.cs" />
     <Compile Include="CDR_R_KehuNHZConfig.cs" />
     <Compile Include="CDR_R_KehuNHZ_all.cs" />
+    <Compile Include="CDR_R_KehuNHZ_cq.cs" />
     <Compile Include="CDR_R_KehuNHZ_gz.cs" />
     <Compile Include="CDR_R_KehuNHZ_hd.cs" />
     <Compile Include="CDR_R_KehuNHZ_jn.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="CDR_R_KehuYXS.cs" />
     <Compile Include="CDR_R_KehuYXSConfig.cs" />
     <Compile Include="CDR_R_KehuYXS_all.cs" />
+    <Compile Include="CDR_R_KehuYXS_cq.cs" />
     <Compile Include="CDR_R_KehuYXS_gz.cs" />
     <Compile Include="CDR_R_KehuYXS_hd.cs" />
     <Compile Include="CDR_R_KehuYXS_jn.cs" />
