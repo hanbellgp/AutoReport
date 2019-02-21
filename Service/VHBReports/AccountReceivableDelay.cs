@@ -92,6 +92,7 @@ namespace Hanbell.AutoReport.VHB
             Hashtable args = new Hashtable();
             args = Base.GetParameter(this.ToString(),nc.ToString());
             string mailcc;
+            string managerId;
             int day1, day2, day3, day4, day5;
             if (args == null || args.Count != 5)
             {
@@ -120,7 +121,7 @@ namespace Hanbell.AutoReport.VHB
                 nc.GetDataTable("tblresult").DefaultView.RowFilter = " userno='" + row["userno"].ToString() + "'";
 
                 NotificationContent msg = new NotificationContent();
-                msg.AddTo("C0160@hanbell.com.cn");
+                //msg.AddTo("C1749@hanbell.com.cn");
                 //抄送给直属主管
                 //msg.AddTo(row["userno"].ToString() + "@" + Base.GetMailAccountDomain());
                 //mailcc = GetManagerIdByEmployeeIdFromOA(row["userno"].ToString());
@@ -129,6 +130,12 @@ namespace Hanbell.AutoReport.VHB
                 //    mailcc = mailcc +  "@" + Base.GetMailAccountDomain();
                 //    msg.AddCc(mailcc);
                 //}
+                msg.AddTo(GetMailAddressByEmployeeIdFromOA(row["userno"].ToString()));
+                managerId = GetManagerIdByEmployeeIdFromOA(row["userno"].ToString());
+                if (managerId != null && managerId.ToString() != "" && !managerId.ToString().Equals("C0002") && !managerId.ToString().Equals("C0616"))
+                {
+                    msg.AddCc(GetMailAddressByEmployeeIdFromOA(managerId));
+                }
                 msg.subject = this.subject;
                 msg.content = GetContent(nc.GetDataTable("tblresult").DefaultView.ToTable(), title, width);
                 msg.AddNotify(new MailNotify());

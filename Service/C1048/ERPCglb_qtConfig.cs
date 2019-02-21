@@ -35,20 +35,20 @@ namespace Hanbell.AutoReport.Config
             sum(acpamt) as ty ,  
             sum(case when left( convert(varchar(8),trdat,112),6)=left( convert(varchar(8),dateadd(month,-1,getdate()),112),6) 
             then acpamt else 0 end)as tm, 
-            isnull((select sum(case when left(convert(varchar(8),y.trdat,112),6) = left(convert(varchar(8),dateadd(year,-1,getdate()),112) ,6)
+            isnull((select sum(case when left(convert(varchar(8),y.trdat,112),6) = left(convert(varchar(8),dateadd(month,-13,getdate()),112) ,6)
             then y.acpamt else 0 end) from apmpyh y ,invmas p,wlfl_db w 
             where y.facno='C' and y.prono='1' and y.itnbr=p.itnbr and p.itcls=w.itcls 
             and wlfl_db.cgtype=w.cgtype and y.pyhkind = '1' 
-            and  left(convert(char(8),y.trdat,112),4)=left(convert(char(4),dateadd(year,-1,getdate()),112),4)),0) as lm, 
+            and  left(convert(char(8),y.trdat,112),4)=left(convert(char(4),dateadd(month,-13,getdate()),112),4)),0) as lm, 
             isnull((select sum(y.acpamt) from apmpyh y ,invmas p,wlfl_db w 
             where y.facno='C' and y.prono='1' and y.itnbr=p.itnbr  
             and p.itcls=w.itcls and wlfl_db.cgtype=w.cgtype  and y.pyhkind = '1' 
-            and left(convert(char(8),y.trdat,112),4)=left(convert(char(8),dateadd(year,-1,getdate()),112),4) ),0) as ly ,
-            isnull((select sum(case when left(convert(varchar(8),y.trdat,112),6) <= left(convert(varchar(8),dateadd(year,-1,getdate()),112) ,6)
+            and left(convert(char(8),y.trdat,112),4)=left(convert(char(8),dateadd(month,-13,getdate()),112),4) ),0) as ly ,
+            isnull((select sum(case when left(convert(varchar(8),y.trdat,112),6) <= left(convert(varchar(8),dateadd(month,-13,getdate()),112) ,6)
             then y.acpamt else 0 end) from apmpyh y ,invmas p,wlfl_db w 
             where y.facno='C' and y.prono='1' and y.itnbr=p.itnbr  
             and p.itcls=w.itcls and wlfl_db.cgtype=w.cgtype  and y.pyhkind = '1' 
-            and left(convert(char(8),y.trdat,112),4)=left(convert(char(8),dateadd(year,-1,getdate()),112),4) ),0) as llj 
+            and left(convert(char(8),y.trdat,112),4)=left(convert(char(8),dateadd(month,-13,getdate()),112),4) ),0) as llj 
             FROM apmpyh , invmas ,  purhad ,wlfl_db  
             WHERE apmpyh.facno = 'C' and apmpyh.prono = '1'  and  purhad.facno = apmpyh.facno  
             and    purhad.prono = apmpyh.prono and   purhad.pono = apmpyh.pono 
@@ -80,9 +80,9 @@ namespace Hanbell.AutoReport.Config
 
             string sqlstr3 = @"SELECT  apmpyh.vdrno ,purvdr.vdrna , 
             wlfl_db.cgtype, sum(acpamt) as ly ,  
-            sum(case when left(convert(varchar(8),trdat,112),6)= left(convert(varchar(8),dateadd(year,-1,getdate()),112),6) 
+            sum(case when left(convert(varchar(8),trdat,112),6)= left(convert(varchar(8),dateadd(month,-13,getdate()),112),6) 
             then acpamt else 0 end)  as lm ,
-            sum(case when left(convert(varchar(8),trdat,112),6)<= left(convert(varchar(8),dateadd(year,-1,getdate()),112),6) 
+            sum(case when left(convert(varchar(8),trdat,112),6)<= left(convert(varchar(8),dateadd(month,-13,getdate()),112),6) 
             then acpamt else 0 end)  as llj   
             FROM apmpyh ,purvdr  , invmas , wlfl_db   
             WHERE apmpyh.facno = 'C' and apmpyh.prono = '1' 
@@ -91,7 +91,7 @@ namespace Hanbell.AutoReport.Config
             wlfl_db.cgtype='R阀类' or wlfl_db.cgtype='齿轮' or wlfl_db.cgtype='加工半成品' or wlfl_db.cgtype='加工成品' or wlfl_db.cgtype='模具' or 
             wlfl_db.cgtype='轴承类' or wlfl_db.cgtype='油品类' or wlfl_db.cgtype='R电磁阀' or wlfl_db.cgtype='A列管零件'or wlfl_db.cgtype='A电机' ) 
             and apmpyh.itnbr=invmas.itnbr 
-            and year(apmpyh.trdat)= year(dateadd(year,-1,getdate()))
+            and year(apmpyh.trdat)= year(dateadd(month,-13,getdate()))
             and apmpyh.pyhkind = '1' 
             group by apmpyh.facno ,apmpyh.prono ,apmpyh.vdrno , purvdr.vdrna,wlfl_db.cgtype";
 
