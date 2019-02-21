@@ -23,9 +23,9 @@ namespace Hanbell.AutoReport.Config
 
         public override void InitData()
         {
-            string sqlstr = "select a.cusno,a.cusna,(case b.mancode when 'C0960' then 'C1826' else b.mancode end) as mancode ,'' as username,a.cuspono,"+
-            "a.cdrno,a.itnbrcus,a.itdsc,a.qty,a.shipday1,a.inqty,a.shipqty,a.manno,a.manday1,a.finday1,a.sn,a.remark1 from cdrschedule a"+
-             "left outer join cdrhmas b on left(a.cdrno,len(a.cdrno)-4)=b.cdrno where a.status<>'Y' and  a.kindcode='{0}' ";
+            string sqlstr = "select a.cusno,a.cusna,b.mancode,'' as username,a.cuspono, " +
+            "a.cdrno,a.itnbrcus,a.itdsc,a.qty,a.shipday1,a.inqty,a.shipqty,a.manno,a.manday1,a.finday1,a.sn,a.remark1 from cdrschedule a "+
+             " left outer join cdrhmas b on left(a.cdrno,len(a.cdrno)-4)=b.cdrno where a.status<>'Y' and  a.kindcode='{0}' ";
             Fill(String.Format(sqlstr, args["kindcode"]), ds, "tblresult");
 
             Fill("select userno,username from secuser ", ds, "tbluser");
