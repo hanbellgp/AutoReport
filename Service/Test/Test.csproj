@@ -130,6 +130,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\C0160\C0160.csproj">
+      <Project>{CE017551-B1D1-4D4E-A3EE-D745FC8A92CD}</Project>
+      <Name>C0160</Name>
+    </ProjectReference>
     <ProjectReference Include="..\C0241\C0241.csproj">
       <Project>{68901C42-6515-4992-9491-5E89E9AC0FFA}</Project>
       <Name>C0241</Name>
