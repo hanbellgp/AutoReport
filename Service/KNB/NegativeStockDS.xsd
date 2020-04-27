@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NegativeStockDS" targetNamespace="http://tempuri.org/NegativeStockDS.xsd" xmlns:mstns="http://tempuri.org/NegativeStockDS.xsd" xmlns="http://tempuri.org/NegativeStockDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NegativeStockDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="NegativeStockDS" msprop:Generator_UserDSName="NegativeStockDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tlb" msprop:Generator_TableClassName="tlbDataTable" msprop:Generator_TableVarName="tabletlb" msprop:Generator_RowChangedName="tlbRowChanged" msprop:Generator_TablePropName="tlb" msprop:Generator_RowDeletingName="tlbRowDeleting" msprop:Generator_RowChangingName="tlbRowChanging" msprop:Generator_RowEvHandlerName="tlbRowChangeEventHandler" msprop:Generator_RowDeletedName="tlbRowDeleted" msprop:Generator_RowClassName="tlbRow" msprop:Generator_UserTableName="tlb" msprop:Generator_RowEvArgName="tlbRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itcls" msdata:Caption="品号大类" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="品号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="品名" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="unmsr1" msdata:Caption="单位" msprop:Generator_ColumnVarNameInTable="columnunmsr1" msprop:Generator_ColumnPropNameInRow="unmsr1" msprop:Generator_ColumnPropNameInTable="unmsr1Column" msprop:Generator_UserColumnName="unmsr1" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msdata:Caption="库号" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="whdsc" msdata:Caption="库名" msprop:Generator_ColumnVarNameInTable="columnwhdsc" msprop:Generator_ColumnPropNameInRow="whdsc" msprop:Generator_ColumnPropNameInTable="whdscColumn" msprop:Generator_UserColumnName="whdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="onhand1" msdata:Caption="库存数1" msprop:Generator_ColumnVarNameInTable="columnonhand1" msprop:Generator_ColumnPropNameInRow="onhand1" msprop:Generator_ColumnPropNameInTable="onhand1Column" msprop:Generator_UserColumnName="onhand1" type="xs:string" minOccurs="0" />
+              <xs:element name="onhand2" msdata:Caption="库存数2" msprop:Generator_ColumnVarNameInTable="columnonhand2" msprop:Generator_ColumnPropNameInRow="onhand2" msprop:Generator_ColumnPropNameInTable="onhand2Column" msprop:Generator_UserColumnName="onhand2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

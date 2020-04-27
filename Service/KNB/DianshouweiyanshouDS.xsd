@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DianshouweiyanshouDS" targetNamespace="http://tempuri.org/DianshouweiyanshouDS.xsd" xmlns:mstns="http://tempuri.org/DianshouweiyanshouDS.xsd" xmlns="http://tempuri.org/DianshouweiyanshouDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DianshouweiyanshouDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DianshouweiyanshouDS" msprop:Generator_UserDSName="DianshouweiyanshouDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl" msprop:Generator_TableClassName="tblDataTable" msprop:Generator_TableVarName="tabletbl" msprop:Generator_TablePropName="tbl" msprop:Generator_RowDeletingName="tblRowDeleting" msprop:Generator_RowChangingName="tblRowChanging" msprop:Generator_RowEvHandlerName="tblRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRowDeleted" msprop:Generator_UserTableName="tbl" msprop:Generator_RowChangedName="tblRowChanged" msprop:Generator_RowEvArgName="tblRowChangeEvent" msprop:Generator_RowClassName="tblRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acceptno" msprop:Generator_ColumnVarNameInTable="columnacceptno" msprop:Generator_ColumnPropNameInRow="acceptno" msprop:Generator_ColumnPropNameInTable="acceptnoColumn" msprop:Generator_UserColumnName="acceptno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="itcls" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="accqy" msprop:Generator_ColumnVarNameInTable="columnaccqy" msprop:Generator_ColumnPropNameInRow="accqy" msprop:Generator_ColumnPropNameInTable="accqyColumn" msprop:Generator_UserColumnName="accqy" type="xs:string" minOccurs="0" />
+              <xs:element name="indate" msprop:Generator_ColumnVarNameInTable="columnindate" msprop:Generator_ColumnPropNameInRow="indate" msprop:Generator_ColumnPropNameInTable="indateColumn" msprop:Generator_UserColumnName="indate" type="xs:string" minOccurs="0" />
+              <xs:element name="delaytime" msprop:Generator_ColumnVarNameInTable="columndelaytime" msprop:Generator_ColumnPropNameInRow="delaytime" msprop:Generator_ColumnPropNameInTable="delaytimeColumn" msprop:Generator_UserColumnName="delaytime" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ERPPUR150DS" targetNamespace="http://tempuri.org/ERPPUR150DS.xsd" xmlns:mstns="http://tempuri.org/ERPPUR150DS.xsd" xmlns="http://tempuri.org/ERPPUR150DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ERPPUR150DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ERPPUR150DS" msprop:Generator_UserDSName="ERPPUR150DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbitnbr" msprop:Generator_TableClassName="tbitnbrDataTable" msprop:Generator_TableVarName="tabletbitnbr" msprop:Generator_TablePropName="tbitnbr" msprop:Generator_RowDeletingName="tbitnbrRowDeleting" msprop:Generator_RowChangingName="tbitnbrRowChanging" msprop:Generator_RowEvHandlerName="tbitnbrRowChangeEventHandler" msprop:Generator_RowDeletedName="tbitnbrRowDeleted" msprop:Generator_UserTableName="tbitnbr" msprop:Generator_RowChangedName="tbitnbrRowChanged" msprop:Generator_RowEvArgName="tbitnbrRowChangeEvent" msprop:Generator_RowClassName="tbitnbrRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbresult" msprop:Generator_TableClassName="tbresultDataTable" msprop:Generator_TableVarName="tabletbresult" msprop:Generator_TablePropName="tbresult" msprop:Generator_RowDeletingName="tbresultRowDeleting" msprop:Generator_RowChangingName="tbresultRowChanging" msprop:Generator_RowEvHandlerName="tbresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tbresultRowDeleted" msprop:Generator_UserTableName="tbresult" msprop:Generator_RowChangedName="tbresultRowChanged" msprop:Generator_RowEvArgName="tbresultRowChangeEvent" msprop:Generator_RowClassName="tbresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="facno" msprop:Generator_ColumnVarNameInTable="columnfacno" msprop:Generator_ColumnPropNameInRow="facno" msprop:Generator_ColumnPropNameInTable="facnoColumn" msprop:Generator_UserColumnName="facno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="enddate" msprop:Generator_ColumnVarNameInTable="columnenddate" msprop:Generator_ColumnPropNameInRow="enddate" msprop:Generator_ColumnPropNameInTable="enddateColumn" msprop:Generator_UserColumnName="enddate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tbmiscode" msprop:Generator_TableClassName="tbmiscodeDataTable" msprop:Generator_TableVarName="tabletbmiscode" msprop:Generator_TablePropName="tbmiscode" msprop:Generator_RowDeletingName="tbmiscodeRowDeleting" msprop:Generator_RowChangingName="tbmiscodeRowChanging" msprop:Generator_RowEvHandlerName="tbmiscodeRowChangeEventHandler" msprop:Generator_RowDeletedName="tbmiscodeRowDeleted" msprop:Generator_UserTableName="tbmiscode" msprop:Generator_RowChangedName="tbmiscodeRowChanged" msprop:Generator_RowEvArgName="tbmiscodeRowChangeEvent" msprop:Generator_RowClassName="tbmiscodeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:string" minOccurs="0" />
+              <xs:element name="cdesc" msprop:Generator_ColumnVarNameInTable="columncdesc" msprop:Generator_ColumnPropNameInRow="cdesc" msprop:Generator_ColumnPropNameInTable="cdescColumn" msprop:Generator_UserColumnName="cdesc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
