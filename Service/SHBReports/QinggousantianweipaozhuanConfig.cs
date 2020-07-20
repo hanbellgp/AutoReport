@@ -28,7 +28,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append("where a.facno = '{0}' and a.prno = b.prno and a.facno = b.facno and a.prono = b.prono ");
             sb.Append("and datediff(day,a.prdate,GETDATE()) > 3 ");
             sb.Append("AND b.dasksta = '20' ");
-            sb.Append("AND a.depno = '1P300' ");
+            //sb.Append("AND a.depno = '1P300' "); change by C1900 2019/8/13
             sb.Append("AND a.prkind = '3NA' ");
             sb.Append("AND Convert(varchar(6),a.prdate,112) <= CONVERT(varchar(6),getdate(),112) ");
             sb.Append("order by a.prdate ASC ");
