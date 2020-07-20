@@ -114,15 +114,15 @@ namespace Hanbell.AutoReport.Config
             sb.Append("', 6) THEN ( booamt - recamt ) ELSE 0 END) AS thismonrec,");
             sb.Append("SUM(CASE WHEN LEFT(CONVERT(CHAR(8), warngdate, 112), 6) < LEFT('");
             sb.Append(baseday);
-            sb.Append("', 6) THEN ( booamt - recamt )  ELSE 0 END) AS beftotal ");
+            sb.Append("', 6) THEN ( booamt - recamt )  ELSE 0 END) AS beftota ");
             sb.Append(" FROM armhad a ");
             sb.Append(" LEFT OUTER JOIN cdrcus b  ON a.cusno = b.cusno ");
             sb.Append(" LEFT OUTER JOIN secuser j ON a.mancode = j.userno ");
-            sb.Append(" WHERE ( booamt - recamt ) > 0  AND bildat <= '");
+            sb.Append(" WHERE ( booamt - recamt ) > 0 {0}  AND bildat <= '");
             sb.Append(baseday);
             sb.Append("' AND accno = '1122' GROUP BY a.cusno, b.cusna, j.userno,j.username,b.cuskind,b.areacode order by b.cuskind,b.areacode,j.userno ");
 
-            Fill(sb.ToString(), ds, "tblresult");
+            Fill(String.Format(sb.ToString(), args["cuskind"]), ds, "tblresult");
 
         }
 

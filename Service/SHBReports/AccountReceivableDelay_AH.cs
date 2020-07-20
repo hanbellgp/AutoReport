@@ -9,11 +9,9 @@ using Hanbell.AutoReport.Core;
 
 namespace Hanbell.AutoReport.Config
 {
-    class AccountReceivableDelay_P : AccountReceivableDelay
+    class AccountReceivableDelay_AH : AccountReceivableDelay
     {
-        public AccountReceivableDelay_P() 
-        {
-        }
+        public AccountReceivableDelay_AH() { }
 
         protected override void Init()
         {
@@ -56,7 +54,7 @@ namespace Hanbell.AutoReport.Config
                     }
                     file = Base.GetAttachmentFileName(this.ToString(), item.FullResourceName);
                     type = Base.GetAttachmentFileType(this.ToString(), item.FullResourceName);
-                    htmlFile = nc.ExportReportToHTML("AccountReceivableDelayReport_P_" + DateTime.Now.ToString("yyyy-MM-dd-H-mm-ss"), item);
+                    htmlFile = nc.ExportReportToHTML("AccountReceivableDelayReport_AH_" + DateTime.Now.ToString("yyyy-MM-dd-H-mm-ss"), item);
                     file = nc.ExportReport(type, file, item);
 
                     AddAtt(file);
