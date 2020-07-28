@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ERPPUR530DS" targetNamespace="http://tempuri.org/ERPPUR530DS.xsd" xmlns:mstns="http://tempuri.org/ERPPUR530DS.xsd" xmlns="http://tempuri.org/ERPPUR530DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ERPPUR530DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ERPPUR530DS" msprop:Generator_UserDSName="ERPPUR530DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbresult" msprop:Generator_TableClassName="tbresultDataTable" msprop:Generator_TableVarName="tabletbresult" msprop:Generator_TablePropName="tbresult" msprop:Generator_RowDeletingName="tbresultRowDeleting" msprop:Generator_RowChangingName="tbresultRowChanging" msprop:Generator_RowEvHandlerName="tbresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tbresultRowDeleted" msprop:Generator_UserTableName="tbresult" msprop:Generator_RowChangedName="tbresultRowChanged" msprop:Generator_RowEvArgName="tbresultRowChangeEvent" msprop:Generator_RowClassName="tbresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acceptno" msdata:Caption="点收编号" msprop:Generator_ColumnVarNameInTable="columnacceptno" msprop:Generator_ColumnPropNameInRow="acceptno" msprop:Generator_ColumnPropNameInTable="acceptnoColumn" msprop:Generator_UserColumnName="acceptno" type="xs:string" minOccurs="0" />
+              <xs:element name="pono" msdata:Caption="采购单号" msprop:Generator_ColumnVarNameInTable="columnpono" msprop:Generator_ColumnPropNameInRow="pono" msprop:Generator_ColumnPropNameInTable="ponoColumn" msprop:Generator_UserColumnName="pono" type="xs:string" minOccurs="0" />
+              <xs:element name="srcno" msdata:Caption="请购单号" msprop:Generator_ColumnVarNameInTable="columnsrcno" msprop:Generator_ColumnPropNameInRow="srcno" msprop:Generator_ColumnPropNameInTable="srcnoColumn" msprop:Generator_UserColumnName="srcno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msdata:Caption="厂商编号" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msdata:Caption="厂商简称" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="dqrq" msdata:Caption="当前日期" msprop:Generator_ColumnVarNameInTable="columndqrq" msprop:Generator_ColumnPropNameInRow="dqrq" msprop:Generator_ColumnPropNameInTable="dqrqColumn" msprop:Generator_UserColumnName="dqrq" type="xs:string" minOccurs="0" />
+              <xs:element name="acceptdate" msdata:Caption="点收日期" msprop:Generator_ColumnVarNameInTable="columnacceptdate" msprop:Generator_ColumnPropNameInRow="acceptdate" msprop:Generator_ColumnPropNameInTable="acceptdateColumn" msprop:Generator_UserColumnName="acceptdate" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="品号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="品名" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="dssl" msdata:Caption="点收数量" msprop:Generator_ColumnVarNameInTable="columndssl" msprop:Generator_ColumnPropNameInRow="dssl" msprop:Generator_ColumnPropNameInTable="dsslColumn" msprop:Generator_UserColumnName="dssl" type="xs:string" minOccurs="0" />
+              <xs:element name="userno" msdata:Caption="请购人工号" msprop:Generator_ColumnVarNameInTable="columnuserno" msprop:Generator_ColumnPropNameInRow="userno" msprop:Generator_ColumnPropNameInTable="usernoColumn" msprop:Generator_UserColumnName="userno" type="xs:string" minOccurs="0" />
+              <xs:element name="username" msdata:Caption="请购人姓名" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username" type="xs:string" minOccurs="0" />
+              <xs:element name="depno" msdata:Caption="部门代号" msprop:Generator_ColumnVarNameInTable="columndepno" msprop:Generator_ColumnPropNameInRow="depno" msprop:Generator_ColumnPropNameInTable="depnoColumn" msprop:Generator_UserColumnName="depno" type="xs:string" minOccurs="0" />
+              <xs:element name="cdesc" msdata:Caption="请购部门" msprop:Generator_ColumnVarNameInTable="columncdesc" msprop:Generator_ColumnPropNameInRow="cdesc" msprop:Generator_ColumnPropNameInTable="cdescColumn" msprop:Generator_UserColumnName="cdesc" type="xs:string" minOccurs="0" />
+              <xs:element name="ywts" msdata:Caption="延误天数" msprop:Generator_ColumnVarNameInTable="columnywts" msprop:Generator_ColumnPropNameInRow="ywts" msprop:Generator_ColumnPropNameInTable="ywtsColumn" msprop:Generator_UserColumnName="ywts" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
