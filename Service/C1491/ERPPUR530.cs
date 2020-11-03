@@ -58,13 +58,11 @@ namespace C1491
                 table1 = "以下已点收GB 物料 ，请技术人员配合检验 <br/>" + table1;
             }
             msg.AddCc("C0733@hanbell.com.cn");
-            msg.AddCc("C1704@hanbell.com.cn");
-            msg.AddCc("C1547@hanbell.com.cn");
             msg.AddCc("1M110@hanbell.com.cn");
             msg.AddBcc("C1491@hanbell.com.cn");
             msg.subject = this.subject;
             msg.content = GetContentHead() + table1 + GetContentFooter();
-    //        msg.AddNotify(new MailNotify());
+            msg.AddNotify(new MailNotify());
             msg.Update();
             msg.Dispose();
         }

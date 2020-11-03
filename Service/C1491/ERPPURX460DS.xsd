@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ERPPURX460DS" targetNamespace="http://tempuri.org/ERPPURX460DS.xsd" xmlns:mstns="http://tempuri.org/ERPPURX460DS.xsd" xmlns="http://tempuri.org/ERPPURX460DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ERPPURX460DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ERPPURX460DS" msprop:Generator_UserDSName="ERPPURX460DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbresult" msprop:Generator_TableClassName="tbresultDataTable" msprop:Generator_TableVarName="tabletbresult" msprop:Generator_TablePropName="tbresult" msprop:Generator_RowDeletingName="tbresultRowDeleting" msprop:Generator_RowChangingName="tbresultRowChanging" msprop:Generator_RowEvHandlerName="tbresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tbresultRowDeleted" msprop:Generator_UserTableName="tbresult" msprop:Generator_RowChangedName="tbresultRowChanged" msprop:Generator_RowEvArgName="tbresultRowChangeEvent" msprop:Generator_RowClassName="tbresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="facno" msdata:Caption="公司别" msprop:Generator_ColumnVarNameInTable="columnfacno" msprop:Generator_ColumnPropNameInRow="facno" msprop:Generator_ColumnPropNameInTable="facnoColumn" msprop:Generator_UserColumnName="facno" type="xs:string" minOccurs="0" />
+              <xs:element name="prono" msdata:Caption="生产地" msprop:Generator_ColumnVarNameInTable="columnprono" msprop:Generator_ColumnPropNameInRow="prono" msprop:Generator_ColumnPropNameInTable="pronoColumn" msprop:Generator_UserColumnName="prono" type="xs:string" minOccurs="0" />
+              <xs:element name="pono" msdata:Caption="采购编号" msprop:Generator_ColumnVarNameInTable="columnpono" msprop:Generator_ColumnPropNameInRow="pono" msprop:Generator_ColumnPropNameInTable="ponoColumn" msprop:Generator_UserColumnName="pono" type="xs:string" minOccurs="0" />
+              <xs:element name="trseq" msdata:Caption="来源项次" msprop:Generator_ColumnVarNameInTable="columntrseq" msprop:Generator_ColumnPropNameInRow="trseq" msprop:Generator_ColumnPropNameInTable="trseqColumn" msprop:Generator_UserColumnName="trseq" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="品号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="品名" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="poqy1" msdata:Caption="请购数量" msprop:Generator_ColumnVarNameInTable="columnpoqy1" msprop:Generator_ColumnPropNameInRow="poqy1" msprop:Generator_ColumnPropNameInTable="poqy1Column" msprop:Generator_UserColumnName="poqy1" type="xs:string" minOccurs="0" />
+              <xs:element name="askdate" msdata:Caption="预计交期" msprop:Generator_ColumnVarNameInTable="columnaskdate" msprop:Generator_ColumnPropNameInRow="askdate" msprop:Generator_ColumnPropNameInTable="askdateColumn" msprop:Generator_UserColumnName="askdate" type="xs:string" minOccurs="0" />
+              <xs:element name="askdateo" msdata:Caption="原始交期" msprop:Generator_ColumnVarNameInTable="columnaskdateo" msprop:Generator_ColumnPropNameInRow="askdateo" msprop:Generator_ColumnPropNameInTable="askdateoColumn" msprop:Generator_UserColumnName="askdateo" type="xs:string" minOccurs="0" />
+              <xs:element name="okqy1" msdata:Caption="已交数量" msprop:Generator_ColumnVarNameInTable="columnokqy1" msprop:Generator_ColumnPropNameInRow="okqy1" msprop:Generator_ColumnPropNameInTable="okqy1Column" msprop:Generator_UserColumnName="okqy1" type="xs:string" minOccurs="0" />
+              <xs:element name="wjh" msdata:Caption="未交数量" msprop:Generator_ColumnVarNameInTable="columnwjh" msprop:Generator_ColumnPropNameInRow="wjh" msprop:Generator_ColumnPropNameInTable="wjhColumn" msprop:Generator_UserColumnName="wjh" type="xs:string" minOccurs="0" />
+              <xs:element name="ydwy" msdata:Caption="已点收未验量" msprop:Generator_ColumnVarNameInTable="columnydwy" msprop:Generator_ColumnPropNameInRow="ydwy" msprop:Generator_ColumnPropNameInTable="ydwyColumn" msprop:Generator_UserColumnName="ydwy" type="xs:string" minOccurs="0" />
+              <xs:element name="userno" msdata:Caption="请购人" msprop:Generator_ColumnVarNameInTable="columnuserno" msprop:Generator_ColumnPropNameInRow="userno" msprop:Generator_ColumnPropNameInTable="usernoColumn" msprop:Generator_UserColumnName="userno" type="xs:string" minOccurs="0" />
+              <xs:element name="buyer" msdata:Caption="采购员" msprop:Generator_ColumnVarNameInTable="columnbuyer" msprop:Generator_ColumnPropNameInRow="buyer" msprop:Generator_ColumnPropNameInTable="buyerColumn" msprop:Generator_UserColumnName="buyer" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

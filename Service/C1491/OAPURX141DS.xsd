@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OAPURX141DS" targetNamespace="http://tempuri.org/OAPURX141DS.xsd" xmlns:mstns="http://tempuri.org/OAPURX141DS.xsd" xmlns="http://tempuri.org/OAPURX141DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OAPURX141DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OAPURX141DS" msprop:Generator_UserDSName="OAPURX141DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbresult" msprop:Generator_TableClassName="tbresultDataTable" msprop:Generator_TableVarName="tabletbresult" msprop:Generator_TablePropName="tbresult" msprop:Generator_RowDeletingName="tbresultRowDeleting" msprop:Generator_RowChangingName="tbresultRowChanging" msprop:Generator_RowEvHandlerName="tbresultRowChangeEventHandler" msprop:Generator_RowDeletedName="tbresultRowDeleted" msprop:Generator_UserTableName="tbresult" msprop:Generator_RowChangedName="tbresultRowChanged" msprop:Generator_RowEvArgName="tbresultRowChangeEvent" msprop:Generator_RowClassName="tbresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="facno" msdata:Caption="事业单位" msprop:Generator_ColumnVarNameInTable="columnfacno" msprop:Generator_ColumnPropNameInRow="facno" msprop:Generator_ColumnPropNameInTable="facnoColumn" msprop:Generator_UserColumnName="facno" type="xs:string" minOccurs="0" />
+              <xs:element name="applyuser" msdata:Caption="申请人" msprop:Generator_ColumnVarNameInTable="columnapplyuser" msprop:Generator_ColumnPropNameInRow="applyuser" msprop:Generator_ColumnPropNameInTable="applyuserColumn" msprop:Generator_UserColumnName="applyuser" type="xs:string" minOccurs="0" />
+              <xs:element name="applydate" msdata:Caption="申请日期" msprop:Generator_ColumnVarNameInTable="columnapplydate" msprop:Generator_ColumnPropNameInRow="applydate" msprop:Generator_ColumnPropNameInTable="applydateColumn" msprop:Generator_UserColumnName="applydate" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="品号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="品名" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="unmsr1" msdata:Caption="单位" msprop:Generator_ColumnVarNameInTable="columnunmsr1" msprop:Generator_ColumnPropNameInRow="unmsr1" msprop:Generator_ColumnPropNameInTable="unmsr1Column" msprop:Generator_UserColumnName="unmsr1" type="xs:string" minOccurs="0" />
+              <xs:element name="spdsc" msdata:Caption="规格" msprop:Generator_ColumnVarNameInTable="columnspdsc" msprop:Generator_ColumnPropNameInRow="spdsc" msprop:Generator_ColumnPropNameInTable="spdscColumn" msprop:Generator_UserColumnName="spdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="costintax" msdata:Caption="采购标准成本含税" msprop:Generator_ColumnVarNameInTable="columncostintax" msprop:Generator_ColumnPropNameInRow="costintax" msprop:Generator_ColumnPropNameInTable="costintaxColumn" msprop:Generator_UserColumnName="costintax" type="xs:string" minOccurs="0" />
+              <xs:element name="cost" msdata:Caption="采购标准成本" msprop:Generator_ColumnVarNameInTable="columncost" msprop:Generator_ColumnPropNameInRow="cost" msprop:Generator_ColumnPropNameInTable="costColumn" msprop:Generator_UserColumnName="cost" type="xs:string" minOccurs="0" />
+              <xs:element name="asscostintax" msdata:Caption="托工成本含税" msprop:Generator_ColumnVarNameInTable="columnasscostintax" msprop:Generator_ColumnPropNameInRow="asscostintax" msprop:Generator_ColumnPropNameInTable="asscostintaxColumn" msprop:Generator_UserColumnName="asscostintax" type="xs:string" minOccurs="0" />
+              <xs:element name="asscost" msdata:Caption="托工成本" msprop:Generator_ColumnVarNameInTable="columnasscost" msprop:Generator_ColumnPropNameInRow="asscost" msprop:Generator_ColumnPropNameInTable="asscostColumn" msprop:Generator_UserColumnName="asscost" type="xs:string" minOccurs="0" />
+              <xs:element name="Isactualquo" msdata:Caption="是否实际报价" msprop:Generator_ColumnVarNameInTable="columnIsactualquo" msprop:Generator_ColumnPropNameInRow="Isactualquo" msprop:Generator_ColumnPropNameInTable="IsactualquoColumn" msprop:Generator_UserColumnName="Isactualquo" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" msdata:Caption="备注" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
