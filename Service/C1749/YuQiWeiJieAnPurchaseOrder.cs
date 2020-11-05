@@ -30,7 +30,7 @@ namespace Hanbell.AutoReport.Config
             this.content = GetContentHead() + GetContentFooter();
             if (nc.GetDataTable("YQWJAPO").Rows.Count > 0)
             {
-                string fileFullName = Base.GetServiceInstallPath() + "\\Data\\" + "研发物料逾期未结案采购单" + DateTime.Now.ToString("yyyy-MM-dd-H-mm-ss") + ".xlsx";
+                string fileFullName = Base.GetServiceInstallPath() + "\\Data\\" + "研发物料逾期未结案采购单" + DateTime.Now.ToString("yyyy-MM-dd-H-mm-ss") + ".xls";
                 DataTableToExcel(nc.GetDataTable("YQWJAPO"), fileFullName, true);
                 AddNotify(new MailNotify());
             }

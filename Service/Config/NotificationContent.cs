@@ -204,7 +204,6 @@ namespace Hanbell.AutoReport.Config
             var excelApp = new Excel.ApplicationClass();
             excelApp.Visible = false;
             excelApp.DisplayAlerts = false;
-
             Excel.Workbook newBook = excelApp.Workbooks.Add();
             //newBook.SaveAs(fileName);
             //将DataTable的列名导入Excel表第一行
@@ -222,6 +221,7 @@ namespace Hanbell.AutoReport.Config
                 {
                     columnIndex++;
                     excelApp.Cells[rowIndex, columnIndex] = tbl.Rows[i][j].ToString();
+                    
                 }
             }
             newBook.SaveCopyAs(fileName);

@@ -3,6 +3,10 @@
     
     
     public partial class StatisticalReportDS {
+        partial class ERPYFDataTable
+        {
+        }
+    
         partial class SRtlbDataTable
         {
         }

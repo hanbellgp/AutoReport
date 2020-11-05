@@ -31,7 +31,7 @@ and pono in
  and ( posrc in ('4','2') or posrc in ('1','3') )  )
  ) a,purhad b , invmas c, secuser d ,miscode s,purvdr v
   where  b.buyer =d.userno and a.itnbr=c.itnbr and b.pono=a.pono 
- and b.hmark1*=s.code  and s.ckind = '2A' and b.vdrno=v.vdrno
+ and b.hmark1*=s.code  and s.ckind = '2A' and b.vdrno=v.vdrno and c.jityn = 'N'
      ) A where A.itnbr like 'B%' or A.itnbr like '%GB%' 
 UNION
      select distinct f.vdrno as vdrno,f.vdrna as vdrna,f.itnbr as itnbr, purdnam.itdsc as itdsc,f.pono,f.username as username,
@@ -45,7 +45,7 @@ UNION
             (select pono from purhad where facno = 'C' and prono = '1' )) a
       , purhad b , invmas c, secuser d ,miscode s,purvdr v
             where b.buyer =d.userno and a.itnbr*=c.itnbr and b.pono=a.pono  and b.facno='C' and b.prono='1' and 
-                  b.hmark1*=s.code and b.vdrno=v.vdrno) f  LEFT JOIN  purdnam on f.pono = purdnam.pono and f.trseq = purdnam.trseq
+                  b.hmark1*=s.code and b.vdrno=v.vdrno and c.jityn = 'N') f  LEFT JOIN  purdnam on f.pono = purdnam.pono and f.trseq = purdnam.trseq
     where  ( f.itnbr = '9')";
             Fill(sqlstr, ds, "YQWJAPO");
         }
