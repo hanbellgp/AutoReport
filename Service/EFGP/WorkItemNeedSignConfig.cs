@@ -32,7 +32,6 @@ namespace Hanbell.AutoReport.EFGP
             sb.Append("WorkAssignment.isNotice = 0 AND WorkAssignment.assigneeOID = Users.OID AND DATEDIFF(DAY, CONVERT(DATETIME, WorkItem.createdTime), GETDATE()) > 0 AND ");
             sb.Append("Users.OID = Functions.occupantOID AND Functions.isMain=1 AND Functions.organizationUnitOID = OrganizationUnit.OID AND ");
             sb.Append("ProcessInstance.processDefinitionId NOT IN {0} ORDER BY OrganizationUnit.id,Users.id,delaydays DESC ");
-
             Fill(String.Format(sb.ToString(), args["processDefinitionId"]), this.ds, "tblprocess");
 
         }

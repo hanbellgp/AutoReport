@@ -34,7 +34,7 @@ namespace Hanbell.AutoReport.EFGP
             DataTable tbl;
             foreach (DataRow row in nc.GetDataTable("tblprocess").Rows)
             {
-                if (row["id"].ToString().Substring(0, 1).Equals("H") || row["id"].ToString().Substring(0, 1).Equals("Q") || row["id"].ToString().Substring(0, 1).Equals("V")) continue;
+                if (row["id"].ToString().Substring(0, 1).Equals("H") || row["id"].ToString().Substring(0, 1).Equals("Q") || row["id"].ToString().Substring(0, 1).Equals("V") || row["id"].ToString().Substring(0, 1).Equals("Y") || row["id"].ToString().Substring(0, 1).Equals("R")) continue;
                 if (p.Contains(row["id"].ToString())) continue;
                 Array.Resize(ref p, p.Length + 1);
                 p.SetValue(row["id"].ToString(), p.Length - 1);

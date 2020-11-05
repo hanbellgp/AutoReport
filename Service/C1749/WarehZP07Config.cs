@@ -18,6 +18,7 @@ namespace Hanbell.AutoReport.Config
         public override void InitData()
         {
             string sqlstr = @"select  a.wareh,a.itnbr,b.itdsc,a.trnqy1,a.unmsr1 from invmas b,invtrn a  where a.itnbr = b.itnbr and a.trtype = 'IAC' and a.wareh = 'ZP07' and  iocode = '1' and  datediff(dd,a.indate,getdate())=1";
+            //string sqlstr = @"select  a.wareh,a.itnbr,b.itdsc,a.trnqy1,a.unmsr1 from invmas b,invtrn a  where a.itnbr = b.itnbr and a.trtype = 'IAC' and a.wareh = 'ZP07' and  iocode = '1' and  a.indate >= '20180518' and a.indate <  '20180519'";
             Fill(sqlstr, ds, "ZP07tlb");
         }
     }
