@@ -339,6 +339,12 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn columnprotype;
             
+            private global::System.Data.DataColumn columnaddress1;
+            
+            private global::System.Data.DataColumn columnaddress2;
+            
+            private global::System.Data.DataColumn columnaddress3;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public resultDataTable() {
@@ -614,6 +620,30 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn address1Column {
+                get {
+                    return this.columnaddress1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn address2Column {
+                get {
+                    return this.columnaddress2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn address3Column {
+                get {
+                    return this.columnaddress3;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -679,7 +709,10 @@ namespace Hanbell.AutoReport.Config {
                         string unpris1, 
                         string ddcose, 
                         string dmark1, 
-                        string protype) {
+                        string protype, 
+                        string address1, 
+                        string address2, 
+                        string address3) {
                 resultRow rowresultRow = ((resultRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         shpno,
@@ -711,7 +744,10 @@ namespace Hanbell.AutoReport.Config {
                         unpris1,
                         ddcose,
                         dmark1,
-                        protype};
+                        protype,
+                        address1,
+                        address2,
+                        address3};
                 rowresultRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowresultRow);
                 return rowresultRow;
@@ -764,6 +800,9 @@ namespace Hanbell.AutoReport.Config {
                 this.columnddcose = base.Columns["ddcose"];
                 this.columndmark1 = base.Columns["dmark1"];
                 this.columnprotype = base.Columns["protype"];
+                this.columnaddress1 = base.Columns["address1"];
+                this.columnaddress2 = base.Columns["address2"];
+                this.columnaddress3 = base.Columns["address3"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -829,6 +868,12 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columndmark1);
                 this.columnprotype = new global::System.Data.DataColumn("protype", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprotype);
+                this.columnaddress1 = new global::System.Data.DataColumn("address1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaddress1);
+                this.columnaddress2 = new global::System.Data.DataColumn("address2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaddress2);
+                this.columnaddress3 = new global::System.Data.DataColumn("address3", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaddress3);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1451,6 +1496,54 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string address1 {
+                get {
+                    try {
+                        return ((string)(this[this.tableresult.address1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“result”中列“address1”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableresult.address1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string address2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableresult.address2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“result”中列“address2”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableresult.address2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string address3 {
+                get {
+                    try {
+                        return ((string)(this[this.tableresult.address3Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“result”中列“address3”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableresult.address3Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsshpnoNull() {
                 return this.IsNull(this.tableresult.shpnoColumn);
             }
@@ -1807,6 +1900,42 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetprotypeNull() {
                 this[this.tableresult.protypeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isaddress1Null() {
+                return this.IsNull(this.tableresult.address1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setaddress1Null() {
+                this[this.tableresult.address1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isaddress2Null() {
+                return this.IsNull(this.tableresult.address2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setaddress2Null() {
+                this[this.tableresult.address2Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isaddress3Null() {
+                return this.IsNull(this.tableresult.address3Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setaddress3Null() {
+                this[this.tableresult.address3Column] = global::System.Convert.DBNull;
             }
         }
         

@@ -39,7 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
@@ -54,6 +57,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcceptanceDetailsReport.cs" />
+    <Compile Include="AcceptanceDetailsReportConfig.cs" />
+    <Compile Include="AcceptanceDetailsReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcceptanceDetailsReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AHPR600.cs" />
+    <Compile Include="AHPR600Config.cs" />
+    <Compile Include="AHPR600DS.cs">
+      <DependentUpon>AHPR600DS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AHPR600DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AHPR600DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ASRS21Stock.cs" />
+    <Compile Include="ASRS21StockConfig.cs" />
+    <Compile Include="ASRS21StockDS.cs">
+      <DependentUpon>ASRS21StockDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ASRS21StockDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ASRS21StockDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BadAcceptance.cs" />
     <Compile Include="BadAcceptanceConfig.cs" />
     <Compile Include="BadAcceptanceDS.cs">
@@ -64,6 +96,24 @@
       <DependentUpon>BadAcceptanceDS.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="BOMSQ.cs" />
+    <Compile Include="BOMSQConfig.cs" />
+    <Compile Include="BOMSQDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BOMSQDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BscShipment.cs" />
+    <Compile Include="BscShipmentConfig.cs" />
+    <Compile Include="BscShipmentDS.cs">
+      <DependentUpon>BscShipmentDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BscShipmentDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BscShipmentDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="CDR643Prompt.cs" />
     <Compile Include="CDRX643DS.cs">
@@ -76,12 +126,142 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="CDRX643PromptConfig.cs" />
+    <Compile Include="ERPPURX460_E.cs" />
+    <Compile Include="ERPPURX460Config.cs" />
+    <Compile Include="ERPPURX460DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPPURX460DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HKYX013Report.cs" />
+    <Compile Include="HKYX013ReportConfig.cs" />
+    <Compile Include="HKYX013ReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HKYX013ReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HSCustomerRankingConfig.cs" />
+    <Compile Include="HSCustomerRanking.cs" />
+    <Compile Include="DullMaterialReport.cs" />
+    <Compile Include="DullMaterialReportConfig.cs" />
+    <Compile Include="EFGPForHK_CG017.cs" />
+    <Compile Include="EFGPForHK_CG017Config.cs" />
+    <Compile Include="EFGPForHK_CG017DS.cs">
+      <DependentUpon>EFGPForHK_CG017DS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EFGPForHK_CG017DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFGPForHK_CG017DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GuestComplaints.cs" />
+    <Compile Include="GuestComplaintsConfig.cs" />
+    <Compile Include="GuestComplaintsDS.cs">
+      <DependentUpon>GuestComplaintsDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GuestComplaintsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GuestComplaintsDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HSCustomerRankingDS.cs">
+      <DependentUpon>HSCustomerRankingDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HSCustomerRankingDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HSCustomerRankingDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="INV520NegativeStockConfig.cs" />
+    <Compile Include="INV520NegativeStock_V.cs" />
+    <Compile Include="InvbalAgingReport.cs" />
+    <Compile Include="InvbalAgingReportConfig.cs" />
+    <Compile Include="InvbalAgingReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvbalAgingReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs" />
+    <Compile Include="InventoryConfig.cs" />
+    <Compile Include="InventoryDS.cs">
+      <DependentUpon>InventoryDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InventoryDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventoryDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Monthly.cs" />
     <Compile Include="MonthlyConfig.cs" />
     <Compile Include="MonthlyDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MonthlyDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NianDuCaiGouPaiMingConfig_HS.cs" />
+    <Compile Include="NianDuCaiGouPaiMing_HS.cs" />
+    <Compile Include="PDMonthlyStatementData.cs" />
+    <Compile Include="PDMonthlyStatementDataConfig.cs" />
+    <Compile Include="PDMonthlyStatementDataDS.cs">
+      <DependentUpon>PDMonthlyStatementDataDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDMonthlyStatementDataDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PDMonthlyStatementDataDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PDMonthlyStatementData_FX.cs" />
+    <Compile Include="PDMonthlyStatementData_YX.cs" />
+    <Compile Include="ProductiveTurnover.cs" />
+    <Compile Include="ProductiveTurnoverConfig.cs" />
+    <Compile Include="ProductiveTurnoverDS.cs">
+      <DependentUpon>ProductiveTurnoverDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductiveTurnoverDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductiveTurnoverDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductiveTurnover_SHKM.cs" />
+    <Compile Include="ProductiveTurnover_ZJKM.cs" />
+    <Compile Include="PurQuantityGrowRatio.cs" />
+    <Compile Include="PurQuantityGrowRatioConfig.cs" />
+    <Compile Include="PurQuantityGrowRatioDS.cs">
+      <DependentUpon>PurQuantityGrowRatioDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PurQuantityGrowRatioDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurQuantityGrowRatioDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SEIASBill.cs" />
+    <Compile Include="SEIASBillConfig.cs" />
+    <Compile Include="SEIASDS.cs">
+      <DependentUpon>SEIASDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SEIASDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SEIASDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceInventoryReport.cs" />
+    <Compile Include="ServiceInventoryReportConfig.cs" />
+    <Compile Include="ServiceInventoryReportDS.cs">
+      <DependentUpon>ServiceInventoryReportDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ServiceInventoryReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceInventoryReportDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="SHBComerNianDuCaiGouPaiMing.cs" />
     <Compile Include="SHBNianDuCaiGouPaiMingConfig.cs" />
@@ -140,6 +320,22 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="StockAndInProcessConfig_S.cs" />
+    <Compile Include="StockAndInProcessDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StockAndInProcessDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StockAndInProcess_S.cs" />
+    <Compile Include="Temporary.cs" />
+    <Compile Include="TemporaryConfig.cs" />
+    <Compile Include="ToolStock.cs" />
+    <Compile Include="ToolStockConfig.cs" />
+    <Compile Include="ToolStockDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolStockDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Unreturn.cs" />
     <Compile Include="UnreturnConfig.cs" />
     <Compile Include="UnreturnDS.cs">
@@ -150,6 +346,43 @@
       <DependentUpon>UnreturnDS.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UnreturnReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnreturnReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnreturnWhyConfig.cs" />
+    <Compile Include="unreturn_why.cs" />
+    <Compile Include="VarianceReport.cs" />
+    <Compile Include="VarianceReportConfig.cs" />
+    <Compile Include="VarianceReportDS.cs">
+      <DependentUpon>VarianceReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VarianceReportDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VarianceReportDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="W01OverallUnit.cs" />
+    <Compile Include="W01OverallUnitConfig.cs" />
+    <Compile Include="W01OverallUnitDS.cs">
+      <DependentUpon>W01OverallUnitDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="W01OverallUnitDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>W01OverallUnitDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WarehouseKYNum.cs" />
+    <Compile Include="WarehouseZYNum.cs" />
+    <Compile Include="WarehouseNumConfig.cs" />
+    <Compile Include="WarehouseNumDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WarehouseNumDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="WarehZP07.cs" />
     <Compile Include="WarehZP07Config.cs" />
@@ -171,6 +404,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="YuqiweijieancaigoudanConfig.cs" />
+    <Compile Include="YuqiweijieancaigoudanDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YuqiweijieancaigoudanDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Yuqiweijieancaigoudan_E.cs" />
     <Compile Include="YuQiWeiJieAnPurchaseOrder.cs" />
     <Compile Include="YuQiWeiJieAnPurchaseOrderConfig.cs" />
     <Compile Include="ComerNainDuCaiGouMaiMingConfig.cs" />
@@ -184,6 +424,43 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UnreturnReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UnreturnReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="AcceptanceDetailsReportDS.xsc">
+      <DependentUpon>AcceptanceDetailsReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="AcceptanceDetailsReportDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AcceptanceDetailsReportDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceDetailsReportDS.xss">
+      <DependentUpon>AcceptanceDetailsReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="AHPR600DS.xsc">
+      <DependentUpon>AHPR600DS.xsd</DependentUpon>
+    </None>
+    <None Include="AHPR600DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AHPR600DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AHPR600DS.xss">
+      <DependentUpon>AHPR600DS.xsd</DependentUpon>
+    </None>
+    <None Include="ASRS21StockDS.xsc">
+      <DependentUpon>ASRS21StockDS.xsd</DependentUpon>
+    </None>
+    <None Include="ASRS21StockDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ASRS21StockDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ASRS21StockDS.xss">
+      <DependentUpon>ASRS21StockDS.xsd</DependentUpon>
+    </None>
     <None Include="BadAcceptanceDS.xsc">
       <DependentUpon>BadAcceptanceDS.xsd</DependentUpon>
     </None>
@@ -194,6 +471,28 @@
     </None>
     <None Include="BadAcceptanceDS.xss">
       <DependentUpon>BadAcceptanceDS.xsd</DependentUpon>
+    </None>
+    <None Include="BOMSQDS.xsc">
+      <DependentUpon>BOMSQDS.xsd</DependentUpon>
+    </None>
+    <None Include="BOMSQDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BOMSQDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BOMSQDS.xss">
+      <DependentUpon>BOMSQDS.xsd</DependentUpon>
+    </None>
+    <None Include="BscShipmentDS.xsc">
+      <DependentUpon>BscShipmentDS.xsd</DependentUpon>
+    </None>
+    <None Include="BscShipmentDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BscShipmentDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BscShipmentDS.xss">
+      <DependentUpon>BscShipmentDS.xsd</DependentUpon>
     </None>
     <None Include="CDRX643DS.xsc">
       <DependentUpon>CDRX643DS.xsd</DependentUpon>
@@ -216,6 +515,83 @@
     </None>
     <None Include="ComerNDCGPMDS.xss">
       <DependentUpon>ComerNDCGPMDS.xsd</DependentUpon>
+    </None>
+    <None Include="EFGPForHK_CG017DS.xsc">
+      <DependentUpon>EFGPForHK_CG017DS.xsd</DependentUpon>
+    </None>
+    <None Include="EFGPForHK_CG017DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EFGPForHK_CG017DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="EFGPForHK_CG017DS.xss">
+      <DependentUpon>EFGPForHK_CG017DS.xsd</DependentUpon>
+    </None>
+    <None Include="ERPPURX460DS.xsc">
+      <DependentUpon>ERPPURX460DS.xsd</DependentUpon>
+    </None>
+    <None Include="ERPPURX460DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERPPURX460DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ERPPURX460DS.xss">
+      <DependentUpon>ERPPURX460DS.xsd</DependentUpon>
+    </None>
+    <None Include="GuestComplaintsDS.xsc">
+      <DependentUpon>GuestComplaintsDS.xsd</DependentUpon>
+    </None>
+    <None Include="GuestComplaintsDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GuestComplaintsDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="GuestComplaintsDS.xss">
+      <DependentUpon>GuestComplaintsDS.xsd</DependentUpon>
+    </None>
+    <None Include="HKYX013ReportDS.xsc">
+      <DependentUpon>HKYX013ReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="HKYX013ReportDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HKYX013ReportDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HKYX013ReportDS.xss">
+      <DependentUpon>HKYX013ReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="HSCustomerRankingDS.xsc">
+      <DependentUpon>HSCustomerRankingDS.xsd</DependentUpon>
+    </None>
+    <None Include="HSCustomerRankingDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HSCustomerRankingDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HSCustomerRankingDS.xss">
+      <DependentUpon>HSCustomerRankingDS.xsd</DependentUpon>
+    </None>
+    <None Include="InvbalAgingReportDS.xsc">
+      <DependentUpon>InvbalAgingReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="InvbalAgingReportDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InvbalAgingReportDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InvbalAgingReportDS.xss">
+      <DependentUpon>InvbalAgingReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDS.xsc">
+      <DependentUpon>InventoryDS.xsd</DependentUpon>
+    </None>
+    <None Include="InventoryDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventoryDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InventoryDS.xss">
+      <DependentUpon>InventoryDS.xsd</DependentUpon>
     </None>
     <None Include="MonthlyDS.xsc">
       <DependentUpon>MonthlyDS.xsd</DependentUpon>
@@ -250,6 +626,28 @@
     <None Include="PaymentDetailsDS.xss">
       <DependentUpon>PaymentDetailsDS.xsd</DependentUpon>
     </None>
+    <None Include="PDMonthlyStatementDataDS.xsc">
+      <DependentUpon>PDMonthlyStatementDataDS.xsd</DependentUpon>
+    </None>
+    <None Include="PDMonthlyStatementDataDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PDMonthlyStatementDataDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PDMonthlyStatementDataDS.xss">
+      <DependentUpon>PDMonthlyStatementDataDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProductiveTurnoverDS.xsc">
+      <DependentUpon>ProductiveTurnoverDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProductiveTurnoverDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductiveTurnoverDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProductiveTurnoverDS.xss">
+      <DependentUpon>ProductiveTurnoverDS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -259,6 +657,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="PurQuantityGrowRatioDS.xsc">
+      <DependentUpon>PurQuantityGrowRatioDS.xsd</DependentUpon>
+    </None>
+    <None Include="PurQuantityGrowRatioDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PurQuantityGrowRatioDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PurQuantityGrowRatioDS.xss">
+      <DependentUpon>PurQuantityGrowRatioDS.xsd</DependentUpon>
+    </None>
+    <None Include="SEIASDS.xsc">
+      <DependentUpon>SEIASDS.xsd</DependentUpon>
+    </None>
+    <None Include="SEIASDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SEIASDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SEIASDS.xss">
+      <DependentUpon>SEIASDS.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceInventoryReportDS.xsc">
+      <DependentUpon>ServiceInventoryReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="ServiceInventoryReportDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ServiceInventoryReportDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ServiceInventoryReportDS.xss">
+      <DependentUpon>ServiceInventoryReportDS.xsd</DependentUpon>
+    </None>
     <None Include="SpecialEquipmentDS.xsc">
       <DependentUpon>SpecialEquipmentDS.xsd</DependentUpon>
     </None>
@@ -281,6 +712,28 @@
     <None Include="StatisticalReportDS.xss">
       <DependentUpon>StatisticalReportDS.xsd</DependentUpon>
     </None>
+    <None Include="StockAndInProcessDS.xsc">
+      <DependentUpon>StockAndInProcessDS.xsd</DependentUpon>
+    </None>
+    <None Include="StockAndInProcessDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StockAndInProcessDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StockAndInProcessDS.xss">
+      <DependentUpon>StockAndInProcessDS.xsd</DependentUpon>
+    </None>
+    <None Include="ToolStockDS.xsc">
+      <DependentUpon>ToolStockDS.xsd</DependentUpon>
+    </None>
+    <None Include="ToolStockDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ToolStockDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ToolStockDS.xss">
+      <DependentUpon>ToolStockDS.xsd</DependentUpon>
+    </None>
     <None Include="UnreturnDS.xsc">
       <DependentUpon>UnreturnDS.xsd</DependentUpon>
     </None>
@@ -291,6 +744,39 @@
     </None>
     <None Include="UnreturnDS.xss">
       <DependentUpon>UnreturnDS.xsd</DependentUpon>
+    </None>
+    <None Include="VarianceReportDS.xsc">
+      <DependentUpon>VarianceReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="VarianceReportDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VarianceReportDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="VarianceReportDS.xss">
+      <DependentUpon>VarianceReportDS.xsd</DependentUpon>
+    </None>
+    <None Include="W01OverallUnitDS.xsc">
+      <DependentUpon>W01OverallUnitDS.xsd</DependentUpon>
+    </None>
+    <None Include="W01OverallUnitDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>W01OverallUnitDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="W01OverallUnitDS.xss">
+      <DependentUpon>W01OverallUnitDS.xsd</DependentUpon>
+    </None>
+    <None Include="WarehouseNumDS.xsc">
+      <DependentUpon>WarehouseNumDS.xsd</DependentUpon>
+    </None>
+    <None Include="WarehouseNumDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WarehouseNumDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WarehouseNumDS.xss">
+      <DependentUpon>WarehouseNumDS.xsd</DependentUpon>
     </None>
     <None Include="WarehZP07DS.xsc">
       <DependentUpon>WarehZP07DS.xsd</DependentUpon>
@@ -314,6 +800,17 @@
     <None Include="YQWJAPurchaseOrder.xss">
       <DependentUpon>YQWJAPurchaseOrder.xsd</DependentUpon>
     </None>
+    <None Include="YuqiweijieancaigoudanDS.xsc">
+      <DependentUpon>YuqiweijieancaigoudanDS.xsd</DependentUpon>
+    </None>
+    <None Include="YuqiweijieancaigoudanDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YuqiweijieancaigoudanDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YuqiweijieancaigoudanDS.xss">
+      <DependentUpon>YuqiweijieancaigoudanDS.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Config\AutoReportConfig.csproj">
@@ -332,6 +829,12 @@
       <Project>{9DFBD0EF-24E5-4DB4-96AF-236452EC9FC5}</Project>
       <Name>SHBReports</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

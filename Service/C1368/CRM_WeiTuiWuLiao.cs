@@ -39,7 +39,7 @@ namespace Hanbell.AutoReport.Config
           {
               string fileFullName = Base.GetServiceInstallPath() + "\\Data\\" + "未退物料明细表" + DateTime.Now.ToString("yyyy-MM-dd-H-mm-ss") + ".xls";
               DataTableToExcel(nc.GetDataTable("CRM_WeiTuiWuLiao"), fileFullName, true);
-              //AddNotify(new MailNotify());
+              AddNotify(new MailNotify());
           }
       }
 
@@ -60,6 +60,8 @@ namespace Hanbell.AutoReport.Config
               msg.subject = this.subject;
               msg.AddTo(item["TC017"].ToString() + "@hanbell.com.cn");
               msg.AddCc(GetManagerIdByDeptIdFromOA(item["TC017"].ToString().Substring(0, 2)) + "@hanbell.com.cn");//抄送给部门主管
+              msg.AddCc("C0201" + "@" + Base.GetMailAccountDomain());//抄送陈海英
+              msg.AddCc("C0005" + "@" + Base.GetMailAccountDomain());//抄送余丽萍
               msg.AddNotify(new MailNotify());
               msg.Update();
               msg.Dispose();

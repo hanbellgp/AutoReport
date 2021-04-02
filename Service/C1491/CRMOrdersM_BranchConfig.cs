@@ -27,7 +27,7 @@ namespace C1491
                             WHERE A.cdrno=B.cdrno AND A.cusno=C.cusno AND A.mancode=D.userno AND B.itnbr=E.itnbr
                             AND A.depno=F.code AND F.ckind='GE'
                             AND ( A.hrecsta= 'Y' or A.hrecsta = 'C')  AND  (B.drecsta != '98' and B.drecsta != '99' and B.drecsta != '10')
-                            AND B.itnbrcus !=''  AND C.cusno NOT IN ('SGD00088','SCQ00146','SJS00254','SSD00107')
+                            AND B.n_code_DD ='00'  AND C.cusno NOT IN ('SGD00088','SCQ00146','SJS00254','SSD00107')
                             AND n.ckind='1R' AND B.dmark1=n.code
                             AND left(convert(varchar(30),A.cfmdate,111),10) >= CONVERT(CHAR(8), dateadd(month,-1,getdate()),111)+'01'  
                             AND left(convert(varchar(30),A.cfmdate,111),10) < convert(VARCHAR(100),dateadd(dd,-day(getdate())+1,getdate()),111)
@@ -40,7 +40,7 @@ namespace C1491
                             WHERE A.cdrno=B.cdrno AND A.cusno=C.cusno AND A.mancode=D.userno AND B.itnbr=E.itnbr
                             AND A.depno=F.code AND F.ckind='GE'
                             AND ( A.hrecsta= 'Y' or A.hrecsta = 'C')  AND  (B.drecsta != '98' and B.drecsta != '99' and B.drecsta != '10')
-                            AND B.itnbrcus !=''  AND C.cusno NOT IN ('SGD00088','SCQ00146','SJS00254','SSD00107')
+                            AND B.n_code_DD ='00'  AND C.cusno NOT IN ('SGD00088','SCQ00146','SJS00254','SSD00107')
                             AND n.ckind='1R' AND B.dmark1=n.code
                             AND left(convert(varchar(30),A.cfmdate,111),10) >= CONVERT(CHAR(8), dateadd(month,-1,getdate()),111)+'01'
                                 AND left(convert(varchar(30),A.cfmdate,111),10) < convert(VARCHAR(100),dateadd(dd,-day(getdate())+1,getdate()),111)
@@ -53,7 +53,7 @@ namespace C1491
                             WHERE A.cdrno=B.cdrno AND A.cusno=C.cusno AND A.mancode=D.userno AND B.itnbr=E.itnbr
                             AND A.depno=F.code AND F.ckind='GE'
                             AND ( A.hrecsta= 'Y' or A.hrecsta = 'C')  AND  (B.drecsta != '98' and B.drecsta != '99' and B.drecsta != '10')
-                            AND B.itnbrcus !=''  AND C.cusno NOT IN ('SGD00088','SCQ00146','SJS00254','SSD00107')
+                            AND B.n_code_DD ='00'  AND C.cusno NOT IN ('SGD00088','SCQ00146','SJS00254','SSD00107')
                             AND n.ckind='1R' AND B.dmark1=n.code
                             AND left(convert(varchar(30),A.cfmdate,111),10) >= CONVERT(CHAR(8), dateadd(month,-1,getdate()),111)+'01'
                             AND left(convert(varchar(30),A.cfmdate,111),10) < convert(VARCHAR(100),dateadd(dd,-day(getdate())+1,getdate()),111) ";

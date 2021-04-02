@@ -30,6 +30,8 @@ namespace Hanbell.AutoReport.Config {
         
         private tramttlbDataTable tabletramttlb;
         
+        private ERPYFDataTable tableERPYF;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -66,6 +68,9 @@ namespace Hanbell.AutoReport.Config {
                 }
                 if ((ds.Tables["tramttlb"] != null)) {
                     base.Tables.Add(new tramttlbDataTable(ds.Tables["tramttlb"]));
+                }
+                if ((ds.Tables["ERPYF"] != null)) {
+                    base.Tables.Add(new ERPYFDataTable(ds.Tables["ERPYF"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -112,6 +117,16 @@ namespace Hanbell.AutoReport.Config {
         public tramttlbDataTable tramttlb {
             get {
                 return this.tabletramttlb;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public ERPYFDataTable ERPYF {
+            get {
+                return this.tableERPYF;
             }
         }
         
@@ -191,6 +206,9 @@ namespace Hanbell.AutoReport.Config {
                 if ((ds.Tables["tramttlb"] != null)) {
                     base.Tables.Add(new tramttlbDataTable(ds.Tables["tramttlb"]));
                 }
+                if ((ds.Tables["ERPYF"] != null)) {
+                    base.Tables.Add(new ERPYFDataTable(ds.Tables["ERPYF"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -242,6 +260,12 @@ namespace Hanbell.AutoReport.Config {
                     this.tabletramttlb.InitVars();
                 }
             }
+            this.tableERPYF = ((ERPYFDataTable)(base.Tables["ERPYF"]));
+            if ((initTable == true)) {
+                if ((this.tableERPYF != null)) {
+                    this.tableERPYF.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -258,6 +282,8 @@ namespace Hanbell.AutoReport.Config {
             base.Tables.Add(this.tableOAtlb);
             this.tabletramttlb = new tramttlbDataTable();
             base.Tables.Add(this.tabletramttlb);
+            this.tableERPYF = new ERPYFDataTable();
+            base.Tables.Add(this.tableERPYF);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -275,6 +301,12 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializetramttlb() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeERPYF() {
             return false;
         }
         
@@ -342,6 +374,9 @@ namespace Hanbell.AutoReport.Config {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void tramttlbRowChangeEventHandler(object sender, tramttlbRowChangeEvent e);
         
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void ERPYFRowChangeEventHandler(object sender, ERPYFRowChangeEvent e);
+        
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
@@ -349,17 +384,15 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class SRtlbDataTable : global::System.Data.TypedTableBase<SRtlbRow> {
             
-            private global::System.Data.DataColumn columnhmark2;
+            private global::System.Data.DataColumn columnBQ197;
             
-            private global::System.Data.DataColumn columnkfno;
+            private global::System.Data.DataColumn columnBQ001;
             
             private global::System.Data.DataColumn columntrno;
             
-            private global::System.Data.DataColumn columntrseq;
-            
             private global::System.Data.DataColumn columnresno;
             
-            private global::System.Data.DataColumn columncusds;
+            private global::System.Data.DataColumn columnBQ500;
             
             private global::System.Data.DataColumn columnitnbr;
             
@@ -373,13 +406,17 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn columnBQ023C;
             
-            private global::System.Data.DataColumn columnBQ133C;
+            private global::System.Data.DataColumn columnBQ504C;
             
             private global::System.Data.DataColumn columnpropotion;
             
+            private global::System.Data.DataColumn columnBQ002C;
+            
             private global::System.Data.DataColumn columnMY008;
             
-            private global::System.Data.DataColumn columnCUSTOMER;
+            private global::System.Data.DataColumn columntotal;
+            
+            private global::System.Data.DataColumn columnBQ501;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -416,17 +453,17 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn hmark2Column {
+            public global::System.Data.DataColumn BQ197Column {
                 get {
-                    return this.columnhmark2;
+                    return this.columnBQ197;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn kfnoColumn {
+            public global::System.Data.DataColumn BQ001Column {
                 get {
-                    return this.columnkfno;
+                    return this.columnBQ001;
                 }
             }
             
@@ -440,14 +477,6 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn trseqColumn {
-                get {
-                    return this.columntrseq;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn resnoColumn {
                 get {
                     return this.columnresno;
@@ -456,9 +485,9 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn cusdsColumn {
+            public global::System.Data.DataColumn BQ500Column {
                 get {
-                    return this.columncusds;
+                    return this.columnBQ500;
                 }
             }
             
@@ -512,9 +541,9 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BQ133CColumn {
+            public global::System.Data.DataColumn BQ504CColumn {
                 get {
-                    return this.columnBQ133C;
+                    return this.columnBQ504C;
                 }
             }
             
@@ -528,6 +557,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BQ002CColumn {
+                get {
+                    return this.columnBQ002C;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn MY008Column {
                 get {
                     return this.columnMY008;
@@ -536,9 +573,17 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CUSTOMERColumn {
+            public global::System.Data.DataColumn totalColumn {
                 get {
-                    return this.columnCUSTOMER;
+                    return this.columntotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BQ501Column {
+                get {
+                    return this.columnBQ501;
                 }
             }
             
@@ -580,40 +625,42 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public SRtlbRow AddSRtlbRow(
-                        string hmark2, 
-                        string kfno, 
+                        string BQ197, 
+                        string BQ001, 
                         string trno, 
-                        string trseq, 
                         string resno, 
-                        string cusds, 
+                        string BQ500, 
                         string itnbr, 
                         string itdsc, 
                         string varnr, 
                         string trnqy1, 
                         string tramt, 
                         string BQ023C, 
-                        string BQ133C, 
+                        string BQ504C, 
                         string propotion, 
+                        string BQ002C, 
                         string MY008, 
-                        string CUSTOMER) {
+                        string total, 
+                        string BQ501) {
                 SRtlbRow rowSRtlbRow = ((SRtlbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        hmark2,
-                        kfno,
+                        BQ197,
+                        BQ001,
                         trno,
-                        trseq,
                         resno,
-                        cusds,
+                        BQ500,
                         itnbr,
                         itdsc,
                         varnr,
                         trnqy1,
                         tramt,
                         BQ023C,
-                        BQ133C,
+                        BQ504C,
                         propotion,
+                        BQ002C,
                         MY008,
-                        CUSTOMER};
+                        total,
+                        BQ501};
                 rowSRtlbRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowSRtlbRow);
                 return rowSRtlbRow;
@@ -636,39 +683,38 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnhmark2 = base.Columns["hmark2"];
-                this.columnkfno = base.Columns["kfno"];
+                this.columnBQ197 = base.Columns["BQ197"];
+                this.columnBQ001 = base.Columns["BQ001"];
                 this.columntrno = base.Columns["trno"];
-                this.columntrseq = base.Columns["trseq"];
                 this.columnresno = base.Columns["resno"];
-                this.columncusds = base.Columns["cusds"];
+                this.columnBQ500 = base.Columns["BQ500"];
                 this.columnitnbr = base.Columns["itnbr"];
                 this.columnitdsc = base.Columns["itdsc"];
                 this.columnvarnr = base.Columns["varnr"];
                 this.columntrnqy1 = base.Columns["trnqy1"];
                 this.columntramt = base.Columns["tramt"];
                 this.columnBQ023C = base.Columns["BQ023C"];
-                this.columnBQ133C = base.Columns["BQ133C"];
+                this.columnBQ504C = base.Columns["BQ504C"];
                 this.columnpropotion = base.Columns["propotion"];
+                this.columnBQ002C = base.Columns["BQ002C"];
                 this.columnMY008 = base.Columns["MY008"];
-                this.columnCUSTOMER = base.Columns["CUSTOMER"];
+                this.columntotal = base.Columns["total"];
+                this.columnBQ501 = base.Columns["BQ501"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnhmark2 = new global::System.Data.DataColumn("hmark2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnhmark2);
-                this.columnkfno = new global::System.Data.DataColumn("kfno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnkfno);
+                this.columnBQ197 = new global::System.Data.DataColumn("BQ197", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ197);
+                this.columnBQ001 = new global::System.Data.DataColumn("BQ001", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ001);
                 this.columntrno = new global::System.Data.DataColumn("trno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntrno);
-                this.columntrseq = new global::System.Data.DataColumn("trseq", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntrseq);
                 this.columnresno = new global::System.Data.DataColumn("resno", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnresno);
-                this.columncusds = new global::System.Data.DataColumn("cusds", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncusds);
+                this.columnBQ500 = new global::System.Data.DataColumn("BQ500", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ500);
                 this.columnitnbr = new global::System.Data.DataColumn("itnbr", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnitnbr);
                 this.columnitdsc = new global::System.Data.DataColumn("itdsc", typeof(string), null, global::System.Data.MappingType.Element);
@@ -681,30 +727,35 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columntramt);
                 this.columnBQ023C = new global::System.Data.DataColumn("BQ023C", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBQ023C);
-                this.columnBQ133C = new global::System.Data.DataColumn("BQ133C", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBQ133C);
+                this.columnBQ504C = new global::System.Data.DataColumn("BQ504C", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ504C);
                 this.columnpropotion = new global::System.Data.DataColumn("propotion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpropotion);
+                this.columnBQ002C = new global::System.Data.DataColumn("BQ002C", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ002C);
                 this.columnMY008 = new global::System.Data.DataColumn("MY008", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMY008);
-                this.columnCUSTOMER = new global::System.Data.DataColumn("CUSTOMER", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCUSTOMER);
-                this.columnhmark2.Caption = "产品别";
-                this.columnkfno.Caption = "客诉单号";
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
+                this.columnBQ501 = new global::System.Data.DataColumn("BQ501", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ501);
+                this.columnBQ197.Caption = "产品别";
+                this.columnBQ001.Caption = "客诉单号";
                 this.columntrno.Caption = "單據編號";
-                this.columntrseq.Caption = "序列號";
                 this.columnresno.Caption = "原因代号";
-                this.columncusds.Caption = "客诉类别";
+                this.columnBQ500.Caption = "客诉类别";
                 this.columnitnbr.Caption = "件号";
                 this.columnitdsc.Caption = "件号名";
                 this.columnvarnr.Caption = "變動批號";
                 this.columntrnqy1.Caption = "數量";
                 this.columntramt.Caption = "材料費";
                 this.columnBQ023C.Caption = "客诉不良原因";
-                this.columnBQ133C.Caption = "责任单位";
+                this.columnBQ504C.Caption = "责任单位";
                 this.columnpropotion.Caption = "责任判定比率";
-                this.columnMY008.Caption = "客户名称";
-                this.columnCUSTOMER.Caption = "差旅费";
+                this.columnBQ002C.Caption = "客户名称";
+                this.columnMY008.Caption = "差旅费";
+                this.columntotal.Caption = "运费";
+                this.columnBQ501.Caption = "收费否";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -842,7 +893,7 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn columnBQ023C;
             
-            private global::System.Data.DataColumn columnBQ133C;
+            private global::System.Data.DataColumn columnBQ504C;
             
             private global::System.Data.DataColumn columnpropotion;
             
@@ -897,9 +948,9 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn BQ133CColumn {
+            public global::System.Data.DataColumn BQ504CColumn {
                 get {
-                    return this.columnBQ133C;
+                    return this.columnBQ504C;
                 }
             }
             
@@ -948,12 +999,12 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public OAtlbRow AddOAtlbRow(string BQ001, string BQ023C, string BQ133C, string propotion) {
+            public OAtlbRow AddOAtlbRow(string BQ001, string BQ023C, string BQ504C, string propotion) {
                 OAtlbRow rowOAtlbRow = ((OAtlbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         BQ001,
                         BQ023C,
-                        BQ133C,
+                        BQ504C,
                         propotion};
                 rowOAtlbRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOAtlbRow);
@@ -979,7 +1030,7 @@ namespace Hanbell.AutoReport.Config {
             internal void InitVars() {
                 this.columnBQ001 = base.Columns["BQ001"];
                 this.columnBQ023C = base.Columns["BQ023C"];
-                this.columnBQ133C = base.Columns["BQ133C"];
+                this.columnBQ504C = base.Columns["BQ504C"];
                 this.columnpropotion = base.Columns["propotion"];
             }
             
@@ -990,8 +1041,8 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columnBQ001);
                 this.columnBQ023C = new global::System.Data.DataColumn("BQ023C", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBQ023C);
-                this.columnBQ133C = new global::System.Data.DataColumn("BQ133C", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBQ133C);
+                this.columnBQ504C = new global::System.Data.DataColumn("BQ504C", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ504C);
                 this.columnpropotion = new global::System.Data.DataColumn("propotion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpropotion);
             }
@@ -1127,7 +1178,15 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tramttlbDataTable : global::System.Data.TypedTableBase<tramttlbRow> {
             
+            private global::System.Data.DataColumn columnfacno;
+            
+            private global::System.Data.DataColumn columnprono;
+            
+            private global::System.Data.DataColumn columntrno;
+            
             private global::System.Data.DataColumn columntramt;
+            
+            private global::System.Data.DataColumn columnitnbr;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1164,9 +1223,41 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn facnoColumn {
+                get {
+                    return this.columnfacno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn pronoColumn {
+                get {
+                    return this.columnprono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn trnoColumn {
+                get {
+                    return this.columntrno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn tramtColumn {
                 get {
                     return this.columntramt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn itnbrColumn {
+                get {
+                    return this.columnitnbr;
                 }
             }
             
@@ -1207,10 +1298,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tramttlbRow AddtramttlbRow(string tramt) {
+            public tramttlbRow AddtramttlbRow(string facno, string prono, string trno, string tramt, string itnbr) {
                 tramttlbRow rowtramttlbRow = ((tramttlbRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        tramt};
+                        facno,
+                        prono,
+                        trno,
+                        tramt,
+                        itnbr};
                 rowtramttlbRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtramttlbRow);
                 return rowtramttlbRow;
@@ -1233,14 +1328,26 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnfacno = base.Columns["facno"];
+                this.columnprono = base.Columns["prono"];
+                this.columntrno = base.Columns["trno"];
                 this.columntramt = base.Columns["tramt"];
+                this.columnitnbr = base.Columns["itnbr"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnfacno = new global::System.Data.DataColumn("facno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfacno);
+                this.columnprono = new global::System.Data.DataColumn("prono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprono);
+                this.columntrno = new global::System.Data.DataColumn("trno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntrno);
                 this.columntramt = new global::System.Data.DataColumn("tramt", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntramt);
+                this.columnitnbr = new global::System.Data.DataColumn("itnbr", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnitnbr);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1368,6 +1475,309 @@ namespace Hanbell.AutoReport.Config {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class ERPYFDataTable : global::System.Data.TypedTableBase<ERPYFRow> {
+            
+            private global::System.Data.DataColumn columnkfno;
+            
+            private global::System.Data.DataColumn columnfwno;
+            
+            private global::System.Data.DataColumn columntotal;
+            
+            private global::System.Data.DataColumn columncusno;
+            
+            private global::System.Data.DataColumn columncusna;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ERPYFDataTable() {
+                this.TableName = "ERPYF";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ERPYFDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected ERPYFDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn kfnoColumn {
+                get {
+                    return this.columnkfno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn fwnoColumn {
+                get {
+                    return this.columnfwno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn totalColumn {
+                get {
+                    return this.columntotal;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cusnoColumn {
+                get {
+                    return this.columncusno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn cusnaColumn {
+                get {
+                    return this.columncusna;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ERPYFRow this[int index] {
+                get {
+                    return ((ERPYFRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ERPYFRowChangeEventHandler ERPYFRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ERPYFRowChangeEventHandler ERPYFRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ERPYFRowChangeEventHandler ERPYFRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event ERPYFRowChangeEventHandler ERPYFRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddERPYFRow(ERPYFRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ERPYFRow AddERPYFRow(string kfno, string fwno, string total, string cusno, string cusna) {
+                ERPYFRow rowERPYFRow = ((ERPYFRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        kfno,
+                        fwno,
+                        total,
+                        cusno,
+                        cusna};
+                rowERPYFRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowERPYFRow);
+                return rowERPYFRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                ERPYFDataTable cln = ((ERPYFDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new ERPYFDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnkfno = base.Columns["kfno"];
+                this.columnfwno = base.Columns["fwno"];
+                this.columntotal = base.Columns["total"];
+                this.columncusno = base.Columns["cusno"];
+                this.columncusna = base.Columns["cusna"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnkfno = new global::System.Data.DataColumn("kfno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnkfno);
+                this.columnfwno = new global::System.Data.DataColumn("fwno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfwno);
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
+                this.columncusno = new global::System.Data.DataColumn("cusno", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncusno);
+                this.columncusna = new global::System.Data.DataColumn("cusna", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncusna);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ERPYFRow NewERPYFRow() {
+                return ((ERPYFRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new ERPYFRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(ERPYFRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.ERPYFRowChanged != null)) {
+                    this.ERPYFRowChanged(this, new ERPYFRowChangeEvent(((ERPYFRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.ERPYFRowChanging != null)) {
+                    this.ERPYFRowChanging(this, new ERPYFRowChangeEvent(((ERPYFRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.ERPYFRowDeleted != null)) {
+                    this.ERPYFRowDeleted(this, new ERPYFRowChangeEvent(((ERPYFRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.ERPYFRowDeleting != null)) {
+                    this.ERPYFRowDeleting(this, new ERPYFRowChangeEvent(((ERPYFRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveERPYFRow(ERPYFRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                StatisticalReportDS ds = new StatisticalReportDS();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "ERPYFDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class SRtlbRow : global::System.Data.DataRow {
@@ -1383,33 +1793,33 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string hmark2 {
+            public string BQ197 {
                 get {
                     try {
-                        return ((string)(this[this.tableSRtlb.hmark2Column]));
+                        return ((string)(this[this.tableSRtlb.BQ197Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“hmark2”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“BQ197”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableSRtlb.hmark2Column] = value;
+                    this[this.tableSRtlb.BQ197Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string kfno {
+            public string BQ001 {
                 get {
                     try {
-                        return ((string)(this[this.tableSRtlb.kfnoColumn]));
+                        return ((string)(this[this.tableSRtlb.BQ001Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“kfno”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“BQ001”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableSRtlb.kfnoColumn] = value;
+                    this[this.tableSRtlb.BQ001Column] = value;
                 }
             }
             
@@ -1431,22 +1841,6 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string trseq {
-                get {
-                    try {
-                        return ((string)(this[this.tableSRtlb.trseqColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“trseq”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tableSRtlb.trseqColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string resno {
                 get {
                     try {
@@ -1463,17 +1857,17 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string cusds {
+            public string BQ500 {
                 get {
                     try {
-                        return ((string)(this[this.tableSRtlb.cusdsColumn]));
+                        return ((string)(this[this.tableSRtlb.BQ500Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“cusds”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“BQ500”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableSRtlb.cusdsColumn] = value;
+                    this[this.tableSRtlb.BQ500Column] = value;
                 }
             }
             
@@ -1575,17 +1969,17 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string BQ133C {
+            public string BQ504C {
                 get {
                     try {
-                        return ((string)(this[this.tableSRtlb.BQ133CColumn]));
+                        return ((string)(this[this.tableSRtlb.BQ504CColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“BQ133C”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“BQ504C”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableSRtlb.BQ133CColumn] = value;
+                    this[this.tableSRtlb.BQ504CColumn] = value;
                 }
             }
             
@@ -1607,6 +2001,22 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BQ002C {
+                get {
+                    try {
+                        return ((string)(this[this.tableSRtlb.BQ002CColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“BQ002C”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableSRtlb.BQ002CColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string MY008 {
                 get {
                     try {
@@ -1623,42 +2033,58 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string CUSTOMER {
+            public string total {
                 get {
                     try {
-                        return ((string)(this[this.tableSRtlb.CUSTOMERColumn]));
+                        return ((string)(this[this.tableSRtlb.totalColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“CUSTOMER”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“total”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableSRtlb.CUSTOMERColumn] = value;
+                    this[this.tableSRtlb.totalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Ishmark2Null() {
-                return this.IsNull(this.tableSRtlb.hmark2Column);
+            public string BQ501 {
+                get {
+                    try {
+                        return ((string)(this[this.tableSRtlb.BQ501Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“SRtlb”中列“BQ501”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableSRtlb.BQ501Column] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Sethmark2Null() {
-                this[this.tableSRtlb.hmark2Column] = global::System.Convert.DBNull;
+            public bool IsBQ197Null() {
+                return this.IsNull(this.tableSRtlb.BQ197Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IskfnoNull() {
-                return this.IsNull(this.tableSRtlb.kfnoColumn);
+            public void SetBQ197Null() {
+                this[this.tableSRtlb.BQ197Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetkfnoNull() {
-                this[this.tableSRtlb.kfnoColumn] = global::System.Convert.DBNull;
+            public bool IsBQ001Null() {
+                return this.IsNull(this.tableSRtlb.BQ001Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBQ001Null() {
+                this[this.tableSRtlb.BQ001Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1675,18 +2101,6 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IstrseqNull() {
-                return this.IsNull(this.tableSRtlb.trseqColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SettrseqNull() {
-                this[this.tableSRtlb.trseqColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsresnoNull() {
                 return this.IsNull(this.tableSRtlb.resnoColumn);
             }
@@ -1699,14 +2113,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IscusdsNull() {
-                return this.IsNull(this.tableSRtlb.cusdsColumn);
+            public bool IsBQ500Null() {
+                return this.IsNull(this.tableSRtlb.BQ500Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetcusdsNull() {
-                this[this.tableSRtlb.cusdsColumn] = global::System.Convert.DBNull;
+            public void SetBQ500Null() {
+                this[this.tableSRtlb.BQ500Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1783,14 +2197,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBQ133CNull() {
-                return this.IsNull(this.tableSRtlb.BQ133CColumn);
+            public bool IsBQ504CNull() {
+                return this.IsNull(this.tableSRtlb.BQ504CColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBQ133CNull() {
-                this[this.tableSRtlb.BQ133CColumn] = global::System.Convert.DBNull;
+            public void SetBQ504CNull() {
+                this[this.tableSRtlb.BQ504CColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1807,6 +2221,18 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBQ002CNull() {
+                return this.IsNull(this.tableSRtlb.BQ002CColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBQ002CNull() {
+                this[this.tableSRtlb.BQ002CColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMY008Null() {
                 return this.IsNull(this.tableSRtlb.MY008Column);
             }
@@ -1819,14 +2245,26 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsCUSTOMERNull() {
-                return this.IsNull(this.tableSRtlb.CUSTOMERColumn);
+            public bool IstotalNull() {
+                return this.IsNull(this.tableSRtlb.totalColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetCUSTOMERNull() {
-                this[this.tableSRtlb.CUSTOMERColumn] = global::System.Convert.DBNull;
+            public void SettotalNull() {
+                this[this.tableSRtlb.totalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsBQ501Null() {
+                return this.IsNull(this.tableSRtlb.BQ501Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetBQ501Null() {
+                this[this.tableSRtlb.BQ501Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -1878,17 +2316,17 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string BQ133C {
+            public string BQ504C {
                 get {
                     try {
-                        return ((string)(this[this.tableOAtlb.BQ133CColumn]));
+                        return ((string)(this[this.tableOAtlb.BQ504CColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“OAtlb”中列“BQ133C”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“OAtlb”中列“BQ504C”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tableOAtlb.BQ133CColumn] = value;
+                    this[this.tableOAtlb.BQ504CColumn] = value;
                 }
             }
             
@@ -1934,14 +2372,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsBQ133CNull() {
-                return this.IsNull(this.tableOAtlb.BQ133CColumn);
+            public bool IsBQ504CNull() {
+                return this.IsNull(this.tableOAtlb.BQ504CColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetBQ133CNull() {
-                this[this.tableOAtlb.BQ133CColumn] = global::System.Convert.DBNull;
+            public void SetBQ504CNull() {
+                this[this.tableOAtlb.BQ504CColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1973,6 +2411,54 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string facno {
+                get {
+                    try {
+                        return ((string)(this[this.tabletramttlb.facnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tramttlb”中列“facno”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletramttlb.facnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string prono {
+                get {
+                    try {
+                        return ((string)(this[this.tabletramttlb.pronoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tramttlb”中列“prono”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletramttlb.pronoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string trno {
+                get {
+                    try {
+                        return ((string)(this[this.tabletramttlb.trnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tramttlb”中列“trno”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletramttlb.trnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string tramt {
                 get {
                     try {
@@ -1989,6 +2475,58 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string itnbr {
+                get {
+                    try {
+                        return ((string)(this[this.tabletramttlb.itnbrColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tramttlb”中列“itnbr”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletramttlb.itnbrColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfacnoNull() {
+                return this.IsNull(this.tabletramttlb.facnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfacnoNull() {
+                this[this.tabletramttlb.facnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IspronoNull() {
+                return this.IsNull(this.tabletramttlb.pronoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetpronoNull() {
+                this[this.tabletramttlb.pronoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstrnoNull() {
+                return this.IsNull(this.tabletramttlb.trnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettrnoNull() {
+                this[this.tabletramttlb.trnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IstramtNull() {
                 return this.IsNull(this.tabletramttlb.tramtColumn);
             }
@@ -1997,6 +2535,173 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SettramtNull() {
                 this[this.tabletramttlb.tramtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsitnbrNull() {
+                return this.IsNull(this.tabletramttlb.itnbrColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetitnbrNull() {
+                this[this.tabletramttlb.itnbrColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class ERPYFRow : global::System.Data.DataRow {
+            
+            private ERPYFDataTable tableERPYF;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal ERPYFRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableERPYF = ((ERPYFDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string kfno {
+                get {
+                    try {
+                        return ((string)(this[this.tableERPYF.kfnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“ERPYF”中列“kfno”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableERPYF.kfnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string fwno {
+                get {
+                    try {
+                        return ((string)(this[this.tableERPYF.fwnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“ERPYF”中列“fwno”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableERPYF.fwnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string total {
+                get {
+                    try {
+                        return ((string)(this[this.tableERPYF.totalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“ERPYF”中列“total”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableERPYF.totalColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cusno {
+                get {
+                    try {
+                        return ((string)(this[this.tableERPYF.cusnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“ERPYF”中列“cusno”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableERPYF.cusnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string cusna {
+                get {
+                    try {
+                        return ((string)(this[this.tableERPYF.cusnaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“ERPYF”中列“cusna”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tableERPYF.cusnaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IskfnoNull() {
+                return this.IsNull(this.tableERPYF.kfnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetkfnoNull() {
+                this[this.tableERPYF.kfnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsfwnoNull() {
+                return this.IsNull(this.tableERPYF.fwnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetfwnoNull() {
+                this[this.tableERPYF.fwnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IstotalNull() {
+                return this.IsNull(this.tableERPYF.totalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SettotalNull() {
+                this[this.tableERPYF.totalColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscusnoNull() {
+                return this.IsNull(this.tableERPYF.cusnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcusnoNull() {
+                this[this.tableERPYF.cusnoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IscusnaNull() {
+                return this.IsNull(this.tableERPYF.cusnaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetcusnaNull() {
+                this[this.tableERPYF.cusnaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2088,6 +2793,40 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tramttlbRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class ERPYFRowChangeEvent : global::System.EventArgs {
+            
+            private ERPYFRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ERPYFRowChangeEvent(ERPYFRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public ERPYFRow Row {
                 get {
                     return this.eventRow;
                 }

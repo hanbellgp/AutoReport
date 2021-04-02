@@ -18,6 +18,7 @@ namespace Hanbell.AutoReport.Config
             nc.InitData();
             nc.ConfigData();
             DataTable dt = nc.GetDataTable("dbtlb");
+            this.content = GetContentHead() + GetContentFooter();
             if (dt.Rows.Count > 0 && dt.Rows.Count > 0)
             {
                 string fileFullName = Base.GetServiceInstallPath() + "\\Data\\" + "生产性物料周转天数报表" + DateTime.Now.ToString("yyyy-MM-dd") + ".xlsx";

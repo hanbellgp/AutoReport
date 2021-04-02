@@ -50,7 +50,7 @@ namespace Hanbell.AutoReport.EFGP
                 tbl.Columns.Remove("dept");
                 if (tbl.Rows.Count > 0)
                 {
-                    table2 = "以下单据已超过5天,请向柯总说明原因!<br/>" + GetHTMLTable(tbl, null, null);
+                    table2 = "以下单据已超过5天,请向柯副董说明原因!<br/>" + GetHTMLTable(tbl, null, null);
                 }
                 else
                 {

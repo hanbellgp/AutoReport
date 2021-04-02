@@ -27,8 +27,8 @@ namespace Hanbell.AutoReport.Config
             ncHanson.InitData();
             ncHanson.ConfigData();
 
-            string[] title = { "年度", "厂商代号", "厂商简称", "上月采购金额(万元)", "上月排名", "年度累计采购金额(万元)", "年度排名", "同期累计采购金额(万元)", "同期排名", "去年总采购金额(万元)", "去年排名", "較去年成長金額", "成长率" };
-            int[] width = { 80, 150, 150, 100, 70, 150, 70, 200, 70, 150, 70,100,60 };
+            string[] title = { "年度", "厂商代号", "厂商简称", "上月采购金额(万元)", "上月排名", "年度累计采购金额(万元)", "年度排名", "同期累计采购金额(万元)", "同期排名", "去年总采购金额(万元)", "去年排名", "較去年成長金額", "成长率", "厂商类别" };
+            int[] width = { 80, 150,150, 100, 70, 150, 70, 200, 70, 150, 70,100,60,120 };
             DataTable dt1 = nc.GetDataTable("ndcgpm");
             DataTable dt2 = ncComer.GetDataTable("ndcgpm");
             DataTable dt3 = ncHanson.GetDataTable("ndcgpm");
@@ -77,11 +77,14 @@ namespace Hanbell.AutoReport.Config
                     item["ly_grower"] = "<font color=red>" + item["ly_grower"] + "</font>";
                 }
             }
-
             dt1.AcceptChanges();
             dt2.AcceptChanges();
             dt3.AcceptChanges();
-            this.content = GetContent(dt1, dt2, dt3, title, width);
+            DataTable cdt = addType(dt1, "C");
+            DataTable kdt = addType(dt2, "K");
+            DataTable hdt = addType(dt3, "H");
+
+            this.content = GetContent(cdt, kdt, hdt, title, width);
             if (nc.GetDataTable("ndcgpm").Rows.Count > 0 && ncComer.GetDataTable("ndcgpm").Rows.Count > 0)
             {
                 AddNotify(new MailNotify());
@@ -119,6 +122,34 @@ namespace Hanbell.AutoReport.Config
             sb.Append(GetHTMLTable(tbl3, title, width));
             sb.Append(GetContentFooter());
             return sb.ToString();
+        }
+
+        public DataTable addType(DataTable dt,string facno) 
+        {
+            //<--2021/1/26增加厂商类别
+            dt.Columns.Add("type", System.Type.GetType("System.String"));//插入新列
+            DataTable dtType = getVdrType(facno);//拿到有厂商类别的dt
+            foreach (DataRow item in dt.Rows)
+            {
+                DataRow[] typeRow = dtType.Select("vdrno='" + item["vdrno"].ToString() + "'");//拿到这个厂商的类型集合
+                if (typeRow != null)
+                {
+                    string[] a = typeRow.Select(row => row["Name"].ToString()).ToArray();//DataRow[] 转成 string[]
+                    string type = string.Join(";", a);//转成string字符串
+                    item["type"] = type;
+                }
+            }
+            return dt;
+        }
+
+        protected DataTable getVdrType(string facno)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(" SELECT DISTINCT a.Vdrno,c.Name FROM EC_SupErpNo a LEFT JOIN EC_STypeVdr b ");
+            sb.Append(" ON a.SID=b.SID ");
+            sb.Append(" LEFT JOIN EC_STypeA c ON b.STAID=c.STAID ");
+            sb.Append(" WHERE a.Facno='{0}' AND a.Vdrno IS NOT NULL and c.Name is not null ");
+            return nc.GetQueryTable(DBServerType.MSSQL, Base.GetDBConnectionString("SHBTMS"), string.Format(sb.ToString(),facno));
         }
 
     }

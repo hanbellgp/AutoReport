@@ -23,7 +23,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select c.facno, c.protype as  protype, 0 as trnqys1, c.mb , 0 as cy , ");
             sb.Append(" c.trnqys1 as  trnqys2,0 as trnqys3 ,0 as trnqys4,0 as trnqys5,0 as trnqys6,'台' as dw from ( ");
             sb.Append(" select b.facno, b.protype, b.trnqys1, ");
-            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20 when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
+            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20 when '离心机体' then 20 when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
             sb.Append(" from ( select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( select isnull(sum(onhand1),0) as trnqys1,itcls, ");
             sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280') then 'R制冷' ");
             sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586','3589','3590') then 'A机组' ");
@@ -64,7 +64,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" group by itcls  ");
             sb.Append(" )as a where a.protype <>'其他' ");
             sb.Append(" GROUP BY a.protype ");
-            //柯茂
+            //上海柯茂
             sb.Append(" UNION ALL ");
             sb.Append(" select  '柯茂' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls, ");
@@ -76,6 +76,9 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" and wareh in ('W01' ,'FTW01') ");
             sb.Append(" group by itcls ");
             sb.Append(" )as a where a.protype <>'其他'  GROUP BY a.protype ");
+            //浙江柯茂
+
+
             sb.Append(" ) as b ");
             sb.Append(" ) as c ORDER BY c.facno,c.protype ");
             Fill(sb.ToString(),ds,"zbtlb1");

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="StockAndInProcessDS" targetNamespace="http://tempuri.org/StockAndInProcessDS.xsd" xmlns:mstns="http://tempuri.org/StockAndInProcessDS.xsd" xmlns="http://tempuri.org/StockAndInProcessDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="StockAndInProcessDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="StockAndInProcessDS" msprop:Generator_UserDSName="StockAndInProcessDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl" msprop:Generator_TableClassName="tblDataTable" msprop:Generator_TableVarName="tabletbl" msprop:Generator_RowChangedName="tblRowChanged" msprop:Generator_TablePropName="tbl" msprop:Generator_RowDeletingName="tblRowDeleting" msprop:Generator_RowChangingName="tblRowChanging" msprop:Generator_RowEvHandlerName="tblRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRowDeleted" msprop:Generator_RowClassName="tblRow" msprop:Generator_UserTableName="tbl" msprop:Generator_RowEvArgName="tblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cmcmodel" msdata:Caption="机型别" msprop:Generator_ColumnVarNameInTable="columncmcmodel" msprop:Generator_ColumnPropNameInRow="cmcmodel" msprop:Generator_ColumnPropNameInTable="cmcmodelColumn" msprop:Generator_UserColumnName="cmcmodel" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="件号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="FSFL" msdata:Caption="FSFL涡旋领料站" msprop:Generator_ColumnVarNameInTable="columnFSFL" msprop:Generator_ColumnPropNameInRow="FSFL" msprop:Generator_ColumnPropNameInTable="FSFLColumn" msprop:Generator_UserColumnName="FSFL" type="xs:long" minOccurs="0" />
+              <xs:element name="FSSC" msdata:Caption="FSSC涡旋试车站" msprop:Generator_ColumnVarNameInTable="columnFSSC" msprop:Generator_ColumnPropNameInRow="FSSC" msprop:Generator_ColumnPropNameInTable="FSSCColumn" msprop:Generator_UserColumnName="FSSC" type="xs:long" minOccurs="0" />
+              <xs:element name="FSJY" msdata:Caption="FSJY涡旋入库检验站" msprop:Generator_ColumnVarNameInTable="columnFSJY" msprop:Generator_ColumnPropNameInRow="FSJY" msprop:Generator_ColumnPropNameInTable="FSJYColumn" msprop:Generator_UserColumnName="FSJY" type="xs:long" minOccurs="0" />
+              <xs:element name="EW01" msprop:Generator_ColumnVarNameInTable="columnEW01" msprop:Generator_ColumnPropNameInRow="EW01" msprop:Generator_ColumnPropNameInTable="EW01Column" msprop:Generator_UserColumnName="EW01" type="xs:long" minOccurs="0" />
+              <xs:element name="total" msdata:Caption="合计" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

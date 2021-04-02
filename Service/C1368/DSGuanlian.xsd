@@ -12,7 +12,7 @@
   <xs:element name="DSGuanlian" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSGuanlian" msprop:Generator_UserDSName="DSGuanlian">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="result" msprop:Generator_TableClassName="resultDataTable" msprop:Generator_TableVarName="tableresult" msprop:Generator_RowChangedName="resultRowChanged" msprop:Generator_TablePropName="result" msprop:Generator_RowDeletingName="resultRowDeleting" msprop:Generator_RowChangingName="resultRowChanging" msprop:Generator_RowEvHandlerName="resultRowChangeEventHandler" msprop:Generator_RowDeletedName="resultRowDeleted" msprop:Generator_RowClassName="resultRow" msprop:Generator_UserTableName="result" msprop:Generator_RowEvArgName="resultRowChangeEvent">
+        <xs:element name="result" msprop:Generator_TableClassName="resultDataTable" msprop:Generator_TableVarName="tableresult" msprop:Generator_TablePropName="result" msprop:Generator_RowDeletingName="resultRowDeleting" msprop:Generator_RowChangingName="resultRowChanging" msprop:Generator_RowEvHandlerName="resultRowChangeEventHandler" msprop:Generator_RowDeletedName="resultRowDeleted" msprop:Generator_UserTableName="result" msprop:Generator_RowChangedName="resultRowChanged" msprop:Generator_RowEvArgName="resultRowChangeEvent" msprop:Generator_RowClassName="resultRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="shpno" msprop:Generator_ColumnVarNameInTable="columnshpno" msprop:Generator_ColumnPropNameInRow="shpno" msprop:Generator_ColumnPropNameInTable="shpnoColumn" msprop:Generator_UserColumnName="shpno" type="xs:string" minOccurs="0" />
@@ -45,6 +45,9 @@
               <xs:element name="ddcose" msprop:Generator_ColumnVarNameInTable="columnddcose" msprop:Generator_ColumnPropNameInRow="ddcose" msprop:Generator_ColumnPropNameInTable="ddcoseColumn" msprop:Generator_UserColumnName="ddcose" type="xs:string" minOccurs="0" />
               <xs:element name="dmark1" msprop:Generator_ColumnVarNameInTable="columndmark1" msprop:Generator_ColumnPropNameInRow="dmark1" msprop:Generator_ColumnPropNameInTable="dmark1Column" msprop:Generator_UserColumnName="dmark1" type="xs:string" minOccurs="0" />
               <xs:element name="protype" msprop:Generator_ColumnVarNameInTable="columnprotype" msprop:Generator_ColumnPropNameInRow="protype" msprop:Generator_ColumnPropNameInTable="protypeColumn" msprop:Generator_UserColumnName="protype" type="xs:string" minOccurs="0" />
+              <xs:element name="address1" msprop:Generator_ColumnVarNameInTable="columnaddress1" msprop:Generator_ColumnPropNameInRow="address1" msprop:Generator_ColumnPropNameInTable="address1Column" msprop:Generator_UserColumnName="address1" type="xs:string" minOccurs="0" />
+              <xs:element name="address2" msprop:Generator_ColumnVarNameInTable="columnaddress2" msprop:Generator_ColumnPropNameInRow="address2" msprop:Generator_ColumnPropNameInTable="address2Column" msprop:Generator_UserColumnName="address2" type="xs:string" minOccurs="0" />
+              <xs:element name="address3" msprop:Generator_ColumnVarNameInTable="columnaddress3" msprop:Generator_ColumnPropNameInRow="address3" msprop:Generator_ColumnPropNameInTable="address3Column" msprop:Generator_UserColumnName="address3" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

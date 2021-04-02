@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C0160", "C0160\C0160.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C1491", "C1491\C1491.csproj", "{87841823-6334-4257-988E-3DA89B1CC76A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C1900", "C1900\C1900.csproj", "{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -407,6 +409,31 @@ Global
 		{87841823-6334-4257-988E-3DA89B1CC76A}.SingleImage|Mixed Platforms.Build.0 = Release|x86
 		{87841823-6334-4257-988E-3DA89B1CC76A}.SingleImage|x86.ActiveCfg = Release|x86
 		{87841823-6334-4257-988E-3DA89B1CC76A}.SingleImage|x86.Build.0 = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.CD_ROM|Any CPU.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.CD_ROM|Mixed Platforms.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.CD_ROM|Mixed Platforms.Build.0 = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.CD_ROM|x86.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.CD_ROM|x86.Build.0 = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Debug|x86.ActiveCfg = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Debug|x86.Build.0 = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.DVD-5|Any CPU.ActiveCfg = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.DVD-5|Mixed Platforms.ActiveCfg = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.DVD-5|Mixed Platforms.Build.0 = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.DVD-5|x86.ActiveCfg = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.DVD-5|x86.Build.0 = Debug|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Release|Any CPU.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Release|Mixed Platforms.Build.0 = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Release|x86.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.Release|x86.Build.0 = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.SingleImage|Any CPU.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.SingleImage|Mixed Platforms.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.SingleImage|Mixed Platforms.Build.0 = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.SingleImage|x86.ActiveCfg = Release|x86
+		{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}.SingleImage|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

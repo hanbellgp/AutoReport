@@ -20,7 +20,8 @@ namespace Hanbell.AutoReport.Config
         {
 
             StringBuilder sqlStr = new StringBuilder();
-            sqlStr.Append(" select (SELECT ME002 FROM CMSME WHERE ME001=BQ017) as '责任部门',BQ198 as '区域别',(SELECT EL002 FROM SALEL WHERE EL001=BQ197) as '产品别',");
+            sqlStr.Append(" select SERBQ.CREATOR,(select MV002 from CMSMV where MV001= SERBQ.CREATOR) as CREATORNAME, ");
+            sqlStr.Append("  BQ017,(SELECT ME002 FROM CMSME WHERE ME001=BQ017) as '部门简称',BQ198 as '区域别',(SELECT EL002 FROM SALEL WHERE EL001=BQ197) as '产品别',");
             sqlStr.Append("  BQ001 as '案件编号',BQ002 as '客户代号',(SELECT GG003 FROM CRMGG WHERE GG001=BQ002) as '客户简称',");
             sqlStr.Append("  CA009 as '产品序号',");
             sqlStr.Append(" CASE WHEN BQ500=1 THEN '客户投诉'");
@@ -53,10 +54,10 @@ namespace Hanbell.AutoReport.Config
             sqlStr.Append(" DATEADD(day, -7, getdate())");
 
             sqlStr.Append(" UNION ALL");
-
-            sqlStr.Append(" select (SELECT ME002 FROM CMSME WHERE ME001=BQ017) as '责任部门',BQ198 as '区域别',(SELECT EL002 FROM SALEL WHERE EL001=BQ197) as '产品别',");
-            sqlStr.Append("  BQ001 as '案件编号',BQ002 as '客户代号',(SELECT GG003 FROM CRMGG WHERE GG001=BQ002) as '客户简称',");
-            sqlStr.Append("  CA009 as '产品序号',");
+            sqlStr.Append(" select SERBQ.CREATOR,(select MV002 from CMSMV where MV001= SERBQ.CREATOR) as CREATORNAME, ");
+            sqlStr.Append(" BQ017,(SELECT ME002 FROM CMSME WHERE ME001=BQ017) as '部门简称',BQ198 as '区域别',(SELECT EL002 FROM SALEL WHERE EL001=BQ197) as '产品别',");
+            sqlStr.Append(" BQ001 as '案件编号',BQ002 as '客户代号',(SELECT GG003 FROM CRMGG WHERE GG001=BQ002) as '客户简称',");
+            sqlStr.Append(" CA009 as '产品序号',");
             sqlStr.Append(" CASE WHEN BQ500=1 THEN '客户投诉'");
             sqlStr.Append("  WHEN BQ500=2 THEN '赠送'");
             sqlStr.Append("  WHEN BQ500=3 THEN '技术支持'");

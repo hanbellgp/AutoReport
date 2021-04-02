@@ -20,631 +20,629 @@ namespace Hanbell.AutoReport.Config
 
         public override void InitData()
         {
-            string sqlstr = @"select x.*
-from 
+            string sqlstr = @"
+select x.*
+from
 (
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   gzerp..cdrhad a, gzerp..cdrdta b, gzerp..cdrhmas c, gzerp..cdrcus d, gzerp..cdrdmas e,  gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.houtsta = 'Y') 
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   gzerp..cdrhad a, gzerp..cdrdta b, gzerp..cdrhmas c, gzerp..cdrcus d, gzerp..cdrdmas e
+   LEFT JOIN gzerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq
+   ,  gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.houtsta = 'Y')
 and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 space(4) as cuspono,space(8) as tocdrno,a.hmark2,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
+      end )  as protype,'' as spdesc,'' as spdesc2
  FROM   gzerp..cdrhad a, gzerp..cdrdta b, gzerp..cdrcus d,   gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.houtsta = 'Y') 
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.houtsta = 'Y')
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 and b.cdrno='9'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   cqerp..cdrhad a, cqerp..cdrdta b, cqerp..cdrhmas c, cqerp..cdrcus d, cqerp..cdrdmas e,  cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.houtsta = 'Y') 
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   cqerp..cdrhad a, cqerp..cdrdta b, cqerp..cdrhmas c, cqerp..cdrcus d, cqerp..cdrdmas e
+   LEFT JOIN cqerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+   cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.houtsta = 'Y')
 and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 space(4) as cuspono,space(8) as tocdrno,a.hmark2,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
+      end )  as protype,'' as spdesc,'' as spdesc2
  FROM   cqerp..cdrhad a, cqerp..cdrdta b, cqerp..cdrcus d,   cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
 AND (
 convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
 
- and a.houtsta = 'Y') 
+ and a.houtsta = 'Y')
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 and b.cdrno='9'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   njerp..cdrhad a, njerp..cdrdta b, njerp..cdrhmas c, njerp..cdrcus d,njerp..cdrdmas e,  njerp..invmas  s,njerp..misdept f,njerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.houtsta = 'Y') 
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   njerp..cdrhad a, njerp..cdrdta b, njerp..cdrhmas c, njerp..cdrcus d,njerp..cdrdmas e
+   LEFT JOIN njerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+     njerp..invmas  s,njerp..misdept f,njerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.houtsta = 'Y')
 and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 space(4) as cuspono,space(8) as tocdrno,a.hmark2,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
+      end )  as protype,'' as spdesc,'' as spdesc2
  FROM   njerp..cdrhad a, njerp..cdrdta b, njerp..cdrcus d,   njerp..invmas  s,njerp..misdept f,njerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.houtsta = 'Y') 
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.houtsta = 'Y')
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 and b.cdrno='9'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   jnerp..cdrhad a, jnerp..cdrdta b, jnerp..cdrhmas c, jnerp..cdrcus d,jnerp..cdrdmas e,  jnerp..invmas  s,jnerp..misdept f,jnerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.shpdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.houtsta = 'Y') 
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   jnerp..cdrhad a, jnerp..cdrdta b, jnerp..cdrhmas c, jnerp..cdrcus d,jnerp..cdrdmas e
+   LEFT JOIN jnerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+   jnerp..invmas  s,jnerp..misdept f,jnerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.shpdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.houtsta = 'Y')
 and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 space(4) as cuspono,space(8) as tocdrno,a.hmark2,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
+      end )  as protype,'' as spdesc,'' as spdesc2
  FROM   jnerp..cdrhad a, jnerp..cdrdta b, jnerp..cdrcus d,   jnerp..invmas  s,jnerp..misdept f,jnerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
 AND (
 convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
 
- and a.houtsta = 'Y') 
+ and a.houtsta = 'Y')
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 and b.cdrno='9'
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   cdrhad a, cdrdta b, cdrhmas c, cdrcus d, cdrdmas e, invmas  s,misdept f,secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   cdrhad a, cdrdta b, cdrhmas c, cdrcus d, cdrdmas e
+   LEFT JOIN cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+  invmas  s,misdept f,secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
 and a.houtsta = 'Y') and a.cusno not in ('SGD00088','SJS00254','SSD00107')
 and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 
 union all
-SELECT     
-     a.shpno ,       
+SELECT
+     a.shpno ,
     a.shpdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.ctrseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris ,     
-      b.armqy ,      
-     b.shpamts ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.ctrseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris ,
+      b.armqy ,
+     b.shpamts ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 space(4) as cuspono,space(8) as tocdrno,a.hmark2,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
+      end )  as protype,'' as spdesc,'' as spdesc2
  FROM   cdrhad a, cdrdta b, cdrcus d,   invmas  s,misdept f,secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.shpno = b.shpno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.shpno = b.shpno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
 AND (
 convert(varchar(6),a.shpdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
 
- and a.houtsta = 'Y') 
+ and a.houtsta = 'Y')
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 and b.cdrno='9'
 union all
-SELECT     
-     a.bakno ,       
+SELECT
+     a.bakno ,
     a.bakdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.strseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris*(-1) ,     
-      b.bshpqy1*(-1) ,      
-     b.bakamts*(-1) ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.strseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris*(-1) ,
+      b.bshpqy1*(-1) ,
+     b.bakamts*(-1) ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   gzerp..cdrbhad a, gzerp..cdrbdta b, gzerp..cdrhmas c, gzerp..cdrcus d, gzerp..cdrdmas e, gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.bakno = b.bakno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.baksta = 'Y') 
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   gzerp..cdrbhad a, gzerp..cdrbdta b, gzerp..cdrhmas c, gzerp..cdrcus d, gzerp..cdrdmas e
+   LEFT JOIN gzerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+   gzerp..invmas  s,gzerp..misdept f,gzerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.bakno = b.bakno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.baksta = 'Y')
+and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
+and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
+union all
+SELECT
+     a.bakno ,
+    a.bakdate ,
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.strseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris*(-1) ,
+      b.bshpqy1*(-1) ,
+     b.bakamts*(-1) ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
+  case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
+ then s.unmsr3 end as cp_armunmsr   ,
+c.cuspono,c.tocdrno,e.dmark1,
+(case when b.n_code_DC in ('L') then '冷冻'
+      when b.n_code_DC in ('R') then '空调'
+      when b.n_code_DC in ('H') then '热泵'
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   cqerp..cdrbhad a, cqerp..cdrbdta b, cqerp..cdrhmas c, cqerp..cdrcus d, cqerp..cdrdmas e
+   LEFT JOIN cqerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+   cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.bakno = b.bakno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.baksta = 'Y')
 and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 
 union all
-SELECT     
-     a.bakno ,       
+SELECT
+     a.bakno ,
     a.bakdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.strseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris*(-1) ,     
-      b.bshpqy1*(-1) ,      
-     b.bakamts*(-1) ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.strseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris*(-1) ,
+      b.bshpqy1*(-1) ,
+     b.bakamts*(-1) ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   cqerp..cdrbhad a, cqerp..cdrbdta b, cqerp..cdrhmas c, cqerp..cdrcus d, cqerp..cdrdmas e, cqerp..invmas  s,cqerp..misdept f,cqerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.bakno = b.bakno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.baksta = 'Y') 
-and c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
-and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
-
-union all
-SELECT     
-     a.bakno ,       
-    a.bakdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.strseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris*(-1) ,     
-      b.bshpqy1*(-1) ,      
-     b.bakamts*(-1) ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
-  case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
- then s.unmsr3 end as cp_armunmsr   ,
-c.cuspono,c.tocdrno,e.dmark1,
-(case when b.n_code_DC in ('L') then '冷冻'
-      when b.n_code_DC in ('R') then '空调'
-      when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   njerp..cdrbhad a, njerp..cdrbdta b, njerp..cdrhmas c, njerp..cdrcus d, njerp..cdrdmas e, njerp..invmas  s,njerp..misdept f,njerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.bakno = b.bakno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.baksta = 'Y') 
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   njerp..cdrbhad a, njerp..cdrbdta b, njerp..cdrhmas c, njerp..cdrcus d, njerp..cdrdmas e
+   LEFT JOIN njerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+    njerp..invmas  s,njerp..misdept f,njerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.bakno = b.bakno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.baksta = 'Y')
 and  c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 
 union all
-SELECT     
-     a.bakno ,       
+SELECT
+     a.bakno ,
     a.bakdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.strseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris*(-1) ,     
-      b.bshpqy1*(-1) ,      
-     b.bakamts*(-1) ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.strseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris*(-1) ,
+      b.bshpqy1*(-1) ,
+     b.bakamts*(-1) ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   jnerp..cdrbhad a, jnerp..cdrbdta b, jnerp..cdrhmas c, jnerp..cdrcus d, jnerp..cdrdmas e, jnerp..invmas s,jnerp..misdept f,jnerp..secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.bakno = b.bakno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
-
- and a.baksta = 'Y') 
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   jnerp..cdrbhad a, jnerp..cdrbdta b, jnerp..cdrhmas c, jnerp..cdrcus d, jnerp..cdrdmas e
+   LEFT JOIN jnerp..cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+   jnerp..invmas s,jnerp..misdept f,jnerp..secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.bakno = b.bakno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.bakdate,112) = convert(varchar(6),dateadd(month,-1,getdate()),112)
+ and a.baksta = 'Y')
 and  c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 
 union all
-SELECT     
-     a.bakno ,       
+SELECT
+     a.bakno ,
     a.bakdate ,
-	 a.depno,  
-	f.depname,  
-       a.cusno ,       
-    a.coin ,     
-      a.ratio ,   
-        b.trseq ,   
-        b.cdrno ,        
-   b.strseq ,      
-     b.itnbr ,    
-       b.itdsc ,     
-      b.spdsc ,      
-     b.itnbrcus ,     
-      b.unpris*(-1) ,     
-      b.bshpqy1*(-1) ,      
-     b.bakamts*(-1) ,  
-         d.cusna ,   
-      space(4) as cp_lcoin,   
-        a.mancode , 
-			g.username,               
+	 a.depno,
+	f.depname,
+       a.cusno ,
+    a.coin ,
+      a.ratio ,
+        b.trseq ,
+        b.cdrno ,
+   b.strseq ,
+     b.itnbr ,
+       b.itdsc ,
+      b.spdsc ,
+     b.itnbrcus ,
+      b.unpris*(-1) ,
+      b.bshpqy1*(-1) ,
+     b.bakamts*(-1) ,
+         d.cusna ,
+      space(4) as cp_lcoin,
+        a.mancode ,
+			g.username,
   case substring(s.judco,5,1) when '1' then unmsr1 when '3' then s.unmsr2 when '5'
  then s.unmsr3 end as cp_armunmsr   ,
 c.cuspono,c.tocdrno ,e.dmark1,
 (case when b.n_code_DC in ('L') then '冷冻'
       when b.n_code_DC in ('R') then '空调'
       when b.n_code_DC in ('H') then '热泵'
-      end )  as protype 
- FROM   cdrbhad a, cdrbdta b, cdrhmas c, cdrcus d,  cdrdmas e,invmas  s,misdept f,secuser g
-   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and  
-( a.bakno = b.bakno ) and       
-   ( a.cusno = d.cusno ) and     
-     ( b.itnbr = s.itnbr )    
-AND (
-convert(varchar(6),a.bakdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
+      end )  as protype,bs.spdesc,bs.spdesc2
+ FROM   cdrbhad a, cdrbdta b, cdrhmas c, cdrcus d,  cdrdmas e
+   LEFT JOIN cdrbomsub bs on e.facno= bs.facno and e.cdrno = bs.cdrno and e.trseq = bs.trseq,
+   invmas  s,misdept f,secuser g
+   WHERE ( a.facno = b.facno ) and  a.depno=f.depno    and g.userno=a.mancode  and
+( a.bakno = b.bakno ) and
+   ( a.cusno = d.cusno ) and
+     ( b.itnbr = s.itnbr )
+AND (convert(varchar(6),a.bakdate,112)  = convert(varchar(6),dateadd(month,-1,getdate()),112)
 and a.baksta = 'Y')  and a.cusno not in ('SGD00088','SJS00254','SSD00107')
 and  c.cdrno=e.cdrno and b.ctrseq=e.trseq and b.cdrno = c.cdrno
 and a.depno<>'1E210' and a.depno<>'1D200' and a.depno<>'1C200' and a.depno<>'1A000' and a.depno<>'1B200'
 
 ) x
-where 
-(x.itnbr in ( 
-select itnbr from invmas where itcls in('3176','3177','3179','3180','3276','3279','3280','3083') 
+where
+(x.itnbr in (
+select itnbr from invmas where itcls in('3176','3177','3179','3180','3276','3279','3280','3083')
 )   or x.itnbr in (select itnbr from invmas where itcls in ('3176','3177','3179','3180','3676','3679','3680','3015')  AND itnbr<>'3142-GBR9018'))
 
 

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Service>
 	<mailserver>
-		<smtp>172.16.10.18</smtp>
-		<port>25</port>
+		<smtp>172.16.10.108</smtp>
+		<port>2525</port>
     <from>noreply@hanbell.com.cn</from>
 		<account></account>
 		<pwd></pwd>

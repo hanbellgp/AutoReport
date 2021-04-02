@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MeiyuexinzengkuhaoDS" targetNamespace="http://tempuri.org/MeiyuexinzengkuhaoDS.xsd" xmlns:mstns="http://tempuri.org/MeiyuexinzengkuhaoDS.xsd" xmlns="http://tempuri.org/MeiyuexinzengkuhaoDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MeiyuexinzengkuhaoDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MeiyuexinzengkuhaoDS" msprop:Generator_UserDSName="MeiyuexinzengkuhaoDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="warehtable" msprop:Generator_TableClassName="warehtableDataTable" msprop:Generator_TableVarName="tablewarehtable" msprop:Generator_RowChangedName="warehtableRowChanged" msprop:Generator_TablePropName="warehtable" msprop:Generator_RowDeletingName="warehtableRowDeleting" msprop:Generator_RowChangingName="warehtableRowChanging" msprop:Generator_RowEvHandlerName="warehtableRowChangeEventHandler" msprop:Generator_RowDeletedName="warehtableRowDeleted" msprop:Generator_RowClassName="warehtableRow" msprop:Generator_UserTableName="warehtable" msprop:Generator_RowEvArgName="warehtableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="facno" msdata:Caption="公司别" msprop:Generator_ColumnVarNameInTable="columnfacno" msprop:Generator_ColumnPropNameInRow="facno" msprop:Generator_ColumnPropNameInTable="facnoColumn" msprop:Generator_UserColumnName="facno" type="xs:string" minOccurs="0" />
+              <xs:element name="prono" msdata:Caption="生产地代码" msprop:Generator_ColumnVarNameInTable="columnprono" msprop:Generator_ColumnPropNameInRow="prono" msprop:Generator_ColumnPropNameInTable="pronoColumn" msprop:Generator_UserColumnName="prono" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msdata:Caption="库号" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="whdsc" msdata:Caption="库号说明" msprop:Generator_ColumnVarNameInTable="columnwhdsc" msprop:Generator_ColumnPropNameInRow="whdsc" msprop:Generator_ColumnPropNameInTable="whdscColumn" msprop:Generator_UserColumnName="whdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="mrpco" msdata:Caption="mrp堪用码" msprop:Generator_ColumnVarNameInTable="columnmrpco" msprop:Generator_ColumnPropNameInRow="mrpco" msprop:Generator_ColumnPropNameInTable="mrpcoColumn" msprop:Generator_UserColumnName="mrpco" type="xs:string" minOccurs="0" />
+              <xs:element name="costyn" msdata:Caption="单位成本管理方式" msprop:Generator_ColumnVarNameInTable="columncostyn" msprop:Generator_ColumnPropNameInRow="costyn" msprop:Generator_ColumnPropNameInTable="costynColumn" msprop:Generator_UserColumnName="costyn" type="xs:string" minOccurs="0" />
+              <xs:element name="wclerk" msdata:Caption="仓管员" msprop:Generator_ColumnVarNameInTable="columnwclerk" msprop:Generator_ColumnPropNameInRow="wclerk" msprop:Generator_ColumnPropNameInTable="wclerkColumn" msprop:Generator_UserColumnName="wclerk" type="xs:string" minOccurs="0" />
+              <xs:element name="userno" msdata:Caption="输入人员" msprop:Generator_ColumnVarNameInTable="columnuserno" msprop:Generator_ColumnPropNameInRow="userno" msprop:Generator_ColumnPropNameInTable="usernoColumn" msprop:Generator_UserColumnName="userno" type="xs:string" minOccurs="0" />
+              <xs:element name="indate" msdata:Caption="输入日期" msprop:Generator_ColumnVarNameInTable="columnindate" msprop:Generator_ColumnPropNameInRow="indate" msprop:Generator_ColumnPropNameInTable="indateColumn" msprop:Generator_UserColumnName="indate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
