@@ -53,6 +53,10 @@
   <ItemGroup>
     <Compile Include="FWKCGL.cs" />
     <Compile Include="FWKCGLConfig.cs" />
+    <Compile Include="FWKCGLDS.cs">
+      <DependentUpon>FWKCGLDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FWKCGLDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

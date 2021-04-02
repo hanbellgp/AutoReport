@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="YuqiweiqianheDS" targetNamespace="http://tempuri.org/YuqiweiqianheDS.xsd" xmlns:mstns="http://tempuri.org/YuqiweiqianheDS.xsd" xmlns="http://tempuri.org/YuqiweiqianheDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="YuqiweiqianheDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="YuqiweiqianheDS" msprop:Generator_UserDSName="YuqiweiqianheDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblprocess1" msprop:Generator_TableClassName="tblprocess1DataTable" msprop:Generator_TableVarName="tabletblprocess1" msprop:Generator_RowChangedName="tblprocess1RowChanged" msprop:Generator_TablePropName="tblprocess1" msprop:Generator_RowDeletingName="tblprocess1RowDeleting" msprop:Generator_RowChangingName="tblprocess1RowChanging" msprop:Generator_RowEvHandlerName="tblprocess1RowChangeEventHandler" msprop:Generator_RowDeletedName="tblprocess1RowDeleted" msprop:Generator_RowClassName="tblprocess1Row" msprop:Generator_UserTableName="tblprocess1" msprop:Generator_RowEvArgName="tblprocess1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="processDefinitionId" msdata:Caption="流程代号Mã số lưu trình" msprop:Generator_ColumnVarNameInTable="columnprocessDefinitionId" msprop:Generator_ColumnPropNameInRow="processDefinitionId" msprop:Generator_ColumnPropNameInTable="processDefinitionIdColumn" msprop:Generator_UserColumnName="processDefinitionId" type="xs:string" minOccurs="0" />
+              <xs:element name="processInstanceName" msdata:Caption="流程名称Tên lưu trình" msprop:Generator_ColumnVarNameInTable="columnprocessInstanceName" msprop:Generator_ColumnPropNameInRow="processInstanceName" msprop:Generator_ColumnPropNameInTable="processInstanceNameColumn" msprop:Generator_UserColumnName="processInstanceName" type="xs:string" minOccurs="0" />
+              <xs:element name="serialNumber" msdata:Caption="流程序号Thứ tự lưu trình" msprop:Generator_ColumnVarNameInTable="columnserialNumber" msprop:Generator_ColumnPropNameInRow="serialNumber" msprop:Generator_ColumnPropNameInTable="serialNumberColumn" msprop:Generator_UserColumnName="serialNumber" type="xs:string" minOccurs="0" />
+              <xs:element name="subject" msdata:Caption="主旨Chủ đề" msprop:Generator_ColumnVarNameInTable="columnsubject" msprop:Generator_ColumnPropNameInRow="subject" msprop:Generator_ColumnPropNameInTable="subjectColumn" msprop:Generator_UserColumnName="subject" type="xs:string" minOccurs="0" />
+              <xs:element name="id" msdata:Caption="需签核人Cần người duyệt" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:string" minOccurs="0" />
+              <xs:element name="userName" msdata:Caption="姓名Họ tên" msprop:Generator_ColumnVarNameInTable="columnuserName" msprop:Generator_ColumnPropNameInRow="userName" msprop:Generator_ColumnPropNameInTable="userNameColumn" msprop:Generator_UserColumnName="userName" type="xs:string" minOccurs="0" />
+              <xs:element name="createdTime" msdata:Caption="建立时间Thời gian lập" msprop:Generator_ColumnVarNameInTable="columncreatedTime" msprop:Generator_ColumnPropNameInRow="createdTime" msprop:Generator_ColumnPropNameInTable="createdTimeColumn" msprop:Generator_UserColumnName="createdTime" type="xs:string" minOccurs="0" />
+              <xs:element name="status" msdata:Caption="状态Trạng thái" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" type="xs:string" minOccurs="0" />
+              <xs:element name="delaydays" msdata:Caption="滞留天数Số ngày trì trệ" msprop:Generator_ColumnVarNameInTable="columndelaydays" msprop:Generator_ColumnPropNameInRow="delaydays" msprop:Generator_ColumnPropNameInTable="delaydaysColumn" msprop:Generator_UserColumnName="delaydays" type="xs:string" minOccurs="0" />
+              <xs:element name="deptno" msprop:Generator_ColumnVarNameInTable="columndeptno" msprop:Generator_ColumnPropNameInRow="deptno" msprop:Generator_ColumnPropNameInTable="deptnoColumn" msprop:Generator_UserColumnName="deptno" type="xs:string" minOccurs="0" />
+              <xs:element name="dept" msprop:Generator_ColumnVarNameInTable="columndept" msprop:Generator_ColumnPropNameInRow="dept" msprop:Generator_ColumnPropNameInTable="deptColumn" msprop:Generator_UserColumnName="dept" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -19,8 +19,8 @@ namespace Hanbell.AutoReport.Config
         {
             StringBuilder sb = new StringBuilder();
             //每月月底发送本月的验收明细
-            sb.Append(" select a.acceptno,a.cfmuserno,b.username,a.acceptdate from puracd a,secuser b  ");
-            sb.Append(" where b.userno = a.cfmuserno AND  ");
+            sb.Append(" select a.acceptno,a.vdrno,p.vdrna,a.cfmuserno,b.username,a.acceptdate from puracd a,secuser b,purvdr p  ");
+            sb.Append(" where b.userno = a.cfmuserno AND a.vdrno = p.vdrno and  ");
             sb.Append(" a.facno = 'C' AND a.prono = '1' AND convert(VARCHAR(6),a.acceptdate,112)=convert(VARCHAR(6),getdate(),112) ");
             Fill(sb.ToString(), ds, "dbtlb");
         }

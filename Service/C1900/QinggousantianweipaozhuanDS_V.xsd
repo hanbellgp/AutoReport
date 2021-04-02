@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QinggousantianweipaozhuanDS_V" targetNamespace="http://tempuri.org/QinggousantianweipaozhuanDS_V.xsd" xmlns:mstns="http://tempuri.org/QinggousantianweipaozhuanDS_V.xsd" xmlns="http://tempuri.org/QinggousantianweipaozhuanDS_V.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="QinggousantianweipaozhuanDS_V" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="QinggousantianweipaozhuanDS_V" msprop:Generator_UserDSName="QinggousantianweipaozhuanDS_V">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblprocessv" msprop:Generator_TableClassName="tblprocessvDataTable" msprop:Generator_TableVarName="tabletblprocessv" msprop:Generator_RowChangedName="tblprocessvRowChanged" msprop:Generator_TablePropName="tblprocessv" msprop:Generator_RowDeletingName="tblprocessvRowDeleting" msprop:Generator_RowChangingName="tblprocessvRowChanging" msprop:Generator_RowEvHandlerName="tblprocessvRowChangeEventHandler" msprop:Generator_RowDeletedName="tblprocessvRowDeleted" msprop:Generator_RowClassName="tblprocessvRow" msprop:Generator_UserTableName="tblprocessv" msprop:Generator_RowEvArgName="tblprocessvRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="品号" msdata:Caption="品号Mã số SP" msprop:Generator_ColumnVarNameInTable="column品号" msprop:Generator_ColumnPropNameInRow="品号" msprop:Generator_ColumnPropNameInTable="品号Column" msprop:Generator_UserColumnName="品号" type="xs:string" minOccurs="0" />
+              <xs:element name="品名" msdata:Caption="品名Tên Sản phẩm" msprop:Generator_ColumnVarNameInTable="column品名" msprop:Generator_ColumnPropNameInRow="品名" msprop:Generator_ColumnPropNameInTable="品名Column" msprop:Generator_UserColumnName="品名" type="xs:string" minOccurs="0" />
+              <xs:element name="数量" msdata:Caption="数量Số lượng" msprop:Generator_ColumnVarNameInTable="column数量" msprop:Generator_ColumnPropNameInRow="数量" msprop:Generator_ColumnPropNameInTable="数量Column" msprop:Generator_UserColumnName="数量" type="xs:decimal" minOccurs="0" />
+              <xs:element name="请购单号" msdata:Caption="请购单号Mã đơn xin mua" msprop:Generator_ColumnVarNameInTable="column请购单号" msprop:Generator_ColumnPropNameInRow="请购单号" msprop:Generator_ColumnPropNameInTable="请购单号Column" msprop:Generator_UserColumnName="请购单号" type="xs:string" minOccurs="0" />
+              <xs:element name="请购日期" msdata:Caption="请购日期Ngày xin mua" msprop:Generator_ColumnVarNameInTable="column请购日期" msprop:Generator_ColumnPropNameInRow="请购日期" msprop:Generator_ColumnPropNameInTable="请购日期Column" msprop:Generator_UserColumnName="请购日期" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="diff" msdata:Caption="异常时间（超过3个工作日）Thời gian bất thường" msprop:Generator_ColumnVarNameInTable="columndiff" msprop:Generator_ColumnPropNameInRow="diff" msprop:Generator_ColumnPropNameInTable="diffColumn" msprop:Generator_UserColumnName="diff" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

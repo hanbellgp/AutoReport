@@ -279,7 +279,17 @@ namespace Hanbell.AutoReport.Config {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tlbGuestDataTable : global::System.Data.TypedTableBase<tlbGuestRow> {
             
-            private global::System.Data.DataColumn column责任部门;
+            private global::System.Data.DataColumn columnCREATOR;
+            
+            private global::System.Data.DataColumn columnCREATORNAME;
+            
+            private global::System.Data.DataColumn columnBQ017;
+            
+            private global::System.Data.DataColumn column部门简称;
+            
+            private global::System.Data.DataColumn column区域别;
+            
+            private global::System.Data.DataColumn column产品别;
             
             private global::System.Data.DataColumn column案件编号;
             
@@ -287,29 +297,27 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn column客户简称;
             
-            private global::System.Data.DataColumn column问题描述;
-            
-            private global::System.Data.DataColumn column产品别;
-            
-            private global::System.Data.DataColumn column区域别;
+            private global::System.Data.DataColumn column产品序号;
             
             private global::System.Data.DataColumn column客诉类别;
             
             private global::System.Data.DataColumn column责任判定;
             
+            private global::System.Data.DataColumn column是否客诉;
+            
             private global::System.Data.DataColumn column收费否;
+            
+            private global::System.Data.DataColumn column是否在原厂保固期;
+            
+            private global::System.Data.DataColumn column问题描述;
+            
+            private global::System.Data.DataColumn column接案日期;
+            
+            private global::System.Data.DataColumn column原因分析说明;
             
             private global::System.Data.DataColumn column结案码;
             
             private global::System.Data.DataColumn column结案日期;
-            
-            private global::System.Data.DataColumn column是否客诉;
-            
-            private global::System.Data.DataColumn column原因分析说明;
-            
-            private global::System.Data.DataColumn column接案日期;
-            
-            private global::System.Data.DataColumn column是否在原厂保固期;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -346,9 +354,49 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 责任部门Column {
+            public global::System.Data.DataColumn CREATORColumn {
                 get {
-                    return this.column责任部门;
+                    return this.columnCREATOR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CREATORNAMEColumn {
+                get {
+                    return this.columnCREATORNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn BQ017Column {
+                get {
+                    return this.columnBQ017;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 部门简称Column {
+                get {
+                    return this.column部门简称;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 区域别Column {
+                get {
+                    return this.column区域别;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 产品别Column {
+                get {
+                    return this.column产品别;
                 }
             }
             
@@ -378,25 +426,9 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 问题描述Column {
+            public global::System.Data.DataColumn 产品序号Column {
                 get {
-                    return this.column问题描述;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 产品别Column {
-                get {
-                    return this.column产品别;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 区域别Column {
-                get {
-                    return this.column区域别;
+                    return this.column产品序号;
                 }
             }
             
@@ -418,9 +450,49 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 是否客诉Column {
+                get {
+                    return this.column是否客诉;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn 收费否Column {
                 get {
                     return this.column收费否;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 是否在原厂保固期Column {
+                get {
+                    return this.column是否在原厂保固期;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 问题描述Column {
+                get {
+                    return this.column问题描述;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 接案日期Column {
+                get {
+                    return this.column接案日期;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn 原因分析说明Column {
+                get {
+                    return this.column原因分析说明;
                 }
             }
             
@@ -437,38 +509,6 @@ namespace Hanbell.AutoReport.Config {
             public global::System.Data.DataColumn 结案日期Column {
                 get {
                     return this.column结案日期;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 是否客诉Column {
-                get {
-                    return this.column是否客诉;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 原因分析说明Column {
-                get {
-                    return this.column原因分析说明;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 接案日期Column {
-                get {
-                    return this.column接案日期;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn 是否在原厂保固期Column {
-                get {
-                    return this.column是否在原厂保固期;
                 }
             }
             
@@ -510,40 +550,48 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tlbGuestRow AddtlbGuestRow(
-                        string 责任部门, 
+                        string CREATOR, 
+                        string CREATORNAME, 
+                        string BQ017, 
+                        string 部门简称, 
+                        string 区域别, 
+                        string 产品别, 
                         string 案件编号, 
                         string 客户代号, 
                         string 客户简称, 
-                        string 问题描述, 
-                        string 产品别, 
-                        string 区域别, 
+                        string 产品序号, 
                         string 客诉类别, 
                         string 责任判定, 
-                        string 收费否, 
-                        string 结案码, 
-                        string 结案日期, 
                         string 是否客诉, 
-                        string 原因分析说明, 
+                        string 收费否, 
+                        string 是否在原厂保固期, 
+                        string 问题描述, 
                         string 接案日期, 
-                        string 是否在原厂保固期) {
+                        string 原因分析说明, 
+                        string 结案码, 
+                        string 结案日期) {
                 tlbGuestRow rowtlbGuestRow = ((tlbGuestRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        责任部门,
+                        CREATOR,
+                        CREATORNAME,
+                        BQ017,
+                        部门简称,
+                        区域别,
+                        产品别,
                         案件编号,
                         客户代号,
                         客户简称,
-                        问题描述,
-                        产品别,
-                        区域别,
+                        产品序号,
                         客诉类别,
                         责任判定,
-                        收费否,
-                        结案码,
-                        结案日期,
                         是否客诉,
-                        原因分析说明,
+                        收费否,
+                        是否在原厂保固期,
+                        问题描述,
                         接案日期,
-                        是否在原厂保固期};
+                        原因分析说明,
+                        结案码,
+                        结案日期};
                 rowtlbGuestRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtlbGuestRow);
                 return rowtlbGuestRow;
@@ -566,59 +614,72 @@ namespace Hanbell.AutoReport.Config {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.column责任部门 = base.Columns["责任部门"];
+                this.columnCREATOR = base.Columns["CREATOR"];
+                this.columnCREATORNAME = base.Columns["CREATORNAME"];
+                this.columnBQ017 = base.Columns["BQ017"];
+                this.column部门简称 = base.Columns["部门简称"];
+                this.column区域别 = base.Columns["区域别"];
+                this.column产品别 = base.Columns["产品别"];
                 this.column案件编号 = base.Columns["案件编号"];
                 this.column客户代号 = base.Columns["客户代号"];
                 this.column客户简称 = base.Columns["客户简称"];
-                this.column问题描述 = base.Columns["问题描述"];
-                this.column产品别 = base.Columns["产品别"];
-                this.column区域别 = base.Columns["区域别"];
+                this.column产品序号 = base.Columns["产品序号"];
                 this.column客诉类别 = base.Columns["客诉类别"];
                 this.column责任判定 = base.Columns["责任判定"];
+                this.column是否客诉 = base.Columns["是否客诉"];
                 this.column收费否 = base.Columns["收费否"];
+                this.column是否在原厂保固期 = base.Columns["是否在原厂保固期"];
+                this.column问题描述 = base.Columns["问题描述"];
+                this.column接案日期 = base.Columns["接案日期"];
+                this.column原因分析说明 = base.Columns["原因分析说明"];
                 this.column结案码 = base.Columns["结案码"];
                 this.column结案日期 = base.Columns["结案日期"];
-                this.column是否客诉 = base.Columns["是否客诉"];
-                this.column原因分析说明 = base.Columns["原因分析说明"];
-                this.column接案日期 = base.Columns["接案日期"];
-                this.column是否在原厂保固期 = base.Columns["是否在原厂保固期"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.column责任部门 = new global::System.Data.DataColumn("责任部门", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column责任部门);
+                this.columnCREATOR = new global::System.Data.DataColumn("CREATOR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCREATOR);
+                this.columnCREATORNAME = new global::System.Data.DataColumn("CREATORNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCREATORNAME);
+                this.columnBQ017 = new global::System.Data.DataColumn("BQ017", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBQ017);
+                this.column部门简称 = new global::System.Data.DataColumn("部门简称", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column部门简称);
+                this.column区域别 = new global::System.Data.DataColumn("区域别", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column区域别);
+                this.column产品别 = new global::System.Data.DataColumn("产品别", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column产品别);
                 this.column案件编号 = new global::System.Data.DataColumn("案件编号", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column案件编号);
                 this.column客户代号 = new global::System.Data.DataColumn("客户代号", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column客户代号);
                 this.column客户简称 = new global::System.Data.DataColumn("客户简称", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column客户简称);
-                this.column问题描述 = new global::System.Data.DataColumn("问题描述", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column问题描述);
-                this.column产品别 = new global::System.Data.DataColumn("产品别", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column产品别);
-                this.column区域别 = new global::System.Data.DataColumn("区域别", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column区域别);
+                this.column产品序号 = new global::System.Data.DataColumn("产品序号", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column产品序号);
                 this.column客诉类别 = new global::System.Data.DataColumn("客诉类别", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column客诉类别);
                 this.column责任判定 = new global::System.Data.DataColumn("责任判定", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column责任判定);
+                this.column是否客诉 = new global::System.Data.DataColumn("是否客诉", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column是否客诉);
                 this.column收费否 = new global::System.Data.DataColumn("收费否", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column收费否);
+                this.column是否在原厂保固期 = new global::System.Data.DataColumn("是否在原厂保固期", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column是否在原厂保固期);
+                this.column问题描述 = new global::System.Data.DataColumn("问题描述", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column问题描述);
+                this.column接案日期 = new global::System.Data.DataColumn("接案日期", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column接案日期);
+                this.column原因分析说明 = new global::System.Data.DataColumn("原因分析说明", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.column原因分析说明);
                 this.column结案码 = new global::System.Data.DataColumn("结案码", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column结案码);
                 this.column结案日期 = new global::System.Data.DataColumn("结案日期", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.column结案日期);
-                this.column是否客诉 = new global::System.Data.DataColumn("是否客诉", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column是否客诉);
-                this.column原因分析说明 = new global::System.Data.DataColumn("原因分析说明", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column原因分析说明);
-                this.column接案日期 = new global::System.Data.DataColumn("接案日期", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column接案日期);
-                this.column是否在原厂保固期 = new global::System.Data.DataColumn("是否在原厂保固期", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.column是否在原厂保固期);
+                this.columnCREATOR.Caption = "录入人员";
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -761,17 +822,97 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 责任部门 {
+            public string CREATOR {
                 get {
                     try {
-                        return ((string)(this[this.tabletlbGuest.责任部门Column]));
+                        return ((string)(this[this.tabletlbGuest.CREATORColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“责任部门”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“CREATOR”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletlbGuest.责任部门Column] = value;
+                    this[this.tabletlbGuest.CREATORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string CREATORNAME {
+                get {
+                    if (this.IsCREATORNAMENull()) {
+                        return null;
+                    }
+                    else {
+                        return ((string)(this[this.tabletlbGuest.CREATORNAMEColumn]));
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.CREATORNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string BQ017 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.BQ017Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“BQ017”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.BQ017Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 部门简称 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.部门简称Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“部门简称”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.部门简称Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 区域别 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.区域别Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“区域别”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.区域别Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 产品别 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.产品别Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“产品别”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.产品别Column] = value;
                 }
             }
             
@@ -825,49 +966,17 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 问题描述 {
+            public string 产品序号 {
                 get {
                     try {
-                        return ((string)(this[this.tabletlbGuest.问题描述Column]));
+                        return ((string)(this[this.tabletlbGuest.产品序号Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“问题描述”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“产品序号”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tabletlbGuest.问题描述Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 产品别 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletlbGuest.产品别Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“产品别”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletlbGuest.产品别Column] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 区域别 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletlbGuest.区域别Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“区域别”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletlbGuest.区域别Column] = value;
+                    this[this.tabletlbGuest.产品序号Column] = value;
                 }
             }
             
@@ -905,6 +1014,22 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 是否客诉 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.是否客诉Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“是否客诉”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.是否客诉Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string 收费否 {
                 get {
                     try {
@@ -916,6 +1041,70 @@ namespace Hanbell.AutoReport.Config {
                 }
                 set {
                     this[this.tabletlbGuest.收费否Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 是否在原厂保固期 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.是否在原厂保固期Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“是否在原厂保固期”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.是否在原厂保固期Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 问题描述 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.问题描述Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“问题描述”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.问题描述Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 接案日期 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.接案日期Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“接案日期”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.接案日期Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string 原因分析说明 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletlbGuest.原因分析说明Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“原因分析说明”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletlbGuest.原因分析说明Column] = value;
                 }
             }
             
@@ -953,78 +1142,74 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 是否客诉 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletlbGuest.是否客诉Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“是否客诉”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletlbGuest.是否客诉Column] = value;
-                }
+            public bool IsCREATORNull() {
+                return this.IsNull(this.tabletlbGuest.CREATORColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 原因分析说明 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletlbGuest.原因分析说明Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“原因分析说明”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletlbGuest.原因分析说明Column] = value;
-                }
+            public void SetCREATORNull() {
+                this[this.tabletlbGuest.CREATORColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 接案日期 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletlbGuest.接案日期Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“接案日期”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletlbGuest.接案日期Column] = value;
-                }
+            public bool IsCREATORNAMENull() {
+                return this.IsNull(this.tabletlbGuest.CREATORNAMEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string 是否在原厂保固期 {
-                get {
-                    try {
-                        return ((string)(this[this.tabletlbGuest.是否在原厂保固期Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“tlbGuest”中列“是否在原厂保固期”的值为 DBNull。", e);
-                    }
-                }
-                set {
-                    this[this.tabletlbGuest.是否在原厂保固期Column] = value;
-                }
+            public void SetCREATORNAMENull() {
+                this[this.tabletlbGuest.CREATORNAMEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is责任部门Null() {
-                return this.IsNull(this.tabletlbGuest.责任部门Column);
+            public bool IsBQ017Null() {
+                return this.IsNull(this.tabletlbGuest.BQ017Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set责任部门Null() {
-                this[this.tabletlbGuest.责任部门Column] = global::System.Convert.DBNull;
+            public void SetBQ017Null() {
+                this[this.tabletlbGuest.BQ017Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is部门简称Null() {
+                return this.IsNull(this.tabletlbGuest.部门简称Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set部门简称Null() {
+                this[this.tabletlbGuest.部门简称Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is区域别Null() {
+                return this.IsNull(this.tabletlbGuest.区域别Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set区域别Null() {
+                this[this.tabletlbGuest.区域别Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is产品别Null() {
+                return this.IsNull(this.tabletlbGuest.产品别Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set产品别Null() {
+                this[this.tabletlbGuest.产品别Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1065,38 +1250,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is问题描述Null() {
-                return this.IsNull(this.tabletlbGuest.问题描述Column);
+            public bool Is产品序号Null() {
+                return this.IsNull(this.tabletlbGuest.产品序号Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set问题描述Null() {
-                this[this.tabletlbGuest.问题描述Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is产品别Null() {
-                return this.IsNull(this.tabletlbGuest.产品别Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set产品别Null() {
-                this[this.tabletlbGuest.产品别Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is区域别Null() {
-                return this.IsNull(this.tabletlbGuest.区域别Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set区域别Null() {
-                this[this.tabletlbGuest.区域别Column] = global::System.Convert.DBNull;
+            public void Set产品序号Null() {
+                this[this.tabletlbGuest.产品序号Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1125,6 +1286,18 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is是否客诉Null() {
+                return this.IsNull(this.tabletlbGuest.是否客诉Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set是否客诉Null() {
+                this[this.tabletlbGuest.是否客诉Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Is收费否Null() {
                 return this.IsNull(this.tabletlbGuest.收费否Column);
             }
@@ -1133,6 +1306,54 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Set收费否Null() {
                 this[this.tabletlbGuest.收费否Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is是否在原厂保固期Null() {
+                return this.IsNull(this.tabletlbGuest.是否在原厂保固期Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set是否在原厂保固期Null() {
+                this[this.tabletlbGuest.是否在原厂保固期Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is问题描述Null() {
+                return this.IsNull(this.tabletlbGuest.问题描述Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set问题描述Null() {
+                this[this.tabletlbGuest.问题描述Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is接案日期Null() {
+                return this.IsNull(this.tabletlbGuest.接案日期Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set接案日期Null() {
+                this[this.tabletlbGuest.接案日期Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Is原因分析说明Null() {
+                return this.IsNull(this.tabletlbGuest.原因分析说明Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Set原因分析说明Null() {
+                this[this.tabletlbGuest.原因分析说明Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1157,54 +1378,6 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Set结案日期Null() {
                 this[this.tabletlbGuest.结案日期Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is是否客诉Null() {
-                return this.IsNull(this.tabletlbGuest.是否客诉Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set是否客诉Null() {
-                this[this.tabletlbGuest.是否客诉Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is原因分析说明Null() {
-                return this.IsNull(this.tabletlbGuest.原因分析说明Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set原因分析说明Null() {
-                this[this.tabletlbGuest.原因分析说明Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is接案日期Null() {
-                return this.IsNull(this.tabletlbGuest.接案日期Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set接案日期Null() {
-                this[this.tabletlbGuest.接案日期Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Is是否在原厂保固期Null() {
-                return this.IsNull(this.tabletlbGuest.是否在原厂保固期Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Set是否在原厂保固期Null() {
-                this[this.tabletlbGuest.是否在原厂保固期Column] = global::System.Convert.DBNull;
             }
         }
         

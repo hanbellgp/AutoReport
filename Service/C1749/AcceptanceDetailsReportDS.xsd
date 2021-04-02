@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AcceptanceDetailsReportDS" targetNamespace="http://tempuri.org/AcceptanceDetailsReportDS.xsd" xmlns:mstns="http://tempuri.org/AcceptanceDetailsReportDS.xsd" xmlns="http://tempuri.org/AcceptanceDetailsReportDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AcceptanceDetailsReportDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AcceptanceDetailsReportDS" msprop:Generator_UserDSName="AcceptanceDetailsReportDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dbtlb" msprop:Generator_TableClassName="dbtlbDataTable" msprop:Generator_TableVarName="tabledbtlb" msprop:Generator_TablePropName="dbtlb" msprop:Generator_RowDeletingName="dbtlbRowDeleting" msprop:Generator_RowChangingName="dbtlbRowChanging" msprop:Generator_RowEvHandlerName="dbtlbRowChangeEventHandler" msprop:Generator_RowDeletedName="dbtlbRowDeleted" msprop:Generator_UserTableName="dbtlb" msprop:Generator_RowChangedName="dbtlbRowChanged" msprop:Generator_RowEvArgName="dbtlbRowChangeEvent" msprop:Generator_RowClassName="dbtlbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="acceptno" msdata:Caption="验收单号" msprop:Generator_ColumnVarNameInTable="columnacceptno" msprop:Generator_ColumnPropNameInRow="acceptno" msprop:Generator_ColumnPropNameInTable="acceptnoColumn" msprop:Generator_UserColumnName="acceptno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrno" msdata:Caption="厂商代号" msprop:Generator_ColumnVarNameInTable="columnvdrno" msprop:Generator_ColumnPropNameInRow="vdrno" msprop:Generator_ColumnPropNameInTable="vdrnoColumn" msprop:Generator_UserColumnName="vdrno" type="xs:string" minOccurs="0" />
+              <xs:element name="vdrna" msdata:Caption="厂商名称" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="cfmuserno" msdata:Caption="确认人员" msprop:Generator_ColumnVarNameInTable="columncfmuserno" msprop:Generator_ColumnPropNameInRow="cfmuserno" msprop:Generator_ColumnPropNameInTable="cfmusernoColumn" msprop:Generator_UserColumnName="cfmuserno" type="xs:string" minOccurs="0" />
+              <xs:element name="username" msdata:Caption="人员姓名" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username" type="xs:string" minOccurs="0" />
+              <xs:element name="acceptdate" msdata:Caption="日期" msprop:Generator_ColumnVarNameInTable="columnacceptdate" msprop:Generator_ColumnPropNameInRow="acceptdate" msprop:Generator_ColumnPropNameInTable="acceptdateColumn" msprop:Generator_UserColumnName="acceptdate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

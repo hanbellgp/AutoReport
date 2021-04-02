@@ -197,7 +197,7 @@ namespace Hanbell.AutoReport.Core
         /// <returns></returns>
         public static string GetMailFrom()
         {
-            return GetXmlNode("ServiceConfig.xml","from").InnerText;
+            return GetXmlNode("ServiceConfig.xml", "from").InnerText;
         }
 
         /// <summary>
@@ -333,13 +333,13 @@ namespace Hanbell.AutoReport.Core
         /// <param name="notificationName">消息类</param>
         /// <param name="configName">配置类</param>
         /// <returns></returns>
-        public static Hashtable GetParameter(string notificationName,string configName)
+        public static Hashtable GetParameter(string notificationName, string configName)
         {
             Hashtable param = new Hashtable();
             XmlNode root = GetXmlNode(notificationConfigFileName, notificationName);
             foreach (XmlNode item in root.ChildNodes)
             {
-                if (item.Name=="param" && item.Attributes["name"].Value == configName)
+                if (item.Name == "param" && item.Attributes["name"].Value == configName)
                 {
                     foreach (XmlNode p in item.ChildNodes)
                     {
@@ -357,7 +357,7 @@ namespace Hanbell.AutoReport.Core
         /// <returns></returns>
         public static string GetServiceInstallPath()
         {
-            //return @"G:\myWorkSpace\SHB\AutoReport\Service\Test\bin\Debug";
+            return @"F:\C1749HL\AutoReport\Service\Test\bin\Debug";
             string key = @"SYSTEM\CurrentControlSet\Services\" + "HanbellAutoReport";
             string path = Registry.LocalMachine.OpenSubKey(key).GetValue("ImagePath").ToString();
             path = path.Replace("\"", string.Empty);

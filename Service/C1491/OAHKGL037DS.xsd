@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OAHKGL037DS" targetNamespace="http://tempuri.org/OAHKGL037DS.xsd" xmlns:mstns="http://tempuri.org/OAHKGL037DS.xsd" xmlns="http://tempuri.org/OAHKGL037DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OAHKGL037DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OAHKGL037DS" msprop:Generator_UserDSName="OAHKGL037DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbprivatecar" msprop:Generator_TableClassName="tbprivatecarDataTable" msprop:Generator_TableVarName="tabletbprivatecar" msprop:Generator_TablePropName="tbprivatecar" msprop:Generator_RowDeletingName="tbprivatecarRowDeleting" msprop:Generator_RowChangingName="tbprivatecarRowChanging" msprop:Generator_RowEvHandlerName="tbprivatecarRowChangeEventHandler" msprop:Generator_RowDeletedName="tbprivatecarRowDeleted" msprop:Generator_UserTableName="tbprivatecar" msprop:Generator_RowChangedName="tbprivatecarRowChanged" msprop:Generator_RowEvArgName="tbprivatecarRowChangeEvent" msprop:Generator_RowClassName="tbprivatecarRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hdn_dept" msdata:Caption="部门" msprop:Generator_ColumnVarNameInTable="columnhdn_dept" msprop:Generator_ColumnPropNameInRow="hdn_dept" msprop:Generator_ColumnPropNameInTable="hdn_deptColumn" msprop:Generator_UserColumnName="hdn_dept" type="xs:string" minOccurs="0" />
+              <xs:element name="emplyer" msdata:Caption="驾驶员" msprop:Generator_ColumnVarNameInTable="columnemplyer" msprop:Generator_ColumnPropNameInRow="emplyer" msprop:Generator_ColumnPropNameInTable="emplyerColumn" msprop:Generator_UserColumnName="emplyer" type="xs:string" minOccurs="0" />
+              <xs:element name="userName" msdata:Caption="姓名" msprop:Generator_ColumnVarNameInTable="columnuserName" msprop:Generator_ColumnPropNameInRow="userName" msprop:Generator_ColumnPropNameInTable="userNameColumn" msprop:Generator_UserColumnName="userName" type="xs:string" minOccurs="0" />
+              <xs:element name="cctime" msdata:Caption="出车时间" msprop:Generator_ColumnVarNameInTable="columncctime" msprop:Generator_ColumnPropNameInRow="cctime" msprop:Generator_ColumnPropNameInTable="cctimeColumn" msprop:Generator_UserColumnName="cctime" type="xs:string" minOccurs="0" />
+              <xs:element name="address2" msdata:Caption="目的地" msprop:Generator_ColumnVarNameInTable="columnaddress2" msprop:Generator_ColumnPropNameInRow="address2" msprop:Generator_ColumnPropNameInTable="address2Column" msprop:Generator_UserColumnName="address2" type="xs:string" minOccurs="0" />
+              <xs:element name="sy" msdata:Caption="事由" msprop:Generator_ColumnVarNameInTable="columnsy" msprop:Generator_ColumnPropNameInRow="sy" msprop:Generator_ColumnPropNameInTable="syColumn" msprop:Generator_UserColumnName="sy" type="xs:string" minOccurs="0" />
+              <xs:element name="sgls" msdata:Caption="始公里数" msprop:Generator_ColumnVarNameInTable="columnsgls" msprop:Generator_ColumnPropNameInRow="sgls" msprop:Generator_ColumnPropNameInTable="sglsColumn" msprop:Generator_UserColumnName="sgls" type="xs:string" minOccurs="0" />
+              <xs:element name="zgls" msdata:Caption="终公里数" msprop:Generator_ColumnVarNameInTable="columnzgls" msprop:Generator_ColumnPropNameInRow="zgls" msprop:Generator_ColumnPropNameInTable="zglsColumn" msprop:Generator_UserColumnName="zgls" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msdata:Caption="里程合计" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:string" minOccurs="0" />
+              <xs:element name="hctime" msdata:Caption="回程时间" msprop:Generator_ColumnVarNameInTable="columnhctime" msprop:Generator_ColumnPropNameInRow="hctime" msprop:Generator_ColumnPropNameInTable="hctimeColumn" msprop:Generator_UserColumnName="hctime" type="xs:string" minOccurs="0" />
+              <xs:element name="processSerialNumber" msdata:Caption="流程序号" msprop:Generator_ColumnVarNameInTable="columnprocessSerialNumber" msprop:Generator_ColumnPropNameInRow="processSerialNumber" msprop:Generator_ColumnPropNameInTable="processSerialNumberColumn" msprop:Generator_UserColumnName="processSerialNumber" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

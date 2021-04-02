@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HZ_JS014DS" targetNamespace="http://tempuri.org/HZ_JS014DS.xsd" xmlns:mstns="http://tempuri.org/HZ_JS014DS.xsd" xmlns="http://tempuri.org/HZ_JS014DS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HZ_JS014DS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HZ_JS014DS" msprop:Generator_UserDSName="HZ_JS014DS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl" msprop:Generator_TableClassName="tblDataTable" msprop:Generator_TableVarName="tabletbl" msprop:Generator_RowChangedName="tblRowChanged" msprop:Generator_TablePropName="tbl" msprop:Generator_RowDeletingName="tblRowDeleting" msprop:Generator_RowChangingName="tblRowChanging" msprop:Generator_RowEvHandlerName="tblRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRowDeleted" msprop:Generator_RowClassName="tblRow" msprop:Generator_UserTableName="tbl" msprop:Generator_RowEvArgName="tblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="canu" msdata:Caption="通报编号" msprop:Generator_ColumnVarNameInTable="columncanu" msprop:Generator_ColumnPropNameInRow="canu" msprop:Generator_ColumnPropNameInTable="canuColumn" msprop:Generator_UserColumnName="canu" type="xs:string" minOccurs="0" />
+              <xs:element name="aim" msdata:Caption="主题" msprop:Generator_ColumnVarNameInTable="columnaim" msprop:Generator_ColumnPropNameInRow="aim" msprop:Generator_ColumnPropNameInTable="aimColumn" msprop:Generator_UserColumnName="aim" type="xs:string" minOccurs="0" />
+              <xs:element name="delaydays" msdata:Caption="距有效日期剩余天数" msprop:Generator_ColumnVarNameInTable="columndelaydays" msprop:Generator_ColumnPropNameInRow="delaydays" msprop:Generator_ColumnPropNameInTable="delaydaysColumn" msprop:Generator_UserColumnName="delaydays" type="xs:string" minOccurs="0" />
+              <xs:element name="depat" msdata:Caption="分发部门" msprop:Generator_ColumnVarNameInTable="columndepat" msprop:Generator_ColumnPropNameInRow="depat" msprop:Generator_ColumnPropNameInTable="depatColumn" msprop:Generator_UserColumnName="depat" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87841823-6334-4257-988E-3DA89B1CC76A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>C1491</RootNamespace>
+    <AssemblyName>C1491</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CDR310CheckOil.cs" />
+    <Compile Include="CDR310CheckOilConfig.cs" />
+    <Compile Include="CDR310CheckOilDS.cs">
+      <DependentUpon>CDR310CheckOilDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDR310CheckOilDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CDR310CheckOilDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMOrdersM.cs" />
+    <Compile Include="CRMOrdersMConfig.cs" />
+    <Compile Include="CRMOrdersMDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMOrdersMDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMOrdersM_Branch.cs" />
+    <Compile Include="CRMOrdersM_BranchConfig.cs" />
+    <Compile Include="CRMOrdersM_CQ.cs" />
+    <Compile Include="CRMOrdersM_GZ.cs" />
+    <Compile Include="CRMOrdersM_JN.cs" />
+    <Compile Include="CRMOrdersM_NJ.cs" />
+    <Compile Include="CRMSALMQ01M.cs" />
+    <Compile Include="CRMSALMQ01MConfig.cs" />
+    <Compile Include="CRMSALMQ01MDS.cs">
+      <DependentUpon>CRMSALMQ01MDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CRMSALMQ01MDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRMSALMQ01MDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CRMSALMQ01M_Branch.cs" />
+    <Compile Include="CRMSALMQ01M_BranchConfig.cs" />
+    <Compile Include="CRMSALMQ01M_CQ.cs" />
+    <Compile Include="CRMSALMQ01M_GZ.cs" />
+    <Compile Include="CRMSALMQ01M_HD.cs" />
+    <Compile Include="CRMSALMQ01M_JN.cs" />
+    <Compile Include="CRMSALMQ01M_NJ.cs" />
+    <Compile Include="DSCloudEquipmentReserve.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSCloudEquipmentReserve.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSPUR150.cs">
+      <DependentUpon>DSPUR150.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSPUR150.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPUR150.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSShpKehu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSShpKehu.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERPPUR150Config.cs" />
+    <Compile Include="ERPPUR530.cs" />
+    <Compile Include="ERPPUR530Config.cs" />
+    <Compile Include="ERPPUR530DS.cs">
+      <DependentUpon>ERPPUR530DS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ERPPUR530DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPPUR530DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ERPPUR530_AM.cs" />
+    <Compile Include="ERPPUR530_PM.cs" />
+    <Compile Include="ERPPURX460.cs" />
+    <Compile Include="ERPPURX460Config.cs" />
+    <Compile Include="ERPPURX460DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ERPPURX460DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OAHKGL037.cs" />
+    <Compile Include="OAHKGL037Config.cs" />
+    <Compile Include="OAHKGL037DS.cs">
+      <DependentUpon>OAHKGL037DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OAHKGL037DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OAHKGL037DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OAPURX141Config.cs" />
+    <Compile Include="OAPURX141DS.cs">
+      <DependentUpon>OAPURX141DS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OAPURX141DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OAPURX141DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OAPURX141_C.cs" />
+    <Compile Include="OAPURX141_K.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PUR150.cs" />
+    <Compile Include="CloudEquipmentReserve.cs" />
+    <Compile Include="CloudEquipmentReserveConfig.cs" />
+    <Compile Include="ShpKehu.cs" />
+    <Compile Include="ShpKehuConfig.cs" />
+    <Compile Include="ShpKehuReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShpKehuReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ShpKehuReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ShpKehuReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="CDR310CheckOilDS.xsc">
+      <DependentUpon>CDR310CheckOilDS.xsd</DependentUpon>
+    </None>
+    <None Include="CDR310CheckOilDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CDR310CheckOilDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CDR310CheckOilDS.xss">
+      <DependentUpon>CDR310CheckOilDS.xsd</DependentUpon>
+    </None>
+    <None Include="CRMOrdersMDS.xsc">
+      <DependentUpon>CRMOrdersMDS.xsd</DependentUpon>
+    </None>
+    <None Include="CRMOrdersMDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMOrdersMDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CRMOrdersMDS.xss">
+      <DependentUpon>CRMOrdersMDS.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSALMQ01MDS.xsc">
+      <DependentUpon>CRMSALMQ01MDS.xsd</DependentUpon>
+    </None>
+    <None Include="CRMSALMQ01MDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRMSALMQ01MDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="CRMSALMQ01MDS.xss">
+      <DependentUpon>CRMSALMQ01MDS.xsd</DependentUpon>
+    </None>
+    <None Include="DSCloudEquipmentReserve.xsc">
+      <DependentUpon>DSCloudEquipmentReserve.xsd</DependentUpon>
+    </None>
+    <None Include="DSCloudEquipmentReserve.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSCloudEquipmentReserve.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSCloudEquipmentReserve.xss">
+      <DependentUpon>DSCloudEquipmentReserve.xsd</DependentUpon>
+    </None>
+    <None Include="DSPUR150.xsc">
+      <DependentUpon>DSPUR150.xsd</DependentUpon>
+    </None>
+    <None Include="DSPUR150.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPUR150.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPUR150.xss">
+      <DependentUpon>DSPUR150.xsd</DependentUpon>
+    </None>
+    <None Include="DSShpKehu.xsc">
+      <DependentUpon>DSShpKehu.xsd</DependentUpon>
+    </None>
+    <None Include="DSShpKehu.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSShpKehu.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSShpKehu.xss">
+      <DependentUpon>DSShpKehu.xsd</DependentUpon>
+    </None>
+    <None Include="ERPPUR530DS.xsc">
+      <DependentUpon>ERPPUR530DS.xsd</DependentUpon>
+    </None>
+    <None Include="ERPPUR530DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERPPUR530DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ERPPUR530DS.xss">
+      <DependentUpon>ERPPUR530DS.xsd</DependentUpon>
+    </None>
+    <None Include="ERPPURX460DS.xsc">
+      <DependentUpon>ERPPURX460DS.xsd</DependentUpon>
+    </None>
+    <None Include="ERPPURX460DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ERPPURX460DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ERPPURX460DS.xss">
+      <DependentUpon>ERPPURX460DS.xsd</DependentUpon>
+    </None>
+    <None Include="OAHKGL037DS.xsc">
+      <DependentUpon>OAHKGL037DS.xsd</DependentUpon>
+    </None>
+    <None Include="OAHKGL037DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OAHKGL037DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OAHKGL037DS.xss">
+      <DependentUpon>OAHKGL037DS.xsd</DependentUpon>
+    </None>
+    <None Include="OAPURX141DS.xsc">
+      <DependentUpon>OAPURX141DS.xsd</DependentUpon>
+    </None>
+    <None Include="OAPURX141DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OAPURX141DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OAPURX141DS.xss">
+      <DependentUpon>OAPURX141DS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\AutoReportConfig.csproj">
+      <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
+      <Name>AutoReportConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\AutoReportCore.csproj">
+      <Project>{1BF1F150-93F7-47B9-BDFF-12D407C33987}</Project>
+      <Name>AutoReportCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

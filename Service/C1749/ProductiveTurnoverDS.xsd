@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProductiveTurnoverDS" targetNamespace="http://tempuri.org/ProductiveTurnoverDS.xsd" xmlns:mstns="http://tempuri.org/ProductiveTurnoverDS.xsd" xmlns="http://tempuri.org/ProductiveTurnoverDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProductiveTurnoverDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProductiveTurnoverDS" msprop:Generator_UserDSName="ProductiveTurnoverDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dbtlb" msprop:Generator_TableClassName="dbtlbDataTable" msprop:Generator_TableVarName="tabledbtlb" msprop:Generator_TablePropName="dbtlb" msprop:Generator_RowDeletingName="dbtlbRowDeleting" msprop:Generator_RowChangingName="dbtlbRowChanging" msprop:Generator_RowEvHandlerName="dbtlbRowChangeEventHandler" msprop:Generator_RowDeletedName="dbtlbRowDeleted" msprop:Generator_UserTableName="dbtlb" msprop:Generator_RowChangedName="dbtlbRowChanged" msprop:Generator_RowEvArgName="dbtlbRowChangeEvent" msprop:Generator_RowClassName="dbtlbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itcls" msdata:Caption="品号大类" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="clsdsc" msdata:Caption="大类说明" msprop:Generator_ColumnVarNameInTable="columnclsdsc" msprop:Generator_ColumnPropNameInRow="clsdsc" msprop:Generator_ColumnPropNameInTable="clsdscColumn" msprop:Generator_UserColumnName="clsdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="品号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="品名" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="genre1" msdata:Caption="产品别" msprop:Generator_ColumnVarNameInTable="columngenre1" msprop:Generator_ColumnPropNameInRow="genre1" msprop:Generator_ColumnPropNameInTable="genre1Column" msprop:Generator_UserColumnName="genre1" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msdata:Caption="库号" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="trnqys" msdata:Caption="上月期末" msprop:Generator_ColumnVarNameInTable="columntrnqys" msprop:Generator_ColumnPropNameInRow="trnqys" msprop:Generator_ColumnPropNameInTable="trnqysColumn" msprop:Generator_UserColumnName="trnqys" type="xs:string" minOccurs="0" />
+              <xs:element name="onhand1" msdata:Caption="现库存" msprop:Generator_ColumnVarNameInTable="columnonhand1" msprop:Generator_ColumnPropNameInRow="onhand1" msprop:Generator_ColumnPropNameInTable="onhand1Column" msprop:Generator_UserColumnName="onhand1" type="xs:string" minOccurs="0" />
+              <xs:element name="trnqyh3" msdata:Caption="前三个月" msprop:Generator_ColumnVarNameInTable="columntrnqyh3" msprop:Generator_ColumnPropNameInRow="trnqyh3" msprop:Generator_ColumnPropNameInTable="trnqyh3Column" msprop:Generator_UserColumnName="trnqyh3" type="xs:string" minOccurs="0" />
+              <xs:element name="trnqyh2" msdata:Caption="前两个月" msprop:Generator_ColumnVarNameInTable="columntrnqyh2" msprop:Generator_ColumnPropNameInRow="trnqyh2" msprop:Generator_ColumnPropNameInTable="trnqyh2Column" msprop:Generator_UserColumnName="trnqyh2" type="xs:string" minOccurs="0" />
+              <xs:element name="trnqyh1" msdata:Caption="前一个月" msprop:Generator_ColumnVarNameInTable="columntrnqyh1" msprop:Generator_ColumnPropNameInRow="trnqyh1" msprop:Generator_ColumnPropNameInTable="trnqyh1Column" msprop:Generator_UserColumnName="trnqyh1" type="xs:string" minOccurs="0" />
+              <xs:element name="avgtrnqys" msdata:Caption="平均用量" msprop:Generator_ColumnVarNameInTable="columnavgtrnqys" msprop:Generator_ColumnPropNameInRow="avgtrnqys" msprop:Generator_ColumnPropNameInTable="avgtrnqysColumn" msprop:Generator_UserColumnName="avgtrnqys" type="xs:string" minOccurs="0" />
+              <xs:element name="zzts" msdata:Caption="现库存可周转天数" msprop:Generator_ColumnVarNameInTable="columnzzts" msprop:Generator_ColumnPropNameInRow="zzts" msprop:Generator_ColumnPropNameInTable="zztsColumn" msprop:Generator_UserColumnName="zzts" type="xs:double" minOccurs="0" />
+              <xs:element name="vdrna" msdata:Caption="主供应商" msprop:Generator_ColumnVarNameInTable="columnvdrna" msprop:Generator_ColumnPropNameInRow="vdrna" msprop:Generator_ColumnPropNameInTable="vdrnaColumn" msprop:Generator_UserColumnName="vdrna" type="xs:string" minOccurs="0" />
+              <xs:element name="cgwj" msdata:Caption="采购未进" msprop:Generator_ColumnVarNameInTable="columncgwj" msprop:Generator_ColumnPropNameInRow="cgwj" msprop:Generator_ColumnPropNameInTable="cgwjColumn" msprop:Generator_UserColumnName="cgwj" type="xs:string" minOccurs="0" />
+              <xs:element name="leadtime" msdata:Caption="前置天数" msprop:Generator_ColumnVarNameInTable="columnleadtime" msprop:Generator_ColumnPropNameInRow="leadtime" msprop:Generator_ColumnPropNameInTable="leadtimeColumn" msprop:Generator_UserColumnName="leadtime" type="xs:double" minOccurs="0" />
+              <xs:element name="cy" msdata:Caption="差异" msprop:Generator_ColumnVarNameInTable="columncy" msprop:Generator_ColumnPropNameInRow="cy" msprop:Generator_ColumnPropNameInTable="cyColumn" msprop:Generator_UserColumnName="cy" type="xs:string" minOccurs="0" />
+              <xs:element name="pominqy" msdata:Caption="最低采购量" msprop:Generator_ColumnVarNameInTable="columnpominqy" msprop:Generator_ColumnPropNameInRow="pominqy" msprop:Generator_ColumnPropNameInTable="pominqyColumn" msprop:Generator_UserColumnName="pominqy" type="xs:string" minOccurs="0" />
+              <xs:element name="safqy" msdata:Caption="安全库存量" msprop:Generator_ColumnVarNameInTable="columnsafqy" msprop:Generator_ColumnPropNameInRow="safqy" msprop:Generator_ColumnPropNameInTable="safqyColumn" msprop:Generator_UserColumnName="safqy" type="xs:string" minOccurs="0" />
+              <xs:element name="maxqy" msdata:Caption="最高库存" msprop:Generator_ColumnVarNameInTable="columnmaxqy" msprop:Generator_ColumnPropNameInRow="maxqy" msprop:Generator_ColumnPropNameInTable="maxqyColumn" msprop:Generator_UserColumnName="maxqy" type="xs:string" minOccurs="0" />
+              <xs:element name="lindate" msdata:Caption="最后的入库日期" msprop:Generator_ColumnVarNameInTable="columnlindate" msprop:Generator_ColumnPropNameInRow="lindate" msprop:Generator_ColumnPropNameInTable="lindateColumn" msprop:Generator_UserColumnName="lindate" type="xs:string" minOccurs="0" />
+              <xs:element name="abcclass" msdata:Caption="库存分类" msprop:Generator_ColumnVarNameInTable="columnabcclass" msprop:Generator_ColumnPropNameInRow="abcclass" msprop:Generator_ColumnPropNameInTable="abcclassColumn" msprop:Generator_UserColumnName="abcclass" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
