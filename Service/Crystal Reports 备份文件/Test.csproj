@@ -100,16 +100,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Config\AutoReportConfig.csproj">
-      <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
-      <Name>AutoReportConfig</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Core\AutoReportCore.csproj">
-      <Project>{1BF1F150-93F7-47B9-BDFF-12D407C33987}</Project>
-      <Name>AutoReportCore</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

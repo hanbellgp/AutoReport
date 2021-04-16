@@ -138,6 +138,18 @@
       <Project>{68901C42-6515-4992-9491-5E89E9AC0FFA}</Project>
       <Name>C0241</Name>
     </ProjectReference>
+    <ProjectReference Include="..\C1368\C1368.csproj">
+      <Project>{B15E6C4E-B99B-42F8-B630-AF6F20B18BEE}</Project>
+      <Name>C1368</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\C1491\C1491.csproj">
+      <Project>{87841823-6334-4257-988E-3DA89B1CC76A}</Project>
+      <Name>C1491</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\C1749\C1749.csproj">
+      <Project>{FF4A273A-5E79-4E42-9108-9B319DE94827}</Project>
+      <Name>C1749</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Config\AutoReportConfig.csproj">
       <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
       <Name>AutoReportConfig</Name>

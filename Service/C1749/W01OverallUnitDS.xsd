@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="W01OverallUnitDS" targetNamespace="http://tempuri.org/W01OverallUnitDS.xsd" xmlns:mstns="http://tempuri.org/W01OverallUnitDS.xsd" xmlns="http://tempuri.org/W01OverallUnitDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="W01OverallUnitDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="W01OverallUnitDS" msprop:Generator_UserDSName="W01OverallUnitDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dbtlb" msprop:Generator_TableClassName="dbtlbDataTable" msprop:Generator_TableVarName="tabledbtlb" msprop:Generator_TablePropName="dbtlb" msprop:Generator_RowDeletingName="dbtlbRowDeleting" msprop:Generator_RowChangingName="dbtlbRowChanging" msprop:Generator_RowEvHandlerName="dbtlbRowChangeEventHandler" msprop:Generator_RowDeletedName="dbtlbRowDeleted" msprop:Generator_UserTableName="dbtlb" msprop:Generator_RowChangedName="dbtlbRowChanged" msprop:Generator_RowEvArgName="dbtlbRowChangeEvent" msprop:Generator_RowClassName="dbtlbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="yearmon" msdata:Caption="日期" msprop:Generator_ColumnVarNameInTable="columnyearmon" msprop:Generator_ColumnPropNameInRow="yearmon" msprop:Generator_ColumnPropNameInTable="yearmonColumn" msprop:Generator_UserColumnName="yearmon" type="xs:string" minOccurs="0" />
+              <xs:element name="trtype" msdata:Caption="类型" msprop:Generator_ColumnVarNameInTable="columntrtype" msprop:Generator_ColumnPropNameInRow="trtype" msprop:Generator_ColumnPropNameInTable="trtypeColumn" msprop:Generator_UserColumnName="trtype" type="xs:string" minOccurs="0" />
+              <xs:element name="iocode" msdata:Caption="出入库区分" msprop:Generator_ColumnVarNameInTable="columniocode" msprop:Generator_ColumnPropNameInRow="iocode" msprop:Generator_ColumnPropNameInTable="iocodeColumn" msprop:Generator_UserColumnName="iocode" type="xs:string" minOccurs="0" />
+              <xs:element name="facno" msdata:Caption="公司别" msprop:Generator_ColumnVarNameInTable="columnfacno" msprop:Generator_ColumnPropNameInRow="facno" msprop:Generator_ColumnPropNameInTable="facnoColumn" msprop:Generator_UserColumnName="facno" type="xs:string" minOccurs="0" />
+              <xs:element name="prono" msdata:Caption="生产地" msprop:Generator_ColumnVarNameInTable="columnprono" msprop:Generator_ColumnPropNameInRow="prono" msprop:Generator_ColumnPropNameInTable="pronoColumn" msprop:Generator_UserColumnName="prono" type="xs:string" minOccurs="0" />
+              <xs:element name="wareh" msdata:Caption="库号" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msdata:Caption="件号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="fixnr" msdata:Caption="批号" msprop:Generator_ColumnVarNameInTable="columnfixnr" msprop:Generator_ColumnPropNameInRow="fixnr" msprop:Generator_ColumnPropNameInTable="fixnrColumn" msprop:Generator_UserColumnName="fixnr" type="xs:string" minOccurs="0" />
+              <xs:element name="varnr" msdata:Caption="制造号码" msprop:Generator_ColumnVarNameInTable="columnvarnr" msprop:Generator_ColumnPropNameInRow="varnr" msprop:Generator_ColumnPropNameInTable="varnrColumn" msprop:Generator_UserColumnName="varnr" type="xs:string" minOccurs="0" />
+              <xs:element name="itcls" msdata:Caption="大类编号" msprop:Generator_ColumnVarNameInTable="columnitcls" msprop:Generator_ColumnPropNameInRow="itcls" msprop:Generator_ColumnPropNameInTable="itclsColumn" msprop:Generator_UserColumnName="itcls" type="xs:string" minOccurs="0" />
+              <xs:element name="itclscode" msdata:Caption="归类码" msprop:Generator_ColumnVarNameInTable="columnitclscode" msprop:Generator_ColumnPropNameInRow="itclscode" msprop:Generator_ColumnPropNameInTable="itclscodeColumn" msprop:Generator_UserColumnName="itclscode" type="xs:string" minOccurs="0" />
+              <xs:element name="trnqy1" msdata:Caption="数量" msprop:Generator_ColumnVarNameInTable="columntrnqy1" msprop:Generator_ColumnPropNameInRow="trnqy1" msprop:Generator_ColumnPropNameInTable="trnqy1Column" msprop:Generator_UserColumnName="trnqy1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

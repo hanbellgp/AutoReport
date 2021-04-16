@@ -157,6 +157,7 @@ namespace Hanbell.AutoReport.Config
             try
             {
                 this.dbcomm.CommandText = sqlstr;
+                dbcomm.CommandTimeout = 180;
                 if (this.dbconn.State == ConnectionState.Closed) this.dbconn.Open();
                 tbl.Clear();
                 da.Fill(tbl);
@@ -177,6 +178,7 @@ namespace Hanbell.AutoReport.Config
             try
             {
                 this.dbcomm.CommandText = sqlstr;
+                dbcomm.CommandTimeout = 180;
                 if (this.dbconn.State == ConnectionState.Closed) this.dbconn.Open();
                 return this.dbcomm.ExecuteScalar().ToString();
             }
@@ -195,6 +197,7 @@ namespace Hanbell.AutoReport.Config
             try
             {
                 dbcomm.CommandText = sqlstr;
+                dbcomm.CommandTimeout = 180;
                 da.Fill(ds, tbl);
 
             }
@@ -257,7 +260,7 @@ namespace Hanbell.AutoReport.Config
 
             try
             {
-                report.ExportToDisk(fileType, fileFullName);
+               report.ExportToDisk(fileType, fileFullName);
                 return fileFullName;
             }
             catch (Exception ex)

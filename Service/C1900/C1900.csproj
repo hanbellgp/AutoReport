@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC26C2A5-9864-48D5-9CF6-25F7F8837B2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hanbell.AutoReport.Config</RootNamespace>
+    <AssemblyName>C1900</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hetongshenhe.cs" />
+    <Compile Include="HetongshenheConfig.cs" />
+    <Compile Include="HetongshenheDS.cs">
+      <DependentUpon>HetongshenheDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HetongshenheDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HetongshenheDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HeyuedanjiaweilailianggeyueConfig_K.cs" />
+    <Compile Include="Heyuedanjiaweilailianggeyue_K.cs" />
+    <Compile Include="Heyuedanjiaweilailianggeyue_KDS.cs">
+      <DependentUpon>Heyuedanjiaweilailianggeyue_KDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Heyuedanjiaweilailianggeyue_KDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Heyuedanjiaweilailianggeyue_KDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HZ_JS014.cs" />
+    <Compile Include="HZ_JS014Config.cs" />
+    <Compile Include="HZ_JS014DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HZ_JS014DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Jiechangshangbaobiao_K.cs" />
+    <Compile Include="JiechangshangbaobiaoConfig_K.cs" />
+    <Compile Include="JiechangshangbaobiaoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiechangshangbaobiaoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiechangshangmeiriConfig_K.cs" />
+    <Compile Include="JiechangshangmeiriDS.cs">
+      <DependentUpon>JiechangshangmeiriDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JiechangshangmeiriDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiechangshangmeiriDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Jiechangshangmeiri_K.cs" />
+    <Compile Include="Meiyuexinzengkuhao.cs" />
+    <Compile Include="MeiyuexinzengkuhaoConfig.cs" />
+    <Compile Include="MeiyuexinzengkuhaoDS.cs">
+      <DependentUpon>MeiyuexinzengkuhaoDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MeiyuexinzengkuhaoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MeiyuexinzengkuhaoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QinggousantianweipaozhuanConfig_V.cs" />
+    <Compile Include="QinggousantianweipaozhuanDS_V.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QinggousantianweipaozhuanDS_V.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Qinggousantianweipaozhuan_V.cs" />
+    <Compile Include="Weilaiyizhouxujiaohuo.cs" />
+    <Compile Include="WeilaiyizhouxujiaohuoConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeilaiyizhouxujiaohuoConfig_V.cs" />
+    <Compile Include="WeilaiyizhouxujiaohuoDS.cs">
+      <DependentUpon>WeilaiyizhouxujiaohuoDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WeilaiyizhouxujiaohuoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WeilaiyizhouxujiaohuoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Weilaiyizhouxujiaohuo_V.cs" />
+    <Compile Include="Weilaiyizhouxujiaohuo_VDS.cs">
+      <DependentUpon>Weilaiyizhouxujiaohuo_VDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Weilaiyizhouxujiaohuo_VDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Weilaiyizhouxujiaohuo_VDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WeiweihuchangshangfenpeilvdangConfig_K.cs" />
+    <Compile Include="Weiweihuchangshangfenpeilvdang_K.cs" />
+    <Compile Include="Weiweihuchangshangfenpeilvdang_KDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Weiweihuchangshangfenpeilvdang_KDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkItemNeedSignConfig.cs" />
+    <Compile Include="YidianshouweiyanshouConfig_K.cs" />
+    <Compile Include="Yidianshouweiyanshou_E.cs" />
+    <Compile Include="Yidianshouweiyanshou_K.cs" />
+    <Compile Include="Yidianshouweiyanshou_KDS.cs">
+      <DependentUpon>Yidianshouweiyanshou_KDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Yidianshouweiyanshou_KDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Yidianshouweiyanshou_KDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YuqiweijieancaigoudanConfig_K.cs" />
+    <Compile Include="YuqiweijieancaigoudanDS.cs">
+      <DependentUpon>YuqiweijieancaigoudanDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YuqiweijieancaigoudanDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YuqiweijieancaigoudanDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Yuqiweijieancaigoudan_K.cs" />
+    <Compile Include="YuqiweiqianheConfig_V.cs" />
+    <Compile Include="YuqiweiqianheDS.cs">
+      <DependentUpon>YuqiweiqianheDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="YuqiweiqianheDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YuqiweiqianheDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Yuqiweiqianhe_V.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="HetongshenheDS.xsc">
+      <DependentUpon>HetongshenheDS.xsd</DependentUpon>
+    </None>
+    <None Include="HetongshenheDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HetongshenheDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HetongshenheDS.xss">
+      <DependentUpon>HetongshenheDS.xsd</DependentUpon>
+    </None>
+    <None Include="Heyuedanjiaweilailianggeyue_KDS.xsc">
+      <DependentUpon>Heyuedanjiaweilailianggeyue_KDS.xsd</DependentUpon>
+    </None>
+    <None Include="Heyuedanjiaweilailianggeyue_KDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Heyuedanjiaweilailianggeyue_KDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Heyuedanjiaweilailianggeyue_KDS.xss">
+      <DependentUpon>Heyuedanjiaweilailianggeyue_KDS.xsd</DependentUpon>
+    </None>
+    <None Include="HZ_JS014DS.xsc">
+      <DependentUpon>HZ_JS014DS.xsd</DependentUpon>
+    </None>
+    <None Include="HZ_JS014DS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HZ_JS014DS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="HZ_JS014DS.xss">
+      <DependentUpon>HZ_JS014DS.xsd</DependentUpon>
+    </None>
+    <None Include="JiechangshangbaobiaoDS.xsc">
+      <DependentUpon>JiechangshangbaobiaoDS.xsd</DependentUpon>
+    </None>
+    <None Include="JiechangshangbaobiaoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiechangshangbaobiaoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JiechangshangbaobiaoDS.xss">
+      <DependentUpon>JiechangshangbaobiaoDS.xsd</DependentUpon>
+    </None>
+    <None Include="JiechangshangmeiriDS.xsc">
+      <DependentUpon>JiechangshangmeiriDS.xsd</DependentUpon>
+    </None>
+    <None Include="JiechangshangmeiriDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiechangshangmeiriDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JiechangshangmeiriDS.xss">
+      <DependentUpon>JiechangshangmeiriDS.xsd</DependentUpon>
+    </None>
+    <None Include="MeiyuexinzengkuhaoDS.xsc">
+      <DependentUpon>MeiyuexinzengkuhaoDS.xsd</DependentUpon>
+    </None>
+    <None Include="MeiyuexinzengkuhaoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MeiyuexinzengkuhaoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MeiyuexinzengkuhaoDS.xss">
+      <DependentUpon>MeiyuexinzengkuhaoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QinggousantianweipaozhuanDS_V.xsc">
+      <DependentUpon>QinggousantianweipaozhuanDS_V.xsd</DependentUpon>
+    </None>
+    <None Include="QinggousantianweipaozhuanDS_V.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QinggousantianweipaozhuanDS_V.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QinggousantianweipaozhuanDS_V.xss">
+      <DependentUpon>QinggousantianweipaozhuanDS_V.xsd</DependentUpon>
+    </None>
+    <None Include="WeilaiyizhouxujiaohuoDS.xsc">
+      <DependentUpon>WeilaiyizhouxujiaohuoDS.xsd</DependentUpon>
+    </None>
+    <None Include="WeilaiyizhouxujiaohuoDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WeilaiyizhouxujiaohuoDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="WeilaiyizhouxujiaohuoDS.xss">
+      <DependentUpon>WeilaiyizhouxujiaohuoDS.xsd</DependentUpon>
+    </None>
+    <None Include="Weilaiyizhouxujiaohuo_VDS.xsc">
+      <DependentUpon>Weilaiyizhouxujiaohuo_VDS.xsd</DependentUpon>
+    </None>
+    <None Include="Weilaiyizhouxujiaohuo_VDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Weilaiyizhouxujiaohuo_VDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Weilaiyizhouxujiaohuo_VDS.xss">
+      <DependentUpon>Weilaiyizhouxujiaohuo_VDS.xsd</DependentUpon>
+    </None>
+    <None Include="Weiweihuchangshangfenpeilvdang_KDS.xsc">
+      <DependentUpon>Weiweihuchangshangfenpeilvdang_KDS.xsd</DependentUpon>
+    </None>
+    <None Include="Weiweihuchangshangfenpeilvdang_KDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Weiweihuchangshangfenpeilvdang_KDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Weiweihuchangshangfenpeilvdang_KDS.xss">
+      <DependentUpon>Weiweihuchangshangfenpeilvdang_KDS.xsd</DependentUpon>
+    </None>
+    <None Include="Yidianshouweiyanshou_KDS.xsc">
+      <DependentUpon>Yidianshouweiyanshou_KDS.xsd</DependentUpon>
+    </None>
+    <None Include="Yidianshouweiyanshou_KDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Yidianshouweiyanshou_KDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Yidianshouweiyanshou_KDS.xss">
+      <DependentUpon>Yidianshouweiyanshou_KDS.xsd</DependentUpon>
+    </None>
+    <None Include="YuqiweijieancaigoudanDS.xsc">
+      <DependentUpon>YuqiweijieancaigoudanDS.xsd</DependentUpon>
+    </None>
+    <None Include="YuqiweijieancaigoudanDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YuqiweijieancaigoudanDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YuqiweijieancaigoudanDS.xss">
+      <DependentUpon>YuqiweijieancaigoudanDS.xsd</DependentUpon>
+    </None>
+    <None Include="YuqiweiqianheDS.xsc">
+      <DependentUpon>YuqiweiqianheDS.xsd</DependentUpon>
+    </None>
+    <None Include="YuqiweiqianheDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YuqiweiqianheDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YuqiweiqianheDS.xss">
+      <DependentUpon>YuqiweiqianheDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Config\AutoReportConfig.csproj">
+      <Project>{090B91D7-B824-4D92-BA4D-C058648C619E}</Project>
+      <Name>AutoReportConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\AutoReportCore.csproj">
+      <Project>{1BF1F150-93F7-47B9-BDFF-12D407C33987}</Project>
+      <Name>AutoReportCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\AutoReportService.csproj">
+      <Project>{7DF64C24-5601-4D09-9842-A3B5C789EDB6}</Project>
+      <Name>AutoReportService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SHBReports\SHBReports.csproj">
+      <Project>{9DFBD0EF-24E5-4DB4-96AF-236452EC9FC5}</Project>
+      <Name>SHBReports</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

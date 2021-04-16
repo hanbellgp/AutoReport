@@ -21,21 +21,28 @@ namespace Hanbell.AutoReport.Config
         {
             //查询年度年度采购金额
             String sqlStr = @"select top 30 convert(varchar(4),a.trdat,112) as yer,a.vdrno,a.vdrna ,0 as m_puramt, 0 as m_order,
-            sum(a.acpamt)/10000 as y_puramt , 0 as y_order,0 as lm_puramt,0 as lm_order,0 as ly_puramt,0 as ly_order from ( 
-            SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh, purvdr,purhad 
-            WHERE (apmpyh.vdrno = purvdr.vdrno) and  (purhad.facno = apmpyh.facno) and (purhad.prono = apmpyh.prono) and (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1'))  AND
-            (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
-            year(apmpyh.trdat)= year(dateadd(month,-1,getdate()))))a 
-            GROUP BY convert(varchar(4),a.trdat,112),a.vdrno ,a.vdrna 
-            order by sum(a.acpamt) desc";
+            sum(a.acpamt)/10000 as y_puramt , 0 as y_order,0 as lm_puramt,0 as lm_order,0 as ly_puramt,0 as ly_order,0 as ly_grow,0 as ly_grower from (
+            SELECT apmaph.facno,apmaph.vdrno,purvdr.vdrna,sum(apmapd.acpamt) as acpamt,0 as ordern,year(apmaph.apdate) as trdat FROM apmaph
+            LEFT JOIN  apmapd on apmaph.facno = apmapd.facno and apmaph.apno = apmapd.apno
+            LEFT JOIN  purvdr on apmaph.vdrno = purvdr.vdrno
+            WHERE apmaph.apsta <> '99'
+            and apmaph.vdrno not in ('SSH00344')
+            and year(apmaph.apdate)= year(dateadd(month,-1,getdate()))
+            GROUP BY apmaph.facno,apmaph.vdrno,purvdr.vdrna,year(apmaph.apdate)
+            )a
+            GROUP BY a.trdat,a.vdrno ,a.vdrna
+            ORDER BY sum(a.acpamt) desc ";
             Fill(sqlStr, ds, "ndcgpm");
             //查询上个月采购金额
-            sqlStr = @"select convert(varchar(6),a.trdat,112) as 'mon',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as 'm_puramt',0 as 'm_order' from (
-            SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh, purvdr,purhad WHERE (apmpyh.vdrno = purvdr.vdrno) and 
-            (purhad.facno = apmpyh.facno) and (purhad.prono = apmpyh.prono) and (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1')) AND (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
-            convert(varchar(6),apmpyh.trdat,112)= convert(varchar(6),dateadd(month,-1,getdate()),112)))a 
-            GROUP BY convert(varchar(6),a.trdat,112),a.vdrno ,a.vdrna    
-            order by sum(a.acpamt) desc";
+            sqlStr = @"select convert(varchar(6),a.apdate,112) as 'mon',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as 'm_puramt',0 as 'm_order' from (
+            SELECT apmaph.facno,apmaph.vdrno,purvdr.vdrna,apmapd.acpamt,0 as ordern,apmaph.apdate FROM apmaph
+            LEFT JOIN  apmapd on apmaph.facno = apmapd.facno and apmaph.apno = apmapd.apno
+            LEFT JOIN  purvdr on apmaph.vdrno = purvdr.vdrno
+            WHERE (apmaph.apsta <> '99'
+            and apmaph.vdrno not in ('SSH00344')
+            AND convert(varchar(6),apmaph.apdate,112)= convert(varchar(6),dateadd(month,-1,getdate()),112)))a
+            GROUP BY convert(varchar(6),a.apdate,112),a.vdrno ,a.vdrna
+            order by sum(a.acpamt) desc ";
             Fill(sqlStr, ds, "mpuramt");
             //添加到ndcgpm表中
             foreach (DataRow item in ds.Tables["ndcgpm"].Rows)
@@ -51,14 +58,17 @@ namespace Hanbell.AutoReport.Config
             }
 
             //查询同期排名
-            sqlStr = @"select convert(varchar(4),a.trdat,112) as 'mom',a.vdrno,a.vdrna,sum(a.acpamt)/10000 as 'lm_puramt',0 as 'lm_order' from (
-            SELECT  apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna ,acpamt,0 as ordern,apmpyh.trdat
-            FROM apmpyh,purvdr,purhad  WHERE (apmpyh.vdrno = purvdr.vdrno) and (purhad.facno = apmpyh.facno) and  (purhad.prono = apmpyh.prono) and   
-            (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1'))  AND (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
-            convert(varchar(6),apmpyh.trdat,112) < = convert( varchar(6),dateadd(month,-13,getdate()),112) 
-            and convert(varchar(4),apmpyh.trdat,112) = convert( varchar(4),dateadd(month,-13,getdate()),112)))a 
-            GROUP BY convert(varchar(4),a.trdat,112),a.vdrno,a.vdrna 
-            order by sum(a.acpamt) desc";
+            sqlStr = @"select convert(varchar(4),a.apdate,112) as 'mom',a.vdrno,a.vdrna,sum(a.acpamt)/10000 as 'lm_puramt',0 as 'lm_order' from (
+            SELECT  apmaph.facno,apmaph.vdrno,purvdr.vdrna ,apmapd.acpamt,0 as ordern,apmaph.apdate
+            FROM apmaph
+            LEFT JOIN  apmapd on apmaph.facno = apmapd.facno and apmaph.apno = apmapd.apno
+            LEFT JOIN  purvdr on apmaph.vdrno = purvdr.vdrno
+            WHERE (apmaph.apsta <> '99'
+            and apmaph.vdrno not in ('SSH00344') 
+            and convert(varchar(6),apmaph.apdate,112) <=  convert( varchar(6),dateadd(month,-13,getdate()),112)
+            and convert(varchar(4),apmaph.apdate,112) = convert( varchar(4),dateadd(month,-13,getdate()),112)))a
+            GROUP BY convert(varchar(4),a.apdate,112),a.vdrno,a.vdrna
+            order by sum(a.acpamt) desc ";
             //添加到ndcgpm表去
             Fill(sqlStr, ds, "lmpuramt");
             foreach (DataRow item in ds.Tables["ndcgpm"].Rows)
@@ -73,14 +83,16 @@ namespace Hanbell.AutoReport.Config
                 }
             }
 
-            //查询去年排名
-            sqlStr = @"select convert(varchar(4),a.trdat,112) as 'yer',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as 'ly_puramt',0 as 'ly_order' from (
-            SELECT apmpyh.facno,apmpyh.prono,apmpyh.vdrno,purvdr.vdrna,acpamt,0 as ordern,apmpyh.trdat FROM apmpyh,purvdr,purhad 
-            WHERE (apmpyh.vdrno = purvdr.vdrno) and ( purhad.facno = apmpyh.facno ) and ( purhad.prono = apmpyh.prono ) and   
-            (purhad.pono = apmpyh.pono) and ((apmpyh.pyhkind = '1')) AND (apmpyh.facno = 'C' and apmpyh.prono = '1' and 
-            year(apmpyh.trdat)= year(dateadd(year,-1,dateadd(month,-1,getdate())))))a 
-            GROUP BY convert(varchar(4),a.trdat,112),a.vdrno,a.vdrna    
-            order by sum(a.acpamt) desc";
+            //查询去年排名 AND convert(varchar(6),apmpyh.trdat,112) <= convert( varchar(6),dateadd(month,-13,getdate()),112)
+            sqlStr = @"select convert(varchar(4),a.apdate,112) as 'yer',a.vdrno,a.vdrna ,sum(a.acpamt)/10000 as 'ly_puramt',0 as 'ly_order' from (
+            SELECT apmaph.facno,apmaph.vdrno,purvdr.vdrna,apmapd.acpamt,0 as ordern,apmaph.apdate FROM apmaph
+            LEFT JOIN  apmapd on apmaph.facno = apmapd.facno and apmaph.apno = apmapd.apno
+            LEFT JOIN  purvdr on apmaph.vdrno = purvdr.vdrno
+            WHERE ( apmaph.apsta <> '99'
+            and apmaph.vdrno not in ('SSH00344') 
+            and convert(varchar(4),apmaph.apdate,112) = convert( varchar(4),dateadd(month,-13,getdate()),112)))a
+            GROUP BY convert(varchar(4),a.apdate,112),a.vdrno,a.vdrna
+            order by sum(a.acpamt) desc ";
             //添加到ndcgpm表里去
             Fill(sqlStr, ds, "lypuramt");
             foreach (DataRow item in ds.Tables["ndcgpm"].Rows)

@@ -63,7 +63,7 @@ namespace Hanbell.AutoReport.Config
                     {
                         sb.Append("<td class='number'>");
                     }
-                    else if (tbl.Columns[k].ColumnName == "rate1" || tbl.Columns[k].ColumnName == "rate2" )
+                    else if (tbl.Columns[k].ColumnName == "rate1" || tbl.Columns[k].ColumnName == "rate2")
                     {
                         sb.Append("<td class='number'>");
                     }
@@ -173,12 +173,24 @@ namespace Hanbell.AutoReport.Config
 
             string[] title = { "产品别", "本年当月库存台数", "去年同期库存台数", "库存增长比率", "本年当月出货台数", "去年同期出货台数", "出货增长比率" };
             int[] width = { 100, 150, 150, 150, 150, 150, 150 };
-
+            DataTable dt = nc.GetDataTable("W01");
+            foreach (DataRow item in dt.Rows)
+            {
+                if (item["rate1"].ToString() == "" )
+                {
+                    item["rate1"] = Convert.ToDouble(0);
+                }
+                if (item["rate2"].ToString() == "")
+                {
+                    item["rate2"] = Convert.ToDouble(0);
+                }  
+            }
+            dt.AcceptChanges();
             //string[] title = { };
-            this.content = GetContent(nc.GetDataTable("W01"), title, width);
+            this.content = GetContent(dt, title, width);
 
 
-            if (nc.GetDataTable("W01").Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
                 AddNotify(new MailNotify());
             }

@@ -398,13 +398,17 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn columny_order;
             
+            private global::System.Data.DataColumn columnlm_puramt;
+            
+            private global::System.Data.DataColumn columnlm_order;
+            
             private global::System.Data.DataColumn columnly_puramt;
             
             private global::System.Data.DataColumn columnly_order;
             
-            private global::System.Data.DataColumn columnlm_puramt;
+            private global::System.Data.DataColumn columnly_grow;
             
-            private global::System.Data.DataColumn columnlm_order;
+            private global::System.Data.DataColumn columnly_grower;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -497,6 +501,22 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn lm_puramtColumn {
+                get {
+                    return this.columnlm_puramt;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn lm_orderColumn {
+                get {
+                    return this.columnlm_order;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn ly_puramtColumn {
                 get {
                     return this.columnly_puramt;
@@ -513,17 +533,17 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn lm_puramtColumn {
+            public global::System.Data.DataColumn ly_growColumn {
                 get {
-                    return this.columnlm_puramt;
+                    return this.columnly_grow;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn lm_orderColumn {
+            public global::System.Data.DataColumn ly_growerColumn {
                 get {
-                    return this.columnlm_order;
+                    return this.columnly_grower;
                 }
             }
             
@@ -564,7 +584,7 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ndcgpmRow AddndcgpmRow(string yer, string vdrno, string vdrna, decimal m_puramt, short m_order, decimal y_puramt, short y_order, decimal ly_puramt, short ly_order, decimal lm_puramt, short lm_order) {
+            public ndcgpmRow AddndcgpmRow(string yer, string vdrno, string vdrna, decimal m_puramt, short m_order, decimal y_puramt, short y_order, decimal lm_puramt, short lm_order, decimal ly_puramt, short ly_order, decimal ly_grow, string ly_grower) {
                 ndcgpmRow rowndcgpmRow = ((ndcgpmRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         yer,
@@ -574,10 +594,12 @@ namespace Hanbell.AutoReport.Config {
                         m_order,
                         y_puramt,
                         y_order,
+                        lm_puramt,
+                        lm_order,
                         ly_puramt,
                         ly_order,
-                        lm_puramt,
-                        lm_order};
+                        ly_grow,
+                        ly_grower};
                 rowndcgpmRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowndcgpmRow);
                 return rowndcgpmRow;
@@ -607,10 +629,12 @@ namespace Hanbell.AutoReport.Config {
                 this.columnm_order = base.Columns["m_order"];
                 this.columny_puramt = base.Columns["y_puramt"];
                 this.columny_order = base.Columns["y_order"];
-                this.columnly_puramt = base.Columns["ly_puramt"];
-                this.columnly_order = base.Columns["ly_order"];
                 this.columnlm_puramt = base.Columns["lm_puramt"];
                 this.columnlm_order = base.Columns["lm_order"];
+                this.columnly_puramt = base.Columns["ly_puramt"];
+                this.columnly_order = base.Columns["ly_order"];
+                this.columnly_grow = base.Columns["ly_grow"];
+                this.columnly_grower = base.Columns["ly_grower"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -630,14 +654,18 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columny_puramt);
                 this.columny_order = new global::System.Data.DataColumn("y_order", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columny_order);
-                this.columnly_puramt = new global::System.Data.DataColumn("ly_puramt", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnly_puramt);
-                this.columnly_order = new global::System.Data.DataColumn("ly_order", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnly_order);
                 this.columnlm_puramt = new global::System.Data.DataColumn("lm_puramt", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlm_puramt);
                 this.columnlm_order = new global::System.Data.DataColumn("lm_order", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnlm_order);
+                this.columnly_puramt = new global::System.Data.DataColumn("ly_puramt", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnly_puramt);
+                this.columnly_order = new global::System.Data.DataColumn("ly_order", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnly_order);
+                this.columnly_grow = new global::System.Data.DataColumn("ly_grow", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnly_grow);
+                this.columnly_grower = new global::System.Data.DataColumn("ly_grower", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnly_grower);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1759,6 +1787,38 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal lm_puramt {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablendcgpm.lm_puramtColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“ndcgpm”中列“lm_puramt”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tablendcgpm.lm_puramtColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public short lm_order {
+                get {
+                    try {
+                        return ((short)(this[this.tablendcgpm.lm_orderColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“ndcgpm”中列“lm_order”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tablendcgpm.lm_orderColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal ly_puramt {
                 get {
                     try {
@@ -1791,33 +1851,33 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal lm_puramt {
+            public decimal ly_grow {
                 get {
                     try {
-                        return ((decimal)(this[this.tablendcgpm.lm_puramtColumn]));
+                        return ((decimal)(this[this.tablendcgpm.ly_growColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“ndcgpm”中列“lm_puramt”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“ndcgpm”中列“ly_grow”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tablendcgpm.lm_puramtColumn] = value;
+                    this[this.tablendcgpm.ly_growColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public short lm_order {
+            public string ly_grower {
                 get {
                     try {
-                        return ((short)(this[this.tablendcgpm.lm_orderColumn]));
+                        return ((string)(this[this.tablendcgpm.ly_growerColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("表“ndcgpm”中列“lm_order”的值为 DBNull。", e);
+                        throw new global::System.Data.StrongTypingException("表“ndcgpm”中列“ly_grower”的值为 DBNull。", e);
                     }
                 }
                 set {
-                    this[this.tablendcgpm.lm_orderColumn] = value;
+                    this[this.tablendcgpm.ly_growerColumn] = value;
                 }
             }
             
@@ -1907,6 +1967,30 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Islm_puramtNull() {
+                return this.IsNull(this.tablendcgpm.lm_puramtColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setlm_puramtNull() {
+                this[this.tablendcgpm.lm_puramtColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Islm_orderNull() {
+                return this.IsNull(this.tablendcgpm.lm_orderColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setlm_orderNull() {
+                this[this.tablendcgpm.lm_orderColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isly_puramtNull() {
                 return this.IsNull(this.tablendcgpm.ly_puramtColumn);
             }
@@ -1931,26 +2015,26 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Islm_puramtNull() {
-                return this.IsNull(this.tablendcgpm.lm_puramtColumn);
+            public bool Isly_growNull() {
+                return this.IsNull(this.tablendcgpm.ly_growColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setlm_puramtNull() {
-                this[this.tablendcgpm.lm_puramtColumn] = global::System.Convert.DBNull;
+            public void Setly_growNull() {
+                this[this.tablendcgpm.ly_growColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Islm_orderNull() {
-                return this.IsNull(this.tablendcgpm.lm_orderColumn);
+            public bool Isly_growerNull() {
+                return this.IsNull(this.tablendcgpm.ly_growerColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setlm_orderNull() {
-                this[this.tablendcgpm.lm_orderColumn] = global::System.Convert.DBNull;
+            public void Setly_growerNull() {
+                this[this.tablendcgpm.ly_growerColumn] = global::System.Convert.DBNull;
             }
         }
         

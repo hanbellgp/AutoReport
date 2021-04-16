@@ -35,6 +35,27 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="unreturn" msprop:Generator_TableClassName="unreturnDataTable" msprop:Generator_TableVarName="tableunreturn" msprop:Generator_RowChangedName="unreturnRowChanged" msprop:Generator_TablePropName="unreturn" msprop:Generator_RowDeletingName="unreturnRowDeleting" msprop:Generator_RowChangingName="unreturnRowChanging" msprop:Generator_RowEvHandlerName="unreturnRowChangeEventHandler" msprop:Generator_RowDeletedName="unreturnRowDeleted" msprop:Generator_RowClassName="unreturnRow" msprop:Generator_UserTableName="unreturn" msprop:Generator_RowEvArgName="unreturnRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="objtype" msprop:Generator_ColumnVarNameInTable="columnobjtype" msprop:Generator_ColumnPropNameInRow="objtype" msprop:Generator_ColumnPropNameInTable="objtypeColumn" msprop:Generator_UserColumnName="objtype" type="xs:string" minOccurs="0" />
+              <xs:element name="depno" msprop:Generator_ColumnVarNameInTable="columndepno" msprop:Generator_ColumnPropNameInRow="depno" msprop:Generator_ColumnPropNameInTable="depnoColumn" msprop:Generator_UserColumnName="depno" type="xs:string" minOccurs="0" />
+              <xs:element name="cdesc" msprop:Generator_ColumnVarNameInTable="columncdesc" msprop:Generator_ColumnPropNameInRow="cdesc" msprop:Generator_ColumnPropNameInTable="cdescColumn" msprop:Generator_UserColumnName="cdesc" type="xs:string" minOccurs="0" />
+              <xs:element name="cost" msprop:Generator_ColumnVarNameInTable="columncost" msprop:Generator_ColumnPropNameInRow="cost" msprop:Generator_ColumnPropNameInTable="costColumn" msprop:Generator_UserColumnName="cost" type="xs:string" minOccurs="0" />
+              <xs:element name="actor" msprop:Generator_ColumnVarNameInTable="columnactor" msprop:Generator_ColumnPropNameInRow="actor" msprop:Generator_ColumnPropNameInTable="actorColumn" msprop:Generator_UserColumnName="actor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="unreturn_why" msprop:Generator_TableClassName="unreturn_whyDataTable" msprop:Generator_TableVarName="tableunreturn_why" msprop:Generator_TablePropName="unreturn_why" msprop:Generator_RowDeletingName="unreturn_whyRowDeleting" msprop:Generator_RowChangingName="unreturn_whyRowChanging" msprop:Generator_RowEvHandlerName="unreturn_whyRowChangeEventHandler" msprop:Generator_RowDeletedName="unreturn_whyRowDeleted" msprop:Generator_UserTableName="unreturn_why" msprop:Generator_RowChangedName="unreturn_whyRowChanged" msprop:Generator_RowEvArgName="unreturn_whyRowChangeEvent" msprop:Generator_RowClassName="unreturn_whyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="objtype" msprop:Generator_ColumnVarNameInTable="columnobjtype" msprop:Generator_ColumnPropNameInRow="objtype" msprop:Generator_ColumnPropNameInTable="objtypeColumn" msprop:Generator_UserColumnName="objtype" type="xs:string" minOccurs="0" />
+              <xs:element name="cdesc" msprop:Generator_ColumnVarNameInTable="columncdesc" msprop:Generator_ColumnPropNameInRow="cdesc" msprop:Generator_ColumnPropNameInTable="cdescColumn" msprop:Generator_UserColumnName="cdesc" type="xs:string" minOccurs="0" />
+              <xs:element name="cost" msprop:Generator_ColumnVarNameInTable="columncost" msprop:Generator_ColumnPropNameInRow="cost" msprop:Generator_ColumnPropNameInTable="costColumn" msprop:Generator_UserColumnName="cost" type="xs:string" minOccurs="0" />
+              <xs:element name="actor" msprop:Generator_ColumnVarNameInTable="columnactor" msprop:Generator_ColumnPropNameInRow="actor" msprop:Generator_ColumnPropNameInTable="actorColumn" msprop:Generator_UserColumnName="actor" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

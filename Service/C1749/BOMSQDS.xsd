@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BOMSQDS" targetNamespace="http://tempuri.org/BOMSQDS.xsd" xmlns:mstns="http://tempuri.org/BOMSQDS.xsd" xmlns="http://tempuri.org/BOMSQDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BOMSQDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BOMSQDS" msprop:Generator_UserDSName="BOMSQDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="bomtlb" msprop:Generator_TableClassName="bomtlbDataTable" msprop:Generator_TableVarName="tablebomtlb" msprop:Generator_TablePropName="bomtlb" msprop:Generator_RowDeletingName="bomtlbRowDeleting" msprop:Generator_RowChangingName="bomtlbRowChanging" msprop:Generator_RowEvHandlerName="bomtlbRowChangeEventHandler" msprop:Generator_RowDeletedName="bomtlbRowDeleted" msprop:Generator_UserTableName="bomtlb" msprop:Generator_RowChangedName="bomtlbRowChanged" msprop:Generator_RowEvArgName="bomtlbRowChangeEvent" msprop:Generator_RowClassName="bomtlbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itnbrf" msprop:Generator_ColumnVarNameInTable="columnitnbrf" msprop:Generator_ColumnPropNameInRow="itnbrf" msprop:Generator_ColumnPropNameInTable="itnbrfColumn" msprop:Generator_UserColumnName="itnbrf" type="xs:string" minOccurs="0" />
+              <xs:element name="itnbr" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="newitdsc" msprop:Generator_ColumnVarNameInTable="columnnewitdsc" msprop:Generator_ColumnPropNameInRow="newitdsc" msprop:Generator_ColumnPropNameInTable="newitdscColumn" msprop:Generator_UserColumnName="newitdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="olditnbr" msprop:Generator_ColumnVarNameInTable="columnolditnbr" msprop:Generator_ColumnPropNameInRow="olditnbr" msprop:Generator_ColumnPropNameInTable="olditnbrColumn" msprop:Generator_UserColumnName="olditnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="olditdsc" msprop:Generator_ColumnVarNameInTable="columnolditdsc" msprop:Generator_ColumnPropNameInRow="olditdsc" msprop:Generator_ColumnPropNameInTable="olditdscColumn" msprop:Generator_UserColumnName="olditdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="ratio" msprop:Generator_ColumnVarNameInTable="columnratio" msprop:Generator_ColumnPropNameInRow="ratio" msprop:Generator_ColumnPropNameInTable="ratioColumn" msprop:Generator_UserColumnName="ratio" type="xs:string" minOccurs="0" />
+              <xs:element name="ecnno" msprop:Generator_ColumnVarNameInTable="columnecnno" msprop:Generator_ColumnPropNameInRow="ecnno" msprop:Generator_ColumnPropNameInTable="ecnnoColumn" msprop:Generator_UserColumnName="ecnno" type="xs:string" minOccurs="0" />
+              <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username" type="xs:string" minOccurs="0" />
+              <xs:element name="chgkind" msprop:Generator_ColumnVarNameInTable="columnchgkind" msprop:Generator_ColumnPropNameInRow="chgkind" msprop:Generator_ColumnPropNameInTable="chgkindColumn" msprop:Generator_UserColumnName="chgkind" type="xs:string" minOccurs="0" />
+              <xs:element name="modifydate" msprop:Generator_ColumnVarNameInTable="columnmodifydate" msprop:Generator_ColumnPropNameInRow="modifydate" msprop:Generator_ColumnPropNameInTable="modifydateColumn" msprop:Generator_UserColumnName="modifydate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -332,6 +332,8 @@ namespace Hanbell.AutoReport.Config {
             
             private global::System.Data.DataColumn columnqty;
             
+            private global::System.Data.DataColumn columnrecdate;
+            
             private global::System.Data.DataColumn columnshipday1;
             
             private global::System.Data.DataColumn columninqty;
@@ -347,6 +349,10 @@ namespace Hanbell.AutoReport.Config {
             private global::System.Data.DataColumn columnsn;
             
             private global::System.Data.DataColumn columnremark1;
+            
+            private global::System.Data.DataColumn columnppday1;
+            
+            private global::System.Data.DataColumn columnremark2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -455,6 +461,14 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn recdateColumn {
+                get {
+                    return this.columnrecdate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn shipday1Column {
                 get {
                     return this.columnshipday1;
@@ -519,6 +533,22 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ppday1Column {
+                get {
+                    return this.columnppday1;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn remark2Column {
+                get {
+                    return this.columnremark2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -564,6 +594,7 @@ namespace Hanbell.AutoReport.Config {
                         string itnbrcus, 
                         string itdsc, 
                         decimal qty, 
+                        string recdate, 
                         System.DateTime shipday1, 
                         decimal inqty, 
                         decimal shipqty, 
@@ -571,7 +602,9 @@ namespace Hanbell.AutoReport.Config {
                         System.DateTime manday1, 
                         System.DateTime finday1, 
                         string sn, 
-                        string remark1) {
+                        string remark1, 
+                        string ppday1, 
+                        string remark2) {
                 tblresultRow rowtblresultRow = ((tblresultRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         cusno,
@@ -583,6 +616,7 @@ namespace Hanbell.AutoReport.Config {
                         itnbrcus,
                         itdsc,
                         qty,
+                        recdate,
                         shipday1,
                         inqty,
                         shipqty,
@@ -590,7 +624,9 @@ namespace Hanbell.AutoReport.Config {
                         manday1,
                         finday1,
                         sn,
-                        remark1};
+                        remark1,
+                        ppday1,
+                        remark2};
                 rowtblresultRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblresultRow);
                 return rowtblresultRow;
@@ -622,6 +658,7 @@ namespace Hanbell.AutoReport.Config {
                 this.columnitnbrcus = base.Columns["itnbrcus"];
                 this.columnitdsc = base.Columns["itdsc"];
                 this.columnqty = base.Columns["qty"];
+                this.columnrecdate = base.Columns["recdate"];
                 this.columnshipday1 = base.Columns["shipday1"];
                 this.columninqty = base.Columns["inqty"];
                 this.columnshipqty = base.Columns["shipqty"];
@@ -630,6 +667,8 @@ namespace Hanbell.AutoReport.Config {
                 this.columnfinday1 = base.Columns["finday1"];
                 this.columnsn = base.Columns["sn"];
                 this.columnremark1 = base.Columns["remark1"];
+                this.columnppday1 = base.Columns["ppday1"];
+                this.columnremark2 = base.Columns["remark2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -653,6 +692,8 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columnitdsc);
                 this.columnqty = new global::System.Data.DataColumn("qty", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnqty);
+                this.columnrecdate = new global::System.Data.DataColumn("recdate", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnrecdate);
                 this.columnshipday1 = new global::System.Data.DataColumn("shipday1", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnshipday1);
                 this.columninqty = new global::System.Data.DataColumn("inqty", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -669,6 +710,10 @@ namespace Hanbell.AutoReport.Config {
                 base.Columns.Add(this.columnsn);
                 this.columnremark1 = new global::System.Data.DataColumn("remark1", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnremark1);
+                this.columnppday1 = new global::System.Data.DataColumn("ppday1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnppday1);
+                this.columnremark2 = new global::System.Data.DataColumn("remark2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnremark2);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1227,6 +1272,22 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string recdate {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblresult.recdateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“recdate”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletblresult.recdateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime shipday1 {
                 get {
                     try {
@@ -1355,6 +1416,38 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ppday1 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblresult.ppday1Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“ppday1”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletblresult.ppday1Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string remark2 {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblresult.remark2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("表“tblresult”中列“remark2”的值为 DBNull。", e);
+                    }
+                }
+                set {
+                    this[this.tabletblresult.remark2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IscusnoNull() {
                 return this.IsNull(this.tabletblresult.cusnoColumn);
             }
@@ -1463,6 +1556,18 @@ namespace Hanbell.AutoReport.Config {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsrecdateNull() {
+                return this.IsNull(this.tabletblresult.recdateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetrecdateNull() {
+                this[this.tabletblresult.recdateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isshipday1Null() {
                 return this.IsNull(this.tabletblresult.shipday1Column);
             }
@@ -1555,6 +1660,30 @@ namespace Hanbell.AutoReport.Config {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setremark1Null() {
                 this[this.tabletblresult.remark1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isppday1Null() {
+                return this.IsNull(this.tabletblresult.ppday1Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setppday1Null() {
+                this[this.tabletblresult.ppday1Column] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool Isremark2Null() {
+                return this.IsNull(this.tabletblresult.remark2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Setremark2Null() {
+                this[this.tabletblresult.remark2Column] = global::System.Convert.DBNull;
             }
         }
         

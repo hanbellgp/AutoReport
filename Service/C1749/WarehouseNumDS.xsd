@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="WarehouseNumDS" targetNamespace="http://tempuri.org/WarehouseNumDS.xsd" xmlns:mstns="http://tempuri.org/WarehouseNumDS.xsd" xmlns="http://tempuri.org/WarehouseNumDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="WarehouseNumDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="WarehouseNumDS" msprop:Generator_UserDSName="WarehouseNumDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="zytlb" msprop:Generator_TableClassName="zytlbDataTable" msprop:Generator_TableVarName="tablezytlb" msprop:Generator_TablePropName="zytlb" msprop:Generator_RowDeletingName="zytlbRowDeleting" msprop:Generator_RowChangingName="zytlbRowChanging" msprop:Generator_RowEvHandlerName="zytlbRowChangeEventHandler" msprop:Generator_RowDeletedName="zytlbRowDeleted" msprop:Generator_UserTableName="zytlb" msprop:Generator_RowChangedName="zytlbRowChanged" msprop:Generator_RowEvArgName="zytlbRowChangeEvent" msprop:Generator_RowClassName="zytlbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="wareh" msprop:Generator_ColumnVarNameInTable="columnwareh" msprop:Generator_ColumnPropNameInRow="wareh" msprop:Generator_ColumnPropNameInTable="warehColumn" msprop:Generator_UserColumnName="wareh" type="xs:string" minOccurs="0" />
+              <xs:element name="num" msprop:Generator_ColumnVarNameInTable="columnnum" msprop:Generator_ColumnPropNameInRow="num" msprop:Generator_ColumnPropNameInTable="numColumn" msprop:Generator_UserColumnName="num" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="kytlb" msprop:Generator_TableClassName="kytlbDataTable" msprop:Generator_TableVarName="tablekytlb" msprop:Generator_TablePropName="kytlb" msprop:Generator_RowDeletingName="kytlbRowDeleting" msprop:Generator_RowChangingName="kytlbRowChanging" msprop:Generator_RowEvHandlerName="kytlbRowChangeEventHandler" msprop:Generator_RowDeletedName="kytlbRowDeleted" msprop:Generator_UserTableName="kytlb" msprop:Generator_RowChangedName="kytlbRowChanged" msprop:Generator_RowEvArgName="kytlbRowChangeEvent" msprop:Generator_RowClassName="kytlbRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="linecode" msprop:Generator_ColumnVarNameInTable="columnlinecode" msprop:Generator_ColumnPropNameInRow="linecode" msprop:Generator_ColumnPropNameInTable="linecodeColumn" msprop:Generator_UserColumnName="linecode" type="xs:string" minOccurs="0" />
+              <xs:element name="num" msprop:Generator_ColumnVarNameInTable="columnnum" msprop:Generator_ColumnPropNameInRow="num" msprop:Generator_ColumnPropNameInTable="numColumn" msprop:Generator_UserColumnName="num" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

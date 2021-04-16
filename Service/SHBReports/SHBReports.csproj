@@ -64,6 +64,7 @@
     </Compile>
     <Compile Include="AccountReceivableDelay.cs" />
     <Compile Include="AccountReceivableDelayConfig.cs" />
+    <Compile Include="AccountReceivableDelayConfigP.cs" />
     <Compile Include="AccountReceivableDelayForSaler.cs" />
     <Compile Include="AccountReceivableDelayForSalerConfig.cs" />
     <Compile Include="AccountReceivableDelayReport.cs">
@@ -78,10 +79,12 @@
       <DependentUpon>AccountReceivableDelayReport_Comer.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="AccountReceivableDelay_AH.cs" />
     <Compile Include="AccountReceivableDelay_Comer.cs" />
     <Compile Include="AccountReceivableDelay_GZ.cs" />
     <Compile Include="AccountReceivableDelay_JN.cs" />
     <Compile Include="AccountReceivableDelay_NJ.cs" />
+    <Compile Include="AccountReceivableDelay_P.cs" />
     <Compile Include="Dianshouweiyanshou_zhuweiConfig.cs" />
     <Compile Include="Dianshouweiyanshou_zhuweiReport.cs">
       <AutoGen>True</AutoGen>
@@ -147,6 +150,7 @@
     <Compile Include="IdleStock_Comer.cs" />
     <Compile Include="IdleProduct.cs" />
     <Compile Include="IdleProductConfig.cs" />
+    <Compile Include="IdleStock_ZjComer.cs" />
     <Compile Include="ProductionOrderNeedClose.cs" />
     <Compile Include="ProductionOrderNeedCloseConfig.cs" />
     <Compile Include="ProductionOrderNeedCloseDS.Designer.cs">
@@ -179,11 +183,17 @@
     <Compile Include="Qinggousantianweipaozhuan_K.cs" />
     <Compile Include="Qinggousantianweipaozhuan_M3.cs" />
     <Compile Include="Qinggousantianweipaozhuan_M3_K.cs" />
+    <Compile Include="Qinggousantianweipaozhuan_M3_ZJKM.cs" />
     <Compile Include="Qinggousantianweipaozhuan_P3.cs" />
     <Compile Include="Qinggousantianweipaozhuan_P3_K.cs" />
+    <Compile Include="Qinggousantianweipaozhuan_ZJKM.cs" />
     <Compile Include="SalesOrderSchedule.cs" />
     <Compile Include="SalesOrderScheduleConfig.cs" />
     <Compile Include="SalesOrderScheduleConfig_R_HD.cs" />
+    <Compile Include="SalesOrderScheduleDS.cs">
+      <DependentUpon>SalesOrderScheduleDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SalesOrderScheduleDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -201,6 +211,7 @@
     <Compile Include="SalesOrderSchedule_R_HD.cs" />
     <Compile Include="SpecOrderDelay_Comer.cs" />
     <Compile Include="SpecOrderPO_Comer.cs" />
+    <Compile Include="SpecOrderPP_E.cs" />
     <Compile Include="SpecOrderRD_Comer.cs" />
     <Compile Include="SpecOrderUpdateStateConfig.cs" />
     <Compile Include="SpecOrderUpdateState.cs" />

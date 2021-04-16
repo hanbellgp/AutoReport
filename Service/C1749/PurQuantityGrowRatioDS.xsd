@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PurQuantityGrowRatioDS" targetNamespace="http://tempuri.org/PurQuantityGrowRatioDS.xsd" xmlns:mstns="http://tempuri.org/PurQuantityGrowRatioDS.xsd" xmlns="http://tempuri.org/PurQuantityGrowRatioDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PurQuantityGrowRatioDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="PurQuantityGrowRatioDS" msprop:Generator_UserDSName="PurQuantityGrowRatioDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tbl" msprop:Generator_TableClassName="tblDataTable" msprop:Generator_TableVarName="tabletbl" msprop:Generator_RowChangedName="tblRowChanged" msprop:Generator_TablePropName="tbl" msprop:Generator_RowDeletingName="tblRowDeleting" msprop:Generator_RowChangingName="tblRowChanging" msprop:Generator_RowEvHandlerName="tblRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRowDeleted" msprop:Generator_RowClassName="tblRow" msprop:Generator_UserTableName="tbl" msprop:Generator_RowEvArgName="tblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="itnbr" msdata:Caption="件号" msprop:Generator_ColumnVarNameInTable="columnitnbr" msprop:Generator_ColumnPropNameInRow="itnbr" msprop:Generator_ColumnPropNameInTable="itnbrColumn" msprop:Generator_UserColumnName="itnbr" type="xs:string" minOccurs="0" />
+              <xs:element name="itdsc" msdata:Caption="品名" msprop:Generator_ColumnVarNameInTable="columnitdsc" msprop:Generator_ColumnPropNameInRow="itdsc" msprop:Generator_ColumnPropNameInTable="itdscColumn" msprop:Generator_UserColumnName="itdsc" type="xs:string" minOccurs="0" />
+              <xs:element name="oldyear" msdata:Caption="去年全年" msprop:Generator_ColumnVarNameInTable="columnoldyear" msprop:Generator_ColumnPropNameInRow="oldyear" msprop:Generator_ColumnPropNameInTable="oldyearColumn" msprop:Generator_UserColumnName="oldyear" type="xs:string" minOccurs="0" />
+              <xs:element name="newyear" msdata:Caption="今年累计" msprop:Generator_ColumnVarNameInTable="columnnewyear" msprop:Generator_ColumnPropNameInRow="newyear" msprop:Generator_ColumnPropNameInTable="newyearColumn" msprop:Generator_UserColumnName="newyear" type="xs:string" minOccurs="0" />
+              <xs:element name="oldquarterall" msdata:Caption="去年同期比" msprop:Generator_ColumnVarNameInTable="columnoldquarterall" msprop:Generator_ColumnPropNameInRow="oldquarterall" msprop:Generator_ColumnPropNameInTable="oldquarterallColumn" msprop:Generator_UserColumnName="oldquarterall" type="xs:string" minOccurs="0" />
+              <xs:element name="gr1" msdata:Caption="成长率" msprop:Generator_ColumnVarNameInTable="columngr1" msprop:Generator_ColumnPropNameInRow="gr1" msprop:Generator_ColumnPropNameInTable="gr1Column" msprop:Generator_UserColumnName="gr1" type="xs:string" minOccurs="0" />
+              <xs:element name="lastquarter" msdata:Caption="上季" msprop:Generator_ColumnVarNameInTable="columnlastquarter" msprop:Generator_ColumnPropNameInRow="lastquarter" msprop:Generator_ColumnPropNameInTable="lastquarterColumn" msprop:Generator_UserColumnName="lastquarter" type="xs:string" minOccurs="0" />
+              <xs:element name="currentquarter" msdata:Caption="当季" msprop:Generator_ColumnVarNameInTable="columncurrentquarter" msprop:Generator_ColumnPropNameInRow="currentquarter" msprop:Generator_ColumnPropNameInTable="currentquarterColumn" msprop:Generator_UserColumnName="currentquarter" type="xs:string" minOccurs="0" />
+              <xs:element name="gr2" msdata:Caption="较上季成长率" msprop:Generator_ColumnVarNameInTable="columngr2" msprop:Generator_ColumnPropNameInRow="gr2" msprop:Generator_ColumnPropNameInTable="gr2Column" msprop:Generator_UserColumnName="gr2" type="xs:string" minOccurs="0" />
+              <xs:element name="oldquarter" msdata:Caption="去年同季" msprop:Generator_ColumnVarNameInTable="columnoldquarter" msprop:Generator_ColumnPropNameInRow="oldquarter" msprop:Generator_ColumnPropNameInTable="oldquarterColumn" msprop:Generator_UserColumnName="oldquarter" type="xs:string" minOccurs="0" />
+              <xs:element name="gr3" msdata:Caption="较去年同季成长比率" msprop:Generator_ColumnVarNameInTable="columngr3" msprop:Generator_ColumnPropNameInRow="gr3" msprop:Generator_ColumnPropNameInTable="gr3Column" msprop:Generator_UserColumnName="gr3" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
