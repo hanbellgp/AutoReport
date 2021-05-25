@@ -14,7 +14,7 @@ namespace Hanbell.AutoReport.Config
         {
             PrepareDBUtil(dbType, Base.GetDBConnectionString(connName));
             this.ds = new SalesOrderScheduleDS();
-            this.reportList.Add(new SalesOrderScheduleReport());
+            //this.reportList.Add(new SalesOrderScheduleReport());
             this.args = Base.GetParameter(notification, this.ToString());
         }
 
