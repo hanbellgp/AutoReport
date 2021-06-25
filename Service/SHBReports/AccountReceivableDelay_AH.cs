@@ -36,7 +36,7 @@ namespace Hanbell.AutoReport.Config
                         int day1, day2, day3, day4, day5;
                         if (args == null || args.Count != 5)
                         {
-                            day1 = 3; day2 = 6; day3 = 9; day4 = 12; day5 = 18;
+                            day1 = 1; day2 = 2; day3 = 3; day4 = 4; day5 = 5;
                         }
                         else
                         {
