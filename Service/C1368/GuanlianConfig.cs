@@ -418,7 +418,7 @@ select  a.*,c.cusno,e.cusna, b.armqy,b.unpris,b.armqy*b.unpris as ddcose ,b.dmar
         and  convert(varchar(4),cdrhad.shpdate,112) = convert(varchar(4),dateadd(month,-1,getdate()),112)
 		 and cdrhad.houtsta = 'Y'  and cdrdta.cdrno not like 'CC%'
 		 ) x
-        where x.depno not in ('1G110') and x.depno in ( '1D000','1B100','1E100','1D100','1C100','1C000','1C700','1E000','1B000','1F100','1F000','1F500' ,'1V000','1V100','1T100')
+        where x.depno not in ('1G110') and x.depno in ( '1D000','1B100','1E100','1D100','1C100','1C000','1C700','1E000','1B000','1F100','1F000','1F500' ,'1V000','1V100','1T100','1F700')
         and (x.itnbr in ( select itnbr from invmas where itcls in('3176','3177','3179','3180','3276','3279','3280','3083') )
          or x.itnbr in (select itnbr from invmas where itcls in ('3176','3177','3179','3180','3676','3679','3680','3015')  AND itnbr<>'3142-GBR9018'))
 ";
