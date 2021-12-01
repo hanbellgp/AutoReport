@@ -8,7 +8,8 @@ namespace Hanbell.AutoReport.Config
 {
     class YuQiWeiJieAnPurchaseOrderConfig : NotificationConfig
     {
-        public YuQiWeiJieAnPurchaseOrderConfig(DBServerType dbType, string connName, string notification) {
+        public YuQiWeiJieAnPurchaseOrderConfig(DBServerType dbType, string connName, string notification)
+        {
             PrepareDBUtil(dbType, Base.GetDBConnectionString(connName));
             this.ds = new YQWJAPurchaseOrder();
             this.args = Base.GetParameter(notification, this.ToString());
@@ -17,6 +18,8 @@ namespace Hanbell.AutoReport.Config
         public override void InitData()
         {
             String sqlstr = @"
+
+
 select distinct  A.vdrno as vdrno,A.vdrna as vdrna,A.itnbr as itnbr,A.itdsc as itdsc ,A.pono,A.username  ,
 A.askdate ,A.askdateo,A.poqy1, A.okqy1 ,wjs1 , '' as cghf, '' as yqcs, '' as yyhf,
                 case A.dposta when '10' then '未确认'
@@ -27,9 +30,9 @@ A.askdate ,A.askdateo,A.poqy1, A.okqy1 ,wjs1 , '' as cghf, '' as yqcs, '' as yyh
                     when '95' then '自动结案'
                     when '98' then '人工结案'
                     when '99' then '作废'
-                    else  ''end
+                    else  ''end as '状态'
 from (
-       select  b.vdrno ,v.vdrna ,a.itnbr ,c.itdsc ,a.pono ,d.username ,a.askdate ,a.askdateo ,
+       select  b.vdrno ,v.vdrna ,a.itnbr ,c.itdsc ,a.pono +'-'+right(cast(power(10,3) as varchar)+convert(nvarchar(50),a.trseq ),3) as 'pono',d.username ,a.askdate ,a.askdateo ,
 a.poqy1 ,a.okqy1, (a.poqy1-a.okqy1) as wjs1, a.dposta ,a.trseq,b.buyer,a.dposta
 from (
     select  pono,trseq,itnbr,askdate,poqy1,okqy1,dposta,askdateo ,badqy1,stqy1,dposta
@@ -41,7 +44,7 @@ and pono in
  and ( posrc in ('4','2') or posrc in ('1','3') )  )
  ) a,purhad b , invmas c, secuser d ,miscode s,purvdr v
   where  b.buyer =d.userno and a.itnbr=c.itnbr and b.pono=a.pono
- and b.hmark1*=s.code  and s.ckind = '2A' and b.vdrno=v.vdrno and c.jityn = 'N'
+ and b.hmark1*=s.code  and s.ckind = '2A' and b.vdrno=v.vdrno
      ) A where A.itnbr like 'B%' or A.itnbr like '%GB%'
 UNION
      select distinct f.vdrno as vdrno,f.vdrna as vdrna,f.itnbr as itnbr, purdnam.itdsc as itdsc,f.pono,f.username as username,
@@ -54,9 +57,9 @@ UNION
                     when '95' then '自动结案'
                     when '98' then '人工结案'
                     when '99' then '作废'
-                    else  ''end
+                    else  ''end as '状态'
     from (
-           select b.vdrno ,v.vdrna ,a.itnbr ,c.itdsc  ,b.paycode, a.pono ,d.username  ,a.askdate ,a.askdateo ,a.dposta,
+           select b.vdrno ,v.vdrna ,a.itnbr ,c.itdsc  ,b.paycode, a.pono +'-'+right(cast(power(10,3) as varchar)+convert(nvarchar(50),a.trseq ),3) as 'pono',d.username  ,a.askdate ,a.askdateo ,a.dposta,
             a.poqy1 ,a.okqy1,a.accqy1,(a.poqy1-a.okqy1) as wjs1,a.srcno,a.trseq,a.dposta
     from (select  t.pono,t.trseq,t.itnbr,t.askdate,t.poqy1,okqy1,t.accqy1,t.dposta,t.askdateo ,badqy1,stqy1,purdtamap.srcno,t.dposta
     from purdta t LEFT JOIN   purdtamap on purdtamap.pono =t.pono  and purdtamap.trseq =t.trseq
@@ -64,9 +67,8 @@ UNION
             (select pono from purhad where facno = 'C' and prono = '1' )) a
       , purhad b , invmas c, secuser d ,miscode s,purvdr v
             where b.buyer =d.userno and a.itnbr*=c.itnbr and b.pono=a.pono  and b.facno='C' and b.prono='1' and
-                  b.hmark1*=s.code and b.vdrno=v.vdrno and c.jityn = 'N') f  LEFT JOIN  purdnam on f.pono = purdnam.pono and f.trseq = purdnam.trseq
+                  b.hmark1*=s.code and b.vdrno=v.vdrno) f  LEFT JOIN  purdnam on f.pono = (purdnam.pono +'-'+right(cast(power(10,3) as varchar)+convert(nvarchar(50),purdnam.trseq ),3))
     where  ( f.itnbr = '9')
-
 ";
             Fill(sqlstr, ds, "YQWJAPO");
         }
