@@ -43,7 +43,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" (case when itcls in ('3886','3889','3890','3876','3879','3880','3976','3979','3980') then 'A机体' else '其他' end )  as protype ");
             sb.Append(" from invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112) >= convert(VARCHAR(8),DATEADD(MONTH,-6,getdate()),112) and convert(VARCHAR(8),lindate,112)  <= convert(varchar(8),getdate(),112) ");
-            sb.Append(" and wareh in ('W01' ,'ASRS03') AND itnbr NOT  LIKE '39%'  ");
+            sb.Append(" and wareh in ('W01' ,'ASRS03','EW03') AND itnbr NOT  LIKE '39%'  ");
             sb.Append(" group by itcls )as a where a.protype <>'其他'  GROUP BY a.protype ");
             //涡旋
             sb.Append(" UNION ALL ");
@@ -108,7 +108,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" (case when itcls in ('3886','3889','3890','3876','3879','3880','3976','3979','3980') then 'A机体' else '其他' end )  as protype ");
             sb.Append(" from invbal ");
             sb.Append(" where  ");
-            sb.Append("  wareh in ('W01' ,'ASRS03') AND itnbr NOT  LIKE '39%' ");
+            sb.Append("  wareh in ('W01' ,'ASRS03','EW03') AND itnbr NOT  LIKE '39%' ");
             sb.Append(" group by itcls )as a where a.protype <>'其他'  GROUP BY a.protype ");
             //涡旋
             sb.Append(" UNION ALL ");
@@ -168,7 +168,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" (case when itcls in ('3886','3889','3890','3876','3879','3880','3976','3979','3980') then 'A机体' else '其他' end )  as protype ");
             sb.Append(" from invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-12,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-6,getdate()),112) ");
-            sb.Append(" and wareh in ('W01' ,'ASRS03') AND itnbr NOT  LIKE '39%'  ");
+            sb.Append(" and wareh in ('W01' ,'ASRS03','EW03') AND itnbr NOT  LIKE '39%'  ");
             sb.Append(" group by itcls )as a where a.protype <>'其他'  GROUP BY a.protype ");
             //涡旋
             sb.Append(" UNION ALL ");
@@ -228,7 +228,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" (case when itcls in ('3886','3889','3890','3876','3879','3880','3976','3979','3980') then 'A机体' else '其他' end )  as protype ");
             sb.Append(" from invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-24,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-12,getdate()),112) ");
-            sb.Append(" and wareh in ('W01' ,'ASRS03') AND itnbr NOT LIKE '39%' ");
+            sb.Append(" and wareh in ('W01' ,'ASRS03','EW03') AND itnbr NOT LIKE '39%' ");
             sb.Append(" group by itcls )as a where a.protype <>'其他'  GROUP BY a.protype ");
             //涡旋
             sb.Append(" UNION ALL ");
@@ -288,7 +288,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" (case when itcls in ('3886','3889','3890','3876','3879','3880','3976','3979','3980') then 'A机体' else '其他' end )  as protype ");
             sb.Append(" from invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-36,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-24,getdate()),112) ");
-            sb.Append(" and wareh in ('W01' ,'ASRS03') AND itnbr NOT LIKE '39%'  ");
+            sb.Append(" and wareh in ('W01' ,'ASRS03','EW03') AND itnbr NOT LIKE '39%'  ");
             sb.Append(" group by itcls )as a where a.protype <>'其他'  GROUP BY a.protype ");
             //涡旋
             sb.Append(" UNION ALL ");
@@ -348,7 +348,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" (case when itcls in ('3886','3889','3890','3876','3879','3880','3976','3979','3980') then 'A机体' else '其他' end )  as protype ");
             sb.Append(" from invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-36,getdate()),112) ");
-            sb.Append(" and wareh in ('W01' ,'ASRS03') AND itnbr NOT LIKE '39%'  ");
+            sb.Append(" and wareh in ('W01' ,'ASRS03','EW03') AND itnbr NOT LIKE '39%'  ");
             sb.Append(" group by itcls )as a where a.protype <>'其他'  GROUP BY a.protype ");
             //涡旋
             sb.Append(" UNION ALL ");
@@ -462,7 +462,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" LEFT JOIN invbat t on b.wareh = t.wareh and b.itnbr = t.itnbr ");
             sb.Append(" LEFT JOIN invwh w on b.wareh = w.wareh and b.facno=w.facno and b.prono = w.prono ");
             sb.Append(" LEFT JOIN invmas s on b.itnbr = s.itnbr and b.itcls = s.itcls ");
-            sb.Append(" where b.wareh  in ('W01','ASRS03') ");
+            sb.Append(" where b.wareh  in ('W01','ASRS03','EW03') ");
             sb.Append(" and b.itcls in ('3886','3889','3890','3876','3879','3880','3976','3979','3980') ");
             sb.Append(" and t.onhand1>0 ");
             sb.Append(" UNION ALL ");

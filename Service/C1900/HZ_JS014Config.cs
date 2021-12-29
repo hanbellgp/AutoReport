@@ -20,7 +20,7 @@ namespace Hanbell.AutoReport.Config
         public override void InitData()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(" SELECT canu,aim,DateDiff(DAY,  getdate(),time1)as delaydays,depat ");
+            sb.Append(" SELECT hdn_applyuser,canu,aim,DateDiff(DAY,  getdate(),time1)as delaydays,depat ");
             sb.Append(" FROM HZ_JS014,ProcessInstance ");
             sb.Append(" WHERE HZ_JS014.processSerialNumber = ProcessInstance.serialNumber ");
             sb.Append(" AND DateDiff(DAY,  getdate(),time1) <= 15 AND  DateDiff(DAY,  getdate(),time1)>= 0 ");
