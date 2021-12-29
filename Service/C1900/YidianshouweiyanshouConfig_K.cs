@@ -23,7 +23,7 @@ namespace Hanbell.AutoReport.Config
         {
             StringBuilder sb = new StringBuilder();
             sb.Append("select a.acceptno as '点收编号',a.vdrno as '厂商编号',c.vdrna as '厂商简称',i.itcls as '大类',a.itnbr as '品号',i.itdsc as '品名', ");
-            sb.Append("a.accqy1+a.accqy2 as '点收数量',purach.indate as '点收时间',datediff(hour,purach.indate,GETDATE()) as '延误小时数','' as '备注'  ");
+            sb.Append("a.accqy1+a.accqy2 as '点收数量',a.indate as '点收时间',datediff(hour,a.indate,GETDATE()) as '延误小时数','' as '备注'  ");
             sb.Append("from purach,puracd  a  ");
             sb.Append("left join purhad h on a.facno = h.facno and a.prono = h.prono and a.pono = h.pono left join purdtamap m on a.pono=m.pono and a.trseq=m.trseq ");
             sb.Append("right join purvdr c on a.vdrno=c.vdrno right join invmas i on a.itnbr=i.itnbr  ");

@@ -33,7 +33,7 @@ namespace C1491
                             AND n.ckind='1R' AND E.dmark1=n.code
                             AND left(convert(varchar(30),A.shpdate,111),10) >= CONVERT(CHAR(8), dateadd(month,-1,getdate()),111)+'01' 
                             AND left(convert(varchar(30),A.shpdate,111),10) < convert(VARCHAR(100),dateadd(dd,-day(getdate())+1,getdate()),111) 
-                            AND A.depno IN('1B000','1B100','1C000','1C100','1C700','1D000','1D100','1E000','1E100','1F000','1F100','1F500','1V000','1V100','1T100','1T000')
+                            AND A.depno IN('1B000','1B100','1C000','1C100','1C700','1D000','1D100','1E000','1E100','1F000','1F100','1F500','1F700','1F800','1V000','1V100','1T100','1T000')
                             UNION ALL
                             SELECT A.facno,A.shpno,B.trseq,left(convert(varchar(30),A.shpdate,111),10) as shpdate,A.depno,F.cdesc, A.cusno ,C.cusna ,A.mancode,
                             D.username, B.cdrno,B.itnbr,B.itdsc,B.itnbrcus,B.shpqy1,B.unpris,B.shpamts,''as dmark1 ,''as cdesc1,B.n_code_DC 
@@ -42,7 +42,7 @@ namespace C1491
                             C.cusno NOT IN ('SGD00088', 'SCQ00146', 'SJS00254', 'SSD00107')
                             AND left(convert(varchar(30),A.shpdate,111),10) >= CONVERT(CHAR(8), dateadd(month,-1,getdate()),111)+'01'
                             AND left(convert(varchar(30),A.shpdate,111),10) < convert(VARCHAR(100),dateadd(dd,-day(getdate())+1,getdate()),111) 
-                            AND A.depno IN('1B000','1B100','1C000','1C100','1C700','1D000','1D100','1E000','1E100','1F000','1F100','1F500','1V000','1V100','1T100','1T000')
+                            AND A.depno IN('1B000','1B100','1C000','1C100','1C700','1D000','1D100','1E000','1E100','1F000','1F100','1F500','1F700','1F800','1V000','1V100','1T100','1T000')
                             UNION ALL
                             SELECT  A.facno,A.bakno,B.trseq,left(convert(varchar(30),A.bakdate,111),10) as bakdate,A.depno,F.cdesc,C.cusno,
                             C.cusna,A.mancode,D.username,B.cdrno,B.itnbr,B.itdsc,B.itnbrcus,-1*B.bshpqy1 AS bshpqy1,B.unpris,-1*B.bakamts AS bakamts,E.dmark1,n.cdesc as cdesc1,
@@ -51,7 +51,7 @@ namespace C1491
                             AND A.baksta = 'Y'  AND n.ckind='1R' AND E.dmark1=n.code
                              AND left(convert(varchar(30),A.bakdate,111),10) >=  CONVERT(CHAR(8), dateadd(month,-1,getdate()),111)+'01' AND 
                              left(convert(varchar(30),A.bakdate,111),10) < convert(VARCHAR(100),dateadd(dd,-day(getdate())+1,getdate()),111) 
-                            AND A.depno IN('1B000','1B100','1C000','1C100','1C700','1D000','1D100','1E000','1E100','1F000','1F100','1F500','1V000','1V100')
+                            AND A.depno IN('1B000','1B100','1C000','1C100','1C700','1D000','1D100','1E000','1E100','1F000','1F100','1F500','1F700','1F800','1V000','1V100')
                             UNION ALL
                             SELECT A.facno,A.shpno,B.trseq,left(convert(varchar(30),A.shpdate,111),10) as shpdate,A.depno,F.cdesc,C.cusno,C.cusna,A.mancode,D.username,
                                B.cdrno,B.itnbr,B.itdsc,B.itnbrcus,B.shpqy1,B.unpris,B.shpamts,E.dmark1,n.cdesc as cdesc1,B.n_code_DC 
