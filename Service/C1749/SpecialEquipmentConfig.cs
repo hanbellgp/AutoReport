@@ -24,7 +24,7 @@ namespace Hanbell.AutoReport.Config
                             left join secuser on secuser.userno = purhask.userno 
                             left join miscode on miscode.code = purhask.depno 
                             where a.accsta = 'R' and  a.facno='C' and a.prono = '1' and 
-                            a.itnbr in ('A310-01','A310-02','A310-06','A310-09','A311-04')  
+                            a.itnbr in ('AS310-01','AS310-02','AS310-06','AS310-09','AS311-04')
                             and h.posrc <> '5' 
                             order by datediff(day,a.acceptdate,GETDATE())";
             Fill(sqlStr, ds, "tlbequipment");
