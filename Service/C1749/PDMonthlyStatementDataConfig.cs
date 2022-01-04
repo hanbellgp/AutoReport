@@ -144,24 +144,24 @@ namespace Hanbell.AutoReport.Config
                             switch (parameters)
                             {
                                 case "刀具":
-                                    sb.Append(" and depno='1P100' and (itnbr like 'BS101%' OR itnbr like 'B101%' )");
+                                    sb.Append(" and depno='1P100' and itnbr like 'BS101%' ");
                                     break;
                                 case "钻头丝攻铣刀":
-                                    sb.Append(" and depno='1P100' and (itnbr like 'BS102%' or itnbr like 'B102%' or itnbr like 'BS103%' or itnbr like 'B103%' or itnbr like 'BS104%' or itnbr like 'B104%' or  itnbr like 'BS105%' or itnbr like 'B105%')  ");
+                                    sb.Append(" and depno='1P100' and (itnbr like 'BS102%'  or itnbr like 'BS103%'  or itnbr like 'BS104%'  or  itnbr like 'BS105%' )  ");
                                     break;
                                 case "刀柄类":
                                     sb.Append(" and depno='1P100'  ");
-                                    sb.Append(" and (itnbr like 'BS106%' or itnbr like 'B106%' or itnbr like 'BS151%' or itnbr like 'B151%' or itnbr like 'BS152%' or  itnbr like 'B153%' or  itnbr like 'BS153%' or  ");
-                                    sb.Append(" itnbr like 'BS154%' or  itnbr like 'BS154%' or  itnbr like 'B155%' or  itnbr like 'BS155%' or itnbr like 'B156%' or  itnbr like 'BS156%' or  itnbr like 'B157%' or  itnbr like 'B158%' or  itnbr like 'BS158%')  ");
+                                    sb.Append(" and (itnbr like 'BS106%' or itnbr like 'BS151%'  or itnbr like 'BS152%'  or  itnbr like 'BS153%' or  ");
+                                    sb.Append(" itnbr like 'BS154%'  ' or  itnbr like 'BS155%'  or  itnbr like 'BS156%'  or  itnbr like 'BS158%')  ");
                                     break;
                                 case "NSM":
-                                    sb.Append(" and depno in('1P121','1P122') and itnbr  like 'BS101-01%' or itnbr  like 'B101-01%'  ");
+                                    sb.Append(" and depno in('1P121','1P122') and itnbr  like 'BS101-01%'   ");
                                     break;
                                 case "NL+CG":
                                     sb.Append(" and  depno in('1P121','1P122')   ");
-                                    sb.Append(" and ((itnbr like 'B101-06%' or itnbr like 'BS101-06%' or itnbr like 'B101-07%' or itnbr like 'BS101-07%' or itnbr like 'B101-08%' or itnbr like 'BS101-08%' or  itnbr like 'B101-09%' or itnbr like 'BS101-09%' ");
-                                    sb.Append(" or  itnbr like 'B108-01%' or  itnbr like 'BS108-01%' or  itnbr like 'B104-03%' or  itnbr like 'BS104-03%' or  itnbr like 'B109%' or  itnbr like 'BS109%'  or  itnbr like 'B110%'  or  itnbr like 'BS110%')  ");
-                                    sb.Append(" and ((itnbr  not like 'B101-01%'  or  itnbr like 'BS101-01%') and itnbr not like '52%'))  ");
+                                    sb.Append(" and (( itnbr like 'BS101-06%'  or itnbr like 'BS101-07%'  or itnbr like 'BS101-08%' or itnbr like 'BS101-09%' ");
+                                    sb.Append("  or  itnbr like 'BS108-01%'  or  itnbr like 'BS104-03%'  or  itnbr like 'BS109%'    or  itnbr like 'BS110%')  ");
+                                    sb.Append(" and (  itnbr not like 'BS101-01%' and itnbr not like '52%'))  ");
                                     break;
                                 default:
                                     break;
