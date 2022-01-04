@@ -29,7 +29,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append("and d.indate<= dateadd(dd,-day(getdate()),getdate())  and purvdr.vdrno=d.vdrno and invmas.itnbr=a.itnbr   ");
             sb.Append("and a.itnbr < > '9' and ((a.itnbr not in (select purdis.itnbr from purdis where purdis.vdrno=d.vdrno)) ");
             sb.Append("or (d.vdrno not in (select purdis.vdrno from purdis where purdis.itnbr=a.itnbr)) ");
-            sb.Append("or (a.itnbr not in (select purdis.itnbr from purdis  ) )) and d.pono not like 'AC%' and a.itnbr not like '%9QC%'");
+            sb.Append("or (a.itnbr not in (select purdis.itnbr from purdis  ) )) and d.pono not like 'AC%' and a.itnbr not in ((a.itnbr LIKE '%-9QC%' OR ( len(a.itnbr) >= 14 AND (substring(a.itnbr, 1, 14) LIKE '%-C1%' OR substring(a.itnbr, 1, 14) LIKE '%-C2%') AND len(substring(a.itnbr, 1, 14)) - len(STR_REPLACE(substring(a.itnbr, 1, 14), '-', NULL)) = 1))");
 
            
             Fill(sb.ToString() ,ds, "tblresult5");
