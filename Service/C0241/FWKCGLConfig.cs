@@ -60,7 +60,7 @@ namespace C0241
              " where trdate=left(convert(char(8), dateadd(day, -1, getdate()), 112),8) " +
              "   and y.wareh=h.wareh and h.wareh in ('ESKF02') )a " +
              " UNION ALL "+
-            " SELECT top 1 '服务部' as '部门', '7' as '顺序','上海ERP' as 'ERP区域',a.wareh as '库号',sum(a.je) as '金额',385 as '目标',a.whdsc as '库名',left(convert(char(8), dateadd(day, -1, getdate()), 112),8)  from " +
+            " SELECT top 1 '服务部' as '部门', '7' as '顺序','上海ERP' as 'ERP区域',a.wareh as '库号',sum(a.je) as '金额',863 as '目标',a.whdsc as '库名',left(convert(char(8), dateadd(day, -1, getdate()), 112),8)  from " +
             " (select  y.wareh ,(amts/10000) as je,  h.whdsc   from invamtshistory y,[test].[dbo].invwh h "+
             " where trdate=left(convert(char(8), dateadd(day, -1, getdate()), 112),8) and y.wareh=h.wareh and h.wareh in ('EZK09'))a ";
             

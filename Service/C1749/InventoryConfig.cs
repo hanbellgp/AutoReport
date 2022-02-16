@@ -23,10 +23,10 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select c.facno, c.protype as  protype, 0 as trnqys1, c.mb , 0 as cy , ");
             sb.Append(" c.trnqys1 as  trnqys2,0 as trnqys3 ,0 as trnqys4,0 as trnqys5,0 as trnqys6,'台' as dw from ( ");
             sb.Append(" select b.facno, b.protype, b.trnqys1, ");
-            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20 when '离心机体' then 20 when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
+            sb.Append(" (CASE b.protype when 'R制冷' then 350 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20 when '离心机体' then 20 when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
             sb.Append(" from ( select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( select isnull(sum(onhand1),0) as trnqys1,itcls, ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280') then 'R制冷' ");
-            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586','3589','3590') then 'A机组' ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280') then 'R制冷' ");
+            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586') then 'A机组' ");
             sb.Append(" when itcls in ('3376','3379','3380','3476','3479','3480') then 'P机体' ");
             sb.Append(" when itcls in ('3776','3779','3780','3A76','3A79','3A80') then 'P机组' ");
             //<-- 20191227增加代理品
@@ -49,7 +49,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" UNION ALL ");
             sb.Append(" select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls,   ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3589','3590', ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586', ");
             sb.Append(" '3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80') then '涡旋' else '其他' end )  as protype  ");
             sb.Append(" from invbal  where  convert(VARCHAR(8),lindate,112) >= convert(VARCHAR(8),DATEADD(MONTH,-6,getdate()),112)  ");
             sb.Append(" and convert(VARCHAR(8),lindate,112)  <= convert(varchar(8),getdate(),112)  ");
@@ -69,8 +69,8 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select  '柯茂' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls, ");
             sb.Append(" (case when itcls in ('3H76','3H79','3H80') then '离心机组' ");
-            sb.Append(" when itcls in ('3W76','3W79','3W80') then '螺杆机组' ");
-            sb.Append(" when itcls in('3B76','3B79','3B80') then 'ORC' else '其他' end )  as protype ");
+            sb.Append(" when itcls in ('3W76','3W79','3W80','3X76','3X79','3X80') then '螺杆机组' ");
+            sb.Append(" when itcls in('3Y76','3Y79','3Y80') then 'ORC' else '其他' end )  as protype ");
             sb.Append(" from [comererp].[dbo].invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-6,getdate()),112) and convert(VARCHAR(8),lindate,112)  <= convert(varchar(8),getdate(),112) ");
             sb.Append(" and wareh in ('W01' ,'FTW01') ");
@@ -88,10 +88,10 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select c.facno, c.protype as  protype, c.trnqys1 as trnqys1, c.mb , (convert(int,c.trnqys1,0) - convert(int,c.mb,0)) as cy , ");
             sb.Append(" 0 as  trnqys2,0 as trnqys3 ,0 as trnqys4,0 as trnqys5,0 as trnqys6,'台' as dw from ( ");
             sb.Append(" select b.facno, b.protype, b.trnqys1, ");
-            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
+            sb.Append(" (CASE b.protype when 'R制冷' then 350 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
             sb.Append(" from ( select  '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( select isnull(sum(onhand1),0) as trnqys1,itcls, ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280') then 'R制冷' ");
-            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586','3589','3590') then 'A机组' ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280') then 'R制冷' ");
+            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586') then 'A机组' ");
             sb.Append(" when itcls in ('3376','3379','3380','3476','3479','3480') then 'P机体' ");
             sb.Append(" when itcls in ('3776','3779','3780','3A76','3A79','3A80') then 'P机组' ");
             //<-- 20191227增加代理品
@@ -114,7 +114,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" UNION ALL ");
             sb.Append(" select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls,   ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3589','3590', ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586', ");
             sb.Append(" '3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80') then '涡旋' else '其他' end )  as protype  ");
             sb.Append(" from invbal  where  ");
             sb.Append(" wareh in ('W01' ,'EW01','FTW01') AND itnbr LIKE '39%' ");
@@ -132,8 +132,8 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select  '柯茂' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls, ");
             sb.Append(" (case when itcls in ('3H76','3H79','3H80') then '离心机组' ");
-            sb.Append(" when itcls in ('3W76','3W79','3W80') then '螺杆机组' ");
-            sb.Append(" when itcls in('3B76','3B79','3B80') then 'ORC' else '其他' end )  as protype ");
+            sb.Append(" when itcls in ('3W76','3W79','3W80','3X76','3X79','3X80') then '螺杆机组' ");
+            sb.Append(" when itcls in('3Y76','3Y79','3Y80') then 'ORC' else '其他' end )  as protype ");
             sb.Append(" from [comererp].[dbo].invbal ");
             sb.Append(" where  ");
             sb.Append("  wareh in ('W01' ,'FTW01') ");
@@ -148,10 +148,10 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select c.facno, c.protype as  protype, 0 as trnqys1, c.mb , 0 as cy , ");
             sb.Append(" 0 as  trnqys2,c.trnqys1 as trnqys3 ,0 as trnqys4,0 as trnqys5,0 as trnqys6,'台' as dw from ( ");
             sb.Append(" select b.facno, b.protype, b.trnqys1, ");
-            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
+            sb.Append(" (CASE b.protype when 'R制冷' then 350 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
             sb.Append(" from ( select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( select isnull(sum(onhand1),0) as trnqys1,itcls, ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280') then 'R制冷' ");
-            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586','3589','3590') then 'A机组' ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280') then 'R制冷' ");
+            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586') then 'A机组' ");
             sb.Append(" when itcls in ('3376','3379','3380','3476','3479','3480') then 'P机体' ");
             sb.Append(" when itcls in ('3776','3779','3780','3A76','3A79','3A80') then 'P机组' ");
             //<-- 20191227增加代理品
@@ -174,7 +174,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" UNION ALL ");
             sb.Append(" select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls,   ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3589','3590', ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586', ");
             sb.Append(" '3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80') then '涡旋' else '其他' end )  as protype  ");
             sb.Append(" from invbal  where  convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-12,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-6,getdate()),112)  ");
             sb.Append(" and wareh in ('W01' ,'EW01','FTW01') AND itnbr LIKE '39%' ");
@@ -192,8 +192,8 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select '柯茂' as facno,  a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls, ");
             sb.Append(" (case when itcls in ('3H76','3H79','3H80') then '离心机组' ");
-            sb.Append(" when itcls in ('3W76','3W79','3W80') then '螺杆机组' ");
-            sb.Append(" when itcls in('3B76','3B79','3B80') then 'ORC' else '其他' end )  as protype ");
+            sb.Append(" when itcls in ('3W76','3W79','3W80','3X76','3X79','3X80') then '螺杆机组' ");
+            sb.Append(" when itcls in('3Y76','3Y79','3Y80') then 'ORC' else '其他' end )  as protype ");
             sb.Append(" from [comererp].[dbo].invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-12,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-6,getdate()),112) ");
             sb.Append(" and wareh in ('W01' ,'FTW01') ");
@@ -208,10 +208,10 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select c.facno, c.protype as  protype, 0 as trnqys1, c.mb , 0 as cy , ");
             sb.Append(" 0 as  trnqys2,0 as trnqys3 ,c.trnqys1 as trnqys4,0 as trnqys5,0 as trnqys6,'台' as dw from ( ");
             sb.Append(" select b.facno, b.protype, b.trnqys1, ");
-            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
+            sb.Append(" (CASE b.protype when 'R制冷' then 350 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
             sb.Append(" from ( select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( select isnull(sum(onhand1),0) as trnqys1,itcls, ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280') then 'R制冷' ");
-            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586','3589','3590') then 'A机组' ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280') then 'R制冷' ");
+            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586') then 'A机组' ");
             sb.Append(" when itcls in ('3376','3379','3380','3476','3479','3480') then 'P机体' ");
             sb.Append(" when itcls in ('3776','3779','3780','3A76','3A79','3A80') then 'P机组' ");
             //<-- 20191227增加代理品
@@ -234,7 +234,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" UNION ALL ");
             sb.Append(" select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls,   ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3589','3590', ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586', ");
             sb.Append(" '3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80') then '涡旋' else '其他' end )  as protype  ");
             sb.Append(" from invbal  where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-24,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-12,getdate()),112)  ");
             sb.Append(" and wareh in ('W01' ,'EW01','FTW01') AND itnbr LIKE '39%' ");
@@ -252,8 +252,8 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select '柯茂' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls, ");
             sb.Append(" (case when itcls in ('3H76','3H79','3H80') then '离心机组' ");
-            sb.Append(" when itcls in ('3W76','3W79','3W80') then '螺杆机组' ");
-            sb.Append(" when itcls in('3B76','3B79','3B80') then 'ORC' else '其他' end )  as protype ");
+            sb.Append(" when itcls in ('3W76','3W79','3W80','3X76','3X79','3X80') then '螺杆机组' ");
+            sb.Append(" when itcls in('3Y76','3Y79','3Y80') then 'ORC' else '其他' end )  as protype ");
             sb.Append(" from [comererp].[dbo].invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-24,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-12,getdate()),112) ");
             sb.Append(" and wareh in ('W01' ,'FTW01') ");
@@ -268,10 +268,10 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select c.facno,  c.protype as  protype, 0 as trnqys1, c.mb , 0 as cy , ");
             sb.Append(" 0 as  trnqys2,0 as trnqys3 ,0 as trnqys4,c.trnqys1 as trnqys5,0 as trnqys6,'台' as dw from ( ");
             sb.Append(" select b.facno,  b.protype, b.trnqys1, ");
-            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
+            sb.Append(" (CASE b.protype when 'R制冷' then 350 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
             sb.Append(" from ( select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( select isnull(sum(onhand1),0) as trnqys1,itcls, ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280') then 'R制冷' ");
-            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586','3589','3590') then 'A机组' ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280') then 'R制冷' ");
+            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586') then 'A机组' ");
             sb.Append(" when itcls in ('3376','3379','3380','3476','3479','3480') then 'P机体' ");
             sb.Append(" when itcls in ('3776','3779','3780','3A76','3A79','3A80') then 'P机组' ");
             //<-- 20191227增加代理品
@@ -294,7 +294,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" UNION ALL ");
             sb.Append(" select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls,   ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3589','3590', ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586', ");
             sb.Append(" '3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80') then '涡旋' else '其他' end )  as protype  ");
             sb.Append(" from invbal where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-36,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-24,getdate()),112)  ");
             sb.Append(" and wareh in ('W01' ,'EW01','FTW01') AND itnbr LIKE '39%' ");
@@ -312,8 +312,8 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select '柯茂' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls, ");
             sb.Append(" (case when itcls in ('3H76','3H79','3H80') then '离心机组' ");
-            sb.Append(" when itcls in ('3W76','3W79','3W80') then '螺杆机组' ");
-            sb.Append(" when itcls in('3B76','3B79','3B80') then 'ORC' else '其他' end )  as protype ");
+            sb.Append(" when itcls in ('3W76','3W79','3W80','3X76','3X79','3X80') then '螺杆机组' ");
+            sb.Append(" when itcls in('3Y76','3Y79','3Y80') then 'ORC' else '其他' end )  as protype ");
             sb.Append(" from [comererp].[dbo].invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  >= convert(VARCHAR(8),DATEADD(MONTH,-36,getdate()),112) and convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-24,getdate()),112) ");
             sb.Append(" and wareh in ('W01' ,'FTW01') ");
@@ -328,10 +328,10 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select c.facno, c.protype as  protype, 0 as trnqys1, c.mb , 0 as cy , ");
             sb.Append(" 0 as  trnqys2,0 as trnqys3 ,0 as trnqys4,0 as trnqys5,c.trnqys1 as trnqys6,'台' as dw from ( ");
             sb.Append(" select b.facno, b.protype, b.trnqys1, ");
-            sb.Append(" (CASE b.protype when 'R制冷' then 450 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
+            sb.Append(" (CASE b.protype when 'R制冷' then 350 when 'A机体' then 2000 when 'A机组' then 230 when 'P机体' then 240 when 'P机组' then 100 WHEN '涡旋' THEN 20 when '代理品' then 20  when '离心机组' then 5 when '螺杆机组' then 12 when 'ORC' then 5 else 1 END ) as mb ");
             sb.Append(" from ( select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( select isnull(sum(onhand1),0) as trnqys1,itcls, ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280') then 'R制冷' ");
-            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586','3589','3590') then 'A机组' ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280') then 'R制冷' ");
+            sb.Append(" when itcls in ('3576','3579','3580','3676','3679','3680','3586') then 'A机组' ");
             sb.Append(" when itcls in ('3376','3379','3380','3476','3479','3480') then 'P机体' ");
             sb.Append(" when itcls in ('3776','3779','3780','3A76','3A79','3A80') then 'P机组' ");
             //<-- 20191227增加代理品
@@ -354,7 +354,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" UNION ALL ");
             sb.Append(" select '汉钟' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls,   ");
-            sb.Append(" (case when itcls in ('3176','3177','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3589','3590', ");
+            sb.Append(" (case when itcls in ('3176','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586', ");
             sb.Append(" '3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80') then '涡旋' else '其他' end )  as protype  ");
             sb.Append(" from invbal where convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-36,getdate()),112)  ");
             sb.Append(" and wareh in ('W01' ,'EW01','FTW01') AND itnbr LIKE '39%' ");
@@ -372,8 +372,8 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" select '柯茂' as facno, a.protype,isnull(sum(a.trnqys1),0) as trnqys1 from ( ");
             sb.Append(" select isnull(sum(onhand1),0) as trnqys1,itcls, ");
             sb.Append(" (case when itcls in ('3H76','3H79','3H80') then '离心机组' ");
-            sb.Append(" when itcls in ('3W76','3W79','3W80') then '螺杆机组' ");
-            sb.Append(" when itcls in('3B76','3B79','3B80') then 'ORC' else '其他' end )  as protype ");
+            sb.Append(" when itcls in ('3W76','3W79','3W80','3X76','3X79','3X80') then '螺杆机组' ");
+            sb.Append(" when itcls in('3Y76','3Y79','3Y80') then 'ORC' else '其他' end )  as protype ");
             sb.Append(" from [comererp].[dbo].invbal ");
             sb.Append(" where convert(VARCHAR(8),lindate,112)  < convert(VARCHAR(8),DATEADD(MONTH,-36,getdate()),112) ");
             sb.Append(" and wareh in ('W01' ,'FTW01') ");
@@ -455,7 +455,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" LEFT JOIN invwh w on b.wareh = w.wareh and b.facno=w.facno and b.prono = w.prono ");
             sb.Append(" LEFT JOIN invmas s on b.itnbr = s.itnbr and b.itcls = s.itcls ");
             sb.Append(" where b.wareh  in ('W01' ,'EW01','FTW01') ");
-            sb.Append(" and b.itcls in ('3176','3177','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3589','3590','3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80','6053') ");
+            sb.Append(" and b.itcls in ('3176','3179','3180','3276','3279','3280','3576','3579','3580','3676','3679','3680','3586','3376','3379','3380','3476','3479','3480','3776','3779','3780','3A76','3A79','3A80','6053') ");
             sb.Append(" and t.onhand1>0 ");
             sb.Append(" UNION ALL ");
             sb.Append(" select b.wareh,w.whdsc,b.itcls,b.itnbr,s.itdsc,t.varnr,t.onhand1,s.unmsr1,b.lindate, datediff(day,b.lindate,getdate()) as zlts from invbal b ");
@@ -471,7 +471,7 @@ namespace Hanbell.AutoReport.Config
             sb.Append(" LEFT JOIN [comererp].[dbo].invwh w on b.wareh = w.wareh and b.facno=w.facno and b.prono = w.prono ");
             sb.Append(" LEFT JOIN [comererp].[dbo].invmas s on b.itnbr = s.itnbr and b.itcls = s.itcls ");
             sb.Append(" where b.wareh  in ('W01' ,'FTW01') ");
-            sb.Append(" and b.itcls in ('3H76','3H79','3H80','3W76','3W79','3W80','3B76','3B79','3B80') ");
+            sb.Append(" and b.itcls in ('3H76','3H79','3H80','3W76','3W79','3W80','3X76','3X79','3X80','3Y76','3Y79','3Y80') ");
             sb.Append(" and t.onhand1>0 ");
             sb.Append(" ) AS a ORDER BY a.wareh, zlts DESC  ");
             Fill(sb.ToString(),ds,"mxtlb");

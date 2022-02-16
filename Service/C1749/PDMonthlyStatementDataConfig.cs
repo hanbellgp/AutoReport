@@ -152,7 +152,7 @@ namespace Hanbell.AutoReport.Config
                                 case "刀柄类":
                                     sb.Append(" and depno='1P100'  ");
                                     sb.Append(" and (itnbr like 'BS106%' or itnbr like 'BS151%'  or itnbr like 'BS152%'  or  itnbr like 'BS153%' or  ");
-                                    sb.Append(" itnbr like 'BS154%'  ' or  itnbr like 'BS155%'  or  itnbr like 'BS156%'  or  itnbr like 'BS158%')  ");
+                                    sb.Append(" itnbr like 'BS154%' or  itnbr like 'BS155%'  or  itnbr like 'BS156%'  or  itnbr like 'BS158%')  ");
                                     break;
                                 case "NSM":
                                     sb.Append(" and depno in('1P121','1P122') and itnbr  like 'BS101-01%'   ");

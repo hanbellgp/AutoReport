@@ -27,7 +27,7 @@ namespace Hanbell.AutoReport.Config
         protected override void SendAddtionalNotification()
         {
             string dept = null;
-            String[] title = { "通报编号", "主题", "距有效日期剩余天数", "分发部门" };
+            String[] title = { "申请人","通报编号", "主题", "距有效日期剩余天数", "分发部门" };
             int[] width = { 100, 100, 100, 100 };
             string table;
             string deptno = "";
